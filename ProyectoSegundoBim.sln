@@ -5,6 +5,8 @@ VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaEntidadea", "CapaEntidadea\CapaEntidadea.csproj", "{FF72B57F-954F-415C-BE67-66A361A97C68}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CapaPresentacion", "CapaPresentacion", "{C4A1D28A-1FC0-4F02-A351-F7E1C8EAA678}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
