@@ -124,12 +124,6 @@
     <Compile Include="CRUD\FormAsignatura.Designer.cs">
       <DependentUpon>FormAsignatura.cs</DependentUpon>
     </Compile>
-    <Compile Include="Probando.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Probando.Designer.cs">
-      <DependentUpon>Probando.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -137,9 +131,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD\FormAsignatura.resx">
       <DependentUpon>FormAsignatura.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Probando.resx">
-      <DependentUpon>Probando.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -221,6 +212,16 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaEntidades\CapaEntidades.csproj">
+      <Project>{ff72b57f-954f-415c-be67-66a361a97c68}</Project>
+      <Name>CapaEntidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaNegocio\CapaNegocio.csproj">
+      <Project>{4f12cbea-2da7-4aa2-be87-b5e869dffff7}</Project>
+      <Name>CapaNegocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
