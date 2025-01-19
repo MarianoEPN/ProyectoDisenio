@@ -56,9 +56,9 @@
     <Compile Include="TipoResultadoAsignaturaNeg.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CapaEntidadea\CapaEntidadea.csproj">
+    <ProjectReference Include="..\CapaEntidades\CapaEntidades.csproj">
       <Project>{ff72b57f-954f-415c-be67-66a361a97c68}</Project>
-      <Name>CapaEntidadea</Name>
+      <Name>CapaEntidades</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
