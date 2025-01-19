@@ -8,5 +8,6 @@ namespace CapaNegocio
 {
     public class AsignaturaNeg
     {
+
     }
 }
