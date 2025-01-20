@@ -14,6 +14,7 @@ namespace CapaAccesoDatos
         SqlDataReader leer;
         SqlCommand comando = new SqlCommand();
 
+
         public List<CarreraAsignatura> MostrarCarreraAsignatura()
         {
             comando.Connection = conexion.AbrirConexion();
