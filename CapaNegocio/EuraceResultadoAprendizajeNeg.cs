@@ -12,17 +12,19 @@ namespace CapaNegocio
 {
     public class EuraceResultadoAprendizajeNeg
     {
-        private EuraceResultadoAprendizajeDAL ERAprendizaje = new EuraceResultadoAprendizajeDAL();
+       // private EuraceResultadoAprendizajeDAL ERAprendizaje = new EuraceResultadoAprendizajeDAL();
 
         public void InsertarEuraceResultadoAprendizaje(EuraceResultadoAprendizaje ERApr)
         {
-            ERAprendizaje.InsertarEuraceResultadoAprendizaje(ERApr);
+            //ERAprendizaje.InsertarEuraceResultadoAprendizaje(ERApr);
         }
 
+        /*
         public List<EuraceResultadoAprendizaje> MostrarEuraceResultadoAprendizajes()
         {
-            return ERAprendizaje.MostrarEuraceResultadoAprendizajes();
+            //return ERAprendizaje.MostrarEuraceResultadoAprendizajes();
         }
+        */
 
         
     }

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaEntidadea;
+using Guna.UI2.WinForms;
 
 namespace CapaPresentacion
 {
@@ -15,18 +17,150 @@ namespace CapaPresentacion
         public FormAsignatura()
         {
             InitializeComponent();
+            btnCrear.Text = "Crear";
+            lbAdvertencia.Visible = false;
+
+        }
+        public FormAsignatura(Carrera carrera)
+        {
+            InitializeComponent();
+            btnCrear.Text = "Crear";
+            lbAdvertencia.Visible = false;
+
         }
 
-        private void FormAsignatura_Load(object sender, EventArgs e)
+        public FormAsignatura(Carrera carrera, Asignatura asignatura)
         {
-            MessageBox.Show("HOLA");
-            guna2TextBox1.Text = "";
+            InitializeComponent();
+            btnCrear.Text = "Guardar";
+            lbAdvertencia.Visible = false;
+            tbCodigo.Text = asignatura.Nombre;
+            tbCodigo.Text = asignatura.Codigo;
+            tbNivel.Text = Convert.ToString(asignatura.Nivel);
+            AsignaturaEditar = asignatura;
         }
+
+        private Asignatura AsignaturaEditar { get; set; }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        private void lblSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnCrear_Click(object sender, EventArgs e)
+        {
+            List<Guna2TextBox> listaTextBoxes = new List<Guna2TextBox>
+        {
+            tbCodigo,
+            tbNombre,
+            tbNivel
+        };
+            if (btnCrear.Text.Equals("Crear"))
+            {
+                bool camposCompletos = true;
+                foreach (var txt in listaTextBoxes)
+                {
+                    // 3. Verificar si está vacío o nulo
+                    if (string.IsNullOrEmpty(txt.Text))
+                    {
+                        // Cambiar color del borde a rojo
+                        txt.BorderColor = Color.Red;
+                        camposCompletos = false;
+                    }
+                    else
+                    {
+
+                    }
+                }
+                if (camposCompletos)
+                {
+                    Asignatura asignatura = new Asignatura();
+                    asignatura.Codigo = tbCodigo.Text;
+                    asignatura.Nombre = tbNombre.Text;
+                    asignatura.Nivel = Convert.ToInt32(tbNivel.Text);
+
+                    // Metodo de la capa de negocio para guardar la asignatura creada
+                    
+                    this.Close();
+                }
+                else 
+                {
+                    lbAdvertencia.Visible = true;
+                }
+
+
+
+            } else if (btnCrear.Text.Equals("Guardar"))
+            {
+                bool camposCompletos = true;
+                foreach (var txt in listaTextBoxes)
+                {
+                    // 3. Verificar si está vacío o nulo
+                    if (string.IsNullOrEmpty(txt.Text))
+                    {
+                        // Cambiar color del borde a rojo
+                        txt.BorderColor = Color.Red;
+                        camposCompletos = false;
+                    }
+                    else
+                    {
+
+                    }
+                }
+                if (camposCompletos)
+                {
+                    Asignatura asignatura = AsignaturaEditar;        
+                    asignatura.Codigo = tbCodigo.Text;
+                    asignatura.Nombre = tbNombre.Text;
+                    asignatura.Nivel = Convert.ToInt32(tbNivel.Text);
+
+                    // Metodo de la capa de negocio para guardar la asignatura editada
+
+                    this.Close();
+                }
+                else
+                {
+                    lbAdvertencia.Visible = true;
+                }
+
+            }
+        }
+
+        private void tbCodigo_Enter(object sender, EventArgs e)
+        {
+            tbCodigo.BorderColor = Color.FromArgb(213, 218, 223);
+        }
+
+        private void tbNombre_Enter(object sender, EventArgs e)
+        {
+            tbNombre.BorderColor = Color.FromArgb(213, 218, 223);
+        }
+
+        private void tbNivel_Enter(object sender, EventArgs e)
+        {
+            tbNivel.BorderColor = Color.FromArgb(213, 218, 223);
+        }
+
+        private void tbNivel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // 1. Si no es dígito ni tecla de retroceso (Backspace), se descarta.
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; // No se procesa esa tecla
+                return;
+            }
+
+            // 2. Si es un dígito pero ya hay un carácter (o más) en el textbox, no permite más.
+            //    (así solo tendrías 1 dígito máximo)
+            if (char.IsDigit(e.KeyChar) && tbNivel.Text.Length >= 1)
+            {
+                e.Handled = true; // Descartar
+            }
+        }
     }
 }

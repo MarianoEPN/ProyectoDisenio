@@ -102,7 +102,7 @@
             this.panelIniciar.Controls.Add(this.lblLogin);
             this.panelIniciar.FillColor = System.Drawing.Color.White;
             this.panelIniciar.Location = new System.Drawing.Point(274, 144);
-            this.panelIniciar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelIniciar.Margin = new System.Windows.Forms.Padding(2);
             this.panelIniciar.Name = "panelIniciar";
             this.panelIniciar.Radius = 10;
             this.panelIniciar.ShadowColor = System.Drawing.Color.Black;
@@ -118,7 +118,7 @@
             this.linKCreateR.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linKCreateR.Name = "linKCreateR";
             this.linKCreateR.Size = new System.Drawing.Size(59, 13);
-            this.linKCreateR.TabIndex = 21;
+            this.linKCreateR.TabIndex = 19;
             this.linKCreateR.TabStop = true;
             this.linKCreateR.Text = "Create one";
             this.linKCreateR.Click += new System.EventHandler(this.linKCreateR_Click);
@@ -168,11 +168,11 @@
             this.cbRecordar.Font = new System.Drawing.Font("Californian FB", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbRecordar.ForeColor = System.Drawing.Color.DimGray;
             this.cbRecordar.Location = new System.Drawing.Point(56, 257);
-            this.cbRecordar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbRecordar.Margin = new System.Windows.Forms.Padding(2);
             this.cbRecordar.Name = "cbRecordar";
-            this.cbRecordar.Size = new System.Drawing.Size(121, 20);
-            this.cbRecordar.TabIndex = 17;
-            this.cbRecordar.Text = "Remember User";
+            this.cbRecordar.Size = new System.Drawing.Size(118, 20);
+            this.cbRecordar.TabIndex = 18;
+            this.cbRecordar.Text = "Remember user";
             this.cbRecordar.UncheckedState.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.cbRecordar.UncheckedState.BorderRadius = 1;
             this.cbRecordar.UncheckedState.BorderThickness = 1;
@@ -189,7 +189,7 @@
             this.tbClave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbClave.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbClave.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbClave.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbClave.Font = new System.Drawing.Font("Californian FB", 13.8F);
             this.tbClave.ForeColor = System.Drawing.Color.DimGray;
             this.tbClave.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbClave.IconLeft = ((System.Drawing.Image)(resources.GetObject("tbClave.IconLeft")));
@@ -201,7 +201,7 @@
             this.tbClave.SelectedText = "";
             this.tbClave.Size = new System.Drawing.Size(203, 39);
             this.tbClave.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.tbClave.TabIndex = 16;
+            this.tbClave.TabIndex = 17;
             this.tbClave.TextChanged += new System.EventHandler(this.tbClave_TextChanged);
             this.tbClave.Enter += new System.EventHandler(this.tbClave_Enter_1);
             // 
@@ -216,7 +216,7 @@
             this.tbUsuario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbUsuario.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbUsuario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbUsuario.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbUsuario.Font = new System.Drawing.Font("Californian FB", 13.8F);
             this.tbUsuario.ForeColor = System.Drawing.Color.DimGray;
             this.tbUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbUsuario.IconLeft = ((System.Drawing.Image)(resources.GetObject("tbUsuario.IconLeft")));
@@ -235,7 +235,7 @@
             // 
             this.pbVista.Image = ((System.Drawing.Image)(resources.GetObject("pbVista.Image")));
             this.pbVista.Location = new System.Drawing.Point(264, 200);
-            this.pbVista.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbVista.Margin = new System.Windows.Forms.Padding(2);
             this.pbVista.Name = "pbVista";
             this.pbVista.Size = new System.Drawing.Size(18, 19);
             this.pbVista.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -258,11 +258,12 @@
             this.btnLogin.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Location = new System.Drawing.Point(92, 336);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(135, 37);
-            this.btnLogin.TabIndex = 9;
+            this.btnLogin.TabIndex = 20;
             this.btnLogin.Text = "Login";
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // lblLogin
             // 
@@ -297,7 +298,7 @@
             this.panelRegistro.Controls.Add(this.tbUsuarioReg);
             this.panelRegistro.FillColor = System.Drawing.Color.White;
             this.panelRegistro.Location = new System.Drawing.Point(274, 649);
-            this.panelRegistro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelRegistro.Margin = new System.Windows.Forms.Padding(2);
             this.panelRegistro.Name = "panelRegistro";
             this.panelRegistro.Radius = 10;
             this.panelRegistro.ShadowColor = System.Drawing.Color.Black;
@@ -316,7 +317,7 @@
             this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
             this.guna2CircleButton1.Location = new System.Drawing.Point(140, 413);
-            this.guna2CircleButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2CircleButton1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2CircleButton1.Name = "guna2CircleButton1";
             this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CircleButton1.Size = new System.Drawing.Size(42, 46);
@@ -445,7 +446,7 @@
             // 
             this.pbVista3.Image = ((System.Drawing.Image)(resources.GetObject("pbVista3.Image")));
             this.pbVista3.Location = new System.Drawing.Point(267, 310);
-            this.pbVista3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbVista3.Margin = new System.Windows.Forms.Padding(2);
             this.pbVista3.Name = "pbVista3";
             this.pbVista3.Size = new System.Drawing.Size(18, 19);
             this.pbVista3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -483,7 +484,7 @@
             // 
             this.pbVista2.Image = ((System.Drawing.Image)(resources.GetObject("pbVista2.Image")));
             this.pbVista2.Location = new System.Drawing.Point(267, 250);
-            this.pbVista2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbVista2.Margin = new System.Windows.Forms.Padding(2);
             this.pbVista2.Name = "pbVista2";
             this.pbVista2.Size = new System.Drawing.Size(18, 19);
             this.pbVista2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -506,7 +507,7 @@
             this.btnRegistrarseReg.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarseReg.ForeColor = System.Drawing.Color.White;
             this.btnRegistrarseReg.Location = new System.Drawing.Point(91, 366);
-            this.btnRegistrarseReg.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegistrarseReg.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrarseReg.Name = "btnRegistrarseReg";
             this.btnRegistrarseReg.Size = new System.Drawing.Size(135, 37);
             this.btnRegistrarseReg.TabIndex = 10;
@@ -578,7 +579,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(36)))), ((int)(((byte)(75)))));
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Location = new System.Drawing.Point(-2, -2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(206, 653);
             this.panel1.TabIndex = 15;
@@ -587,7 +588,7 @@
             // 
             this.pictureBox2.Image = global::CapaPresentacion.Properties.Resources.es;
             this.pictureBox2.Location = new System.Drawing.Point(2, 175);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(202, 336);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -611,7 +612,7 @@
             // 
             this.pictureBox3.Image = global::CapaPresentacion.Properties.Resources.buhooo;
             this.pictureBox3.Location = new System.Drawing.Point(674, 574);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(68, 66);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -629,7 +630,7 @@
             this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.DeepSkyBlue;
             this.guna2ControlBox2.Location = new System.Drawing.Point(664, 10);
-            this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.Size = new System.Drawing.Size(28, 20);
             this.guna2ControlBox2.TabIndex = 11;
@@ -644,7 +645,7 @@
             this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.DeepSkyBlue;
             this.guna2ControlBox1.Location = new System.Drawing.Point(696, 10);
-            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(28, 20);
             this.guna2ControlBox1.TabIndex = 10;
@@ -656,7 +657,7 @@
             this.guna2PictureBox1.Image = global::CapaPresentacion.Properties.Resources.BB;
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(414, 128);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(61, 63);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -671,7 +672,7 @@
             this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
             this.guna2PictureBox2.ImageRotate = 0F;
             this.guna2PictureBox2.Location = new System.Drawing.Point(403, 115);
-            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.Size = new System.Drawing.Size(82, 88);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -685,7 +686,7 @@
             this.guna2PictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox4.Image")));
             this.guna2PictureBox4.ImageRotate = 0F;
             this.guna2PictureBox4.Location = new System.Drawing.Point(603, -13);
-            this.guna2PictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2PictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.guna2PictureBox4.Name = "guna2PictureBox4";
             this.guna2PictureBox4.Size = new System.Drawing.Size(181, 116);
             this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -710,8 +711,9 @@
             this.Controls.Add(this.panelIniciar);
             this.Controls.Add(this.guna2PictureBox4);
             this.DoubleBuffered = true;
+            this.ForeColor = System.Drawing.Color.DimGray;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

@@ -44,16 +44,69 @@ namespace CapaPresentacion
             //
         }
 
+        // Creadno una lista temporal para probar unicamente funcionamiento del login
+        List<Carrera> listaCarreras;
         private void Form1_Load(object sender, EventArgs e)
         {
-          
+            listaCarreras = new List<Carrera>();
+            Carrera carrera = new Carrera();
+            carrera.Id = 1;
+            carrera.Nombre = "Tecnologias de la informacion";
+            carrera.Contraseña = "FIEE-TI2024B";
+            listaCarreras.Add(carrera);
 
         }
 
-        private void btnRegistrarse_Click(object sender, EventArgs e)
+        
+
+        private void btnLogin_Click(object sender, EventArgs e)
         {
+            //hasta que se implemente adecuadamente la capa de negocio se implementara un metodo para verificar usuarios
+
+            bool verificarUsuario = false;
+
+            if ((tbUsuario.Text == null || tbUsuario.Text == string.Empty))
+            {
+                tbUsuario.BorderColor = Color.Red;
+                if ((tbClave.Text == null || tbClave.Text == string.Empty))
+                {
+                    
+                    tbClave.BorderColor = Color.Red;
+
+                }
+
+            } else
+            {
+                if ((tbClave.Text == null || tbClave.Text == string.Empty))
+                {
+                    tbClave.BorderColor = Color.Red;
+                }
+            }         
+
+            foreach (Carrera carrera in listaCarreras)
+            {
+                if (tbUsuario.Text.Equals(carrera.Nombre) && tbClave.Text.Equals(carrera.Contraseña))
+                {
+                    MessageBox.Show("Acceso condedido");
+                    //this.Hide();
+                    verificarUsuario = true;
+                    break;
+                }
+            }
+
+            if (!verificarUsuario)
+            {
+                tbUsuario.BorderColor = Color.Red;
+                tbClave.BorderColor = Color.Red;
+            }
+        }
+
+        private void btnRegistrarseReg_Click(object sender, EventArgs e)
+        {
+            
 
         }
+
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -108,14 +161,11 @@ namespace CapaPresentacion
 
         }
 
-        private void tbClave_Enter(object sender, EventArgs e)
-        {
-            tbClave.Text = ""; // Vacía el contenido del TextBox al recibir el foco.
-
-        }
+       
 
         private void tbClave_Enter_1(object sender, EventArgs e)
         {
+            //tbUsuario.BorderColor = Color.FromArgb(213, 218, 223); Kevin
             lblContraseñaL.Text = "Password";
             tbClave.Text = ""; // Vacía el contenido del TextBox al recibir el foco.
 
@@ -123,8 +173,9 @@ namespace CapaPresentacion
 
         private void tbUsuario_Enter(object sender, EventArgs e)
         {
+            //tbUsuario.BorderColor = Color.FromArgb(213, 218, 223); Kevin
             lblCarrera.Text = "Username";
-            tbUsuario.Text = ""; // Vacía el contenido del TextBox al recibir el foco.
+            tbClave.Text = ""; // Vacía el contenido del TextBox al recibir el foco.
 
         }
 
@@ -143,10 +194,7 @@ namespace CapaPresentacion
 
         }
 
-        private void btnRegistrarseReg_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void pbVista3_Click(object sender, EventArgs e)
         {
@@ -239,5 +287,7 @@ namespace CapaPresentacion
             timer2.Stop(); // Detener el temporizador de bajada
             timer1.Start(); // Inicia el temporizador de subida
         }
+
+        
     }
 }
