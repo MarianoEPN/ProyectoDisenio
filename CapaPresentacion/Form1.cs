@@ -175,7 +175,7 @@ namespace CapaPresentacion
         {
             //tbUsuario.BorderColor = Color.FromArgb(213, 218, 223); Kevin
             lblCarrera.Text = "Username";
-            tbClave.Text = ""; // Vacía el contenido del TextBox al recibir el foco.
+            tbUsuario.Text = ""; // Vacía el contenido del TextBox al recibir el foco.
 
         }
 
