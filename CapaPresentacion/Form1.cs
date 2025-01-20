@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Media; // Necesario para SoundPlayer.
 using CapaEntidadea;
 using CapaNegocio;
+using System.Web.UI.WebControls;
 
 
 namespace CapaPresentacion
@@ -120,8 +121,55 @@ namespace CapaPresentacion
             {
                 MessageBox.Show("Todos los campos deben ser completados");
             }
-            
 
+            if (!EsCorreoValido(tbCorreo.Text))
+            {
+                MessageBox.Show("El correo electrónico ingresado no es válido.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            
+            if ((tbClave.Text).Length > 8)
+            {
+                if (tbClave.Text.Equals(tbClaveConfirmReg.Text))
+                {
+                    // Aqui se creara la carrera
+
+
+                    
+
+
+                   // MessageBox.Show("Cuenta creada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                   // Accion para devolver al login
+                }
+                else
+                {
+                    MessageBox.Show("Las contraseñas no coinciden");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Las contraseña debe contener mas de 8 caracteres");
+            }
+
+
+        }
+
+        private bool EsCorreoValido(string correo)
+        {
+            if (string.IsNullOrEmpty(correo)) {
+                return false;
+            }
+            try
+            {
+                var direccion = new System.Net.Mail.MailAddress(correo);
+                return true;
+            }
+            catch (FormatException)
+            {
+                return false;
+            }
         }
 
 
