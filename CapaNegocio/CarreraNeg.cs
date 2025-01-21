@@ -9,6 +9,7 @@ namespace CapaNegocio
 {
     public class CarreraNeg
     {
+        /*
         private CarreraDAL carreraDAL = CarreraDAL();
 
         public List<Carrera> MostrarAsignatura()
@@ -30,5 +31,6 @@ namespace CapaNegocio
         {
             carreraDAL.EliminarAsignatura(id);
         }
+        */
     }
 }

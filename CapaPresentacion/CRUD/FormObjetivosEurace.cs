@@ -1,4 +1,4 @@
-﻿using CapaEntidadea;
+﻿using CapaEntidades;
 using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;

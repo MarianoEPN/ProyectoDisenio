@@ -42,7 +42,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AsignaturaNeg.cs" />
-    <Compile Include="CarreraAsignaturaNeg.cs" />
     <Compile Include="CarreraNeg.cs" />
     <Compile Include="EuraceResultadoAprendizajeNeg.cs" />
     <Compile Include="EuraceResultadoAsignaturaNeg.cs" />

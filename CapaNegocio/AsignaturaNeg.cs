@@ -10,6 +10,7 @@ namespace CapaNegocio
 {
     public class AsignaturaNeg
     {
+        /*
         private AsignaturaDAL asignaturaDAL = AsignaturaDAL();
 
         public List<Asignatura> MostrarAsignatura()
@@ -31,5 +32,6 @@ namespace CapaNegocio
         {
             asignaturaDAL.EliminarAsignatura(id);
         }
+        */
     }
 }
