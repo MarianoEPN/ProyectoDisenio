@@ -158,13 +158,21 @@ namespace CapaPresentacion
                 return;
             }
 
-            // 2. Si es un dígito pero ya hay un carácter (o más) en el textbox, no permite más.
+            // 2. Si es un dígito pero es '0', se descarta (no se permite insertar cero).
+            if (e.KeyChar == '0')
+            {
+                e.Handled = true; // No se procesa el cero
+                return;
+            }
+
+            // 3. Si es un dígito pero ya hay un carácter (o más) en el textbox, no permite más.
             //    (así solo tendrías 1 dígito máximo)
             if (char.IsDigit(e.KeyChar) && tbNivel.Text.Length >= 1)
             {
                 e.Handled = true; // Descartar
             }
         }
+
 
         private void guna2CustomGradientPanel1_MouseDown(object sender, MouseEventArgs e)
         {
