@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media; // Necesario para SoundPlayer.
-using CapaEntidadea;
+using CapaEntidades;
 using CapaNegocio;
 using System.Web.UI.WebControls;
 

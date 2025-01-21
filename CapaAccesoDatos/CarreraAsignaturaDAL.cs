@@ -1,4 +1,4 @@
-﻿using CapaEntidadea;
+﻿using CapaEntidades;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -14,7 +14,7 @@ namespace CapaAccesoDatos
         SqlDataReader leer;
         SqlCommand comando = new SqlCommand();
 
-
+        /*
         public List<CarreraAsignatura> MostrarCarreraAsignatura()
         {
             comando.Connection = conexion.AbrirConexion();
@@ -38,6 +38,7 @@ namespace CapaAccesoDatos
             conexion.CerrarConexion();
             return lista;
         }
+        
 
         public void InsertarCarreraAsignatura(CarreraAsignatura item)
         {
@@ -75,5 +76,6 @@ namespace CapaAccesoDatos
             comando.Parameters.Clear();
             conexion.CerrarConexion();
         }
+        */
     }
 }

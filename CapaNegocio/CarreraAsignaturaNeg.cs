@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CapaAccesoDatos;
-using CapaEntidadea;
+using CapaEntidades;
 using CapaNegocio;
 
 namespace CapaNegocio

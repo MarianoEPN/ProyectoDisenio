@@ -10,8 +10,8 @@ namespace CapaEntidades
     public class Carrera
     {
         public int Id { get; set; }
-        private string Nombre { get; set; }
-        private string Contraseña { get; set; }
+        public string Nombre { get; set; }
+        public string Contraseña { get; set; }
         public string Presum { get; set; }
         public string Correo { get; set; }
 
