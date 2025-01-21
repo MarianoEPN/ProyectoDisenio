@@ -35,7 +35,7 @@ namespace CapaPresentacion
         public FormAsignatura(Carrera carrera, Asignatura asignatura)
         {
             InitializeComponent();
-            btnCrear.Text = "Guardar";
+            btnCrear.Text = "Guardarr";
             lbAdvertencia.Visible = false;
             tbCodigo.Text = asignatura.Nombre;
             tbCodigo.Text = asignatura.Codigo;
