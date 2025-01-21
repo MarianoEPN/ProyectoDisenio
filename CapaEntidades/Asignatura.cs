@@ -17,12 +17,13 @@ namespace CapaEntidades
         public List<ResultadoAprendizajeAsignatura> ResultadosAprendizaje { get; set; }
 
         // Relación con CarreraAsignatura (Muchos a Muchos con Carrera)
-        public List<Carrera> Carreras { get; set; }
+      public int CarreraId { get; set; }
+        public Carrera carrera { get; set; }
 
         public Asignatura()
         {
             ResultadosAprendizaje = new List<ResultadoAprendizajeAsignatura>();
-            Carreras = new List<Carrera>();
+
         }
 
         // Constructor con parámetros
@@ -33,7 +34,7 @@ namespace CapaEntidades
             Nombre = nombre;
             Nivel = nivel;
             ResultadosAprendizaje = new List<ResultadoAprendizajeAsignatura>();
-            Carreras = new List<Carrera>();
+            
         }
 
         // Método ToString

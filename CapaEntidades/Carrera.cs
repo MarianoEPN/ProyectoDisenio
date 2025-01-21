@@ -14,14 +14,14 @@ namespace CapaEntidades
        
 
         // Relación con CarreraAsignatura (Muchos a Muchos con Asignatura)
-        public List<Asignatura> Asignatura { get; set; }
+        public List<Asignatura> Asignaturas { get; set; }
         public List<ResultadoAprendizaje> ResultadoAprendizaje { get; set; }
         public List<ObjetivoPrograma> ObjetivoPrograma { get; set; }
 
         // Constructor vacío
         public Carrera()
         {
-            Asignatura = new List<Asignatura>();
+            Asignaturas = new List<Asignatura>();
         }
 
         // Constructor con parámetros
@@ -30,7 +30,7 @@ namespace CapaEntidades
             Id = id;
             Nombre = nombre;
            
-            Asignatura = new List<Asignatura>();
+            Asignaturas  = new List<Asignatura>();
         }
 
         // Método ToString
