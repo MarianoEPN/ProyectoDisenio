@@ -12,6 +12,7 @@ using System.Media; // Necesario para SoundPlayer.
 using CapaEntidades;
 using CapaNegocio;
 using System.Web.UI.WebControls;
+using Guna;
 
 namespace CapaPresentacion
 {
