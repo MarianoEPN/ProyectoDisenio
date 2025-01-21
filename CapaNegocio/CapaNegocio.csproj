@@ -56,6 +56,10 @@
     <Compile Include="TipoResultadoAsignaturaNeg.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CapaAccesoDatos\CapaAccesoDatos.csproj">
+      <Project>{9c3315f5-124a-4a03-9ec9-53c78cabd638}</Project>
+      <Name>CapaAccesoDatos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CapaEntidades\CapaEntidades.csproj">
       <Project>{ff72b57f-954f-415c-be67-66a361a97c68}</Project>
       <Name>CapaEntidades</Name>
