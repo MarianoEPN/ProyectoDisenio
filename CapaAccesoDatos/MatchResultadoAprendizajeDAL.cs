@@ -44,6 +44,7 @@ namespace CapaAccesoDatos
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "InsertarMatchResultadoAprendizaje";
             comando.CommandType = System.Data.CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@id", match.Id);
             comando.Parameters.AddWithValue("@perfil_egreso_id", match.PerfilEgresoId);
             comando.Parameters.AddWithValue("@sub_resultado_aprendizage_asignatura_i", match.SubResultadoAprendizajeId);
             comando.Parameters.AddWithValue("@nivelaporte", match.NivelAporte);

@@ -41,6 +41,7 @@ namespace CapaAccesoDatos
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "InsertarTipoResultadoAsignatura";
             comando.CommandType = System.Data.CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@id", tipo.Id);
             comando.Parameters.AddWithValue("@codigo", tipo.Codigo);
             comando.Parameters.AddWithValue("@nombre", tipo.Nombre);
 

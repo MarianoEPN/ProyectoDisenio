@@ -43,6 +43,7 @@ namespace CapaAccesoDatos
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "InsertarObjetivoEurace";
             comando.CommandType = System.Data.CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@id", objetivo.Id);
             comando.Parameters.AddWithValue("@codigo", objetivo.Codigo);
             comando.Parameters.AddWithValue("@nombre", objetivo.Nombre);
             comando.Parameters.AddWithValue("@descripcion", objetivo.Descripcion);
