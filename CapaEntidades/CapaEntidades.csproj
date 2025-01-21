@@ -58,7 +58,6 @@
   <ItemGroup>
     <Compile Include="Asignatura.cs" />
     <Compile Include="Carrera.cs" />
-    <Compile Include="CarreraAsignatura.cs" />
     <Compile Include="EuraceResultadoAprendizaje.cs" />
     <Compile Include="EuraceResultadoAsignatura.cs" />
     <Compile Include="MatchResultadoAprendizaje.cs" />
