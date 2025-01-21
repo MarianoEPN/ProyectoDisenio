@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Media; // Necesario para SoundPlayer.
 using CapaEntidadea;
 using CapaNegocio;
+using System.Web.UI.WebControls;
 
 
 namespace CapaPresentacion
@@ -58,7 +59,7 @@ namespace CapaPresentacion
         }
 
         
-
+        // Apartado para la verificacion de los campos e ingreso del usuario al programa
         private void btnLogin_Click(object sender, EventArgs e)
         {
             //hasta que se implemente adecuadamente la capa de negocio se implementara un metodo para verificar usuarios
@@ -72,14 +73,18 @@ namespace CapaPresentacion
                 {
                     
                     tbClave.BorderColor = Color.Red;
-
+                    // Se puede agregar un label que indique completar los campos
+                    return;
                 }
+                return;
 
             } else
             {
                 if ((tbClave.Text == null || tbClave.Text == string.Empty))
                 {
                     tbClave.BorderColor = Color.Red;
+                    // Se puede agregar un label que indique completar los campos
+                    return;
                 }
             }         
 
@@ -87,6 +92,7 @@ namespace CapaPresentacion
             {
                 if (tbUsuario.Text.Equals(carrera.Nombre) && tbClave.Text.Equals(carrera.Contraseña))
                 {
+                    // Mensaje para dar a entender que funciono
                     MessageBox.Show("Acceso condedido");
                     //this.Hide();
                     verificarUsuario = true;
@@ -98,13 +104,72 @@ namespace CapaPresentacion
             {
                 tbUsuario.BorderColor = Color.Red;
                 tbClave.BorderColor = Color.Red;
+                // Mensaje en un labelpara dar a entender que Usuario y/o contraseña son incorrectos.
+                return;
             }
         }
 
         private void btnRegistrarseReg_Click(object sender, EventArgs e)
         {
-            
 
+            if (string.IsNullOrWhiteSpace(tbUsuarioReg.Text)||
+                string.IsNullOrWhiteSpace(tbPEA.Text)||
+                string.IsNullOrWhiteSpace(tbCorreo.Text)||
+                string.IsNullOrWhiteSpace(tbClaveReg.Text)||
+                 string.IsNullOrWhiteSpace(tbClaveConfirmReg.Text)
+                )
+            {
+                MessageBox.Show("Todos los campos deben ser completados");
+            }
+
+            if (!EsCorreoValido(tbCorreo.Text))
+            {
+                MessageBox.Show("El correo electrónico ingresado no es válido.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            
+            if ((tbClave.Text).Length > 8)
+            {
+                if (tbClave.Text.Equals(tbClaveConfirmReg.Text))
+                {
+                    // Aqui se creara la carrera
+
+
+                    
+
+
+                   // MessageBox.Show("Cuenta creada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                   // Accion para devolver al login
+                }
+                else
+                {
+                    MessageBox.Show("Las contraseñas no coinciden");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Las contraseña debe contener mas de 8 caracteres");
+            }
+
+
+        }
+
+        private bool EsCorreoValido(string correo)
+        {
+            if (string.IsNullOrEmpty(correo)) {
+                return false;
+            }
+            try
+            {
+                var direccion = new System.Net.Mail.MailAddress(correo);
+                return true;
+            }
+            catch (FormatException)
+            {
+                return false;
+            }
         }
 
 

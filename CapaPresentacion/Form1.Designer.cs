@@ -183,7 +183,7 @@
             this.tbClave.Animated = true;
             this.tbClave.BorderThickness = 2;
             this.tbClave.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbClave.DefaultText = "Password";
+            this.tbClave.DefaultText = "";
             this.tbClave.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.tbClave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.tbClave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -197,7 +197,7 @@
             this.tbClave.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.tbClave.Name = "tbClave";
             this.tbClave.PasswordChar = '\0';
-            this.tbClave.PlaceholderText = "";
+            this.tbClave.PlaceholderText = "Password";
             this.tbClave.SelectedText = "";
             this.tbClave.Size = new System.Drawing.Size(203, 39);
             this.tbClave.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
@@ -210,7 +210,7 @@
             this.tbUsuario.Animated = true;
             this.tbUsuario.BorderThickness = 2;
             this.tbUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbUsuario.DefaultText = "Username (Career)";
+            this.tbUsuario.DefaultText = "";
             this.tbUsuario.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.tbUsuario.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.tbUsuario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -224,7 +224,7 @@
             this.tbUsuario.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tbUsuario.Name = "tbUsuario";
             this.tbUsuario.PasswordChar = '\0';
-            this.tbUsuario.PlaceholderText = "";
+            this.tbUsuario.PlaceholderText = "Username (Career)";
             this.tbUsuario.SelectedText = "";
             this.tbUsuario.Size = new System.Drawing.Size(203, 39);
             this.tbUsuario.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
@@ -297,7 +297,7 @@
             this.panelRegistro.Controls.Add(this.tbClaveReg);
             this.panelRegistro.Controls.Add(this.tbUsuarioReg);
             this.panelRegistro.FillColor = System.Drawing.Color.White;
-            this.panelRegistro.Location = new System.Drawing.Point(274, 649);
+            this.panelRegistro.Location = new System.Drawing.Point(274, 651);
             this.panelRegistro.Margin = new System.Windows.Forms.Padding(2);
             this.panelRegistro.Name = "panelRegistro";
             this.panelRegistro.Radius = 10;
@@ -396,13 +396,13 @@
             // 
             this.tbPEA.BorderThickness = 2;
             this.tbPEA.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbPEA.DefaultText = "PEA";
+            this.tbPEA.DefaultText = "";
             this.tbPEA.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.tbPEA.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.tbPEA.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbPEA.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbPEA.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbPEA.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPEA.Font = new System.Drawing.Font("Californian FB", 13.8F);
             this.tbPEA.ForeColor = System.Drawing.Color.DimGray;
             this.tbPEA.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbPEA.IconLeft = ((System.Drawing.Image)(resources.GetObject("tbPEA.IconLeft")));
@@ -410,7 +410,7 @@
             this.tbPEA.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tbPEA.Name = "tbPEA";
             this.tbPEA.PasswordChar = '\0';
-            this.tbPEA.PlaceholderText = "";
+            this.tbPEA.PlaceholderText = "PEA";
             this.tbPEA.SelectedText = "";
             this.tbPEA.Size = new System.Drawing.Size(80, 39);
             this.tbPEA.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
@@ -421,13 +421,13 @@
             // 
             this.tbCorreo.BorderThickness = 2;
             this.tbCorreo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbCorreo.DefaultText = "Email";
+            this.tbCorreo.DefaultText = "";
             this.tbCorreo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.tbCorreo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.tbCorreo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbCorreo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbCorreo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbCorreo.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCorreo.Font = new System.Drawing.Font("Californian FB", 13.8F);
             this.tbCorreo.ForeColor = System.Drawing.Color.DimGray;
             this.tbCorreo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbCorreo.IconLeft = ((System.Drawing.Image)(resources.GetObject("tbCorreo.IconLeft")));
@@ -435,7 +435,7 @@
             this.tbCorreo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tbCorreo.Name = "tbCorreo";
             this.tbCorreo.PasswordChar = '\0';
-            this.tbCorreo.PlaceholderText = "";
+            this.tbCorreo.PlaceholderText = "Email";
             this.tbCorreo.SelectedText = "";
             this.tbCorreo.Size = new System.Drawing.Size(191, 39);
             this.tbCorreo.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
@@ -458,13 +458,13 @@
             // 
             this.tbClaveConfirmReg.BorderThickness = 2;
             this.tbClaveConfirmReg.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbClaveConfirmReg.DefaultText = "Confirm Password";
+            this.tbClaveConfirmReg.DefaultText = "";
             this.tbClaveConfirmReg.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.tbClaveConfirmReg.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.tbClaveConfirmReg.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbClaveConfirmReg.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbClaveConfirmReg.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbClaveConfirmReg.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbClaveConfirmReg.Font = new System.Drawing.Font("Californian FB", 13.8F);
             this.tbClaveConfirmReg.ForeColor = System.Drawing.Color.DimGray;
             this.tbClaveConfirmReg.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbClaveConfirmReg.IconLeft = ((System.Drawing.Image)(resources.GetObject("tbClaveConfirmReg.IconLeft")));
@@ -472,7 +472,7 @@
             this.tbClaveConfirmReg.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tbClaveConfirmReg.Name = "tbClaveConfirmReg";
             this.tbClaveConfirmReg.PasswordChar = '\0';
-            this.tbClaveConfirmReg.PlaceholderText = "";
+            this.tbClaveConfirmReg.PlaceholderText = "Confirm Password";
             this.tbClaveConfirmReg.SelectedText = "";
             this.tbClaveConfirmReg.Size = new System.Drawing.Size(191, 39);
             this.tbClaveConfirmReg.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
@@ -518,13 +518,13 @@
             // 
             this.tbClaveReg.BorderThickness = 2;
             this.tbClaveReg.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbClaveReg.DefaultText = "Password";
+            this.tbClaveReg.DefaultText = "";
             this.tbClaveReg.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.tbClaveReg.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.tbClaveReg.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbClaveReg.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbClaveReg.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbClaveReg.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbClaveReg.Font = new System.Drawing.Font("Californian FB", 13.8F);
             this.tbClaveReg.ForeColor = System.Drawing.Color.DimGray;
             this.tbClaveReg.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbClaveReg.IconLeft = ((System.Drawing.Image)(resources.GetObject("tbClaveReg.IconLeft")));
@@ -532,7 +532,7 @@
             this.tbClaveReg.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tbClaveReg.Name = "tbClaveReg";
             this.tbClaveReg.PasswordChar = '\0';
-            this.tbClaveReg.PlaceholderText = "";
+            this.tbClaveReg.PlaceholderText = "Password";
             this.tbClaveReg.SelectedText = "";
             this.tbClaveReg.Size = new System.Drawing.Size(191, 39);
             this.tbClaveReg.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
@@ -544,13 +544,13 @@
             // 
             this.tbUsuarioReg.BorderThickness = 2;
             this.tbUsuarioReg.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbUsuarioReg.DefaultText = "Username (Career)";
+            this.tbUsuarioReg.DefaultText = "";
             this.tbUsuarioReg.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.tbUsuarioReg.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.tbUsuarioReg.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbUsuarioReg.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbUsuarioReg.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbUsuarioReg.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbUsuarioReg.Font = new System.Drawing.Font("Californian FB", 13.8F);
             this.tbUsuarioReg.ForeColor = System.Drawing.Color.DimGray;
             this.tbUsuarioReg.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbUsuarioReg.IconLeft = ((System.Drawing.Image)(resources.GetObject("tbUsuarioReg.IconLeft")));
@@ -558,7 +558,7 @@
             this.tbUsuarioReg.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tbUsuarioReg.Name = "tbUsuarioReg";
             this.tbUsuarioReg.PasswordChar = '\0';
-            this.tbUsuarioReg.PlaceholderText = "";
+            this.tbUsuarioReg.PlaceholderText = "Username (Career)";
             this.tbUsuarioReg.SelectedText = "";
             this.tbUsuarioReg.Size = new System.Drawing.Size(191, 39);
             this.tbUsuarioReg.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;

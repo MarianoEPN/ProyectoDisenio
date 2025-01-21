@@ -112,6 +112,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bienvenido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bienvenido.Designer.cs">
+      <DependentUpon>Bienvenido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD\FormObjetivosEurace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD\FormObjetivosEurace.Designer.cs">
+      <DependentUpon>FormObjetivosEurace.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,13 +136,28 @@
     <Compile Include="CRUD\FormAsignatura.Designer.cs">
       <DependentUpon>FormAsignatura.cs</DependentUpon>
     </Compile>
+    <Compile Include="Menuu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menuu.Designer.cs">
+      <DependentUpon>Menuu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Bienvenido.resx">
+      <DependentUpon>Bienvenido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD\FormObjetivosEurace.resx">
+      <DependentUpon>FormObjetivosEurace.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD\FormAsignatura.resx">
       <DependentUpon>FormAsignatura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menuu.resx">
+      <DependentUpon>Menuu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -222,6 +249,84 @@
       <Project>{4f12cbea-2da7-4aa2-be87-b5e869dffff7}</Project>
       <Name>CapaNegocio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\asignatura.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baja.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bara.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barraa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buhoUser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrar-sesion %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrar-sesion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\challenge %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\challenge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circleBlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circleRED.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CircleWithe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\libro %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\libro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Welcome.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -10,8 +10,10 @@ namespace CapaEntidadea
     {
         public int Id { get; set; }
         public string Nombre { get; set; }
+        public string Correo {  get; set; }
         public string Contraseña { get; set; }
-        public string Presum { get; set; }
+        public string Pensum { get; set; }
+
 
         // Relación con CarreraAsignatura (Muchos a Muchos con Asignatura)
         public ICollection<CarreraAsignatura> CarrerasAsignatura { get; set; }

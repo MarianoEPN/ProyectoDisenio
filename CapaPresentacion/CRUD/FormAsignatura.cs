@@ -14,6 +14,9 @@ namespace CapaPresentacion
 {
     public partial class FormAsignatura : Form
     {
+        // Variables para almacenar la posición relativa del ratón en el panel
+        private bool isDragging = false;
+        private Point initialMousePosition;
         public FormAsignatura()
         {
             InitializeComponent();
@@ -160,6 +163,38 @@ namespace CapaPresentacion
             if (char.IsDigit(e.KeyChar) && tbNivel.Text.Length >= 1)
             {
                 e.Handled = true; // Descartar
+            }
+        }
+
+        private void guna2CustomGradientPanel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                isDragging = true;
+                // Guarda la posición inicial del ratón
+                initialMousePosition = e.Location;
+            }
+        }
+
+        private void guna2CustomGradientPanel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isDragging)
+            {
+                // Calcula la diferencia entre la posición actual y la inicial
+                Point currentMousePosition = e.Location;
+                int deltaX = currentMousePosition.X - initialMousePosition.X;
+                int deltaY = currentMousePosition.Y - initialMousePosition.Y;
+
+                // Mueve el formulario
+                this.Location = new Point(this.Location.X + deltaX, this.Location.Y + deltaY);
+            }
+        }
+
+        private void guna2CustomGradientPanel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                isDragging = false;
             }
         }
     }
