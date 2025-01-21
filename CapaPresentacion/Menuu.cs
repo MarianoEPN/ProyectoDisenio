@@ -95,6 +95,9 @@ namespace CapaPresentacion
             }
         }
 
+        private void panelControl_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
     }
 }

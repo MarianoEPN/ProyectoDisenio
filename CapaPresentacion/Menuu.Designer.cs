@@ -38,29 +38,29 @@
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnMenu = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
             this.panelControl = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panelContainer = new Guna.UI2.WinForms.Guna2Panel();
             this.timerExpanded = new System.Windows.Forms.Timer(this.components);
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.panelOpciones = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button10 = new Guna.UI2.WinForms.Guna2Button();
             this.btnBajar = new Guna.UI2.WinForms.Guna2CircleButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.panelOpciones = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.guna2Button10 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CirclePictureBox3 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.btnMenu = new Guna.UI2.WinForms.Guna2CircleButton();
             this.panelBarra.SuspendLayout();
             this.panelControl.SuspendLayout();
             this.guna2ShadowPanel1.SuspendLayout();
-            this.panelOpciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            this.panelOpciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -266,6 +266,23 @@
             this.guna2Button2.TabIndex = 7;
             this.guna2Button2.Text = "RAA";
             // 
+            // btnMenu
+            // 
+            this.btnMenu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnMenu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnMenu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnMenu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnMenu.FillColor = System.Drawing.Color.Transparent;
+            this.btnMenu.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnMenu.ForeColor = System.Drawing.Color.White;
+            this.btnMenu.Image = global::CapaPresentacion.Properties.Resources.menu;
+            this.btnMenu.Location = new System.Drawing.Point(22, 12);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnMenu.Size = new System.Drawing.Size(27, 28);
+            this.btnMenu.TabIndex = 5;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
+            // 
             // btnHome
             // 
             this.btnHome.BorderRadius = 10;
@@ -301,6 +318,48 @@
             this.panelControl.Name = "panelControl";
             this.panelControl.Size = new System.Drawing.Size(1133, 36);
             this.panelControl.TabIndex = 3;
+            this.panelControl.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl_Paint);
+            // 
+            // guna2ControlBox3
+            // 
+            this.guna2ControlBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox3.BackgroundImage = global::CapaPresentacion.Properties.Resources.CircleWithe;
+            this.guna2ControlBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
+            this.guna2ControlBox3.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox3.IconColor = System.Drawing.Color.DimGray;
+            this.guna2ControlBox3.Location = new System.Drawing.Point(1055, 3);
+            this.guna2ControlBox3.Name = "guna2ControlBox3";
+            this.guna2ControlBox3.Size = new System.Drawing.Size(30, 30);
+            this.guna2ControlBox3.TabIndex = 6;
+            // 
+            // guna2ControlBox2
+            // 
+            this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox2.BackgroundImage = global::CapaPresentacion.Properties.Resources.CircleWithe;
+            this.guna2ControlBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox2.IconColor = System.Drawing.Color.DimGray;
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1019, 3);
+            this.guna2ControlBox2.Name = "guna2ControlBox2";
+            this.guna2ControlBox2.Size = new System.Drawing.Size(30, 30);
+            this.guna2ControlBox2.TabIndex = 5;
+            // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.BackgroundImage = global::CapaPresentacion.Properties.Resources.CircleWithe;
+            this.guna2ControlBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.DimGray;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1091, 3);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(30, 30);
+            this.guna2ControlBox1.TabIndex = 4;
             // 
             // lblTitulo
             // 
@@ -343,65 +402,6 @@
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Silver;
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(1133, 63);
             this.guna2ShadowPanel1.TabIndex = 7;
-            // 
-            // panelOpciones
-            // 
-            this.panelOpciones.BackColor = System.Drawing.Color.Transparent;
-            this.panelOpciones.Controls.Add(this.guna2Button10);
-            this.panelOpciones.Controls.Add(this.guna2Button9);
-            this.panelOpciones.Controls.Add(this.guna2CirclePictureBox3);
-            this.panelOpciones.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
-            this.panelOpciones.Location = new System.Drawing.Point(940, 40);
-            this.panelOpciones.Name = "panelOpciones";
-            this.panelOpciones.ShadowColor = System.Drawing.Color.Black;
-            this.panelOpciones.Size = new System.Drawing.Size(200, 235);
-            this.panelOpciones.TabIndex = 0;
-            // 
-            // guna2Button9
-            // 
-            this.guna2Button9.BorderRadius = 10;
-            this.guna2Button9.CustomImages.HoveredImage = global::CapaPresentacion.Properties.Resources.cerrar_sesion__1_;
-            this.guna2Button9.CustomImages.Image = global::CapaPresentacion.Properties.Resources.cerrar_sesion;
-            this.guna2Button9.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button9.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button9.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button9.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button9.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button9.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button9.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button9.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Button9.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(109)))));
-            this.guna2Button9.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
-            this.guna2Button9.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button9.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button9.Location = new System.Drawing.Point(24, 173);
-            this.guna2Button9.Name = "guna2Button9";
-            this.guna2Button9.Size = new System.Drawing.Size(153, 34);
-            this.guna2Button9.TabIndex = 5;
-            this.guna2Button9.Text = "Salir";
-            // 
-            // guna2Button10
-            // 
-            this.guna2Button10.BorderRadius = 10;
-            this.guna2Button10.CustomImages.HoveredImage = global::CapaPresentacion.Properties.Resources.editar__1_;
-            this.guna2Button10.CustomImages.Image = global::CapaPresentacion.Properties.Resources.editar;
-            this.guna2Button10.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button10.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button10.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button10.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button10.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button10.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button10.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button10.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Button10.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(109)))));
-            this.guna2Button10.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
-            this.guna2Button10.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button10.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button10.Location = new System.Drawing.Point(24, 122);
-            this.guna2Button10.Name = "guna2Button10";
-            this.guna2Button10.Size = new System.Drawing.Size(153, 34);
-            this.guna2Button10.TabIndex = 14;
-            this.guna2Button10.Text = "Editar";
             // 
             // btnBajar
             // 
@@ -449,6 +449,65 @@
             this.guna2CirclePictureBox1.TabIndex = 9;
             this.guna2CirclePictureBox1.TabStop = false;
             // 
+            // panelOpciones
+            // 
+            this.panelOpciones.BackColor = System.Drawing.Color.Transparent;
+            this.panelOpciones.Controls.Add(this.guna2Button10);
+            this.panelOpciones.Controls.Add(this.guna2Button9);
+            this.panelOpciones.Controls.Add(this.guna2CirclePictureBox3);
+            this.panelOpciones.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
+            this.panelOpciones.Location = new System.Drawing.Point(940, 40);
+            this.panelOpciones.Name = "panelOpciones";
+            this.panelOpciones.ShadowColor = System.Drawing.Color.Black;
+            this.panelOpciones.Size = new System.Drawing.Size(200, 235);
+            this.panelOpciones.TabIndex = 0;
+            // 
+            // guna2Button10
+            // 
+            this.guna2Button10.BorderRadius = 10;
+            this.guna2Button10.CustomImages.HoveredImage = global::CapaPresentacion.Properties.Resources.editar__1_;
+            this.guna2Button10.CustomImages.Image = global::CapaPresentacion.Properties.Resources.editar;
+            this.guna2Button10.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button10.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button10.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button10.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button10.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button10.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button10.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button10.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2Button10.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(109)))));
+            this.guna2Button10.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
+            this.guna2Button10.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button10.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2Button10.Location = new System.Drawing.Point(24, 122);
+            this.guna2Button10.Name = "guna2Button10";
+            this.guna2Button10.Size = new System.Drawing.Size(153, 34);
+            this.guna2Button10.TabIndex = 14;
+            this.guna2Button10.Text = "Editar";
+            // 
+            // guna2Button9
+            // 
+            this.guna2Button9.BorderRadius = 10;
+            this.guna2Button9.CustomImages.HoveredImage = global::CapaPresentacion.Properties.Resources.cerrar_sesion__1_;
+            this.guna2Button9.CustomImages.Image = global::CapaPresentacion.Properties.Resources.cerrar_sesion;
+            this.guna2Button9.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button9.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button9.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button9.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button9.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button9.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button9.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button9.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2Button9.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(109)))));
+            this.guna2Button9.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
+            this.guna2Button9.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button9.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2Button9.Location = new System.Drawing.Point(24, 173);
+            this.guna2Button9.Name = "guna2Button9";
+            this.guna2Button9.Size = new System.Drawing.Size(153, 34);
+            this.guna2Button9.TabIndex = 5;
+            this.guna2Button9.Text = "Salir";
+            // 
             // guna2CirclePictureBox3
             // 
             this.guna2CirclePictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -462,64 +521,6 @@
             this.guna2CirclePictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2CirclePictureBox3.TabIndex = 12;
             this.guna2CirclePictureBox3.TabStop = false;
-            // 
-            // guna2ControlBox3
-            // 
-            this.guna2ControlBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox3.BackgroundImage = global::CapaPresentacion.Properties.Resources.CircleWithe;
-            this.guna2ControlBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
-            this.guna2ControlBox3.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox3.IconColor = System.Drawing.Color.DimGray;
-            this.guna2ControlBox3.Location = new System.Drawing.Point(1055, 3);
-            this.guna2ControlBox3.Name = "guna2ControlBox3";
-            this.guna2ControlBox3.Size = new System.Drawing.Size(30, 30);
-            this.guna2ControlBox3.TabIndex = 6;
-            // 
-            // guna2ControlBox2
-            // 
-            this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox2.BackgroundImage = global::CapaPresentacion.Properties.Resources.CircleWithe;
-            this.guna2ControlBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox2.IconColor = System.Drawing.Color.DimGray;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(1019, 3);
-            this.guna2ControlBox2.Name = "guna2ControlBox2";
-            this.guna2ControlBox2.Size = new System.Drawing.Size(30, 30);
-            this.guna2ControlBox2.TabIndex = 5;
-            // 
-            // guna2ControlBox1
-            // 
-            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox1.BackgroundImage = global::CapaPresentacion.Properties.Resources.CircleWithe;
-            this.guna2ControlBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.DimGray;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1091, 3);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(30, 30);
-            this.guna2ControlBox1.TabIndex = 4;
-            // 
-            // btnMenu
-            // 
-            this.btnMenu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnMenu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnMenu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnMenu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnMenu.FillColor = System.Drawing.Color.Transparent;
-            this.btnMenu.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnMenu.ForeColor = System.Drawing.Color.White;
-            this.btnMenu.Image = global::CapaPresentacion.Properties.Resources.menu;
-            this.btnMenu.Location = new System.Drawing.Point(22, 12);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnMenu.Size = new System.Drawing.Size(27, 28);
-            this.btnMenu.TabIndex = 5;
-            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // Menuu
             // 
@@ -540,9 +541,9 @@
             this.panelControl.ResumeLayout(false);
             this.guna2ShadowPanel1.ResumeLayout(false);
             this.guna2ShadowPanel1.PerformLayout();
-            this.panelOpciones.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            this.panelOpciones.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).EndInit();
             this.ResumeLayout(false);
 

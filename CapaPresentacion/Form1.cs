@@ -230,17 +230,17 @@ namespace CapaPresentacion
 
         private void tbClave_Enter_1(object sender, EventArgs e)
         {
-            //tbUsuario.BorderColor = Color.FromArgb(213, 218, 223); Kevin
-            lblContraseñaL.Text = "Password";
-            tbClave.Text = ""; // Vacía el contenido del TextBox al recibir el foco.
+            tbClave.BorderColor = Color.FromArgb(213, 218, 223);
+            //lblContraseñaL.Text = "Password";
+            //tbClave.Text = ""; // Vacía el contenido del TextBox al recibir el foco.
 
         }
 
         private void tbUsuario_Enter(object sender, EventArgs e)
         {
-            //tbUsuario.BorderColor = Color.FromArgb(213, 218, 223); Kevin
-            lblCarrera.Text = "Username";
-            tbUsuario.Text = ""; // Vacía el contenido del TextBox al recibir el foco.
+            tbUsuario.BorderColor = Color.FromArgb(213, 218, 223);
+            //lblCarrera.Text = "Username";
+            //tbUsuario.Text = ""; // Vacía el contenido del TextBox al recibir el foco.
 
         }
 
