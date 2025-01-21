@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaEntidades;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,6 +25,35 @@ namespace CapaEntidades
         public ICollection<EuraceResultadoAsignatura> EuraceResultados { get; set; }
         public ICollection<MatchResultadoAprendizaje> MatchesResultadoAprendizaje { get; set; }
         public ICollection<ProgramaResultadoAprend> ProgramasResultadoAprend { get; set; }
+
+        // Constructor vacío
+        public ResultadoAprendizajeAsignatura()
+        {
+            EuraceResultados = new List<EuraceResultadoAsignatura>();
+            MatchesResultadoAprendizaje = new List<MatchResultadoAprendizaje>();
+            ProgramasResultadoAprend = new List<ProgramaResultadoAprend>();
+        }
+
+        // Constructor con parámetros
+        public ResultadoAprendizajeAsignatura(int id, string codigo, string descripcion, int asignaturaId, Asignatura asignatura, int tipoId, TipoResultadoAsignatura tipoResultado)
+        {
+            Id = id;
+            Codigo = codigo;
+            Descripcion = descripcion;
+            AsignaturaId = asignaturaId;
+            Asignatura = asignatura;
+            TipoId = tipoId;
+            TipoResultado = tipoResultado;
+            EuraceResultados = new List<EuraceResultadoAsignatura>();
+            MatchesResultadoAprendizaje = new List<MatchResultadoAprendizaje>();
+            ProgramasResultadoAprend = new List<ProgramaResultadoAprend>();
+        }
+
+        // Método ToString
+        public override string ToString()
+        {
+            return $"ResultadoAprendizajeAsignatura: [ID: {Id}, Código: {Codigo}, Descripción: {Descripcion}, Asignatura: {Asignatura?.Nombre}, Tipo: {TipoResultado?.Nombre}]";
+        }
     }
 
 }

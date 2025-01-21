@@ -14,8 +14,32 @@ namespace CapaEntidades
         public string Descripcion { get; set; }
 
         // Relación inversa con EuraceResultadoAsignatura y EuraceResultadoAprendizaje
-        public ICollection<EuraceResultadoAsignatura> EuraceResultadosAsignatura { get; set; }
-        public ICollection<EuraceResultadoAprendizaje> EuraceResultadosAprendizaje { get; set; }
+        public List<EuraceResultadoAsignatura> EuraceResultadosAsignatura { get; set; }
+        public List<EuraceResultadoAprendizaje> EuraceResultadosAprendizaje { get; set; }
+
+        // Constructor vacío
+        public ObjetivoEurace()
+        {
+            EuraceResultadosAsignatura = new List<EuraceResultadoAsignatura>();
+            EuraceResultadosAprendizaje = new List<EuraceResultadoAprendizaje>();
+        }
+
+        // Constructor con parámetros
+        public ObjetivoEurace(int id, string codigo, string nombre, string descripcion)
+        {
+            Id = id;
+            Codigo = codigo;
+            Nombre = nombre;
+            Descripcion = descripcion;
+            EuraceResultadosAsignatura = new List<EuraceResultadoAsignatura>();
+            EuraceResultadosAprendizaje = new List<EuraceResultadoAprendizaje>();
+        }
+
+        // Método ToString
+        public override string ToString()
+        {
+            return $"ObjetivoEurace: [ID: {Id}, Código: {Codigo}, Nombre: {Nombre}, Descripción: {Descripcion}]";
+        }
     }
 
 }

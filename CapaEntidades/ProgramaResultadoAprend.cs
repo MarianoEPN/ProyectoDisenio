@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaEntidades;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,6 +19,28 @@ namespace CapaEntidades
         // Clave foránea hacia ObjetivoPrograma
         public int ObjProgramaId { get; set; }
         public ObjetivoPrograma ObjetivoPrograma { get; set; }
+
+        // Constructor vacío
+        public ProgramaResultadoAprend()
+        {
+        }
+
+        // Constructor con parámetros
+        public ProgramaResultadoAprend(int id, string comentario, int resultadoAprendizajeId, ResultadoAprendizaje resultadoAprendizaje, int objProgramaId, ObjetivoPrograma objetivoPrograma)
+        {
+            Id = id;
+            Comentario = comentario;
+            ResultadoAprendizajeId = resultadoAprendizajeId;
+            ResultadoAprendizaje = resultadoAprendizaje;
+            ObjProgramaId = objProgramaId;
+            ObjetivoPrograma = objetivoPrograma;
+        }
+
+        // Método ToString
+        public override string ToString()
+        {
+            return $"ProgramaResultadoAprend: [ID: {Id}, Comentario: {Comentario}, ResultadoAprendizaje: {ResultadoAprendizaje?.Codigo}, ObjetivoPrograma: {ObjetivoPrograma?.Nombre}]";
+        }
     }
 
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaEntidades;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,27 @@ namespace CapaEntidades
 
         // Relación inversa hacia ResultadoAprendizajeAsignatura
         public ICollection<ResultadoAprendizajeAsignatura> ResultadosAprendizaje { get; set; }
+
+        // Constructor vacío
+        public TipoResultadoAsignatura()
+        {
+            ResultadosAprendizaje = new List<ResultadoAprendizajeAsignatura>();
+        }
+
+        // Constructor con parámetros
+        public TipoResultadoAsignatura(int id, string codigo, string nombre)
+        {
+            Id = id;
+            Codigo = codigo;
+            Nombre = nombre;
+            ResultadosAprendizaje = new List<ResultadoAprendizajeAsignatura>();
+        }
+
+        // Método ToString
+        public override string ToString()
+        {
+            return $"TipoResultadoAsignatura: [ID: {Id}, Código: {Codigo}, Nombre: {Nombre}]";
+        }
     }
 
 }
