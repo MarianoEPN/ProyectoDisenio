@@ -13,7 +13,6 @@ using CapaEntidadea;
 using CapaNegocio;
 using System.Web.UI.WebControls;
 
-
 namespace CapaPresentacion
 {
     public partial class Form1 : Form
