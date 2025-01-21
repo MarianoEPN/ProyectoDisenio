@@ -68,6 +68,7 @@
     <Compile Include="ResultadoAprendizajeAsignatura.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TipoResultadoAsignatura.cs" />
+    <Compile Include="Usuario.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

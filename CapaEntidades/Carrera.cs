@@ -11,9 +11,7 @@ namespace CapaEntidades
     {
         public int Id { get; set; }
         public string Nombre { get; set; }
-        public string Contraseña { get; set; }
-        public string Presum { get; set; }
-        public string Correo { get; set; }
+       
 
         // Relación con CarreraAsignatura (Muchos a Muchos con Asignatura)
         public List<Asignatura> Asignatura { get; set; }
@@ -31,15 +29,14 @@ namespace CapaEntidades
         {
             Id = id;
             Nombre = nombre;
-            Contraseña = contraseña;
-            Presum = presum;
+           
             Asignatura = new List<Asignatura>();
         }
 
         // Método ToString
         public override string ToString()
         {
-            return $"Carrera: {Nombre} (ID: {Id}, Presum: {Presum})";
+            return $"Carrera: {Nombre} (ID: {Id})";
         }
     }
 }
