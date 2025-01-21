@@ -41,7 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CarreraAsignaturaDAL.cs" />
     <Compile Include="ConexionBD.cs" />
     <Compile Include="EuraceResultadoAprendizajeDAL.cs" />
     <Compile Include="EuraceResultadoAsignaturaDAL.cs" />
