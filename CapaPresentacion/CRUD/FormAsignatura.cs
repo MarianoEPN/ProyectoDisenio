@@ -37,9 +37,9 @@ namespace CapaPresentacion
             InitializeComponent();
             btnCrear.Text = "Guardarr";
             lbAdvertencia.Visible = false;
-            tbCodigo.Text = asignatura.Nombre;
-            tbCodigo.Text = asignatura.Codigo;
-            tbNivel.Text = Convert.ToString(asignatura.Nivel);
+            //tbCodigo.Text = asignatura.Nombre;
+            //tbCodigo.Text = asignatura.Codigo;
+            //tbNivel.Text = Convert.ToString(asignatura.Nivel);
             AsignaturaEditar = asignatura;
         }
 
@@ -83,9 +83,9 @@ namespace CapaPresentacion
                 if (camposCompletos)
                 {
                     Asignatura asignatura = new Asignatura();
-                    asignatura.Codigo = tbCodigo.Text;
-                    asignatura.Nombre = tbNombre.Text;
-                    asignatura.Nivel = Convert.ToInt32(tbNivel.Text);
+                    //asignatura.Codigo = tbCodigo.Text;
+                    //asignatura.Nombre = tbNombre.Text;
+                    //asignatura.Nivel = Convert.ToInt32(tbNivel.Text);
 
                     // Metodo de la capa de negocio para guardar la asignatura creada
                     
@@ -118,9 +118,9 @@ namespace CapaPresentacion
                 if (camposCompletos)
                 {
                     Asignatura asignatura = AsignaturaEditar;        
-                    asignatura.Codigo = tbCodigo.Text;
-                    asignatura.Nombre = tbNombre.Text;
-                    asignatura.Nivel = Convert.ToInt32(tbNivel.Text);
+                    //asignatura.Codigo = tbCodigo.Text;
+                    //asignatura.Nombre = tbNombre.Text;
+                    //asignatura.Nivel = Convert.ToInt32(tbNivel.Text);
 
                     // Metodo de la capa de negocio para guardar la asignatura editada
 

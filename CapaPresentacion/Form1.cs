@@ -52,8 +52,8 @@ namespace CapaPresentacion
             listaCarreras = new List<Carrera>();
             Carrera carrera = new Carrera();
             carrera.Id = 1;
-            carrera.Nombre = "Tecnologias de la informacion";
-            carrera.Contraseña = "FIEE-TI2024B";
+            //carrera.Nombre = "Tecnologias de la informacion";
+            //carrera.Contraseña = "FIEE-TI2024B";
             listaCarreras.Add(carrera);
 
         }
@@ -90,7 +90,7 @@ namespace CapaPresentacion
 
             foreach (Carrera carrera in listaCarreras)
             {
-                if (tbUsuario.Text.Equals(carrera.Nombre) && tbClave.Text.Equals(carrera.Contraseña))
+               // if (tbUsuario.Text.Equals(carrera.Nombre) && tbClave.Text.Equals(carrera.Contraseña))
                 {
                     // Mensaje para dar a entender que funciono
                     MessageBox.Show("Acceso condedido");
