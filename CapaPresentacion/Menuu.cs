@@ -99,5 +99,10 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void btnAsigatura_Click(object sender, EventArgs e)
+        {
+            container(new Asignatura());
+        }
     }
 }
