@@ -14,7 +14,7 @@ namespace CapaEntidades
         public string Descripcion { get; set; }
 
         // Relación inversa con ProgramaResultadoAprend y EuraceResultadoAprendizaje
-        public List<ProgramaResultadoAprend> ProgramasResultadoAprend { get; set; }
+        public List<ProgramaResultadoAprendizaje> ProgramasResultadoAprend { get; set; }
         public List<EuraceResultadoAprendizaje> EuraceResultadosAprendizaje { get; set; }
         public List<MatchResultadoAprendizaje> MatchResultadosAprendizaje { get; set; }
         public Carrera Carrera { get; set; }
@@ -23,7 +23,7 @@ namespace CapaEntidades
         // Constructor vacío
         public ResultadoAprendizaje()
         {
-            ProgramasResultadoAprend = new List<ProgramaResultadoAprend>();
+            ProgramasResultadoAprend = new List<ProgramaResultadoAprendizaje>();
             EuraceResultadosAprendizaje = new List<EuraceResultadoAprendizaje>();
             MatchResultadosAprendizaje = new List<MatchResultadoAprendizaje>();
         }
@@ -34,7 +34,7 @@ namespace CapaEntidades
            
             Codigo = codigo;
             Descripcion = descripcion;
-            ProgramasResultadoAprend = new List<ProgramaResultadoAprend>();
+            ProgramasResultadoAprend = new List<ProgramaResultadoAprendizaje>();
             EuraceResultadosAprendizaje = new List<EuraceResultadoAprendizaje>();
             MatchResultadosAprendizaje = new List<MatchResultadoAprendizaje>();
             Carrera = carrera;

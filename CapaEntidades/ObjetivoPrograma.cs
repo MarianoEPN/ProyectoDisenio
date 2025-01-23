@@ -15,14 +15,14 @@ namespace CapaEntidades
         public string Debilidades { get; set; }
 
         // Relación inversa con ProgramaResultadoAprend
-        public List<ProgramaResultadoAprend> ProgramasResultadoAprend { get; set; }
+        public List<ProgramaResultadoAprendizaje> ProgramasResultadoAprend { get; set; }
 
         public Carrera Carrera { get; set; }
 
         // Constructor vacío
         public ObjetivoPrograma()
         {
-            ProgramasResultadoAprend = new List<ProgramaResultadoAprend>();
+            ProgramasResultadoAprend = new List<ProgramaResultadoAprendizaje>();
         }
 
         // Constructor con parámetros
@@ -32,7 +32,7 @@ namespace CapaEntidades
             Nombre = nombre;
             Fortalezas = fortalezas;
             Debilidades = debilidades;
-            ProgramasResultadoAprend = new List<ProgramaResultadoAprend>();
+            ProgramasResultadoAprend = new List<ProgramaResultadoAprendizaje>();
             Carrera = carrera;
         }
 

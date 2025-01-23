@@ -63,7 +63,7 @@
     <Compile Include="MatchResultadoAprendizaje.cs" />
     <Compile Include="ObjetivoEurace.cs" />
     <Compile Include="ObjetivoPrograma.cs" />
-    <Compile Include="ProgramaResultadoAprend.cs" />
+    <Compile Include="ProgramaResultadoAprendizaje.cs" />
     <Compile Include="ResultadoAprendizaje.cs" />
     <Compile Include="ResultadoAprendizajeAsignatura.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CapaEntidades
 {
-    public class ProgramaResultadoAprend
+    public class ProgramaResultadoAprendizaje
     {
         public int Id { get; set; }
         public string Comentario { get; set; }
@@ -21,12 +21,12 @@ namespace CapaEntidades
         public ObjetivoPrograma ObjetivoPrograma { get; set; }
 
         // Constructor vacío
-        public ProgramaResultadoAprend()
+        public ProgramaResultadoAprendizaje()
         {
         }
 
         // Constructor con parámetros
-        public ProgramaResultadoAprend(string comentario, int resultadoAprendizajeId, ResultadoAprendizaje resultadoAprendizaje, int objProgramaId, ObjetivoPrograma objetivoPrograma)
+        public ProgramaResultadoAprendizaje(string comentario, int resultadoAprendizajeId, ResultadoAprendizaje resultadoAprendizaje, int objProgramaId, ObjetivoPrograma objetivoPrograma)
         {
      
             Comentario = comentario;

@@ -24,14 +24,14 @@ namespace CapaEntidades
         // Relaciones con tablas relacionadas (Uno a Muchos)
         public ICollection<EuraceResultadoAsignatura> EuraceResultados { get; set; }
         public ICollection<MatchResultadoAprendizaje> MatchesResultadoAprendizaje { get; set; }
-        public ICollection<ProgramaResultadoAprend> ProgramasResultadoAprend { get; set; }
+        public ICollection<ProgramaResultadoAprendizaje> ProgramasResultadoAprend { get; set; }
 
         // Constructor vacío
         public ResultadoAprendizajeAsignatura()
         {
             EuraceResultados = new List<EuraceResultadoAsignatura>();
             MatchesResultadoAprendizaje = new List<MatchResultadoAprendizaje>();
-            ProgramasResultadoAprend = new List<ProgramaResultadoAprend>();
+            ProgramasResultadoAprend = new List<ProgramaResultadoAprendizaje>();
         }
 
         // Constructor con parámetros
@@ -45,7 +45,7 @@ namespace CapaEntidades
             TipoResultado = tipoResultado;
             EuraceResultados = new List<EuraceResultadoAsignatura>();
             MatchesResultadoAprendizaje = new List<MatchResultadoAprendizaje>();
-            ProgramasResultadoAprend = new List<ProgramaResultadoAprend>();
+            ProgramasResultadoAprend = new List<ProgramaResultadoAprendizaje>();
         }
 
         // Método ToString
