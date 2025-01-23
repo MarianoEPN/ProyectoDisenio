@@ -76,5 +76,20 @@ namespace CapaPresentacion
             }
 
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (dtgAsignatura.CurrentRow != null)
+            {
+                DataGridViewRow row = dtgAsignatura.CurrentRow;
+                // Obtener el objeto completo, que corresponde a la fila seleccionada
+                Asignatura asignaturaSeleccionada = (Asignatura)row.DataBoundItem;
+                FormAsignaturaCrud crud = new FormAsignaturaCrud(asignaturaSeleccionada);
+                this.Enabled = false;
+                crud.ShowDialog();
+                this.Enabled = true;
+                ActualizarTabla();
+            }
+        }
     }
 }
