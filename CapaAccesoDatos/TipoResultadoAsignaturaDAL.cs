@@ -28,7 +28,8 @@ namespace CapaAccesoDatos
                 TipoResultadoAsignatura tipoResultadoAsignatura = new TipoResultadoAsignatura();
                 tipoResultadoAsignatura.Id = leer.GetInt32(0);
                 tipoResultadoAsignatura.Codigo = leer.GetString(1);
-                tipoResultadoAsignatura.Nombre = leer.GetString(2);
+                tipoResultadoAsignatura.Nombre = (TipoNombre)Enum.Parse(typeof(TipoNombre), leer.GetString(2));
+
                 lista.Add(tipoResultadoAsignatura);
 
             }

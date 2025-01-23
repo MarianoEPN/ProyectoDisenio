@@ -26,9 +26,7 @@ namespace CapaAccesoDatos
             while (leer.Read())
             {
                 EuraceResultadoAprendizaje euraceResultadoAprendizaje = new EuraceResultadoAprendizaje();
-                euraceResultadoAprendizaje.Id = leer.GetInt32(0);
-                euraceResultadoAprendizaje.ObjEuraceId = leer.GetInt32(1);
-                euraceResultadoAprendizaje.ResultadoAprendizajeId = leer.GetInt32(2);
+                euraceResultadoAprendizaje.Id = leer.GetInt32(0);          
                 euraceResultadoAprendizaje.Comentario = leer.GetString(3);
 
                 lista.Add(euraceResultadoAprendizaje);
@@ -45,9 +43,7 @@ namespace CapaAccesoDatos
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "InsertarEuraceResultadoAprendizaje";
             comando.CommandType = System.Data.CommandType.StoredProcedure;
-            comando.Parameters.Clear();
-            comando.Parameters.AddWithValue("@obj_eurace_id", euraceResultadoAprendizaje.ObjEuraceId);
-            comando.Parameters.AddWithValue("@resultado_aprendizaje_id", euraceResultadoAprendizaje.ResultadoAprendizajeId);
+            comando.Parameters.Clear();            
             comando.Parameters.AddWithValue("@comentario", euraceResultadoAprendizaje.Comentario);
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
@@ -60,9 +56,7 @@ namespace CapaAccesoDatos
             comando.CommandText = "ActualizarEuraceResultadoAprendizaje";
             comando.CommandType = System.Data.CommandType.StoredProcedure;
             comando.Parameters.Clear();
-            comando.Parameters.AddWithValue("@id", euraceResultadoAprendizaje.Id);
-            comando.Parameters.AddWithValue("@obj_eurace_id", euraceResultadoAprendizaje.ObjEuraceId);
-            comando.Parameters.AddWithValue("@resultado_aprendizaje_id", euraceResultadoAprendizaje.ResultadoAprendizajeId);
+            comando.Parameters.AddWithValue("@id", euraceResultadoAprendizaje.Id);            
             comando.Parameters.AddWithValue("@comentario", euraceResultadoAprendizaje.Comentario);
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();

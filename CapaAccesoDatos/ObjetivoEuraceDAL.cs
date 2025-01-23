@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace CapaAccesoDatos
 {
-    internal class ObjetivoEuraceDAL
+    public class ObjetivoEuraceDAL
     {
         private ConexionBD conexion = new ConexionBD();
         SqlDataReader leer;
         SqlCommand comando = new SqlCommand();
 
-        public List<ObjetivoEurace> MostrarObetivoEurace()
+        public List<ObjetivoEurace> MostrarObjetivoEurace()
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "MostrarObetivoEurace";
@@ -40,7 +40,7 @@ namespace CapaAccesoDatos
             return lista;
         }
 
-        public void IsertarObetivoEurace(ObjetivoEurace objetivo)
+        public void InsertarObjetivoEurace(ObjetivoEurace objetivo)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "InsertarObjetivoEurace";

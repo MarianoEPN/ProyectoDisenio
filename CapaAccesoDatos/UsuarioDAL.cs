@@ -27,8 +27,7 @@ namespace CapaAccesoDatos
             while (leer.Read())
             {
                 Usuario usuario = new Usuario();
-                usuario.id = leer.GetInt32(0);
-                usuario.CarreraId = leer.GetInt32(1);
+                usuario.id = leer.GetInt32(0);                
                 usuario.Username = leer.GetString(2);
                 usuario.Correo = leer.GetString(3);
                 usuario.Clave = leer.GetString(4);
@@ -46,8 +45,7 @@ namespace CapaAccesoDatos
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "InsertarUsuario";
-            comando.CommandType = System.Data.CommandType.StoredProcedure;
-            comando.Parameters.AddWithValue("@carrera_i", usuario.CarreraId);
+            comando.CommandType = System.Data.CommandType.StoredProcedure;            
             comando.Parameters.AddWithValue("@username", usuario.Username);
             comando.Parameters.AddWithValue("@correo", usuario.Correo);
             comando.Parameters.AddWithValue("@clave", usuario.Clave);
@@ -62,8 +60,7 @@ namespace CapaAccesoDatos
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "ActualizarUsuario";
             comando.CommandType = System.Data.CommandType.StoredProcedure;
-            comando.Parameters.AddWithValue("@id", usuario.id);
-            comando.Parameters.AddWithValue("@carrera_i", usuario.CarreraId);
+            comando.Parameters.AddWithValue("@id", usuario.id);            
             comando.Parameters.AddWithValue("@username", usuario.Username);
             comando.Parameters.AddWithValue("@correo", usuario.Correo);
             comando.Parameters.AddWithValue("@clave", usuario.Clave);

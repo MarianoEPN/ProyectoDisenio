@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CapaAccesoDatos
 {
-    internal class AsignaturaDAL
+    public class AsignaturaDAL
     {
         private ConexionBD conexion = new ConexionBD();
         SqlDataReader leer;
@@ -40,7 +40,7 @@ namespace CapaAccesoDatos
             return lista;
         }
 
-        public void IsertarAsignatura(Asignatura asignatura)
+        public void InsertarAsignatura(Asignatura asignatura)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "InsertarAsignaturas";

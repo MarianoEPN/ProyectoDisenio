@@ -27,9 +27,7 @@ namespace CapaAccesoDatos
             while (leer.Read())
             {
                 ResultadoAprendizajeAsignatura item = new ResultadoAprendizajeAsignatura();
-                item.Id = leer.GetInt32(0);
-                item.AsignaturaId = leer.GetInt32(1);
-                item.TipoId = leer.GetInt32(2);
+                item.Id = leer.GetInt32(0);                
                 item.Codigo = leer.GetString(3);
                 item.Descripcion = leer.GetString(4);
                 lista.Add(item);
@@ -44,9 +42,7 @@ namespace CapaAccesoDatos
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "InsertarResultadoAprendizajeAsignatura";
-            comando.CommandType = System.Data.CommandType.StoredProcedure;
-            comando.Parameters.AddWithValue("@asignatura_id", item.AsignaturaId);
-            comando.Parameters.AddWithValue("@tipo_id", item.TipoId);
+            comando.CommandType = System.Data.CommandType.StoredProcedure;            
             comando.Parameters.AddWithValue("@codigo", item.Codigo);
             comando.Parameters.AddWithValue("@descripcion", item.Descripcion);
             comando.ExecuteNonQuery();
@@ -59,9 +55,7 @@ namespace CapaAccesoDatos
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "ActualizarResultadoAprendizajeAsignatura";
             comando.CommandType = System.Data.CommandType.StoredProcedure;
-            comando.Parameters.AddWithValue("@id", item.Id);
-            comando.Parameters.AddWithValue("@asignatura_id", item.AsignaturaId);
-            comando.Parameters.AddWithValue("@tipo_id", item.TipoId);
+            comando.Parameters.AddWithValue("@id", item.Id);            
             comando.Parameters.AddWithValue("@codigo", item.Codigo);
             comando.Parameters.AddWithValue("@descripcion", item.Descripcion);
             comando.ExecuteNonQuery();

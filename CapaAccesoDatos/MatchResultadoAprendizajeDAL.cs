@@ -28,8 +28,8 @@ namespace CapaAccesoDatos
             {
                 MatchResultadoAprendizaje match = new MatchResultadoAprendizaje();
                 match.Id = leer.GetInt32(0);
-                match.PerfilEgresoId = leer.GetInt32(1);
-                match.SubResultadoAprendizajeId = leer.GetInt32(2);
+                
+                
                 match.NivelAporte = leer.GetString(3);
                 lista.Add(match);
             }
@@ -40,13 +40,11 @@ namespace CapaAccesoDatos
             return lista;
         }
 
-        public void IsertarMatchResultadoAprendizaje(MatchResultadoAprendizaje match)
+        public void InsertarMatchResultadoAprendizaje(MatchResultadoAprendizaje match)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "InsertarMatchResultadoAprendizaje";
-            comando.CommandType = System.Data.CommandType.StoredProcedure;
-            comando.Parameters.AddWithValue("@perfil_egreso_id", match.PerfilEgresoId);
-            comando.Parameters.AddWithValue("@sub_resultado_aprendizage_asignatura_id", match.SubResultadoAprendizajeId);
+            comando.CommandType = System.Data.CommandType.StoredProcedure;            
             comando.Parameters.AddWithValue("@nivelaporte", match.NivelAporte);
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
@@ -58,9 +56,7 @@ namespace CapaAccesoDatos
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "ActualizarMatchResultadoAprendizaje";
             comando.CommandType = System.Data.CommandType.StoredProcedure;
-            comando.Parameters.AddWithValue("@id", match.Id);
-            comando.Parameters.AddWithValue("@perfil_egreso_id", match.PerfilEgresoId);
-            comando.Parameters.AddWithValue("@sub_resultado_aprendizage_asignatura_id", match.SubResultadoAprendizajeId);
+            comando.Parameters.AddWithValue("@id", match.Id);            
             comando.Parameters.AddWithValue("@nivelaporte", match.NivelAporte);
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
