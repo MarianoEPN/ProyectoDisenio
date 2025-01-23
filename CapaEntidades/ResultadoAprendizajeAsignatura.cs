@@ -22,14 +22,14 @@ namespace CapaEntidades
         public TipoResultadoAsignatura TipoResultado { get; set; }
 
         // Relaciones con tablas relacionadas (Uno a Muchos)
-        public ICollection<EuraceResultadoAsignatura> EuraceResultados { get; set; }
+       
         public ICollection<MatchResultadoAprendizaje> MatchesResultadoAprendizaje { get; set; }
         public ICollection<ProgramaResultadoAprendizaje> ProgramasResultadoAprend { get; set; }
 
         // Constructor vacío
         public ResultadoAprendizajeAsignatura()
         {
-            EuraceResultados = new List<EuraceResultadoAsignatura>();
+           
             MatchesResultadoAprendizaje = new List<MatchResultadoAprendizaje>();
             ProgramasResultadoAprend = new List<ProgramaResultadoAprendizaje>();
         }
@@ -43,7 +43,7 @@ namespace CapaEntidades
             Asignatura = asignatura;
             TipoId = tipoId;
             TipoResultado = tipoResultado;
-            EuraceResultados = new List<EuraceResultadoAsignatura>();
+            
             MatchesResultadoAprendizaje = new List<MatchResultadoAprendizaje>();
             ProgramasResultadoAprend = new List<ProgramaResultadoAprendizaje>();
         }
