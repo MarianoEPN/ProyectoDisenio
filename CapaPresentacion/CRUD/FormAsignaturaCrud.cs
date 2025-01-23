@@ -22,29 +22,23 @@ namespace CapaPresentacion
         {
             InitializeComponent();
             btnCrear.Text = "Crear";
+            lblAccionAsignatura.Text = "Crear asignatura";
             lbAdvertencia.Visible = false;
 
         }
-        public FormAsignaturaCrud(Carrera carrera)
+        public FormAsignaturaCrud(Asignatura asignatura)
         {
             InitializeComponent();
-            btnCrear.Text = "Crear";
+            btnCrear.Text = "Guardar";
+            lblAccionAsignatura.Text = "Editar asignatura";
             lbAdvertencia.Visible = false;
+            tbNombre.Text = asignatura.Nombre;
+            tbCodigo.Text = asignatura.Codigo;
+            tbNivel.Text = Convert.ToString(asignatura.Nivel);
+            asignatura1 = asignatura;
 
         }
 
-        public FormAsignaturaCrud(Carrera carrera, FormAsignatura asignatura)
-        {
-            InitializeComponent();
-            btnCrear.Text = "Guardarr";
-            lbAdvertencia.Visible = false;
-            //tbCodigo.Text = asignatura.Nombre;
-            //tbCodigo.Text = asignatura.Codigo;
-            //tbNivel.Text = Convert.ToString(asignatura.Nivel);
-            AsignaturaEditar = asignatura;
-        }
-
-        private FormAsignatura AsignaturaEditar { get; set; }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
@@ -121,10 +115,10 @@ namespace CapaPresentacion
                 }
                 if (camposCompletos)
                 {
-                    FormAsignatura asignatura = AsignaturaEditar;        
-                    //asignatura.Codigo = tbCodigo.Text;
-                    //asignatura.Nombre = tbNombre.Text;
-                    //asignatura.Nivel = Convert.ToInt32(tbNivel.Text);
+                    Asignatura asignatura = asignatura1;        
+                    asignatura.Codigo = tbCodigo.Text;
+                    asignatura.Nombre = tbNombre.Text;
+                    asignatura.Nivel = Convert.ToInt32(tbNivel.Text);
 
                     // Metodo de la capa de negocio para guardar la asignatura editada
 
@@ -207,6 +201,31 @@ namespace CapaPresentacion
             if (e.Button == MouseButtons.Left)
             {
                 isDragging = false;
+            }
+        }
+
+        private void tbCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir solo letras y números
+            if (!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != (char)8) // (char)8 es el código de la tecla 'Backspace'
+            {
+                e.Handled = true; // Cancela la tecla no permitida
+            }
+            else
+            {
+                string text = tbCodigo.Text;
+                int letterCount = text.Count(char.IsLetter);
+                int numberCount = text.Count(char.IsDigit);
+
+                // Permitir hasta 4 letras y 3 números
+                if (char.IsLetter(e.KeyChar) && letterCount >= 4)
+                {
+                    e.Handled = true; // No permitir más de 4 letras
+                }
+                else if (char.IsDigit(e.KeyChar) && numberCount >= 3)
+                {
+                    e.Handled = true; // No permitir más de 3 números
+                }
             }
         }
     }
