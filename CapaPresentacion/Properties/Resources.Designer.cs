@@ -93,6 +93,16 @@ namespace CapaPresentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bandera {
+            get {
+                object obj = ResourceManager.GetObject("bandera", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Bara {
             get {
                 object obj = ResourceManager.GetObject("Bara", resourceCulture);
@@ -126,6 +136,16 @@ namespace CapaPresentacion.Properties {
         internal static System.Drawing.Bitmap BB {
             get {
                 object obj = ResourceManager.GetObject("BB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap biblioteca {
+            get {
+                object obj = ResourceManager.GetObject("biblioteca", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

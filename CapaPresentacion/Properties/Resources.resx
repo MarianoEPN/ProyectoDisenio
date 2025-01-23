@@ -124,6 +124,9 @@
   <data name="baja" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\baja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bandera" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bandera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Bara" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Bara.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -135,6 +138,9 @@
   </data>
   <data name="BB" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="biblioteca" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\biblioteca.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bookmark_isolated_icon_which_can_easily_modify_or_edit_vector_removebg_preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bookmark-isolated-icon-which-can-easily-modify-or-edit-vector-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

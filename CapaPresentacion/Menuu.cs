@@ -70,7 +70,6 @@ namespace CapaPresentacion
         private void btnHome_Click(object sender, EventArgs e)
         {
             container(new Bienvenido());
-            lblTitulo.Text = "Home";
         }
 
         private void panelContainer_Paint(object sender, PaintEventArgs e)

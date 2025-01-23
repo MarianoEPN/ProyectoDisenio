@@ -346,5 +346,11 @@
   <ItemGroup>
     <None Include="Resources\lupa.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\biblioteca.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bandera.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
