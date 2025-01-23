@@ -10,8 +10,7 @@ namespace CapaEntidades
     public class MatchResultadoAprendizaje
     {
         public int Id { get; set; }
-        public int PerfilEgresoId { get; set; }
-        public int SubResultadoAprendizajeId { get; set; }
+   
         public string NivelAporte { get; set; }
 
        
@@ -22,11 +21,9 @@ namespace CapaEntidades
         }
 
         // Constructor con parámetros
-        public MatchResultadoAprendizaje( int perfilEgresoId, int subResultadoAprendizajeId, string nivelAporte)
+        public MatchResultadoAprendizaje( string nivelAporte)
         {
            
-            PerfilEgresoId = perfilEgresoId;
-            SubResultadoAprendizajeId = subResultadoAprendizajeId;
             NivelAporte = nivelAporte;
             
         }
@@ -34,7 +31,7 @@ namespace CapaEntidades
         // Método ToString
         public override string ToString()
         {
-            return $"MatchResultadoAprendizaje: [ID: {Id}, PerfilEgresoID: {PerfilEgresoId}, SubResultadoID: {SubResultadoAprendizajeId}, NivelAporte: {NivelAporte}]";
+            return $"MatchResultadoAprendizaje: [ID: {Id}, NivelAporte: {NivelAporte}]";
         }
     }
 
