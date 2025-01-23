@@ -18,11 +18,6 @@ namespace CapaPresentacion
 {
     public partial class Form1 : Form
     {
-        // Variables para almacenar la posición relativa del ratón en el panel
-        private bool isDragging = false;
-        private Point initialMousePosition;
-        
-
         // Codigo para animar ventana Registro
         private Point targetLocationUp = new Point(187, 80);  // Posición objetivo al subir
         private Point targetLocationDown = new Point(187, 650); // Posición objetivo al bajar

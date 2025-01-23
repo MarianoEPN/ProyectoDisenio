@@ -112,16 +112,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormAsignatura.cs">
+    <Compile Include="MenuOpciones\FormAsignatura.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAsignatura.Designer.cs">
+    <Compile Include="MenuOpciones\FormAsignatura.Designer.cs">
       <DependentUpon>FormAsignatura.cs</DependentUpon>
     </Compile>
-    <Compile Include="Bienvenido.cs">
+    <Compile Include="MenuOpciones\Bienvenido.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Bienvenido.Designer.cs">
+    <Compile Include="MenuOpciones\Bienvenido.Designer.cs">
       <DependentUpon>Bienvenido.cs</DependentUpon>
     </Compile>
     <Compile Include="CRUD\FormObjetivosEurace.cs">
@@ -142,6 +142,18 @@
     <Compile Include="CRUD\FormAsignaturaCrud.Designer.cs">
       <DependentUpon>FormAsignaturaCrud.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenuOpciones\FormObjetivosAprendizajeAsignatura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuOpciones\FormObjetivosAprendizajeAsignatura.Designer.cs">
+      <DependentUpon>FormObjetivosAprendizajeAsignatura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuOpciones\FormResultadosAprendizaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuOpciones\FormResultadosAprendizaje.Designer.cs">
+      <DependentUpon>FormResultadosAprendizaje.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menuu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,10 +168,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormAsignatura.resx">
+    <EmbeddedResource Include="MenuOpciones\FormAsignatura.resx">
       <DependentUpon>FormAsignatura.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Bienvenido.resx">
+    <EmbeddedResource Include="MenuOpciones\Bienvenido.resx">
       <DependentUpon>Bienvenido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD\FormObjetivosEurace.resx">
@@ -170,6 +182,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD\FormAsignaturaCrud.resx">
       <DependentUpon>FormAsignaturaCrud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuOpciones\FormObjetivosAprendizajeAsignatura.resx">
+      <DependentUpon>FormObjetivosAprendizajeAsignatura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuOpciones\FormResultadosAprendizaje.resx">
+      <DependentUpon>FormResultadosAprendizaje.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menuu.resx">
       <DependentUpon>Menuu.cs</DependentUpon>
@@ -355,5 +373,6 @@
   <ItemGroup>
     <None Include="Resources\bandera.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
