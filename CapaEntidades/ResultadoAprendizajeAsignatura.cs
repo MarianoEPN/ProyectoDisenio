@@ -35,9 +35,8 @@ namespace CapaEntidades
         }
 
         // Constructor con parámetros
-        public ResultadoAprendizajeAsignatura(int id, string codigo, string descripcion, int asignaturaId, Asignatura asignatura, int tipoId, TipoResultadoAsignatura tipoResultado)
+        public ResultadoAprendizajeAsignatura( string codigo, string descripcion, int asignaturaId, Asignatura asignatura, int tipoId, TipoResultadoAsignatura tipoResultado)
         {
-            Id = id;
             Codigo = codigo;
             Descripcion = descripcion;
             AsignaturaId = asignaturaId;

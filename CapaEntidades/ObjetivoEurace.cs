@@ -25,9 +25,9 @@ namespace CapaEntidades
         }
 
         // Constructor con parámetros
-        public ObjetivoEurace(int id, string codigo, string nombre, string descripcion)
+        public ObjetivoEurace( string codigo, string nombre, string descripcion)
         {
-            Id = id;
+           
             Codigo = codigo;
             Nombre = nombre;
             Descripcion = descripcion;

@@ -1,6 +1,7 @@
 ﻿using CapaEntidades;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,7 +13,8 @@ namespace CapaEntidades
         public int Id { get; set; }
         public string Nombre { get; set; }
        
-
+        public string Correo { get; set; }
+        public string Pensum { get; set; }
         // Relación con CarreraAsignatura (Muchos a Muchos con Asignatura)
         public List<Asignatura> Asignaturas { get; set; }
         public List<ResultadoAprendizaje> ResultadoAprendizaje { get; set; }
@@ -24,13 +26,17 @@ namespace CapaEntidades
             Asignaturas = new List<Asignatura>();
         }
 
+
         // Constructor con parámetros
-        public Carrera(int id, string nombre, string contraseña, string presum)
+        public Carrera( string nombre, string correo, string pensum)
         {
-            Id = id;
+            
             Nombre = nombre;
-           
-            Asignaturas  = new List<Asignatura>();
+            Correo = correo;
+            Pensum = pensum;
+            Asignaturas = new List<Asignatura>();
+            ResultadoAprendizaje = new List<ResultadoAprendizaje>();
+            ObjetivoPrograma = new List<ObjetivoPrograma>();
         }
 
         // Método ToString

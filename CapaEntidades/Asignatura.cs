@@ -12,13 +12,14 @@ namespace CapaEntidades
         public string Codigo { get; set; }
         public string Nombre { get; set; }
         public int Nivel { get; set; }
+        public int CarreraId { get; set; }
+        public Carrera carrera { get; set; }
 
         // Relación inversa hacia ResultadoAprendizajeAsignatura
         public List<ResultadoAprendizajeAsignatura> ResultadosAprendizaje { get; set; }
 
         // Relación con CarreraAsignatura (Muchos a Muchos con Carrera)
-      public int CarreraId { get; set; }
-        public Carrera carrera { get; set; }
+      
 
         public Asignatura()
         {
@@ -27,9 +28,9 @@ namespace CapaEntidades
         }
 
         // Constructor con parámetros
-        public Asignatura(int id, string codigo, string nombre, int nivel)
+        public Asignatura( string codigo, string nombre, int nivel)
         {
-            Id = id;
+           
             Codigo = codigo;
             Nombre = nombre;
             Nivel = nivel;

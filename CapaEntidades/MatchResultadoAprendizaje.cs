@@ -27,9 +27,9 @@ namespace CapaEntidades
         }
 
         // Constructor con parámetros
-        public MatchResultadoAprendizaje(int id, int perfilEgresoId, int subResultadoAprendizajeId, string nivelAporte, int resultadoAprendizajeAsignaturaId, ResultadoAprendizajeAsignatura resultadoAprendizajeAsignatura, int resultadoAprendizajeId, ResultadoAprendizaje resultadoAprendizaje)
+        public MatchResultadoAprendizaje( int perfilEgresoId, int subResultadoAprendizajeId, string nivelAporte, int resultadoAprendizajeAsignaturaId, ResultadoAprendizajeAsignatura resultadoAprendizajeAsignatura, int resultadoAprendizajeId, ResultadoAprendizaje resultadoAprendizaje)
         {
-            Id = id;
+           
             PerfilEgresoId = perfilEgresoId;
             SubResultadoAprendizajeId = subResultadoAprendizajeId;
             NivelAporte = nivelAporte;

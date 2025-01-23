@@ -26,9 +26,9 @@ namespace CapaEntidades
         }
 
         // Constructor con parámetros
-        public ObjetivoPrograma(int id, string nombre, string fortalezas, string debilidades, Carrera carrera)
+        public ObjetivoPrograma( string nombre, string fortalezas, string debilidades, Carrera carrera)
         {
-            Id = id;
+        
             Nombre = nombre;
             Fortalezas = fortalezas;
             Debilidades = debilidades;
