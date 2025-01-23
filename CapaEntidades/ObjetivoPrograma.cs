@@ -33,7 +33,7 @@ namespace CapaEntidades
             Fortalezas = fortalezas;
             Debilidades = debilidades;
             ProgramasResultadoAprend = new List<ProgramaResultadoAprendizaje>();
-            Carrera = carrera;
+           
         }
 
         // Método ToString

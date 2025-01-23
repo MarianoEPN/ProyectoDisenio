@@ -233,16 +233,17 @@
             this.tbCodigo.Font = new System.Drawing.Font("Californian FB", 9F);
             this.tbCodigo.ForeColor = System.Drawing.Color.Black;
             this.tbCodigo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbCodigo.Location = new System.Drawing.Point(108, 87);
+            this.tbCodigo.Location = new System.Drawing.Point(108, 86);
             this.tbCodigo.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.tbCodigo.Name = "tbCodigo";
             this.tbCodigo.PasswordChar = '\0';
-            this.tbCodigo.PlaceholderText = "FIEED100";
+            this.tbCodigo.PlaceholderText = "FIEE100";
             this.tbCodigo.SelectedText = "";
             this.tbCodigo.Size = new System.Drawing.Size(204, 27);
             this.tbCodigo.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.tbCodigo.TabIndex = 21;
             this.tbCodigo.Enter += new System.EventHandler(this.tbCodigo_Enter);
+            this.tbCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCodigo_KeyPress);
             // 
             // tbNombre
             // 
@@ -307,7 +308,7 @@
             this.lbAdvertencia.TabIndex = 24;
             this.lbAdvertencia.Text = "Debe completar todos los campos";
             // 
-            // FormAsignatura
+            // FormAsignaturaCrud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -325,7 +326,7 @@
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "FormAsignatura";
+            this.Name = "FormAsignaturaCrud";
             this.Text = "FormAsignatura";
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
