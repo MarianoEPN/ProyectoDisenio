@@ -47,11 +47,11 @@ namespace CapaPresentacion
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.label1 = new System.Windows.Forms.Label();
             this.lblCarreraR = new System.Windows.Forms.Label();
-            this.lblPEA = new System.Windows.Forms.Label();
+            this.lblPensum = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblContraseñaR = new System.Windows.Forms.Label();
             this.lblContraseñaR2 = new System.Windows.Forms.Label();
-            this.tbPEA = new Guna.UI2.WinForms.Guna2TextBox();
+            this.tbPensum = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbCorreo = new Guna.UI2.WinForms.Guna2TextBox();
             this.pbVista3 = new System.Windows.Forms.PictureBox();
             this.tbClaveConfirmReg = new Guna.UI2.WinForms.Guna2TextBox();
@@ -280,11 +280,11 @@ namespace CapaPresentacion
             this.panelRegistro.Controls.Add(this.guna2CircleButton1);
             this.panelRegistro.Controls.Add(this.label1);
             this.panelRegistro.Controls.Add(this.lblCarreraR);
-            this.panelRegistro.Controls.Add(this.lblPEA);
+            this.panelRegistro.Controls.Add(this.lblPensum);
             this.panelRegistro.Controls.Add(this.lblEmail);
             this.panelRegistro.Controls.Add(this.lblContraseñaR);
             this.panelRegistro.Controls.Add(this.lblContraseñaR2);
-            this.panelRegistro.Controls.Add(this.tbPEA);
+            this.panelRegistro.Controls.Add(this.tbPensum);
             this.panelRegistro.Controls.Add(this.tbCorreo);
             this.panelRegistro.Controls.Add(this.pbVista3);
             this.panelRegistro.Controls.Add(this.tbClaveConfirmReg);
@@ -342,15 +342,15 @@ namespace CapaPresentacion
             this.lblCarreraR.Size = new System.Drawing.Size(0, 18);
             this.lblCarreraR.TabIndex = 20;
             // 
-            // lblPEA
+            // lblPensum
             // 
-            this.lblPEA.AutoSize = true;
-            this.lblPEA.Font = new System.Drawing.Font("Californian FB", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPEA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.lblPEA.Location = new System.Drawing.Point(117, 158);
-            this.lblPEA.Name = "lblPEA";
-            this.lblPEA.Size = new System.Drawing.Size(0, 18);
-            this.lblPEA.TabIndex = 21;
+            this.lblPensum.AutoSize = true;
+            this.lblPensum.Font = new System.Drawing.Font("Californian FB", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPensum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.lblPensum.Location = new System.Drawing.Point(117, 158);
+            this.lblPensum.Name = "lblPensum";
+            this.lblPensum.Size = new System.Drawing.Size(0, 18);
+            this.lblPensum.TabIndex = 21;
             // 
             // lblEmail
             // 
@@ -382,30 +382,30 @@ namespace CapaPresentacion
             this.lblContraseñaR2.Size = new System.Drawing.Size(0, 18);
             this.lblContraseñaR2.TabIndex = 24;
             // 
-            // tbPEA
+            // tbPensum
             // 
-            this.tbPEA.BorderThickness = 2;
-            this.tbPEA.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbPEA.DefaultText = "";
-            this.tbPEA.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbPEA.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbPEA.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbPEA.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbPEA.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbPEA.Font = new System.Drawing.Font("Californian FB", 13.8F);
-            this.tbPEA.ForeColor = System.Drawing.Color.DimGray;
-            this.tbPEA.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbPEA.IconLeft = ((System.Drawing.Image)(resources.GetObject("tbPEA.IconLeft")));
-            this.tbPEA.Location = new System.Drawing.Point(83, 162);
-            this.tbPEA.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbPEA.Name = "tbPEA";
-            this.tbPEA.PasswordChar = '\0';
-            this.tbPEA.PlaceholderText = "PEA";
-            this.tbPEA.SelectedText = "";
-            this.tbPEA.Size = new System.Drawing.Size(107, 48);
-            this.tbPEA.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.tbPEA.TabIndex = 19;
-            this.tbPEA.Enter += new System.EventHandler(this.tbPEA_Enter);
+            this.tbPensum.BorderThickness = 2;
+            this.tbPensum.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbPensum.DefaultText = "";
+            this.tbPensum.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbPensum.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbPensum.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbPensum.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbPensum.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbPensum.Font = new System.Drawing.Font("Californian FB", 13.8F);
+            this.tbPensum.ForeColor = System.Drawing.Color.DimGray;
+            this.tbPensum.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbPensum.IconLeft = ((System.Drawing.Image)(resources.GetObject("tbPensum.IconLeft")));
+            this.tbPensum.Location = new System.Drawing.Point(83, 162);
+            this.tbPensum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbPensum.Name = "tbPensum";
+            this.tbPensum.PasswordChar = '\0';
+            this.tbPensum.PlaceholderText = "Pensum";
+            this.tbPensum.SelectedText = "";
+            this.tbPensum.Size = new System.Drawing.Size(147, 48);
+            this.tbPensum.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.tbPensum.TabIndex = 19;
+            this.tbPensum.Enter += new System.EventHandler(this.tbPEA_Enter);
             // 
             // tbCorreo
             // 
@@ -747,7 +747,7 @@ namespace CapaPresentacion
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
         private System.Windows.Forms.PictureBox pbVista3;
         private Guna.UI2.WinForms.Guna2TextBox tbCorreo;
-        private Guna.UI2.WinForms.Guna2TextBox tbPEA;
+        private Guna.UI2.WinForms.Guna2TextBox tbPensum;
         private Guna.UI2.WinForms.Guna2CheckBox cbRecordar;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Panel panel1;
@@ -757,7 +757,7 @@ namespace CapaPresentacion
         private System.Windows.Forms.Label lblCarrera;
         private System.Windows.Forms.Label lblContraseñaL;
         private System.Windows.Forms.Label lblCarreraR;
-        private System.Windows.Forms.Label lblPEA;
+        private System.Windows.Forms.Label lblPensum;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblContraseñaR;
         private System.Windows.Forms.Label lblContraseñaR2;

@@ -113,7 +113,7 @@ namespace CapaPresentacion
         {
 
             if (string.IsNullOrWhiteSpace(tbUsuarioReg.Text)||
-                string.IsNullOrWhiteSpace(tbPEA.Text)||
+                string.IsNullOrWhiteSpace(tbPensum.Text)||
                 string.IsNullOrWhiteSpace(tbCorreo.Text)||
                 string.IsNullOrWhiteSpace(tbClaveReg.Text)||
                  string.IsNullOrWhiteSpace(tbClaveConfirmReg.Text)
@@ -327,9 +327,9 @@ namespace CapaPresentacion
 
         private void tbPEA_Enter(object sender, EventArgs e)
         {
-            lblPEA.Text = "PEA";
+            lblPensum.Text = "PEA";
 
-            tbPEA.Text = ""; // Vacía el contenido del TextBox al recibir el foco.
+            tbPensum.Text = ""; // Vacía el contenido del TextBox al recibir el foco.
 
         }
 
