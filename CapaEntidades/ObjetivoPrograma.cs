@@ -14,6 +14,8 @@ namespace CapaEntidades
         public string Fortalezas { get; set; }
         public string Debilidades { get; set; }
 
+        public string Codigo { get; set; }
+
         // Relación inversa con ProgramaResultadoAprend
         public List<ProgramaResultadoAprendizaje> ProgramasResultadoAprend { get; set; }
 
