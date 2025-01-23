@@ -148,6 +148,12 @@
     <Compile Include="Menuu.Designer.cs">
       <DependentUpon>Menuu.cs</DependentUpon>
     </Compile>
+    <Compile Include="notocar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="notocar.Designer.cs">
+      <DependentUpon>notocar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Asignatura.resx">
