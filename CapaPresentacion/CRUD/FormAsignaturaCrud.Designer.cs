@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion
 {
-    partial class FormAsignatura
+    partial class FormAsignaturaCrud
     {
         /// <summary>
         /// Required designer variable.

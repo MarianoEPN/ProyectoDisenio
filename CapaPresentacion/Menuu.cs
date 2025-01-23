@@ -14,11 +14,19 @@ namespace CapaPresentacion
 {
     public partial class Menuu : Form
     {
+        // Variables para almacenar la posición relativa del ratón en el panel
+        private bool isDragging = false;
+        private Point initialMousePosition;
+
         bool sidebarExpanded;
         public Menuu()
         {
             InitializeComponent();
 
+        }
+        public Menuu(Form1 login)
+        {
+            InitializeComponent();
         }
 
         private void Menuu_Load(object sender, EventArgs e)
@@ -101,7 +109,39 @@ namespace CapaPresentacion
 
         private void btnAsigatura_Click(object sender, EventArgs e)
         {
-            container(new Asignatura());
+            container(new FormAsignatura());
+        }
+
+        private void plBarra_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                isDragging = false;
+            }
+        }
+
+        private void plBarra_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isDragging)
+            {
+                // Calcula la diferencia entre la posición actual y la inicial
+                Point currentMousePosition = e.Location;
+                int deltaX = currentMousePosition.X - initialMousePosition.X;
+                int deltaY = currentMousePosition.Y - initialMousePosition.Y;
+
+                // Mueve el formulario
+                this.Location = new Point(this.Location.X + deltaX, this.Location.Y + deltaY);
+            }
+        }
+
+        private void plBarra_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                isDragging = true;
+                // Guarda la posición inicial del ratón
+                initialMousePosition = e.Location;
+            }
         }
     }
 }

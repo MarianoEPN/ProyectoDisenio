@@ -12,19 +12,20 @@ using Guna.UI2.WinForms;
 
 namespace CapaPresentacion
 {
-    public partial class FormAsignatura : Form
+    public partial class FormAsignaturaCrud : Form
     {
         // Variables para almacenar la posición relativa del ratón en el panel
         private bool isDragging = false;
         private Point initialMousePosition;
-        public FormAsignatura()
+        public Asignatura asignatura1;
+        public FormAsignaturaCrud()
         {
             InitializeComponent();
             btnCrear.Text = "Crear";
             lbAdvertencia.Visible = false;
 
         }
-        public FormAsignatura(Carrera carrera)
+        public FormAsignaturaCrud(Carrera carrera)
         {
             InitializeComponent();
             btnCrear.Text = "Crear";
@@ -32,7 +33,7 @@ namespace CapaPresentacion
 
         }
 
-        public FormAsignatura(Carrera carrera, Asignatura asignatura)
+        public FormAsignaturaCrud(Carrera carrera, FormAsignatura asignatura)
         {
             InitializeComponent();
             btnCrear.Text = "Guardarr";
@@ -43,7 +44,7 @@ namespace CapaPresentacion
             AsignaturaEditar = asignatura;
         }
 
-        private Asignatura AsignaturaEditar { get; set; }
+        private FormAsignatura AsignaturaEditar { get; set; }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
@@ -83,9 +84,12 @@ namespace CapaPresentacion
                 if (camposCompletos)
                 {
                     Asignatura asignatura = new Asignatura();
-                    //asignatura.Codigo = tbCodigo.Text;
-                    //asignatura.Nombre = tbNombre.Text;
-                    //asignatura.Nivel = Convert.ToInt32(tbNivel.Text);
+                    asignatura.Codigo = tbCodigo.Text;
+                    asignatura.Nombre = tbNombre.Text;
+                    asignatura.Nivel = Convert.ToInt32(tbNivel.Text);
+
+                    //Temporal
+                    asignatura1 = asignatura;
 
                     // Metodo de la capa de negocio para guardar la asignatura creada
                     
@@ -117,7 +121,7 @@ namespace CapaPresentacion
                 }
                 if (camposCompletos)
                 {
-                    Asignatura asignatura = AsignaturaEditar;        
+                    FormAsignatura asignatura = AsignaturaEditar;        
                     //asignatura.Codigo = tbCodigo.Text;
                     //asignatura.Nombre = tbNombre.Text;
                     //asignatura.Nivel = Convert.ToInt32(tbNivel.Text);

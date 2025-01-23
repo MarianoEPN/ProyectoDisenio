@@ -112,11 +112,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Asignatura.cs">
+    <Compile Include="FormAsignatura.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Asignatura.Designer.cs">
-      <DependentUpon>Asignatura.cs</DependentUpon>
+    <Compile Include="FormAsignatura.Designer.cs">
+      <DependentUpon>FormAsignatura.cs</DependentUpon>
     </Compile>
     <Compile Include="Bienvenido.cs">
       <SubType>Form</SubType>
@@ -136,11 +136,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="CRUD\FormAsignatura.cs">
+    <Compile Include="CRUD\FormAsignaturaCrud.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CRUD\FormAsignatura.Designer.cs">
-      <DependentUpon>FormAsignatura.cs</DependentUpon>
+    <Compile Include="CRUD\FormAsignaturaCrud.Designer.cs">
+      <DependentUpon>FormAsignaturaCrud.cs</DependentUpon>
     </Compile>
     <Compile Include="Menuu.cs">
       <SubType>Form</SubType>
@@ -156,8 +156,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Asignatura.resx">
-      <DependentUpon>Asignatura.cs</DependentUpon>
+    <EmbeddedResource Include="FormAsignatura.resx">
+      <DependentUpon>FormAsignatura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Bienvenido.resx">
       <DependentUpon>Bienvenido.cs</DependentUpon>
@@ -168,8 +168,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CRUD\FormAsignatura.resx">
-      <DependentUpon>FormAsignatura.cs</DependentUpon>
+    <EmbeddedResource Include="CRUD\FormAsignaturaCrud.resx">
+      <DependentUpon>FormAsignaturaCrud.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menuu.resx">
       <DependentUpon>Menuu.cs</DependentUpon>

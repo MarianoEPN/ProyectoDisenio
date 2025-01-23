@@ -18,6 +18,11 @@ namespace CapaPresentacion
 {
     public partial class Form1 : Form
     {
+        // Variables para almacenar la posición relativa del ratón en el panel
+        private bool isDragging = false;
+        private Point initialMousePosition;
+        
+
         // Codigo para animar ventana Registro
         private Point targetLocationUp = new Point(187, 80);  // Posición objetivo al subir
         private Point targetLocationDown = new Point(187, 650); // Posición objetivo al bajar
@@ -42,6 +47,7 @@ namespace CapaPresentacion
             // Inicializar ventana redonda
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+            
             //
         }
 
@@ -93,8 +99,10 @@ namespace CapaPresentacion
                // if (tbUsuario.Text.Equals(carrera.Nombre) && tbClave.Text.Equals(carrera.Contraseña))
                 {
                     // Mensaje para dar a entender que funciono
-                    MessageBox.Show("Acceso condedido");
-                    //this.Hide();
+                    //MessageBox.Show("Acceso condedido");
+                    Menuu menu = new Menuu(this);
+                    menu.Show();
+                    this.Hide();
                     verificarUsuario = true;
                     break;
                 }
@@ -120,6 +128,7 @@ namespace CapaPresentacion
                 )
             {
                 MessageBox.Show("Todos los campos deben ser completados");
+                return;
             }
 
             if (!EsCorreoValido(tbCorreo.Text))
@@ -135,6 +144,7 @@ namespace CapaPresentacion
                 {
                     // Aqui se creara la carrera
 
+                    Carrera carrera = new Carrera();
 
                     
 
@@ -352,7 +362,5 @@ namespace CapaPresentacion
             timer2.Stop(); // Detener el temporizador de bajada
             timer1.Start(); // Inicia el temporizador de subida
         }
-
-        
     }
 }
