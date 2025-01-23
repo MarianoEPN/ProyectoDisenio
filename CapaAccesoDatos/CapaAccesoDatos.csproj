@@ -43,8 +43,8 @@
   <ItemGroup>
     <Compile Include="CarreraDAL.cs" />
     <Compile Include="AsignaturaDAL.cs" />
-    <Compile Include="ObetivoEuraceDAL.cs" />
-    <Compile Include="TipoResultadoAprendizajeDAL.cs" />
+    <Compile Include="ObjetivoEuraceDAL.cs" />
+    <Compile Include="TipoResultadoAsignaturaDAL.cs" />
     <Compile Include="UsuarioDAL.cs" />
     <Compile Include="MatchResultadoAprendizajeDAL.cs" />
     <Compile Include="EuraceResultadoAprendizajeDAL.cs" />

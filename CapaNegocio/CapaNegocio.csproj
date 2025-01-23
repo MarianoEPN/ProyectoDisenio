@@ -44,7 +44,6 @@
     <Compile Include="AsignaturaNeg.cs" />
     <Compile Include="CarreraNeg.cs" />
     <Compile Include="EuraceResultadoAprendizajeNeg.cs" />
-    <Compile Include="EuraceResultadoAsignaturaNeg.cs" />
     <Compile Include="MatchResultadoAprendizajeNeg.cs" />
     <Compile Include="ObjetivoEuraceNeg.cs" />
     <Compile Include="ObjetivoProgramaNeg.cs" />

@@ -69,7 +69,7 @@ namespace CapaAccesoDatos
             conexion.CerrarConexion();
         }
 
-        public void EliminarEuaceResultadoAprendizaje(int id)
+        public void EliminarEuraceResultadoAprendizaje(int id)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "EliminarEuraceResultadoAprendizaje";

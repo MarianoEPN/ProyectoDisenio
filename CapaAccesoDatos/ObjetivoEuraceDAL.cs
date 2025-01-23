@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CapaAccesoDatos
 {
-    internal class ObetivoEuraceDAL
+    internal class ObjetivoEuraceDAL
     {
         private ConexionBD conexion = new ConexionBD();
         SqlDataReader leer;
