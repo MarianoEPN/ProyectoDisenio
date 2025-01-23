@@ -49,6 +49,7 @@
     <Compile Include="ObjetivoProgramaDAL.cs" />
     <Compile Include="ProgramaResultadoAprendizajeDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResultadoAprendizajeAsignaturaDAL.cs" />
     <Compile Include="TipoResultadoAsignaturaDAL.cs" />
   </ItemGroup>
   <ItemGroup>
