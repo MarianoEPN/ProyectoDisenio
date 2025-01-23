@@ -59,7 +59,6 @@
     <Compile Include="Asignatura.cs" />
     <Compile Include="Carrera.cs" />
     <Compile Include="EuraceResultadoAprendizaje.cs" />
-    <Compile Include="EuraceResultadoAsignatura.cs" />
     <Compile Include="MatchResultadoAprendizaje.cs" />
     <Compile Include="ObjetivoEurace.cs" />
     <Compile Include="ObjetivoPrograma.cs" />
