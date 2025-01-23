@@ -41,6 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UsuarioDAL.cs" />
+    <Compile Include="MatchResultadoAprendizajeDAL.cs" />
+    <Compile Include="EuraceResultadoAprendizajeDAL.cs" />
     <Compile Include="ConexionBD.cs" />
     <Compile Include="ProgramaResultadoAprendizajeDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
