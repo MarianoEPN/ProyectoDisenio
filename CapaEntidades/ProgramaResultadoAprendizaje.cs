@@ -12,13 +12,7 @@ namespace CapaEntidades
         public int Id { get; set; }
         public string Comentario { get; set; }
 
-        // Clave foránea hacia ResultadoAprendizaje
-        public int ResultadoAprendizajeId { get; set; }
-        public ResultadoAprendizaje ResultadoAprendizaje { get; set; }
-
-        // Clave foránea hacia ObjetivoPrograma
-        public int ObjProgramaId { get; set; }
-        public ObjetivoPrograma ObjetivoPrograma { get; set; }
+       
 
         // Constructor vacío
         public ProgramaResultadoAprendizaje()
@@ -30,16 +24,13 @@ namespace CapaEntidades
         {
      
             Comentario = comentario;
-            ResultadoAprendizajeId = resultadoAprendizajeId;
-            ResultadoAprendizaje = resultadoAprendizaje;
-            ObjProgramaId = objProgramaId;
-            ObjetivoPrograma = objetivoPrograma;
+           
         }
 
         // Método ToString
         public override string ToString()
         {
-            return $"ProgramaResultadoAprend: [ID: {Id}, Comentario: {Comentario}, ResultadoAprendizaje: {ResultadoAprendizaje?.Codigo}, ObjetivoPrograma: {ObjetivoPrograma?.Nombre}]";
+            return $"ProgramaResultadoAprend: [ID: {Id}, Comentario: {Comentario}]";
         }
     }
 

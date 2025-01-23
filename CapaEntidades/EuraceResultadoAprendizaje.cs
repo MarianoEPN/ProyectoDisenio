@@ -12,13 +12,7 @@ namespace CapaEntidades
         public int Id { get; set; }
         public string Comentario { get; set; }
 
-        // Clave foránea hacia ObjetivoEurace
-        public int ObjEuraceId { get; set; }
-        public ObjetivoEurace ObjetivoEurace { get; set; }
-
-        // Clave foránea hacia ResultadoAprendizaje
-        public int ResultadoAprendizajeId { get; set; }
-        public ResultadoAprendizaje ResultadoAprendizaje { get; set; }
+       
 
         // Constructor vacío
         public EuraceResultadoAprendizaje()
@@ -26,20 +20,16 @@ namespace CapaEntidades
         }
 
         // Constructor con parámetros
-        public EuraceResultadoAprendizaje( string comentario, int objEuraceId, ObjetivoEurace objetivoEurace, int resultadoAprendizajeId, ResultadoAprendizaje resultadoAprendizaje)
+        public EuraceResultadoAprendizaje(string comentario)
         {
-            
+
             Comentario = comentario;
-            ObjEuraceId = objEuraceId;
-            ObjetivoEurace = objetivoEurace;
-            ResultadoAprendizajeId = resultadoAprendizajeId;
-            ResultadoAprendizaje = resultadoAprendizaje;
         }
 
         // Método ToString
         public override string ToString()
         {
-            return $"EuraceResultadoAprendizaje: [ID: {Id}, Comentario: {Comentario}, ObjetivoEurace: {ObjetivoEurace?.Nombre}, ResultadoAprendizaje: {ResultadoAprendizaje?.Codigo}]";
+            return $"EuraceResultadoAprendizaje: [ID: {Id}, Comentario: {Comentario}]";
         }
     }
 

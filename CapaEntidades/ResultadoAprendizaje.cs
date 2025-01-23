@@ -17,8 +17,7 @@ namespace CapaEntidades
         public List<ProgramaResultadoAprendizaje> ProgramasResultadoAprend { get; set; }
         public List<EuraceResultadoAprendizaje> EuraceResultadosAprendizaje { get; set; }
         public List<MatchResultadoAprendizaje> MatchResultadosAprendizaje { get; set; }
-        public Carrera Carrera { get; set; }
-
+     
 
         // Constructor vacío
         public ResultadoAprendizaje()
@@ -37,7 +36,7 @@ namespace CapaEntidades
             ProgramasResultadoAprend = new List<ProgramaResultadoAprendizaje>();
             EuraceResultadosAprendizaje = new List<EuraceResultadoAprendizaje>();
             MatchResultadosAprendizaje = new List<MatchResultadoAprendizaje>();
-            Carrera = carrera;
+           
 
 
         }

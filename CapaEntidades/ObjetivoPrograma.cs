@@ -17,7 +17,7 @@ namespace CapaEntidades
         // Relación inversa con ProgramaResultadoAprend
         public List<ProgramaResultadoAprendizaje> ProgramasResultadoAprend { get; set; }
 
-        public Carrera Carrera { get; set; }
+       
 
         // Constructor vacío
         public ObjetivoPrograma()

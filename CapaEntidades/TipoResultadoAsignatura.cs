@@ -1,20 +1,24 @@
 ﻿using CapaEntidades;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CapaEntidades
 {
+    public enum TipoNombre
+    {
+        Conocimiento,
+        Destreza,
+        Actitud
+    }
+
     public class TipoResultadoAsignatura
     {
         public int Id { get; set; }
+        public TipoNombre Nombre { get; set; } // Propiedad para almacenar el valor del enum
         public string Codigo { get; set; }
-        public string Nombre { get; set; }
 
         // Relación inversa hacia ResultadoAprendizajeAsignatura
-        public ICollection<ResultadoAprendizajeAsignatura> ResultadosAprendizaje { get; set; }
+        public List<ResultadoAprendizajeAsignatura> ResultadosAprendizaje { get; set; }
 
         // Constructor vacío
         public TipoResultadoAsignatura()
@@ -23,9 +27,8 @@ namespace CapaEntidades
         }
 
         // Constructor con parámetros
-        public TipoResultadoAsignatura( string codigo, string nombre)
+        public TipoResultadoAsignatura(string codigo, TipoNombre nombre)
         {
-         
             Codigo = codigo;
             Nombre = nombre;
             ResultadosAprendizaje = new List<ResultadoAprendizajeAsignatura>();
@@ -37,5 +40,5 @@ namespace CapaEntidades
             return $"TipoResultadoAsignatura: [ID: {Id}, Código: {Codigo}, Nombre: {Nombre}]";
         }
     }
-
 }
+

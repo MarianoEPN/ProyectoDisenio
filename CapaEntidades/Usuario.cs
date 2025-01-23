@@ -13,9 +13,7 @@ namespace CapaEntidades
         public string Username { get; set; }
         public string Clave { get; set; }
         public string Correo { get; set; }
-        public int CarreraId { get; set; }
-        public Carrera carrera { get; set; }
-
+       
         public Usuario()
         {
            

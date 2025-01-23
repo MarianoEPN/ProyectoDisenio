@@ -13,8 +13,7 @@ namespace CapaEntidades
         public string Codigo { get; set; }
         public string Nombre { get; set; }
         public int Nivel { get; set; }
-        public int CarreraId { get; set; }
-        public Carrera carrera { get; set; }
+      
 
         // Relación inversa hacia ResultadoAprendizajeAsignatura
         public List<ResultadoAprendizajeAsignatura> ResultadosAprendizaje { get; set; }

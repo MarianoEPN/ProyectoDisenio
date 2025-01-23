@@ -14,17 +14,13 @@ namespace CapaEntidades
         public string Descripcion { get; set; }
 
         // Clave foránea hacia Asignatura
-        public int AsignaturaId { get; set; }
-        public Asignatura Asignatura { get; set; }
-
-        // Clave foránea hacia TipoResultadoAsignatura
-        public int TipoId { get; set; }
-        public TipoResultadoAsignatura TipoResultado { get; set; }
+       
+       
 
         // Relaciones con tablas relacionadas (Uno a Muchos)
        
-        public ICollection<MatchResultadoAprendizaje> MatchesResultadoAprendizaje { get; set; }
-        public ICollection<ProgramaResultadoAprendizaje> ProgramasResultadoAprend { get; set; }
+        public List<MatchResultadoAprendizaje> MatchesResultadoAprendizaje { get; set; }
+        public List<ProgramaResultadoAprendizaje> ProgramasResultadoAprend { get; set; }
 
         // Constructor vacío
         public ResultadoAprendizajeAsignatura()
@@ -39,10 +35,7 @@ namespace CapaEntidades
         {
             Codigo = codigo;
             Descripcion = descripcion;
-            AsignaturaId = asignaturaId;
-            Asignatura = asignatura;
-            TipoId = tipoId;
-            TipoResultado = tipoResultado;
+           
             
             MatchesResultadoAprendizaje = new List<MatchResultadoAprendizaje>();
             ProgramasResultadoAprend = new List<ProgramaResultadoAprendizaje>();
@@ -51,7 +44,7 @@ namespace CapaEntidades
         // Método ToString
         public override string ToString()
         {
-            return $"ResultadoAprendizajeAsignatura: [ID: {Id}, Código: {Codigo}, Descripción: {Descripcion}, Asignatura: {Asignatura?.Nombre}, Tipo: {TipoResultado?.Nombre}]";
+            return $"ResultadoAprendizajeAsignatura: [ID: {Id}, Código: {Codigo}, Descripción: {Descripcion}]";
         }
     }
 
