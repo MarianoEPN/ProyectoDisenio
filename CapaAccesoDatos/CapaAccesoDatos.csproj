@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CarreraDAL.cs" />
+    <Compile Include="TipoResultadoAprendizajeDAL.cs" />
     <Compile Include="UsuarioDAL.cs" />
     <Compile Include="MatchResultadoAprendizajeDAL.cs" />
     <Compile Include="EuraceResultadoAprendizajeDAL.cs" />
