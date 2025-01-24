@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CapaAccesoDatos;
+using CapaEntidades;
 
 namespace CapaNegocio
 {
@@ -12,7 +14,7 @@ namespace CapaNegocio
 
         public List<ObjetivoPrograma> MostrarObjetivoPrograma()
         {
-            return objetivoProgramaDAL.MostrarObjetivoPrograma();
+            return objetivoProgramaDAL.MostrarObjetivosPrograma();
         }
 
         public void InsertarObjetivoPrograma(ObjetivoPrograma objetivoPrograma)

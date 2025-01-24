@@ -29,6 +29,5 @@ namespace CapaNegocio
             MRAprendizaje.EliminarMatchResultadoAprendizaje(id);
         }
 
-        //HOla prueba
     }
 }

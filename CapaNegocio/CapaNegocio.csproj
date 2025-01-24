@@ -52,6 +52,7 @@
     <Compile Include="ResultadoAprendizajeAsignaturaNeg.cs" />
     <Compile Include="ResultadoAprendizajeNeg.cs" />
     <Compile Include="TipoResultadoAsignaturaNeg.cs" />
+    <Compile Include="UsuarioNeg.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CapaAccesoDatos\CapaAccesoDatos.csproj">

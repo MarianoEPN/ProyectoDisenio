@@ -10,12 +10,12 @@ namespace CapaNegocio
 {
     public class AsignaturaNeg
     {
-        /*
-        private AsignaturaDAL asignaturaDAL = AsignaturaDAL();
+        
+        private AsignaturaDAL asignaturaDAL = new AsignaturaDAL();
 
         public List<Asignatura> MostrarAsignatura()
         {
-            return asignaturaDAL.MostrarAsignaturas();
+            return asignaturaDAL.MostrarAsignatura();
         }
 
         public void InsertarAsignatura(Asignatura asignatura)
@@ -28,10 +28,10 @@ namespace CapaNegocio
             asignaturaDAL.ActualizarAsignatura(asignatura);
         }
 
-        public void EliminarAsignatura(Asignatura id)
+        public void EliminarAsignatura(int id)
         {
             asignaturaDAL.EliminarAsignatura(id);
         }
-        */
+        
     }
 }

@@ -4,33 +4,34 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CapaAccesoDatos;
 
 namespace CapaNegocio
 {
     public class CarreraNeg
     {
-        /*
-        private CarreraDAL carreraDAL = CarreraDAL();
+        
+        private CarreraDAL carreraDAL = new CarreraDAL();
 
-        public List<Carrera> MostrarAsignatura()
+        public List<Carrera> MostrarCarrera()
         {
-            return carreraDAL.MostrarAsignaturas();
+            return carreraDAL.MostrarCarrera();
         }
 
-        public void InsertarAsignatura(Carrera carrera)
+        public void InsertarCarrera(Carrera carrera)
         {
-            carreraDAL.InsertarAsignatura(carrera);
+            carreraDAL.InsertarCarrera(carrera);
         }
 
-        public void ActualizarAsignatura(Carrera carrera)
+        public void ActualizarCarrera(Carrera carrera)
         {
-            carreraDAL.ActualizarAsignatura(carrera);
+            carreraDAL.ActualizarCarrera(carrera);
         }
 
-        public void EliminarAsignatura(Carrera id)
+        public void EliminarCarrera(int id)
         {
-            carreraDAL.EliminarAsignatura(id);
+            carreraDAL.EliminarCarrera(id);
         }
-        */
+        
     }
 }

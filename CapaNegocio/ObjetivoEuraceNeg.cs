@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CapaAccesoDatos;
+using CapaEntidades;
 
 
 namespace CapaNegocio
 {
     public class ObjetivoEuraceNeg
     {
+        
         public ObjetivoEuraceDAL objetivoEuraceDAL = new ObjetivoEuraceDAL();
 
         public List<ObjetivoEurace> MostrarObjetivoEurace()

@@ -11,7 +11,6 @@ namespace CapaNegocio
     {
         private ResultadoAprendizajeNeg RANeg = new ResultadoAprendizajeNeg();
 
-        /*
          public void InsertarResultadoAprendizajeNeg(ResultadoAprendizajeNeg MRApr)
          {
              RANeg.InsertarResultadoAprendizajeNeg(MRApr);
@@ -28,6 +27,6 @@ namespace CapaNegocio
          {
               RANeg.EliminarResultadoAprendizajeNeg(id);
          }
-        */
+        
     }
 }

@@ -10,14 +10,13 @@ namespace CapaNegocio
 {
     public class ResultadoAprendizajeAsignaturaNeg
     {
-        private ResultadoAprendizajeAsignatura RAAsignatura = new ResultadoAprendizajeAsignatura();
+        private ResultadoAprendizajeAsignaturaDAL RAAsignatura = new ResultadoAprendizajeAsignaturaDAL();
 
-       /*
         public void InsertarResultadoAprendizajeAsignatura(ResultadoAprendizajeAsignatura RAAsig)
         {
             RAAsignatura.InsertarResultadoAprendizajeAsignatura(RAAsig);
         }
-        public List<MatchResultadoAprendizaje> MostrarResultadoAprendizajeAsignatura()
+        public List<ResultadoAprendizajeAsignatura> MostrarResultadoAprendizajeAsignatura()
         {
              return RAAsignatura.MostrarResultadoAprendizajeAsignatura();
         }
@@ -30,7 +29,5 @@ namespace CapaNegocio
              RAAsignatura.EliminarResultadoAprendizajeAsignatura(id);
         }
        
-        */
-        //HOla prueba
     }
 }
