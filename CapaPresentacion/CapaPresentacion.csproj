@@ -112,6 +112,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CRUD\FormAsignaturaCrud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD\FormAsignaturaCrud.Designer.cs">
+      <DependentUpon>FormAsignaturaCrud.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuOpciones\FormAsignatura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,11 +142,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="CRUD\FormAsignaturaCrud.cs">
+    <Compile Include="CRUD\FormMoldeCrud.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CRUD\FormAsignaturaCrud.Designer.cs">
-      <DependentUpon>FormAsignaturaCrud.cs</DependentUpon>
+    <Compile Include="CRUD\FormMoldeCrud.Designer.cs">
+      <DependentUpon>FormMoldeCrud.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuOpciones\FormObjetivosAprendizajeAsignatura.cs">
       <SubType>Form</SubType>
@@ -153,6 +159,12 @@
     </Compile>
     <Compile Include="MenuOpciones\FormResultadosAprendizaje.Designer.cs">
       <DependentUpon>FormResultadosAprendizaje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuOpciones\Match1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuOpciones\Match1.Designer.cs">
+      <DependentUpon>Match1.cs</DependentUpon>
     </Compile>
     <Compile Include="Menuu.cs">
       <SubType>Form</SubType>
@@ -168,6 +180,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CRUD\FormAsignaturaCrud.resx">
+      <DependentUpon>FormAsignaturaCrud.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuOpciones\FormAsignatura.resx">
       <DependentUpon>FormAsignatura.cs</DependentUpon>
     </EmbeddedResource>
@@ -180,14 +195,17 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CRUD\FormAsignaturaCrud.resx">
-      <DependentUpon>FormAsignaturaCrud.cs</DependentUpon>
+    <EmbeddedResource Include="CRUD\FormMoldeCrud.resx">
+      <DependentUpon>FormMoldeCrud.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuOpciones\FormObjetivosAprendizajeAsignatura.resx">
       <DependentUpon>FormObjetivosAprendizajeAsignatura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuOpciones\FormResultadosAprendizaje.resx">
       <DependentUpon>FormResultadosAprendizaje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuOpciones\Match1.resx">
+      <DependentUpon>Match1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menuu.resx">
       <DependentUpon>Menuu.cs</DependentUpon>
@@ -371,8 +389,73 @@
     <None Include="Resources\biblioteca.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\FON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FondoAbs.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CirculoCerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\promocion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\numerico %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deslizador.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\firma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\numerico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BuhoBlnaco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salida1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salida.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\match8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\match9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\match7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\match6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\match5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\match2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\match3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\match4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\match.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nada.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\bandera.png" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

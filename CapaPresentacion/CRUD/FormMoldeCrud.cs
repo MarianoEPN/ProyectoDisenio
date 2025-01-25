@@ -10,43 +10,45 @@ using System.Windows.Forms;
 using CapaEntidades;
 using Guna.UI2.WinForms;
 
-namespace CapaPresentacion.CRUD
+namespace CapaPresentacion
 {
-    public partial class FormAsignaturaCrud : Form
-    {    // Variables para almacenar la posición relativa del ratón en el panel
+    public partial class FormMoldeCrud : Form
+    {
+        // Variables para almacenar la posición relativa del ratón en el panel
         private bool isDragging = false;
         private Point initialMousePosition;
-        public FormAsignaturaCrud()
+        public Asignatura asignatura1;
+        public FormMoldeCrud()
         {
             InitializeComponent();
-            lbAdvertencia.Visible = false;
+            btnCrear.Text = "Crear";
             lblAccionAsignatura.Text = "Crear asignatura";
-        }
-        public FormAsignaturaCrud(Carrera carrera)
-        {
-            InitializeComponent();
             lbAdvertencia.Visible = false;
-            lblAccionAsignatura.Text = "Crear asignatura";
-        }
 
-        public FormAsignaturaCrud(Asignatura asignatura)
+        }
+        public FormMoldeCrud(Asignatura asignatura)
         {
             InitializeComponent();
-            lbAdvertencia.Visible = false;
-            //tbCodigo.Text = asignatura.Nombre;
-            //tbCodigo.Text = asignatura.Codigo;
-            //tbNivel.Text = Convert.ToString(asignatura.Nivel);
-            AsignaturaEditar = asignatura;
+            btnCrear.Text = "Guardar";
             lblAccionAsignatura.Text = "Editar asignatura";
+            lbAdvertencia.Visible = false;
+            tbNombre.Text = asignatura.Nombre;
+            tbCodigo.Text = asignatura.Codigo;
+            tbNivel.Text = Convert.ToString(asignatura.Nivel);
+            asignatura1 = asignatura;
+
         }
 
-        private Asignatura AsignaturaEditar { get; set; }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        private void lblSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
         private void btnCrear_Click(object sender, EventArgs e)
         {
@@ -65,7 +67,7 @@ namespace CapaPresentacion.CRUD
                     if (string.IsNullOrEmpty(txt.Text))
                     {
                         // Cambiar color del borde a rojo
-                        txt.BorderColor = Color.FromArgb(241, 90, 109);
+                        txt.BorderColor = Color.Red;
                         camposCompletos = false;
                     }
                     else
@@ -76,23 +78,25 @@ namespace CapaPresentacion.CRUD
                 if (camposCompletos)
                 {
                     Asignatura asignatura = new Asignatura();
-                    //asignatura.Codigo = tbCodigo.Text;
-                    //asignatura.Nombre = tbNombre.Text;
-                    //asignatura.Nivel = Convert.ToInt32(tbNivel.Text);
+                    asignatura.Codigo = tbCodigo.Text;
+                    asignatura.Nombre = tbNombre.Text;
+                    asignatura.Nivel = Convert.ToInt32(tbNivel.Text);
+
+                    //Temporal
+                    asignatura1 = asignatura;
 
                     // Metodo de la capa de negocio para guardar la asignatura creada
-
+                    
                     this.Close();
                 }
-                else
+                else 
                 {
                     lbAdvertencia.Visible = true;
                 }
 
 
 
-            }
-            else if (btnCrear.Text.Equals("Guardar"))
+            } else if (btnCrear.Text.Equals("Guardar"))
             {
                 bool camposCompletos = true;
                 foreach (var txt in listaTextBoxes)
@@ -101,7 +105,7 @@ namespace CapaPresentacion.CRUD
                     if (string.IsNullOrEmpty(txt.Text))
                     {
                         // Cambiar color del borde a rojo
-                        txt.BorderColor = Color.FromArgb(241, 90, 109);
+                        txt.BorderColor = Color.Red;
                         camposCompletos = false;
                     }
                     else
@@ -111,10 +115,10 @@ namespace CapaPresentacion.CRUD
                 }
                 if (camposCompletos)
                 {
-                    Asignatura asignatura = AsignaturaEditar;
-                    //asignatura.Codigo = tbCodigo.Text;
-                    //asignatura.Nombre = tbNombre.Text;
-                    //asignatura.Nivel = Convert.ToInt32(tbNivel.Text);
+                    Asignatura asignatura = asignatura1;        
+                    asignatura.Codigo = tbCodigo.Text;
+                    asignatura.Nombre = tbNombre.Text;
+                    asignatura.Nivel = Convert.ToInt32(tbNivel.Text);
 
                     // Metodo de la capa de negocio para guardar la asignatura editada
 
@@ -200,56 +204,29 @@ namespace CapaPresentacion.CRUD
             }
         }
 
-        private void tbCodigo_TextChanged(object sender, EventArgs e)
+        private void tbCodigo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // Actualiza el texto a mayúsculas
-            tbCodigo.Text = tbCodigo.Text.ToUpper();
+            // Permitir solo letras y números
+            if (!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != (char)8) // (char)8 es el código de la tecla 'Backspace'
+            {
+                e.Handled = true; // Cancela la tecla no permitida
+            }
+            else
+            {
+                string text = tbCodigo.Text;
+                int letterCount = text.Count(char.IsLetter);
+                int numberCount = text.Count(char.IsDigit);
 
-            // Mueve el cursor al final del texto para evitar conflictos al escribir
-            tbCodigo.SelectionStart = tbCodigo.Text.Length;
-        }
-
-
-        private void btnClose_MouseEnter(object sender, EventArgs e)
-        {
-            btnClose.BackgroundImage = Properties.Resources.CirculoCerrar;
-            btnClose.IconColor = Color.White;
-
-        }
-
-        private void btnClose_MouseLeave(object sender, EventArgs e)
-        {
-            btnClose.BackgroundImage = Properties.Resources.CircleWithe;
-            btnClose.IconColor = Color.DimGray;
-
-        }
-
-        private void btnMax_MouseEnter(object sender, EventArgs e)
-        {
-            btnMax.BackgroundImage = Properties.Resources.CirculoCerrar;
-            btnMax.IconColor = Color.White;
-
-        }
-
-        private void btnMax_MouseLeave(object sender, EventArgs e)
-        {
-            btnMax.BackgroundImage = Properties.Resources.CircleWithe;
-            btnMax.IconColor = Color.DimGray;
-
-        }
-
-        private void btnMin_MouseEnter(object sender, EventArgs e)
-        {
-            btnMin.BackgroundImage = Properties.Resources.CirculoCerrar;
-            btnMin.IconColor = Color.White;
-
-        }
-
-        private void btnMin_MouseLeave(object sender, EventArgs e)
-        {
-            btnMin.BackgroundImage = Properties.Resources.CircleWithe;
-            btnMin.IconColor = Color.DimGray;
-
+                // Permitir hasta 4 letras y 3 números
+                if (char.IsLetter(e.KeyChar) && letterCount >= 4)
+                {
+                    e.Handled = true; // No permitir más de 4 letras
+                }
+                else if (char.IsDigit(e.KeyChar) && numberCount >= 3)
+                {
+                    e.Handled = true; // No permitir más de 3 números
+                }
+            }
         }
 
     }
