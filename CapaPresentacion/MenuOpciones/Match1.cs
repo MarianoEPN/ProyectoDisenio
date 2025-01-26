@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,6 +27,7 @@ namespace CapaPresentacion
 
             // Llenar el DataGridView
             LlenarDataGrid(tabla1, tabla2);
+
 
 
         }
@@ -128,6 +130,14 @@ namespace CapaPresentacion
                 }
             }
         }
-      
+
+        private void labelFila_Paint(object sender, PaintEventArgs e)
+        {
+            Font myfont = new Font("Californian FB", 20, FontStyle.Bold);
+            Brush mybrush = new System.Drawing.SolidBrush(System.Drawing.Color.FromArgb(33, 40, 58));
+            e.Graphics.TranslateTransform(0, 470);
+            e.Graphics.RotateTransform(-90);
+            e.Graphics.DrawString("Resultados de Aprendizaje de Asignatura", myfont, mybrush, 0, 0);
+        }
     }
 }

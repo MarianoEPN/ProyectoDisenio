@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using CapaPresentacion.CRUD;
 using CapaPresentacion.MenuOpciones;
 using Guna;
+using Guna.UI2.WinForms;
 
 namespace CapaPresentacion
 {
@@ -35,6 +36,7 @@ namespace CapaPresentacion
         {
             panelOpciones.Visible = false;
             container(new Bienvenido());
+            ConfigurarToolTip(); // Configura el ToolTip del botón
 
         }
 
@@ -201,6 +203,21 @@ namespace CapaPresentacion
         private void panelEPN_MouseLeave(object sender, EventArgs e)
         {
             panelEPN.FillColor = Color.FromArgb(33, 40, 58);
+
+        }
+
+        private void ConfigurarToolTip()
+        {
+            // Configurar el texto del ToolTip para el botón
+            ToolTip1.SetToolTip(btnRAAxPE, "RELACIÓN ENTRE LOS RESULTADOS DEL APRENDIZAJE DE LA ASIGNATURA Y EL PERFIL DE EGRESO");
+            ToolTip1.SetToolTip(btnRAxOP, "RELACIÓN ENTRE LOS RESULTADOS DEL APRENDIZAJE Y OBJETIVOS DE PROGRAMA");
+            ToolTip1.SetToolTip(btnRAA, "RESULTADOS DEL APRENDIZAJE DE LA ASIGNATURA");
+
+        }
+
+        private void btnRAAxPE_Click(object sender, EventArgs e)
+        {
+            container(new Match1());
 
         }
     }
