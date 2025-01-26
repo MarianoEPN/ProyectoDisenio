@@ -331,7 +331,7 @@
             this.panelControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl.Location = new System.Drawing.Point(200, 0);
             this.panelControl.Name = "panelControl";
-            this.panelControl.Size = new System.Drawing.Size(1008, 121);
+            this.panelControl.Size = new System.Drawing.Size(1100, 121);
             this.panelControl.TabIndex = 3;
             this.panelControl.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl_Paint);
             // 
@@ -355,7 +355,7 @@
             this.guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
             this.guna2ControlBox3.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox3.IconColor = System.Drawing.Color.DimGray;
-            this.guna2ControlBox3.Location = new System.Drawing.Point(930, 3);
+            this.guna2ControlBox3.Location = new System.Drawing.Point(1022, 3);
             this.guna2ControlBox3.Name = "guna2ControlBox3";
             this.guna2ControlBox3.Size = new System.Drawing.Size(30, 30);
             this.guna2ControlBox3.TabIndex = 6;
@@ -383,7 +383,7 @@
             this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             this.guna2ShadowPanel1.Radius = 10;
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Silver;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(933, 75);
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(1025, 75);
             this.guna2ShadowPanel1.TabIndex = 7;
             // 
             // guna2ShadowPanel2
@@ -425,7 +425,7 @@
             this.btnBajar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBajar.ForeColor = System.Drawing.Color.White;
             this.btnBajar.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnBajar.Location = new System.Drawing.Point(869, 23);
+            this.btnBajar.Location = new System.Drawing.Point(961, 23);
             this.btnBajar.Name = "btnBajar";
             this.btnBajar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnBajar.Size = new System.Drawing.Size(27, 29);
@@ -438,7 +438,7 @@
             this.guna2CirclePictureBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2CirclePictureBox1.Image = global::CapaPresentacion.Properties.Resources.buhoUser;
             this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(813, 13);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(905, 13);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox1.Size = new System.Drawing.Size(50, 50);
@@ -455,7 +455,7 @@
             this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.DimGray;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(894, 3);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(986, 3);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.Size = new System.Drawing.Size(30, 30);
             this.guna2ControlBox2.TabIndex = 5;
@@ -468,7 +468,7 @@
             this.guna2ControlBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.DimGray;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(966, 3);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1058, 3);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(30, 30);
             this.guna2ControlBox1.TabIndex = 4;
@@ -478,7 +478,7 @@
             this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContainer.Location = new System.Drawing.Point(200, 121);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(1008, 704);
+            this.panelContainer.Size = new System.Drawing.Size(1100, 704);
             this.panelContainer.TabIndex = 6;
             this.panelContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContainer_Paint);
             // 
@@ -495,7 +495,7 @@
             this.panelOpciones.Controls.Add(this.guna2Button9);
             this.panelOpciones.Controls.Add(this.guna2CirclePictureBox3);
             this.panelOpciones.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
-            this.panelOpciones.Location = new System.Drawing.Point(940, 40);
+            this.panelOpciones.Location = new System.Drawing.Point(1032, 40);
             this.panelOpciones.Name = "panelOpciones";
             this.panelOpciones.ShadowColor = System.Drawing.Color.Black;
             this.panelOpciones.Size = new System.Drawing.Size(200, 235);
@@ -571,7 +571,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1208, 825);
+            this.ClientSize = new System.Drawing.Size(1300, 825);
             this.Controls.Add(this.panelOpciones);
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.panelControl);

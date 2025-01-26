@@ -22,7 +22,7 @@ namespace CapaPresentacion.CRUD
         {
             InitializeComponent();
             lbAdvertencia.Visible = false;
-            lblAccionAsignatura.Text = "Crear \n Objetivo EUR-ACE";
+            lblAccionAsignatura.Text = "Crear Objetivo EUR-ACE";
         }
 
         public FormObjetivoEuraceCrud(ObjetivoEurace objetivoEurace)
@@ -33,7 +33,7 @@ namespace CapaPresentacion.CRUD
             //tbNombre.Text = objetivoEurace.Nombre;
             //tbDescripcion.Text = objetivoEurace.Descripcion;
             objetivoEditar = objetivoEurace;
-            lblAccionAsignatura.Text = "Editar \n Objetivo EUR-ACE";
+            lblAccionAsignatura.Text = "Editar Objetivo EUR-ACE";
         }
 
         private void FormObjetivoEuraceCrud_Load(object sender, EventArgs e)
@@ -185,17 +185,7 @@ namespace CapaPresentacion.CRUD
             btnMin.IconColor = Color.DimGray;
         }
 
-        private void btnMax_MouseEnter(object sender, EventArgs e)
-        {
-            btnMax.BackgroundImage = Properties.Resources.CirculoCerrar;
-            btnMax.IconColor = Color.White;
-        }
 
-        private void btnMax_MouseLeave(object sender, EventArgs e)
-        {
-            btnMax.BackgroundImage = Properties.Resources.CircleWithe;
-            btnMax.IconColor = Color.DimGray;
-        }
 
         private void btnClose_MouseEnter(object sender, EventArgs e)
         {

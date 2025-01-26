@@ -56,7 +56,7 @@ namespace CapaPresentacion.CRUD
             tbNombre,
             tbNivel
         };
-            if (btnCrear.Text.Equals("Crear"))
+            if (btnCrear.Text.Equals("Guardar"))
             {
                 bool camposCompletos = true;
                 foreach (var txt in listaTextBoxes)
@@ -224,19 +224,7 @@ namespace CapaPresentacion.CRUD
 
         }
 
-        private void btnMax_MouseEnter(object sender, EventArgs e)
-        {
-            btnMax.BackgroundImage = Properties.Resources.CirculoCerrar;
-            btnMax.IconColor = Color.White;
 
-        }
-
-        private void btnMax_MouseLeave(object sender, EventArgs e)
-        {
-            btnMax.BackgroundImage = Properties.Resources.CircleWithe;
-            btnMax.IconColor = Color.DimGray;
-
-        }
 
         private void btnMin_MouseEnter(object sender, EventArgs e)
         {

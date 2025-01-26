@@ -41,7 +41,6 @@
             this.lblCodigo = new System.Windows.Forms.Label();
             this.guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.btnMax = new Guna.UI2.WinForms.Guna2ControlBox();
             this.lblAccionAsignatura = new System.Windows.Forms.Label();
             this.btnMin = new Guna.UI2.WinForms.Guna2ControlBox();
             this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -134,7 +133,10 @@
             // 
             // guna2Button1
             // 
-            this.guna2Button1.BorderRadius = 10;
+            this.guna2Button1.Animated = true;
+            this.guna2Button1.AutoRoundedCorners = true;
+            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.BorderRadius = 23;
             this.guna2Button1.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -147,32 +149,39 @@
             this.guna2Button1.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
             this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button1.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2Button1.IndicateFocus = true;
             this.guna2Button1.Location = new System.Drawing.Point(268, 361);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(138, 48);
             this.guna2Button1.TabIndex = 47;
             this.guna2Button1.Text = "Cancelar";
+            this.guna2Button1.UseTransparentBackground = true;
             // 
             // btnCrear
             // 
-            this.btnCrear.BorderRadius = 10;
+            this.btnCrear.Animated = true;
+            this.btnCrear.AutoRoundedCorners = true;
+            this.btnCrear.BackColor = System.Drawing.Color.Transparent;
+            this.btnCrear.BorderRadius = 23;
             this.btnCrear.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCrear.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnCrear.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnCrear.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnCrear.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnCrear.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
-            this.btnCrear.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrear.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnCrear.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnCrear.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(109)))));
             this.btnCrear.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
             this.btnCrear.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCrear.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnCrear.IndicateFocus = true;
             this.btnCrear.Location = new System.Drawing.Point(106, 361);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(138, 48);
             this.btnCrear.TabIndex = 46;
             this.btnCrear.Text = "Guardar";
+            this.btnCrear.UseTransparentBackground = true;
             // 
             // labelNivel
             // 
@@ -214,7 +223,6 @@
             // 
             this.guna2ShadowPanel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2ShadowPanel2.Controls.Add(this.guna2CirclePictureBox1);
-            this.guna2ShadowPanel2.Controls.Add(this.btnMax);
             this.guna2ShadowPanel2.Controls.Add(this.lblAccionAsignatura);
             this.guna2ShadowPanel2.Controls.Add(this.btnMin);
             this.guna2ShadowPanel2.Controls.Add(this.btnClose);
@@ -239,20 +247,6 @@
             this.guna2CirclePictureBox1.TabIndex = 26;
             this.guna2CirclePictureBox1.TabStop = false;
             // 
-            // btnMax
-            // 
-            this.btnMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMax.BackColor = System.Drawing.Color.Transparent;
-            this.btnMax.BackgroundImage = global::CapaPresentacion.Properties.Resources.CircleWithe;
-            this.btnMax.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMax.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
-            this.btnMax.FillColor = System.Drawing.Color.Transparent;
-            this.btnMax.IconColor = System.Drawing.Color.DimGray;
-            this.btnMax.Location = new System.Drawing.Point(422, 15);
-            this.btnMax.Name = "btnMax";
-            this.btnMax.Size = new System.Drawing.Size(30, 30);
-            this.btnMax.TabIndex = 9;
-            // 
             // lblAccionAsignatura
             // 
             this.lblAccionAsignatura.AutoSize = true;
@@ -274,7 +268,7 @@
             this.btnMin.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.btnMin.FillColor = System.Drawing.Color.Transparent;
             this.btnMin.IconColor = System.Drawing.Color.DimGray;
-            this.btnMin.Location = new System.Drawing.Point(386, 15);
+            this.btnMin.Location = new System.Drawing.Point(422, 15);
             this.btnMin.Name = "btnMin";
             this.btnMin.Size = new System.Drawing.Size(30, 30);
             this.btnMin.TabIndex = 8;
@@ -377,7 +371,7 @@
             this.tbCodigo.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.tbCodigo.TabIndex = 38;
             // 
-            // FormAsignaturaCrud
+            // FormMoldeCrud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -398,7 +392,8 @@
             this.Controls.Add(this.tbCodigo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "FormAsignaturaCrud";
+            this.MaximumSize = new System.Drawing.Size(700, 900);
+            this.Name = "FormMoldeCrud";
             this.Text = "FormAsignatura";
             this.guna2ShadowPanel2.ResumeLayout(false);
             this.guna2ShadowPanel2.PerformLayout();
@@ -422,7 +417,6 @@
         private System.Windows.Forms.Label lblCodigo;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel2;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
-        private Guna.UI2.WinForms.Guna2ControlBox btnMax;
         private System.Windows.Forms.Label lblAccionAsignatura;
         private Guna.UI2.WinForms.Guna2ControlBox btnMin;
         private Guna.UI2.WinForms.Guna2ControlBox btnClose;

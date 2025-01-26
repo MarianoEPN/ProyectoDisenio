@@ -23,14 +23,14 @@ namespace CapaPresentacion.CRUD
         {
             InitializeComponent();
             lbAdvertencia.Visible = false;
-            lblAccionAsignatura.Text = "Crear \n Objetivo EUR-ACE"; 
+            lblAccionAsignatura.Text = "Crear Objetivo EUR-ACE"; 
         }
 
         public FormObjetivoProgramaCRUD(Carrera carrera)
         {
             InitializeComponent();
             lbAdvertencia.Visible = false;
-            lblAccionAsignatura.Text = "Crear \n Objetivo EUR-ACE";
+            lblAccionAsignatura.Text = "Crear Objetivo EUR-ACE";
             this.carrera = carrera;
         }
 
@@ -44,7 +44,7 @@ namespace CapaPresentacion.CRUD
             tbDebilidad.Text = objetivoPrograma.Debilidades;
             this.objetivoPrograma = objetivoPrograma;
             this.carrera = carrera;
-            lblAccionAsignatura.Text = "Editar \n Objetivo EUR-ACE";
+            lblAccionAsignatura.Text = "Editar Objetivo EUR-ACE";
         }
 
         private void lblCodigo_Click(object sender, EventArgs e)
@@ -204,17 +204,7 @@ namespace CapaPresentacion.CRUD
             btnMin.IconColor = Color.DimGray;
         }
 
-        private void btnMax_MouseEnter(object sender, EventArgs e)
-        {
-            btnMax.BackgroundImage = Properties.Resources.CirculoCerrar;
-            btnMax.IconColor = Color.White;
-        }
 
-        private void btnMax_MouseLeave(object sender, EventArgs e)
-        {
-            btnMax.BackgroundImage = Properties.Resources.CircleWithe;
-            btnMax.IconColor = Color.DimGray;
-        }
 
         private void btnClose_MouseEnter(object sender, EventArgs e)
         {
