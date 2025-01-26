@@ -8,6 +8,8 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaPresentacion.CRUD;
+using CapaPresentacion.MenuOpciones;
 using Guna;
 
 namespace CapaPresentacion
@@ -32,6 +34,7 @@ namespace CapaPresentacion
         private void Menuu_Load(object sender, EventArgs e)
         {
             panelOpciones.Visible = false;
+            container(new Bienvenido());
 
         }
 
@@ -142,6 +145,17 @@ namespace CapaPresentacion
                 // Guarda la posición inicial del ratón
                 initialMousePosition = e.Location;
             }
+        }
+
+        private void btnRAA_Click(object sender, EventArgs e)
+        {
+            container(new FormResultadosAprendizaje());
+        }
+
+        private void btnEurase_Click(object sender, EventArgs e)
+        {
+            container(new FormObjetivosAprendizajeAsignatura());
+
         }
     }
 }

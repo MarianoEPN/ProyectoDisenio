@@ -37,8 +37,6 @@ namespace CapaPresentacion
 
             // Ocultar las columnas que no deseas mostrar
             dtgAsignatura.Columns["Id"].Visible = false;    // Ocultar la columna Id
-            dtgAsignatura.Columns["Carrera"].Visible = false; // Ocultar la columna Nivel
-            dtgAsignatura.Columns["CarreraId"].Visible = false; // Ocultar la columna Nivel
         }
         private void ActualizarTabla()
         {
@@ -46,8 +44,6 @@ namespace CapaPresentacion
             dtgAsignatura.DataSource = listaAsignaturas;
             // Ocultar las columnas que no deseas mostrar
             dtgAsignatura.Columns["Id"].Visible = false;    // Ocultar la columna Id
-            dtgAsignatura.Columns["Carrera"].Visible = false; // Ocultar la columna Nivel
-            dtgAsignatura.Columns["CarreraId"].Visible = false; // Ocultar la columna Nivel
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -70,9 +66,9 @@ namespace CapaPresentacion
                 // Obtener el objeto completo, que corresponde a la fila seleccionada
                 Asignatura asignaturaSeleccionada = (Asignatura)row.DataBoundItem;
 
-                listaAsignaturas.RemoveAll(a => a.Id == asignaturaSeleccionada.Id);
-                ActualizarTabla();
-                row.Selected = false;
+                //listaAsignaturas.RemoveAll(a => a.Id == asignaturaSeleccionada.Id);
+                //ActualizarTabla();
+                //row.Selected = false;
             }
 
         }
