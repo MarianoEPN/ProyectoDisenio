@@ -41,7 +41,7 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnAgregar = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.tbBuscar = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnBuscar = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgAsignatura)).BeginInit();
             this.panelTitulos.SuspendLayout();
@@ -199,7 +199,7 @@
             // panelTitulos
             // 
             this.panelTitulos.BackColor = System.Drawing.Color.Transparent;
-            this.panelTitulos.Controls.Add(this.guna2TextBox2);
+            this.panelTitulos.Controls.Add(this.tbBuscar);
             this.panelTitulos.Controls.Add(this.btnBuscar);
             this.panelTitulos.Controls.Add(this.lblTitulo);
             this.panelTitulos.Dock = System.Windows.Forms.DockStyle.Top;
@@ -262,31 +262,32 @@
             this.btnAgregar.UseTransparentBackground = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // guna2TextBox2
+            // tbBuscar
             // 
-            this.guna2TextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2TextBox2.Animated = true;
-            this.guna2TextBox2.AutoRoundedCorners = true;
-            this.guna2TextBox2.BorderColor = System.Drawing.Color.Gray;
-            this.guna2TextBox2.BorderRadius = 19;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.IconLeft = global::CapaPresentacion.Properties.Resources.lupa;
-            this.guna2TextBox2.Location = new System.Drawing.Point(636, 13);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderText = "";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(300, 40);
-            this.guna2TextBox2.TabIndex = 30;
+            this.tbBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbBuscar.Animated = true;
+            this.tbBuscar.AutoRoundedCorners = true;
+            this.tbBuscar.BorderColor = System.Drawing.Color.Gray;
+            this.tbBuscar.BorderRadius = 19;
+            this.tbBuscar.BorderThickness = 2;
+            this.tbBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbBuscar.DefaultText = "";
+            this.tbBuscar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbBuscar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbBuscar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbBuscar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbBuscar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbBuscar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tbBuscar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbBuscar.IconLeft = global::CapaPresentacion.Properties.Resources.lupa;
+            this.tbBuscar.Location = new System.Drawing.Point(636, 13);
+            this.tbBuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbBuscar.Name = "tbBuscar";
+            this.tbBuscar.PasswordChar = '\0';
+            this.tbBuscar.PlaceholderText = "Buscar";
+            this.tbBuscar.SelectedText = "";
+            this.tbBuscar.Size = new System.Drawing.Size(300, 40);
+            this.tbBuscar.TabIndex = 30;
             // 
             // btnBuscar
             // 
@@ -344,7 +345,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewImageColumn Column4;
         private Guna.UI2.WinForms.Guna2Button btnAgregar;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2TextBox tbBuscar;
         private Guna.UI2.WinForms.Guna2Button btnBuscar;
     }
 }

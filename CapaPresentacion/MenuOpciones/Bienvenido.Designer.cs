@@ -68,7 +68,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Californian FB", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
-            this.label1.Location = new System.Drawing.Point(25, 9);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(249, 50);
             this.label1.TabIndex = 10;
@@ -82,11 +82,11 @@
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2ShadowPanel1.Controls.Add(this.pictureBox2);
             this.guna2ShadowPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
-            this.guna2ShadowPanel1.Location = new System.Drawing.Point(21, 62);
+            this.guna2ShadowPanel1.Location = new System.Drawing.Point(0, 62);
             this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             this.guna2ShadowPanel1.Radius = 10;
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(988, 375);
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(1029, 375);
             this.guna2ShadowPanel1.TabIndex = 9;
             // 
             // pictureBox2
@@ -97,7 +97,7 @@
             this.pictureBox2.Image = global::CapaPresentacion.Properties.Resources.Welcome;
             this.pictureBox2.Location = new System.Drawing.Point(36, 20);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(933, 338);
+            this.pictureBox2.Size = new System.Drawing.Size(974, 338);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;

@@ -481,5 +481,89 @@
   <ItemGroup>
     <None Include="Resources\bandera.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Objetivos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Objetivos2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aprendizaje.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aprendizaje2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resultado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resultado %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\programa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\programa %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\colaboracion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\colaboracion %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\casa-icono-silueta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\casa-icono-silueta %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu-principal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu-principal %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aprender-en-linea.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aprender-en-linea %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajustes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajustes %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\conjunto-de-habilidades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\conjunto-de-habilidades %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marca-de-verificacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marca-de-verificacion %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mision-cumplida %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mision-cumplida.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\objetivo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\objetivo %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\objetivo %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\objetivo %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

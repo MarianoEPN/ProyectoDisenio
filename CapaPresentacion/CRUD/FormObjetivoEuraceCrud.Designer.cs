@@ -33,7 +33,7 @@
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.tbDescripcion = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btCancelar = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCancelar = new Guna.UI2.WinForms.Guna2Button();
             this.btnCrear = new Guna.UI2.WinForms.Guna2Button();
             this.labelNombre = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
@@ -99,34 +99,34 @@
             this.label3.TabIndex = 64;
             this.label3.Text = "Descripción";
             // 
-            // btCancelar
+            // btnCancelar
             // 
-            this.btCancelar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btCancelar.Animated = true;
-            this.btCancelar.AutoRoundedCorners = true;
-            this.btCancelar.BackColor = System.Drawing.Color.Transparent;
-            this.btCancelar.BorderRadius = 23;
-            this.btCancelar.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btCancelar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btCancelar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btCancelar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btCancelar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btCancelar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
-            this.btCancelar.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Bold);
-            this.btCancelar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btCancelar.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(109)))));
-            this.btCancelar.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
-            this.btCancelar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btCancelar.ImageSize = new System.Drawing.Size(30, 30);
-            this.btCancelar.IndicateFocus = true;
-            this.btCancelar.Location = new System.Drawing.Point(256, 509);
-            this.btCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btCancelar.Name = "btCancelar";
-            this.btCancelar.Size = new System.Drawing.Size(139, 48);
-            this.btCancelar.TabIndex = 61;
-            this.btCancelar.Text = "Cancelar";
-            this.btCancelar.UseTransparentBackground = true;
-            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
+            this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnCancelar.Animated = true;
+            this.btnCancelar.AutoRoundedCorners = true;
+            this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancelar.BorderRadius = 23;
+            this.btnCancelar.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCancelar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancelar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancelar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCancelar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCancelar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
+            this.btnCancelar.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Bold);
+            this.btnCancelar.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnCancelar.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(109)))));
+            this.btnCancelar.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
+            this.btnCancelar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCancelar.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnCancelar.IndicateFocus = true;
+            this.btnCancelar.Location = new System.Drawing.Point(255, 526);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(139, 48);
+            this.btnCancelar.TabIndex = 61;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseTransparentBackground = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
             // btnCrear
             // 
@@ -148,7 +148,7 @@
             this.btnCrear.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCrear.ImageSize = new System.Drawing.Size(30, 30);
             this.btnCrear.IndicateFocus = true;
-            this.btnCrear.Location = new System.Drawing.Point(95, 509);
+            this.btnCrear.Location = new System.Drawing.Point(94, 526);
             this.btnCrear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(139, 48);
@@ -265,7 +265,7 @@
             this.lbAdvertencia.AutoSize = true;
             this.lbAdvertencia.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Bold);
             this.lbAdvertencia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(109)))));
-            this.lbAdvertencia.Location = new System.Drawing.Point(107, 477);
+            this.lbAdvertencia.Location = new System.Drawing.Point(108, 485);
             this.lbAdvertencia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbAdvertencia.Name = "lbAdvertencia";
             this.lbAdvertencia.Size = new System.Drawing.Size(282, 23);
@@ -330,7 +330,7 @@
             this.ClientSize = new System.Drawing.Size(507, 585);
             this.Controls.Add(this.tbDescripcion);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btCancelar);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnCrear);
             this.Controls.Add(this.labelNombre);
             this.Controls.Add(this.lblCodigo);
@@ -357,7 +357,7 @@
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private Guna.UI2.WinForms.Guna2TextBox tbDescripcion;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2Button btCancelar;
+        private Guna.UI2.WinForms.Guna2Button btnCancelar;
         private Guna.UI2.WinForms.Guna2Button btnCrear;
         private System.Windows.Forms.Label labelNombre;
         private System.Windows.Forms.Label lblCodigo;

@@ -155,6 +155,52 @@ namespace CapaPresentacion
         private void btnEurase_Click(object sender, EventArgs e)
         {
             container(new FormObjetivosAprendizajeAsignatura());
+        }
+
+        private void btnClose_MouseEnter(object sender, EventArgs e)
+        {
+            btnClose.BackgroundImage = Properties.Resources.CirculoCerrar;
+            btnClose.IconColor = Color.White;
+        }
+
+        private void btnClose_MouseLeave(object sender, EventArgs e)
+        {
+            btnClose.BackgroundImage = Properties.Resources.CircleWithe;
+            btnClose.IconColor = Color.DimGray;
+        }
+
+        private void btnMax_MouseEnter(object sender, EventArgs e)
+        {
+            btnMax.BackgroundImage = Properties.Resources.CirculoCerrar;
+            btnMax.IconColor = Color.White;
+        }
+
+        private void btnMax_MouseLeave(object sender, EventArgs e)
+        {
+            btnMax.BackgroundImage = Properties.Resources.CircleWithe;
+            btnMax.IconColor = Color.DimGray;
+        }
+
+        private void btnMin_MouseEnter(object sender, EventArgs e)
+        {
+            btnMin.BackgroundImage = Properties.Resources.CirculoCerrar;
+            btnMin.IconColor = Color.White;
+        }
+
+        private void btnMin_MouseLeave(object sender, EventArgs e)
+        {
+            btnMin.BackgroundImage = Properties.Resources.CircleWithe;
+            btnMin.IconColor = Color.DimGray;
+        }
+
+        private void panelEPN_MouseEnter(object sender, EventArgs e)
+        {
+            panelEPN.FillColor = Color.FromArgb(241, 90, 109);
+        }
+
+        private void panelEPN_MouseLeave(object sender, EventArgs e)
+        {
+            panelEPN.FillColor = Color.FromArgb(33, 40, 58);
 
         }
     }
