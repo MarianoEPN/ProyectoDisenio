@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CapaEntidades;
+using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,138 +9,47 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CapaEntidades;
-using Guna.UI2.WinForms;
 
 namespace CapaPresentacion.CRUD
 {
-    public partial class FormObjetivoEuraceCrud : Form
+    public partial class FormObjetivoProgramaCRUD : Form
     {
         private bool isDragging = false;
         private Point initialMousePosition;
-        private ObjetivoEurace objetivoEditar;
+        private ObjetivoPrograma objetivoPrograma;
+        private Carrera carrera;
 
-        public FormObjetivoEuraceCrud()
+        public FormObjetivoProgramaCRUD()
+        {
+            InitializeComponent();
+            lbAdvertencia.Visible = false;
+            lblAccionAsignatura.Text = "Crear \n Objetivo EUR-ACE"; 
+        }
+
+        public FormObjetivoProgramaCRUD(Carrera carrera)
         {
             InitializeComponent();
             lbAdvertencia.Visible = false;
             lblAccionAsignatura.Text = "Crear \n Objetivo EUR-ACE";
+            this.carrera = carrera;
         }
 
-        public FormObjetivoEuraceCrud(ObjetivoEurace objetivoEurace)
+        public FormObjetivoProgramaCRUD(Carrera carrera, ObjetivoPrograma objetivoPrograma)
         {
             InitializeComponent();
             lbAdvertencia.Visible = false;
-            //tbCodigo.Text = objetivoEurace.Codigo;
-            //tbNombre.Text = objetivoEurace.Nombre;
-            //tbDescripcion.Text = objetivoEurace.Descripcion;
-            objetivoEditar = objetivoEurace;
+            tbCodigo.Text = objetivoPrograma.Codigo;
+            tbNombre.Text = objetivoPrograma.Nombre;
+            tbFortaleza.Text = objetivoPrograma.Fortalezas;
+            tbDebilidad.Text = objetivoPrograma.Debilidades;
+            this.objetivoPrograma = objetivoPrograma;
+            this.carrera = carrera;
             lblAccionAsignatura.Text = "Editar \n Objetivo EUR-ACE";
         }
 
-        private void FormObjetivoEuraceCrud_Load(object sender, EventArgs e)
+        private void lblCodigo_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void btCancelar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnCrear_Click(object sender, EventArgs e)
-        {
-            List<Guna2TextBox> listaTextBoxes = new List<Guna2TextBox>
-            {
-                tbCodigo,
-                tbNombre,
-                tbDescripcion
-            };
-            if (btnCrear.Text.Equals("Crear"))
-            {
-                bool camposCompletos = true;
-                foreach (var txt in listaTextBoxes)
-                {
-                    // 3. Verificar si está vacío o nulo
-                    if (string.IsNullOrEmpty(txt.Text))
-                    {
-                        // Cambiar color del borde a rojo
-                        txt.BorderColor = Color.FromArgb(241, 90, 109);
-                        camposCompletos = false;
-                    }
-                    else
-                    {
-
-                    }
-                }
-                if (camposCompletos)
-                {
-                    ObjetivoEurace objetivo = new ObjetivoEurace();
-                    //objetivo.Codigo = tbCodigo.Text;
-                    //objetivo.Nombre = tbNombre.Text;
-                    //objetivo.Descripcion = tbDescripcion.Text;
-
-                    // Metodo de la capa de negocio para guardar la asignatura creada
-
-                    this.Close();
-                }
-                else
-                {
-                    lbAdvertencia.Visible = true;
-                }
-
-
-
-            }
-            else if (btnCrear.Text.Equals("Guardar"))
-            {
-                bool camposCompletos = true;
-                foreach (var txt in listaTextBoxes)
-                {
-                    // 3. Verificar si está vacío o nulo
-                    if (string.IsNullOrEmpty(txt.Text))
-                    {
-                        // Cambiar color del borde a rojo
-                        txt.BorderColor = Color.FromArgb(241, 90, 109);
-                        camposCompletos = false;
-                    }
-                    else
-                    {
-
-                    }
-                }
-                if (camposCompletos)
-                {
-                    ObjetivoEurace objetivo = new ObjetivoEurace();
-                    //objetivo.Codigo = tbCodigo.Text;
-                    //objetivo.Nombre = tbNombre.Text;
-                    //objetivo.Descripcion = tbDescripcion.Text;
-
-                    // Metodo de la capa de negocio para guardar la asignatura editada
-
-                    this.Close();
-                }
-                else
-                {
-                    lbAdvertencia.Visible = true;
-                }
-
-            }
-        }
-
-        private void tbCodigo_Enter(object sender, EventArgs e)
-        {
-            tbCodigo.BorderColor = Color.FromArgb(213, 218, 223);
-        }
-
-        private void tbNombre_Enter(object sender, EventArgs e)
-        {
-            tbNombre.BorderColor = Color.FromArgb(213, 218, 223);
-        }
-
-        private void tbDescripcion_Enter(object sender, EventArgs e)
-        {
-            tbDescripcion.BorderColor = Color.FromArgb(213, 218, 223);
         }
 
         private void guna2ShadowPanel2_MouseDown(object sender, MouseEventArgs e)
@@ -171,6 +82,114 @@ namespace CapaPresentacion.CRUD
             {
                 isDragging = false;
             }
+        }
+
+        private void btCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnCrear_Click(object sender, EventArgs e)
+        {
+            List<Guna2TextBox> listaTextBoxes = new List<Guna2TextBox>
+            {
+                tbCodigo,
+                tbNombre,
+                tbFortaleza,
+                tbDebilidad
+            };
+            if (btnCrear.Text.Equals("Crear"))
+            {
+                bool camposCompletos = true;
+                foreach (var txt in listaTextBoxes)
+                {
+                    // 3. Verificar si está vacío o nulo
+                    if (string.IsNullOrEmpty(txt.Text))
+                    {
+                        // Cambiar color del borde a rojo
+                        txt.BorderColor = Color.FromArgb(241, 90, 109);
+                        camposCompletos = false;
+                    }
+                    else
+                    {
+
+                    }
+                }
+                if (camposCompletos)
+                {
+                    ObjetivoPrograma objetivo = new ObjetivoPrograma();
+                    //objetivo.Codigo = tbCodigo.Text;
+                    //objetivo.Nombre = tbNombre.Text;
+                    //objetivo.Fortalezas = tbFortaleza.Text;
+                    //objetivo.Debilidades = tbDebilidad.Text;
+
+                    // Metodo de la capa de negocio para guardar la asignatura creada
+
+                    this.Close();
+                }
+                else
+                {
+                    lbAdvertencia.Visible = true;
+                }
+
+
+
+            }
+            else if (btnCrear.Text.Equals("Guardar"))
+            {
+                bool camposCompletos = true;
+                foreach (var txt in listaTextBoxes)
+                {
+                    // 3. Verificar si está vacío o nulo
+                    if (string.IsNullOrEmpty(txt.Text))
+                    {
+                        // Cambiar color del borde a rojo
+                        txt.BorderColor = Color.FromArgb(241, 90, 109);
+                        camposCompletos = false;
+                    }
+                    else
+                    {
+
+                    }
+                }
+                if (camposCompletos)
+                {
+                    ObjetivoPrograma objetivo = new ObjetivoPrograma();
+                    //objetivo.Codigo = tbCodigo.Text;
+                    //objetivo.Nombre = tbNombre.Text;
+                    //objetivo.Fortalezas = tbFortaleza.Text;
+                    //objetivo.Debilidades = tbDebilidad.Text;
+
+                    // Metodo de la capa de negocio para guardar la asignatura editada
+
+                    this.Close();
+                }
+                else
+                {
+                    lbAdvertencia.Visible = true;
+                }
+
+            }
+        }
+
+        private void tbCodigo_Enter(object sender, EventArgs e)
+        {
+            tbCodigo.BorderColor = Color.FromArgb(213, 218, 223);
+        }
+
+        private void tbNombre_Enter(object sender, EventArgs e)
+        {
+            tbNombre.BorderColor = Color.FromArgb(213, 218, 223);
+        }
+
+        private void tbFortaleza_Enter(object sender, EventArgs e)
+        {
+            tbFortaleza.BorderColor = Color.FromArgb(213, 218, 223);
+        }
+
+        private void tbDebilidad_Enter(object sender, EventArgs e)
+        {
+            tbDebilidad.BorderColor = Color.FromArgb(213, 218, 223);
         }
 
         private void btnMin_MouseEnter(object sender, EventArgs e)
@@ -207,11 +226,6 @@ namespace CapaPresentacion.CRUD
         {
             btnClose.BackgroundImage = Properties.Resources.CircleWithe;
             btnClose.IconColor = Color.DimGray;
-        }
-
-        private void lblCodigo_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

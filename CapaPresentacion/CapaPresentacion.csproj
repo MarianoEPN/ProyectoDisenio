@@ -124,6 +124,12 @@
     <Compile Include="CRUD\FormObjetivoEuraceCrud.Designer.cs">
       <DependentUpon>FormObjetivoEuraceCrud.cs</DependentUpon>
     </Compile>
+    <Compile Include="CRUD\FormObjetivoProgramaCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD\FormObjetivoProgramaCRUD.Designer.cs">
+      <DependentUpon>FormObjetivoProgramaCRUD.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLoading.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +159,12 @@
     </Compile>
     <Compile Include="CRUD\FormMoldeCrud.Designer.cs">
       <DependentUpon>FormMoldeCrud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuOpciones\FormObjetivoEurace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuOpciones\FormObjetivoEurace.Designer.cs">
+      <DependentUpon>FormObjetivoEurace.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuOpciones\FormObjetivosAprendizajeAsignatura.cs">
       <SubType>Form</SubType>
@@ -192,6 +204,9 @@
     <EmbeddedResource Include="CRUD\FormObjetivoEuraceCrud.resx">
       <DependentUpon>FormObjetivoEuraceCrud.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CRUD\FormObjetivoProgramaCRUD.resx">
+      <DependentUpon>FormObjetivoProgramaCRUD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuOpciones\FormAsignatura.resx">
       <DependentUpon>FormAsignatura.cs</DependentUpon>
     </EmbeddedResource>
@@ -203,6 +218,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD\FormMoldeCrud.resx">
       <DependentUpon>FormMoldeCrud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuOpciones\FormObjetivoEurace.resx">
+      <DependentUpon>FormObjetivoEurace.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuOpciones\FormObjetivosAprendizajeAsignatura.resx">
       <DependentUpon>FormObjetivosAprendizajeAsignatura.cs</DependentUpon>
