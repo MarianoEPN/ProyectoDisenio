@@ -207,6 +207,9 @@
     <EmbeddedResource Include="CRUD\FormObjetivoProgramaCRUD.resx">
       <DependentUpon>FormObjetivoProgramaCRUD.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormLoading.resx">
+      <DependentUpon>FormLoading.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuOpciones\FormAsignatura.resx">
       <DependentUpon>FormAsignatura.cs</DependentUpon>
     </EmbeddedResource>
@@ -564,6 +567,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\objetivo %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gifLoad.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
