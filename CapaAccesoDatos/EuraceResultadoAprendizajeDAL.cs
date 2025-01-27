@@ -26,7 +26,7 @@ namespace CapaAccesoDatos
             while (leer.Read())
             {
                 EuraceResultadoAprendizaje euraceResultadoAprendizaje = new EuraceResultadoAprendizaje();
-                euraceResultadoAprendizaje.Id = leer.GetInt32(0);          
+                euraceResultadoAprendizaje.Id = leer.GetInt32(0);
                 euraceResultadoAprendizaje.Comentario = leer.GetString(3);
 
                 lista.Add(euraceResultadoAprendizaje);
@@ -43,7 +43,7 @@ namespace CapaAccesoDatos
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "InsertarEuraceResultadoAprendizaje";
             comando.CommandType = System.Data.CommandType.StoredProcedure;
-            comando.Parameters.Clear();            
+            comando.Parameters.Clear();
             comando.Parameters.AddWithValue("@comentario", euraceResultadoAprendizaje.Comentario);
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
@@ -56,7 +56,7 @@ namespace CapaAccesoDatos
             comando.CommandText = "ActualizarEuraceResultadoAprendizaje";
             comando.CommandType = System.Data.CommandType.StoredProcedure;
             comando.Parameters.Clear();
-            comando.Parameters.AddWithValue("@id", euraceResultadoAprendizaje.Id);            
+            comando.Parameters.AddWithValue("@id", euraceResultadoAprendizaje.Id);
             comando.Parameters.AddWithValue("@comentario", euraceResultadoAprendizaje.Comentario);
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
@@ -73,6 +73,67 @@ namespace CapaAccesoDatos
             comando.Parameters.Clear();
             conexion.CerrarConexion();
         }
+
+        public List<EuraceResultadoAprendizaje> BuscarEuraceResultadoAprendizaje(ObjetivoEurace objetivo, ResultadoAprendizaje resultado)
+        {
+            List<EuraceResultadoAprendizaje> lista = new List<EuraceResultadoAprendizaje>();
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "BuscarEuraceResultadoAprendizaje";
+            comando.CommandType = System.Data.CommandType.StoredProcedure;
+            comando.Parameters.Clear();
+            comando.Parameters.AddWithValue("@obj_eurace_id", objetivo.Id);
+            comando.Parameters.AddWithValue("@resultado_aprendizaje_id", resultado.Id);
+            leer = comando.ExecuteReader();
+            while (leer.Read())
+            {
+                EuraceResultadoAprendizaje euraceResultadoAprendizaje = new EuraceResultadoAprendizaje();
+                euraceResultadoAprendizaje.Id = leer.GetInt32(0);
+                euraceResultadoAprendizaje.Comentario = leer.GetString(3);
+
+                lista.Add(euraceResultadoAprendizaje);
+            }
+
+            conexion.CerrarConexion();
+            leer.Close();
+            return lista;
+        }
+
+        /*
+         -- Usar la base de datos creada
+USE acreditacion;
+GO
+
+CREATE PROCEDURE BuscarEuraceResultadoAprendizaje
+    @obj_eurace_id INT,
+    @resultado_aprendizaje_id INT
+AS
+BEGIN
+    -- Seleccionar los registros que coinciden con los parámetros de entrada
+    SELECT 
+        id,
+        obj_eurace_id,
+        resultado_aprendizaje_id,
+        comentario
+    FROM 
+        eurace_resultado_aprendizaje
+    WHERE 
+        (@obj_eurace_id IS NULL OR obj_eurace_id = @obj_eurace_id) AND
+        (@resultado_aprendizaje_id IS NULL OR resultado_aprendizaje_id = @resultado_aprendizaje_id);
+END;
+
+---Pruebas 
+
+EXEC BuscarEuraceResultadoAprendizaje @obj_eurace_id = NULL, @resultado_aprendizaje_id = 2;
+
+EXEC BuscarEuraceResultadoAprendizaje @obj_eurace_id = 10, @resultado_aprendizaje_id = 2;
+
+EXEC BuscarEuraceResultadoAprendizaje @obj_eurace_id = 2, @resultado_aprendizaje_id = NULL;
+
+EXEC BuscarEuraceResultadoAprendizaje @obj_eurace_id = NULL, @resultado_aprendizaje_id = NULL; 
+         
+         
+       
+         */
 
 
 
