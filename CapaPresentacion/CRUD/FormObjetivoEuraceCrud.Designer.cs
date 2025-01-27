@@ -75,7 +75,7 @@
             this.tbDescripcion.Font = new System.Drawing.Font("Californian FB", 12F);
             this.tbDescripcion.ForeColor = System.Drawing.Color.Black;
             this.tbDescripcion.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbDescripcion.Location = new System.Drawing.Point(12, 271);
+            this.tbDescripcion.Location = new System.Drawing.Point(12, 253);
             this.tbDescripcion.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.tbDescripcion.Multiline = true;
             this.tbDescripcion.Name = "tbDescripcion";
@@ -83,7 +83,7 @@
             this.tbDescripcion.PlaceholderText = "Escribe aquí...";
             this.tbDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbDescripcion.SelectedText = "";
-            this.tbDescripcion.Size = new System.Drawing.Size(483, 192);
+            this.tbDescripcion.Size = new System.Drawing.Size(483, 150);
             this.tbDescripcion.TabIndex = 65;
             this.tbDescripcion.Enter += new System.EventHandler(this.tbDescripcion_Enter);
             // 
@@ -93,7 +93,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Californian FB", 15F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(12, 225);
+            this.label3.Location = new System.Drawing.Point(12, 222);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(142, 29);
             this.label3.TabIndex = 64;
@@ -119,7 +119,7 @@
             this.btnCancelar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCancelar.ImageSize = new System.Drawing.Size(30, 30);
             this.btnCancelar.IndicateFocus = true;
-            this.btnCancelar.Location = new System.Drawing.Point(255, 526);
+            this.btnCancelar.Location = new System.Drawing.Point(255, 465);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(139, 48);
@@ -148,7 +148,7 @@
             this.btnCrear.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCrear.ImageSize = new System.Drawing.Size(30, 30);
             this.btnCrear.IndicateFocus = true;
-            this.btnCrear.Location = new System.Drawing.Point(94, 526);
+            this.btnCrear.Location = new System.Drawing.Point(94, 465);
             this.btnCrear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(139, 48);
@@ -262,10 +262,11 @@
             // 
             // lbAdvertencia
             // 
+            this.lbAdvertencia.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lbAdvertencia.AutoSize = true;
             this.lbAdvertencia.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Bold);
             this.lbAdvertencia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(109)))));
-            this.lbAdvertencia.Location = new System.Drawing.Point(108, 485);
+            this.lbAdvertencia.Location = new System.Drawing.Point(108, 423);
             this.lbAdvertencia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbAdvertencia.Name = "lbAdvertencia";
             this.lbAdvertencia.Size = new System.Drawing.Size(282, 23);
@@ -327,7 +328,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(507, 585);
+            this.ClientSize = new System.Drawing.Size(507, 524);
             this.Controls.Add(this.tbDescripcion);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnCancelar);
@@ -339,7 +340,7 @@
             this.Controls.Add(this.tbNombre);
             this.Controls.Add(this.tbCodigo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormObjetivoEuraceCrud";
             this.Text = "FormObjetivoEuraceCrud";
             this.Load += new System.EventHandler(this.FormObjetivoEuraceCrud_Load);
