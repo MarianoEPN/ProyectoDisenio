@@ -16,6 +16,7 @@ namespace CapaPresentacion
         public FormLoading()
         {
             InitializeComponent();
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -24,23 +25,29 @@ namespace CapaPresentacion
             {
                 timer1.Stop();
 
-                Menuu p = new Menuu();
-                p.Show();
+                // Abrir el menú y cerrar este formulario
+                Menuu menu = new Menuu();
+                menu.FormClosed += FormLoading_FormClosed; // Asegura el cierre completo
+                menu.Show();
                 this.Hide();
             }
-            else 
+            else
             {
                 guna2CircleProgressBar1.Value += 1;
                 label_val.Text = (Convert.ToInt32(label_val.Text) + 1).ToString();
             }
-            
-
         }
 
         private void FormLoading_Load(object sender, EventArgs e)
         {
             guna2ShadowForm1.SetShadowForm(this);
             timer1.Start();
+        }
+
+        private void FormLoading_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit(); // Cierra la aplicación por completo
+
         }
     }
 }

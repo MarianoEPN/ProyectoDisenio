@@ -24,5 +24,6 @@ namespace CapaPresentacion
             timer1.Stop(); // Detener el temporizador
             this.Close();  // Cerrar el Splash Screen
         }
+
     }
 }

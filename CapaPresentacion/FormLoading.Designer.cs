@@ -35,15 +35,15 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.labelLoad = new System.Windows.Forms.Label();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2CircleProgressBar1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2CircleProgressBar1
             // 
-            this.guna2CircleProgressBar1.BackColor = System.Drawing.Color.White;
-            this.guna2CircleProgressBar1.Controls.Add(this.guna2PictureBox1);
+            this.guna2CircleProgressBar1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CircleProgressBar1.Controls.Add(this.guna2CirclePictureBox1);
             this.guna2CircleProgressBar1.FillColor = System.Drawing.Color.Transparent;
             this.guna2CircleProgressBar1.FillThickness = 40;
             this.guna2CircleProgressBar1.Font = new System.Drawing.Font("Segoe UI", 12F);
@@ -61,8 +61,9 @@
             // label_val
             // 
             this.label_val.AutoSize = true;
+            this.label_val.BackColor = System.Drawing.Color.Transparent;
             this.label_val.Font = new System.Drawing.Font("Californian FB", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_val.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
+            this.label_val.ForeColor = System.Drawing.Color.Transparent;
             this.label_val.Location = new System.Drawing.Point(321, 403);
             this.label_val.Name = "label_val";
             this.label_val.Size = new System.Drawing.Size(62, 69);
@@ -72,8 +73,9 @@
             // labelEPN
             // 
             this.labelEPN.AutoSize = true;
+            this.labelEPN.BackColor = System.Drawing.Color.Transparent;
             this.labelEPN.Font = new System.Drawing.Font("Californian FB", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEPN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
+            this.labelEPN.ForeColor = System.Drawing.Color.Transparent;
             this.labelEPN.Location = new System.Drawing.Point(83, 509);
             this.labelEPN.Name = "labelEPN";
             this.labelEPN.Size = new System.Drawing.Size(507, 46);
@@ -88,33 +90,33 @@
             // labelLoad
             // 
             this.labelLoad.AutoSize = true;
+            this.labelLoad.BackColor = System.Drawing.Color.Transparent;
             this.labelLoad.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLoad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
+            this.labelLoad.ForeColor = System.Drawing.Color.Transparent;
             this.labelLoad.Location = new System.Drawing.Point(293, 472);
             this.labelLoad.Name = "labelLoad";
             this.labelLoad.Size = new System.Drawing.Size(119, 27);
             this.labelLoad.TabIndex = 3;
             this.labelLoad.Text = "Cargando...";
             // 
-            // guna2PictureBox1
+            // guna2CirclePictureBox1
             // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = global::CapaPresentacion.Properties.Resources.gifLoad;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(109, 82);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(208, 214);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.UseTransparentBackground = true;
+            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CirclePictureBox1.Image = global::CapaPresentacion.Properties.Resources.gifLoad;
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(29, 27);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(359, 332);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox1.TabIndex = 4;
+            this.guna2CirclePictureBox1.TabStop = false;
             // 
             // FormLoading
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
             this.ClientSize = new System.Drawing.Size(712, 564);
             this.Controls.Add(this.labelLoad);
             this.Controls.Add(this.labelEPN);
@@ -124,9 +126,10 @@
             this.Name = "FormLoading";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLoading";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormLoading_FormClosed);
             this.Load += new System.EventHandler(this.FormLoading_Load);
             this.guna2CircleProgressBar1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,11 +138,11 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar1;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Label label_val;
         private System.Windows.Forms.Label labelEPN;
         private System.Windows.Forms.Timer timer1;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
         private System.Windows.Forms.Label labelLoad;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
     }
 }
