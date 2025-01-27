@@ -655,6 +655,7 @@
             // 
             // menuTransition
             // 
+            this.menuTransition.Interval = 10;
             this.menuTransition.Tick += new System.EventHandler(this.menuTransition_Tick);
             // 
             // Menuu
