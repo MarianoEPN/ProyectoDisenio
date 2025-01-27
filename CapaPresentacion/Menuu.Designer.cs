@@ -102,7 +102,7 @@
             this.menuContainer.Controls.Add(this.btnOC);
             this.menuContainer.Controls.Add(this.btnRAAxPE);
             this.menuContainer.Controls.Add(this.btnRAxOP);
-            this.menuContainer.Location = new System.Drawing.Point(12, 395);
+            this.menuContainer.Location = new System.Drawing.Point(9, 395);
             this.menuContainer.Name = "menuContainer";
             this.menuContainer.Size = new System.Drawing.Size(240, 61);
             this.menuContainer.TabIndex = 30;
@@ -222,7 +222,7 @@
             this.btnOP.Name = "btnOP";
             this.btnOP.Size = new System.Drawing.Size(208, 53);
             this.btnOP.TabIndex = 13;
-            this.btnOP.Text = "       Objetivos de     Programa";
+            this.btnOP.Text = "        Objetivos de     Programa";
             this.btnOP.UseTransparentBackground = true;
             // 
             // btnRA
@@ -248,7 +248,7 @@
             this.btnRA.Name = "btnRA";
             this.btnRA.Size = new System.Drawing.Size(208, 53);
             this.btnRA.TabIndex = 12;
-            this.btnRA.Text = "       Resultados de      Aprendizaje";
+            this.btnRA.Text = "        Resultados de        Aprendizaje";
             this.btnRA.UseTransparentBackground = true;
             this.btnRA.Click += new System.EventHandler(this.btnRA_Click);
             // 
@@ -275,7 +275,7 @@
             this.btnEurase.Name = "btnEurase";
             this.btnEurase.Size = new System.Drawing.Size(208, 53);
             this.btnEurase.TabIndex = 11;
-            this.btnEurase.Text = "       Objetivos        EUR-ACE";
+            this.btnEurase.Text = "        Objetivos           EUR-ACE";
             this.btnEurase.UseTransparentBackground = true;
             this.btnEurase.Click += new System.EventHandler(this.btnEurase_Click);
             // 
@@ -302,7 +302,7 @@
             this.btnAsigatura.Name = "btnAsigatura";
             this.btnAsigatura.Size = new System.Drawing.Size(216, 48);
             this.btnAsigatura.TabIndex = 10;
-            this.btnAsigatura.Text = "Asignatura";
+            this.btnAsigatura.Text = " Asignatura";
             this.btnAsigatura.UseTransparentBackground = true;
             this.btnAsigatura.Click += new System.EventHandler(this.btnAsigatura_Click);
             // 
@@ -329,7 +329,7 @@
             this.btnRAA.Name = "btnRAA";
             this.btnRAA.Size = new System.Drawing.Size(216, 53);
             this.btnRAA.TabIndex = 7;
-            this.btnRAA.Text = "       Resultados del         Aprendizaje...";
+            this.btnRAA.Text = "        Resultados del          Aprendizaje...";
             this.btnRAA.UseTransparentBackground = true;
             this.btnRAA.Click += new System.EventHandler(this.btnRAA_Click);
             // 
@@ -379,7 +379,7 @@
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(216, 48);
             this.btnHome.TabIndex = 4;
-            this.btnHome.Text = "        Home";
+            this.btnHome.Text = "         Home";
             this.btnHome.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnHome.UseTransparentBackground = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
