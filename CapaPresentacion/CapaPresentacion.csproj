@@ -130,6 +130,18 @@
     <Compile Include="CRUD\FormObjetivoProgramaCRUD.Designer.cs">
       <DependentUpon>FormObjetivoProgramaCRUD.cs</DependentUpon>
     </Compile>
+    <Compile Include="CRUD\FormResulAprendizajeCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD\FormResulAprendizajeCRUD.Designer.cs">
+      <DependentUpon>FormResulAprendizajeCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD\FormRRACRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD\FormRRACRUD.Designer.cs">
+      <DependentUpon>FormRRACRUD.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormInicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +224,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD\FormObjetivoProgramaCRUD.resx">
       <DependentUpon>FormObjetivoProgramaCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD\FormResulAprendizajeCRUD.resx">
+      <DependentUpon>FormResulAprendizajeCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD\FormRRACRUD.resx">
+      <DependentUpon>FormRRACRUD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormInicio.resx">
       <DependentUpon>FormInicio.cs</DependentUpon>
