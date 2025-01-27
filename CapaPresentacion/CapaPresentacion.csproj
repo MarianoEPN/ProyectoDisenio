@@ -172,11 +172,11 @@
     <Compile Include="MenuOpciones\FormObjetivoEurace.Designer.cs">
       <DependentUpon>FormObjetivoEurace.cs</DependentUpon>
     </Compile>
-    <Compile Include="MenuOpciones\FormObjetivosAprendizajeAsignatura.cs">
+    <Compile Include="MenuOpciones\FormResultadosAprendizajeAsignatura.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuOpciones\FormObjetivosAprendizajeAsignatura.Designer.cs">
-      <DependentUpon>FormObjetivosAprendizajeAsignatura.cs</DependentUpon>
+    <Compile Include="MenuOpciones\FormResultadosAprendizajeAsignatura.Designer.cs">
+      <DependentUpon>FormResultadosAprendizajeAsignatura.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuOpciones\FormResultadosAprendizaje.cs">
       <SubType>Form</SubType>
@@ -234,8 +234,8 @@
     <EmbeddedResource Include="MenuOpciones\FormObjetivoEurace.resx">
       <DependentUpon>FormObjetivoEurace.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MenuOpciones\FormObjetivosAprendizajeAsignatura.resx">
-      <DependentUpon>FormObjetivosAprendizajeAsignatura.cs</DependentUpon>
+    <EmbeddedResource Include="MenuOpciones\FormResultadosAprendizajeAsignatura.resx">
+      <DependentUpon>FormResultadosAprendizajeAsignatura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuOpciones\FormResultadosAprendizaje.resx">
       <DependentUpon>FormResultadosAprendizaje.cs</DependentUpon>

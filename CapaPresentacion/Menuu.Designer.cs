@@ -184,7 +184,7 @@
             this.btnOC.Name = "btnOC";
             this.btnOC.Size = new System.Drawing.Size(208, 53);
             this.btnOC.TabIndex = 14;
-            this.btnOC.Text = "        Objetivos          Conjunto";
+            this.btnOC.Text = "        Opciones          Conjunto";
             this.btnOC.UseTransparentBackground = true;
             // 
             // btnOP
@@ -238,6 +238,7 @@
             this.btnRA.TabIndex = 12;
             this.btnRA.Text = "       Resultados de      Aprendizaje";
             this.btnRA.UseTransparentBackground = true;
+            this.btnRA.Click += new System.EventHandler(this.btnRA_Click);
             // 
             // btnEurase
             // 
@@ -316,7 +317,7 @@
             this.btnRAA.Name = "btnRAA";
             this.btnRAA.Size = new System.Drawing.Size(216, 53);
             this.btnRAA.TabIndex = 7;
-            this.btnRAA.Text = "       Resultados de         Aprendizaje...";
+            this.btnRAA.Text = "       Resultados del         Aprendizaje...";
             this.btnRAA.UseTransparentBackground = true;
             this.btnRAA.Click += new System.EventHandler(this.btnRAA_Click);
             // 

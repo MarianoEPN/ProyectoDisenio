@@ -151,12 +151,13 @@ namespace CapaPresentacion
 
         private void btnRAA_Click(object sender, EventArgs e)
         {
-            container(new FormResultadosAprendizaje());
+            container(new FormResultadosAprendizajeAsignatura());
+
         }
 
         private void btnEurase_Click(object sender, EventArgs e)
         {
-            container(new FormObjetivosAprendizajeAsignatura());
+            container(new FormObjetivoEurace());
         }
 
         private void btnClose_MouseEnter(object sender, EventArgs e)
@@ -219,6 +220,11 @@ namespace CapaPresentacion
         {
             container(new Match1());
 
+        }
+
+        private void btnRA_Click(object sender, EventArgs e)
+        {
+            container(new FormResultadosAprendizaje());
         }
     }
 }
