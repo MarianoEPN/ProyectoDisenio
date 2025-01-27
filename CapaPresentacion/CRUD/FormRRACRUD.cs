@@ -214,17 +214,7 @@ namespace CapaPresentacion.CRUD
             btnCloseRRA.IconColor = Color.DimGray;
         }
 
-        private void btnMaxRRA_MouseEnter(object sender, EventArgs e)
-        {
-            btnMaxRRA.BackgroundImage = Properties.Resources.CirculoCerrar;
-            btnMaxRRA.IconColor = Color.White;
-        }
 
-        private void btnMaxRRA_MouseLeave(object sender, EventArgs e)
-        {
-            btnMaxRRA.BackgroundImage = Properties.Resources.CircleWithe;
-            btnMaxRRA.IconColor = Color.DimGray;
-        }
 
         private void btnMinRRA_MouseEnter(object sender, EventArgs e)
         {

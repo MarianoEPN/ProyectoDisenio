@@ -61,6 +61,8 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.ToolTip1 = new Guna.UI2.WinForms.Guna2HtmlToolTip();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
+            this.menuContainer = new System.Windows.Forms.FlowLayoutPanel();
+            this.menuTransition = new System.Windows.Forms.Timer(this.components);
             this.panelBarra.SuspendLayout();
             this.panelControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -69,15 +71,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.panelOpciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).BeginInit();
+            this.menuContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelBarra
             // 
             this.panelBarra.BackColor = System.Drawing.Color.Transparent;
+            this.panelBarra.Controls.Add(this.menuContainer);
             this.panelBarra.Controls.Add(this.lblMenu);
-            this.panelBarra.Controls.Add(this.btnRAxOP);
-            this.panelBarra.Controls.Add(this.btnRAAxPE);
-            this.panelBarra.Controls.Add(this.btnOC);
             this.panelBarra.Controls.Add(this.btnOP);
             this.panelBarra.Controls.Add(this.btnRA);
             this.panelBarra.Controls.Add(this.btnEurase);
@@ -127,7 +128,7 @@
             this.btnRAxOP.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnRAxOP.ImageSize = new System.Drawing.Size(30, 30);
             this.btnRAxOP.IndicateFocus = true;
-            this.btnRAxOP.Location = new System.Drawing.Point(12, 513);
+            this.btnRAxOP.Location = new System.Drawing.Point(3, 121);
             this.btnRAxOP.Name = "btnRAxOP";
             this.btnRAxOP.Size = new System.Drawing.Size(208, 53);
             this.btnRAxOP.TabIndex = 16;
@@ -153,7 +154,7 @@
             this.btnRAAxPE.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnRAAxPE.ImageSize = new System.Drawing.Size(30, 30);
             this.btnRAAxPE.IndicateFocus = true;
-            this.btnRAAxPE.Location = new System.Drawing.Point(12, 454);
+            this.btnRAAxPE.Location = new System.Drawing.Point(3, 62);
             this.btnRAAxPE.Name = "btnRAAxPE";
             this.btnRAAxPE.Size = new System.Drawing.Size(208, 53);
             this.btnRAAxPE.TabIndex = 15;
@@ -180,12 +181,13 @@
             this.btnOC.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnOC.ImageSize = new System.Drawing.Size(30, 30);
             this.btnOC.IndicateFocus = true;
-            this.btnOC.Location = new System.Drawing.Point(12, 395);
+            this.btnOC.Location = new System.Drawing.Point(3, 3);
             this.btnOC.Name = "btnOC";
             this.btnOC.Size = new System.Drawing.Size(208, 53);
             this.btnOC.TabIndex = 14;
             this.btnOC.Text = "        Opciones          Conjunto";
             this.btnOC.UseTransparentBackground = true;
+            this.btnOC.Click += new System.EventHandler(this.btnOC_Click);
             // 
             // btnOP
             // 
@@ -641,6 +643,20 @@
             this.guna2AnimateWindow1.AnimationType = Guna.UI2.WinForms.Guna2AnimateWindow.AnimateWindowType.AW_BLEND;
             this.guna2AnimateWindow1.TargetForm = this;
             // 
+            // menuContainer
+            // 
+            this.menuContainer.Controls.Add(this.btnOC);
+            this.menuContainer.Controls.Add(this.btnRAAxPE);
+            this.menuContainer.Controls.Add(this.btnRAxOP);
+            this.menuContainer.Location = new System.Drawing.Point(12, 395);
+            this.menuContainer.Name = "menuContainer";
+            this.menuContainer.Size = new System.Drawing.Size(240, 61);
+            this.menuContainer.TabIndex = 30;
+            // 
+            // menuTransition
+            // 
+            this.menuTransition.Tick += new System.EventHandler(this.menuTransition_Tick);
+            // 
             // Menuu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -666,6 +682,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.panelOpciones.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).EndInit();
+            this.menuContainer.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -704,5 +721,7 @@
         private System.Windows.Forms.Label lblMenu;
         private Guna.UI2.WinForms.Guna2HtmlToolTip ToolTip1;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
+        private System.Windows.Forms.FlowLayoutPanel menuContainer;
+        private System.Windows.Forms.Timer menuTransition;
     }
 }

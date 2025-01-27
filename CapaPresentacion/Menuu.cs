@@ -51,7 +51,7 @@ namespace CapaPresentacion
                     timerExpanded.Stop();
                 }
             }
-            else 
+            else
             {
                 panelBarra.Width += 10;
                 if (panelBarra.Width == panelBarra.MaximumSize.Width)
@@ -77,7 +77,7 @@ namespace CapaPresentacion
             fm.Dock = DockStyle.Fill;
             panelContainer.Controls.Add(fm);
             panelContainer.Tag = fm;
-            fm.Show(); 
+            fm.Show();
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -225,6 +225,34 @@ namespace CapaPresentacion
         private void btnRA_Click(object sender, EventArgs e)
         {
             container(new FormResultadosAprendizaje());
+        }
+        bool menuExpand = false;
+        private void menuTransition_Tick(object sender, EventArgs e)
+        {
+            if (menuExpand == false)
+            {
+                menuContainer.Height += 10;
+                if (menuContainer.Height >= 165)
+                {
+                    menuTransition.Stop();
+                    menuExpand = true;
+                }
+            }
+            else
+            {
+                menuContainer.Height -= 10;
+                if (menuContainer.Height <= 53)
+                {
+                    menuTransition.Stop();
+                    menuExpand = false;
+                }
+
+            }
+        }
+
+        private void btnOC_Click(object sender, EventArgs e)
+        {
+            menuTransition.Start();
         }
     }
 }
