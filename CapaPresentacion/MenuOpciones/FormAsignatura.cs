@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaEntidades;
+using CapaPresentacion.CRUD;
 
 namespace CapaPresentacion
 {
@@ -48,11 +49,11 @@ namespace CapaPresentacion
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            FormMoldeCrud crud = new FormMoldeCrud();
+            FormAsignaturaCrud crud = new FormAsignaturaCrud();
             this.Enabled = false;
             crud.ShowDialog();
             this.Enabled = true;
-            listaAsignaturas.Add(crud.asignatura1);
+            listaAsignaturas.Add(crud.AsignaturaEditar);
             ActualizarTabla();
         }
 
@@ -80,7 +81,7 @@ namespace CapaPresentacion
                 DataGridViewRow row = dtgAsignatura.CurrentRow;
                 // Obtener el objeto completo, que corresponde a la fila seleccionada
                 Asignatura asignaturaSeleccionada = (Asignatura)row.DataBoundItem;
-                FormMoldeCrud crud = new FormMoldeCrud(asignaturaSeleccionada);
+                FormAsignaturaCrud crud = new FormAsignaturaCrud(asignaturaSeleccionada);
                 this.Enabled = false;
                 crud.ShowDialog();
                 this.Enabled = true;

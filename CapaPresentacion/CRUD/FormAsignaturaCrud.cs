@@ -33,14 +33,14 @@ namespace CapaPresentacion.CRUD
         {
             InitializeComponent();
             lbAdvertencia.Visible = false;
-            //tbCodigo.Text = asignatura.Nombre;
-            //tbCodigo.Text = asignatura.Codigo;
-            //tbNivel.Text = Convert.ToString(asignatura.Nivel);
+            tbCodigo.Text = asignatura.Nombre;
+            tbCodigo.Text = asignatura.Codigo;
+            tbNivel.Text = Convert.ToString(asignatura.Nivel);
             AsignaturaEditar = asignatura;
             lblAccionAsignatura.Text = "Editar asignatura";
         }
 
-        private Asignatura AsignaturaEditar { get; set; }
+        public Asignatura AsignaturaEditar { get; set; }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
@@ -76,10 +76,11 @@ namespace CapaPresentacion.CRUD
                 if (camposCompletos)
                 {
                     Asignatura asignatura = new Asignatura();
-                    //asignatura.Codigo = tbCodigo.Text;
-                    //asignatura.Nombre = tbNombre.Text;
-                    //asignatura.Nivel = Convert.ToInt32(tbNivel.Text);
+                    asignatura.Codigo = tbCodigo.Text;
+                    asignatura.Nombre = tbNombre.Text;
+                    asignatura.Nivel = Convert.ToInt32(tbNivel.Text);
 
+                    AsignaturaEditar = asignatura;
                     // Metodo de la capa de negocio para guardar la asignatura creada
 
                     this.Close();
@@ -112,10 +113,11 @@ namespace CapaPresentacion.CRUD
                 if (camposCompletos)
                 {
                     Asignatura asignatura = AsignaturaEditar;
-                    //asignatura.Codigo = tbCodigo.Text;
-                    //asignatura.Nombre = tbNombre.Text;
-                    //asignatura.Nivel = Convert.ToInt32(tbNivel.Text);
+                    asignatura.Codigo = tbCodigo.Text;
+                    asignatura.Nombre = tbNombre.Text;
+                    asignatura.Nivel = Convert.ToInt32(tbNivel.Text);
 
+                    AsignaturaEditar = asignatura;
                     // Metodo de la capa de negocio para guardar la asignatura editada
 
                     this.Close();
