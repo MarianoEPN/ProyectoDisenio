@@ -18,7 +18,14 @@ namespace CapaPresentacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormLoading());
+
+            // Mostrar la pantalla de bienvenida
+            using (var splash = new FormInicio())
+            {
+                splash.ShowDialog(); // Mostrar el Splash Screen
+            }
+
+            Application.Run(new Form1());
         }
     }
 }

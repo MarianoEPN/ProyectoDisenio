@@ -30,11 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.guna2CircleProgressBar1 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label_val = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelEPN = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
+            this.labelLoad = new System.Windows.Forms.Label();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2CircleProgressBar1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -57,6 +58,44 @@
             this.guna2CircleProgressBar1.TabIndex = 0;
             this.guna2CircleProgressBar1.Text = "guna2CircleProgressBar1";
             // 
+            // label_val
+            // 
+            this.label_val.AutoSize = true;
+            this.label_val.Font = new System.Drawing.Font("Californian FB", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_val.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
+            this.label_val.Location = new System.Drawing.Point(321, 403);
+            this.label_val.Name = "label_val";
+            this.label_val.Size = new System.Drawing.Size(62, 69);
+            this.label_val.TabIndex = 1;
+            this.label_val.Text = "0";
+            // 
+            // labelEPN
+            // 
+            this.labelEPN.AutoSize = true;
+            this.labelEPN.Font = new System.Drawing.Font("Californian FB", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEPN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
+            this.labelEPN.Location = new System.Drawing.Point(83, 509);
+            this.labelEPN.Name = "labelEPN";
+            this.labelEPN.Size = new System.Drawing.Size(507, 46);
+            this.labelEPN.TabIndex = 2;
+            this.labelEPN.Text = "Escuela Politecnica Nacional";
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 50;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // labelLoad
+            // 
+            this.labelLoad.AutoSize = true;
+            this.labelLoad.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLoad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
+            this.labelLoad.Location = new System.Drawing.Point(293, 472);
+            this.labelLoad.Name = "labelLoad";
+            this.labelLoad.Size = new System.Drawing.Size(119, 27);
+            this.labelLoad.TabIndex = 3;
+            this.labelLoad.Text = "Cargando...";
+            // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -71,43 +110,19 @@
             this.guna2PictureBox1.TabStop = false;
             this.guna2PictureBox1.UseTransparentBackground = true;
             // 
-            // label_val
-            // 
-            this.label_val.AutoSize = true;
-            this.label_val.Font = new System.Drawing.Font("Californian FB", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_val.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
-            this.label_val.Location = new System.Drawing.Point(320, 413);
-            this.label_val.Name = "label_val";
-            this.label_val.Size = new System.Drawing.Size(62, 69);
-            this.label_val.TabIndex = 1;
-            this.label_val.Text = "0";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Californian FB", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
-            this.label2.Location = new System.Drawing.Point(83, 509);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(507, 46);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Escuela Politecnica Nacional";
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // FormLoading
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(712, 564);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelLoad);
+            this.Controls.Add(this.labelEPN);
             this.Controls.Add(this.label_val);
             this.Controls.Add(this.guna2CircleProgressBar1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormLoading";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLoading";
             this.Load += new System.EventHandler(this.FormLoading_Load);
             this.guna2CircleProgressBar1.ResumeLayout(false);
@@ -122,8 +137,9 @@
         private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Label label_val;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelEPN;
         private System.Windows.Forms.Timer timer1;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
+        private System.Windows.Forms.Label labelLoad;
     }
 }

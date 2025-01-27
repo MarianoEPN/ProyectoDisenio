@@ -63,6 +63,7 @@ namespace CapaPresentacion
         // Apartado para la verificacion de los campos e ingreso del usuario al programa
         private void btnLogin_Click(object sender, EventArgs e)
         {
+
             //hasta que se implemente adecuadamente la capa de negocio se implementara un metodo para verificar usuarios
 
             bool verificarUsuario = false;
@@ -95,8 +96,10 @@ namespace CapaPresentacion
                 {
                     // Mensaje para dar a entender que funciono
                     //MessageBox.Show("Acceso condedido");
-                    Menuu menu = new Menuu(this);
-                    menu.Show();
+
+
+                    FormLoading _load = new FormLoading();
+                    _load.Show();
                     this.Hide();
                     verificarUsuario = true;
                     break;

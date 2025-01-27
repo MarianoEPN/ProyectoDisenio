@@ -23,6 +23,10 @@ namespace CapaPresentacion
             if (guna2CircleProgressBar1.Value == 100)
             {
                 timer1.Stop();
+
+                Menuu p = new Menuu();
+                p.Show();
+                this.Hide();
             }
             else 
             {
@@ -30,6 +34,7 @@ namespace CapaPresentacion
                 label_val.Text = (Convert.ToInt32(label_val.Text) + 1).ToString();
             }
             
+
         }
 
         private void FormLoading_Load(object sender, EventArgs e)

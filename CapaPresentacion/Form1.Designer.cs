@@ -38,48 +38,48 @@ namespace CapaPresentacion
             this.lblContraseñaL = new System.Windows.Forms.Label();
             this.lblCarrera = new System.Windows.Forms.Label();
             this.cbRecordar = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.tbClave = new Guna.UI2.WinForms.Guna2TextBox();
-            this.tbUsuario = new Guna.UI2.WinForms.Guna2TextBox();
-            this.pbVista = new System.Windows.Forms.PictureBox();
             this.btnLogin = new Guna.UI2.WinForms.Guna2GradientButton();
             this.lblLogin = new System.Windows.Forms.Label();
             this.panelRegistro = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.label1 = new System.Windows.Forms.Label();
             this.lblCarreraR = new System.Windows.Forms.Label();
             this.lblPensum = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblContraseñaR = new System.Windows.Forms.Label();
             this.lblContraseñaR2 = new System.Windows.Forms.Label();
+            this.btnRegistrarseReg = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.itulo = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.tbPensum = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbCorreo = new Guna.UI2.WinForms.Guna2TextBox();
             this.pbVista3 = new System.Windows.Forms.PictureBox();
             this.tbClaveConfirmReg = new Guna.UI2.WinForms.Guna2TextBox();
             this.pbVista2 = new System.Windows.Forms.PictureBox();
-            this.btnRegistrarseReg = new Guna.UI2.WinForms.Guna2GradientButton();
             this.tbClaveReg = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbUsuarioReg = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.itulo = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.tbClave = new Guna.UI2.WinForms.Guna2TextBox();
+            this.tbUsuario = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pbVista = new System.Windows.Forms.PictureBox();
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panelIniciar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbVista)).BeginInit();
             this.panelRegistro.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbVista3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbVista2)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbVista)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
@@ -175,71 +175,6 @@ namespace CapaPresentacion
             this.cbRecordar.UncheckedState.BorderThickness = 1;
             this.cbRecordar.UncheckedState.FillColor = System.Drawing.Color.WhiteSmoke;
             // 
-            // tbClave
-            // 
-            this.tbClave.Animated = true;
-            this.tbClave.BorderThickness = 2;
-            this.tbClave.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbClave.DefaultText = "";
-            this.tbClave.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbClave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbClave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbClave.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbClave.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbClave.Font = new System.Drawing.Font("Californian FB", 13.8F);
-            this.tbClave.ForeColor = System.Drawing.Color.DimGray;
-            this.tbClave.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbClave.IconLeft = ((System.Drawing.Image)(resources.GetObject("tbClave.IconLeft")));
-            this.tbClave.Location = new System.Drawing.Point(75, 231);
-            this.tbClave.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
-            this.tbClave.Name = "tbClave";
-            this.tbClave.PasswordChar = '\0';
-            this.tbClave.PlaceholderText = "Password";
-            this.tbClave.SelectedText = "";
-            this.tbClave.Size = new System.Drawing.Size(271, 48);
-            this.tbClave.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.tbClave.TabIndex = 17;
-            this.tbClave.TextChanged += new System.EventHandler(this.tbClave_TextChanged);
-            this.tbClave.Enter += new System.EventHandler(this.tbClave_Enter_1);
-            // 
-            // tbUsuario
-            // 
-            this.tbUsuario.Animated = true;
-            this.tbUsuario.BorderThickness = 2;
-            this.tbUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbUsuario.DefaultText = "";
-            this.tbUsuario.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbUsuario.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbUsuario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbUsuario.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbUsuario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbUsuario.Font = new System.Drawing.Font("Californian FB", 13.8F);
-            this.tbUsuario.ForeColor = System.Drawing.Color.DimGray;
-            this.tbUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbUsuario.IconLeft = ((System.Drawing.Image)(resources.GetObject("tbUsuario.IconLeft")));
-            this.tbUsuario.Location = new System.Drawing.Point(75, 151);
-            this.tbUsuario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbUsuario.Name = "tbUsuario";
-            this.tbUsuario.PasswordChar = '\0';
-            this.tbUsuario.PlaceholderText = "Username (Career)";
-            this.tbUsuario.SelectedText = "";
-            this.tbUsuario.Size = new System.Drawing.Size(271, 48);
-            this.tbUsuario.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.tbUsuario.TabIndex = 16;
-            this.tbUsuario.Enter += new System.EventHandler(this.tbUsuario_Enter);
-            // 
-            // pbVista
-            // 
-            this.pbVista.Image = ((System.Drawing.Image)(resources.GetObject("pbVista.Image")));
-            this.pbVista.Location = new System.Drawing.Point(352, 246);
-            this.pbVista.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pbVista.Name = "pbVista";
-            this.pbVista.Size = new System.Drawing.Size(24, 23);
-            this.pbVista.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbVista.TabIndex = 11;
-            this.pbVista.TabStop = false;
-            this.pbVista.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
             // btnLogin
             // 
             this.btnLogin.Animated = true;
@@ -300,25 +235,6 @@ namespace CapaPresentacion
             this.panelRegistro.ShadowColor = System.Drawing.Color.Black;
             this.panelRegistro.Size = new System.Drawing.Size(437, 596);
             this.panelRegistro.TabIndex = 5;
-            // 
-            // guna2CircleButton1
-            // 
-            this.guna2CircleButton1.BackgroundImage = global::CapaPresentacion.Properties.Resources._out;
-            this.guna2CircleButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2CircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2CircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton1.Location = new System.Drawing.Point(187, 508);
-            this.guna2CircleButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2CircleButton1.Name = "guna2CircleButton1";
-            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton1.Size = new System.Drawing.Size(56, 57);
-            this.guna2CircleButton1.TabIndex = 25;
-            this.guna2CircleButton1.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // label1
             // 
@@ -381,6 +297,101 @@ namespace CapaPresentacion
             this.lblContraseñaR2.Name = "lblContraseñaR2";
             this.lblContraseñaR2.Size = new System.Drawing.Size(0, 18);
             this.lblContraseñaR2.TabIndex = 24;
+            // 
+            // btnRegistrarseReg
+            // 
+            this.btnRegistrarseReg.Animated = true;
+            this.btnRegistrarseReg.AutoRoundedCorners = true;
+            this.btnRegistrarseReg.BorderRadius = 22;
+            this.btnRegistrarseReg.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRegistrarseReg.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRegistrarseReg.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRegistrarseReg.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRegistrarseReg.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRegistrarseReg.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(125)))));
+            this.btnRegistrarseReg.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(109)))));
+            this.btnRegistrarseReg.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrarseReg.ForeColor = System.Drawing.Color.White;
+            this.btnRegistrarseReg.Location = new System.Drawing.Point(121, 450);
+            this.btnRegistrarseReg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRegistrarseReg.Name = "btnRegistrarseReg";
+            this.btnRegistrarseReg.Size = new System.Drawing.Size(180, 46);
+            this.btnRegistrarseReg.TabIndex = 10;
+            this.btnRegistrarseReg.Text = "Sign up";
+            this.btnRegistrarseReg.Click += new System.EventHandler(this.btnRegistrarseReg_Click);
+            // 
+            // guna2AnimateWindow1
+            // 
+            this.guna2AnimateWindow1.AnimationType = Guna.UI2.WinForms.Guna2AnimateWindow.AnimateWindowType.AW_BLEND;
+            this.guna2AnimateWindow1.TargetForm = this;
+            // 
+            // timer2
+            // 
+            this.timer2.Interval = 10;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(36)))), ((int)(((byte)(75)))));
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Location = new System.Drawing.Point(-3, -2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(275, 804);
+            this.panel1.TabIndex = 15;
+            // 
+            // itulo
+            // 
+            this.itulo.AutoSize = true;
+            this.itulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(109)))));
+            this.itulo.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.itulo.ForeColor = System.Drawing.Color.White;
+            this.itulo.Location = new System.Drawing.Point(881, 48);
+            this.itulo.Name = "itulo";
+            this.itulo.Size = new System.Drawing.Size(96, 23);
+            this.itulo.TabIndex = 17;
+            this.itulo.Text = "SIVAPRO";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::CapaPresentacion.Properties.Resources.buhooo;
+            this.pictureBox3.Location = new System.Drawing.Point(899, 706);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(91, 81);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 16;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::CapaPresentacion.Properties.Resources.es;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 215);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(269, 414);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // guna2CircleButton1
+            // 
+            this.guna2CircleButton1.BackgroundImage = global::CapaPresentacion.Properties.Resources._out;
+            this.guna2CircleButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2CircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2CircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2CircleButton1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButton1.Location = new System.Drawing.Point(187, 508);
+            this.guna2CircleButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2CircleButton1.Name = "guna2CircleButton1";
+            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton1.Size = new System.Drawing.Size(56, 57);
+            this.guna2CircleButton1.TabIndex = 25;
+            this.guna2CircleButton1.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // tbPensum
             // 
@@ -482,28 +493,6 @@ namespace CapaPresentacion
             this.pbVista2.TabStop = false;
             this.pbVista2.Click += new System.EventHandler(this.pbVista2_Click);
             // 
-            // btnRegistrarseReg
-            // 
-            this.btnRegistrarseReg.Animated = true;
-            this.btnRegistrarseReg.AutoRoundedCorners = true;
-            this.btnRegistrarseReg.BorderRadius = 22;
-            this.btnRegistrarseReg.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnRegistrarseReg.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnRegistrarseReg.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnRegistrarseReg.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnRegistrarseReg.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnRegistrarseReg.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(125)))));
-            this.btnRegistrarseReg.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(109)))));
-            this.btnRegistrarseReg.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrarseReg.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrarseReg.Location = new System.Drawing.Point(121, 450);
-            this.btnRegistrarseReg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnRegistrarseReg.Name = "btnRegistrarseReg";
-            this.btnRegistrarseReg.Size = new System.Drawing.Size(180, 46);
-            this.btnRegistrarseReg.TabIndex = 10;
-            this.btnRegistrarseReg.Text = "Sign up";
-            this.btnRegistrarseReg.Click += new System.EventHandler(this.btnRegistrarseReg_Click);
-            // 
             // tbClaveReg
             // 
             this.tbClaveReg.BorderThickness = 2;
@@ -554,59 +543,6 @@ namespace CapaPresentacion
             this.tbUsuarioReg.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.tbUsuarioReg.TabIndex = 5;
             this.tbUsuarioReg.Enter += new System.EventHandler(this.tbUsuarioReg_Enter);
-            // 
-            // guna2AnimateWindow1
-            // 
-            this.guna2AnimateWindow1.TargetForm = this;
-            // 
-            // timer2
-            // 
-            this.timer2.Interval = 10;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(36)))), ((int)(((byte)(75)))));
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Location = new System.Drawing.Point(-3, -2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(275, 804);
-            this.panel1.TabIndex = 15;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::CapaPresentacion.Properties.Resources.es;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 215);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(269, 414);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // itulo
-            // 
-            this.itulo.AutoSize = true;
-            this.itulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(109)))));
-            this.itulo.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.itulo.ForeColor = System.Drawing.Color.White;
-            this.itulo.Location = new System.Drawing.Point(881, 48);
-            this.itulo.Name = "itulo";
-            this.itulo.Size = new System.Drawing.Size(96, 23);
-            this.itulo.TabIndex = 17;
-            this.itulo.Text = "SIVAPRO";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::CapaPresentacion.Properties.Resources.buhooo;
-            this.pictureBox3.Location = new System.Drawing.Point(899, 706);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(91, 81);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 16;
-            this.pictureBox3.TabStop = false;
             // 
             // guna2ControlBox2
             // 
@@ -669,6 +605,71 @@ namespace CapaPresentacion
             this.guna2PictureBox2.TabStop = false;
             this.guna2PictureBox2.UseTransparentBackground = true;
             // 
+            // tbClave
+            // 
+            this.tbClave.Animated = true;
+            this.tbClave.BorderThickness = 2;
+            this.tbClave.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbClave.DefaultText = "";
+            this.tbClave.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbClave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbClave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbClave.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbClave.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbClave.Font = new System.Drawing.Font("Californian FB", 13.8F);
+            this.tbClave.ForeColor = System.Drawing.Color.DimGray;
+            this.tbClave.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbClave.IconLeft = ((System.Drawing.Image)(resources.GetObject("tbClave.IconLeft")));
+            this.tbClave.Location = new System.Drawing.Point(75, 231);
+            this.tbClave.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
+            this.tbClave.Name = "tbClave";
+            this.tbClave.PasswordChar = '\0';
+            this.tbClave.PlaceholderText = "Password";
+            this.tbClave.SelectedText = "";
+            this.tbClave.Size = new System.Drawing.Size(271, 48);
+            this.tbClave.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.tbClave.TabIndex = 17;
+            this.tbClave.TextChanged += new System.EventHandler(this.tbClave_TextChanged);
+            this.tbClave.Enter += new System.EventHandler(this.tbClave_Enter_1);
+            // 
+            // tbUsuario
+            // 
+            this.tbUsuario.Animated = true;
+            this.tbUsuario.BorderThickness = 2;
+            this.tbUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbUsuario.DefaultText = "";
+            this.tbUsuario.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbUsuario.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbUsuario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbUsuario.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbUsuario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbUsuario.Font = new System.Drawing.Font("Californian FB", 13.8F);
+            this.tbUsuario.ForeColor = System.Drawing.Color.DimGray;
+            this.tbUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbUsuario.IconLeft = ((System.Drawing.Image)(resources.GetObject("tbUsuario.IconLeft")));
+            this.tbUsuario.Location = new System.Drawing.Point(75, 151);
+            this.tbUsuario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbUsuario.Name = "tbUsuario";
+            this.tbUsuario.PasswordChar = '\0';
+            this.tbUsuario.PlaceholderText = "Username (Career)";
+            this.tbUsuario.SelectedText = "";
+            this.tbUsuario.Size = new System.Drawing.Size(271, 48);
+            this.tbUsuario.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.tbUsuario.TabIndex = 16;
+            this.tbUsuario.Enter += new System.EventHandler(this.tbUsuario_Enter);
+            // 
+            // pbVista
+            // 
+            this.pbVista.Image = ((System.Drawing.Image)(resources.GetObject("pbVista.Image")));
+            this.pbVista.Location = new System.Drawing.Point(352, 246);
+            this.pbVista.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbVista.Name = "pbVista";
+            this.pbVista.Size = new System.Drawing.Size(24, 23);
+            this.pbVista.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbVista.TabIndex = 11;
+            this.pbVista.TabStop = false;
+            this.pbVista.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // guna2PictureBox4
             // 
             this.guna2PictureBox4.BackColor = System.Drawing.Color.Transparent;
@@ -709,16 +710,16 @@ namespace CapaPresentacion
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panelIniciar.ResumeLayout(false);
             this.panelIniciar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbVista)).EndInit();
             this.panelRegistro.ResumeLayout(false);
             this.panelRegistro.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbVista3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbVista2)).EndInit();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbVista)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

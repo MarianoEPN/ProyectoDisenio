@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion
 {
-    partial class notocar
+    partial class FormInicio
     {
         /// <summary>
         /// Required designer variable.
@@ -29,27 +29,38 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.SuspendLayout();
             // 
-            // guna2Elipse1
+            // timer1
             // 
-            this.guna2Elipse1.TargetControl = this;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // notocar
+            // guna2AnimateWindow1
+            // 
+            this.guna2AnimateWindow1.AnimationType = Guna.UI2.WinForms.Guna2AnimateWindow.AnimateWindowType.AW_BLEND;
+            this.guna2AnimateWindow1.Interval = 5000;
+            this.guna2AnimateWindow1.TargetForm = this;
+            // 
+            // FormInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(727, 366);
+            this.BackgroundImage = global::CapaPresentacion.Properties.Resources.Welcome;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1065, 439);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "notocar";
-            this.Text = "notocar";
+            this.Name = "FormInicio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "FormInicio";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private System.Windows.Forms.Timer timer1;
+        private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
     }
 }
