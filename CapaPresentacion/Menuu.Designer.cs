@@ -30,10 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelBarra = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.lblMenu = new System.Windows.Forms.Label();
-            this.btnRAxOP = new Guna.UI2.WinForms.Guna2Button();
-            this.btnRAAxPE = new Guna.UI2.WinForms.Guna2Button();
+            this.menuContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.btnOC = new Guna.UI2.WinForms.Guna2Button();
+            this.btnRAAxPE = new Guna.UI2.WinForms.Guna2Button();
+            this.btnRAxOP = new Guna.UI2.WinForms.Guna2Button();
+            this.lblMenu = new System.Windows.Forms.Label();
             this.btnOP = new Guna.UI2.WinForms.Guna2Button();
             this.btnRA = new Guna.UI2.WinForms.Guna2Button();
             this.btnEurase = new Guna.UI2.WinForms.Guna2Button();
@@ -61,9 +62,9 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.ToolTip1 = new Guna.UI2.WinForms.Guna2HtmlToolTip();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
-            this.menuContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.menuTransition = new System.Windows.Forms.Timer(this.components);
             this.panelBarra.SuspendLayout();
+            this.menuContainer.SuspendLayout();
             this.panelControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2ShadowPanel1.SuspendLayout();
@@ -71,7 +72,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.panelOpciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).BeginInit();
-            this.menuContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelBarra
@@ -93,47 +93,46 @@
             this.panelBarra.MinimumSize = new System.Drawing.Size(75, 754);
             this.panelBarra.Name = "panelBarra";
             this.panelBarra.Radius = 10;
-            this.panelBarra.ShadowColor = System.Drawing.Color.Black;
+            this.panelBarra.ShadowColor = System.Drawing.Color.WhiteSmoke;
             this.panelBarra.Size = new System.Drawing.Size(210, 800);
             this.panelBarra.TabIndex = 2;
             // 
-            // lblMenu
+            // menuContainer
             // 
-            this.lblMenu.AutoSize = true;
-            this.lblMenu.BackColor = System.Drawing.Color.Transparent;
-            this.lblMenu.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMenu.ForeColor = System.Drawing.Color.White;
-            this.lblMenu.Location = new System.Drawing.Point(65, 18);
-            this.lblMenu.Name = "lblMenu";
-            this.lblMenu.Size = new System.Drawing.Size(57, 23);
-            this.lblMenu.TabIndex = 29;
-            this.lblMenu.Text = "Menu";
+            this.menuContainer.Controls.Add(this.btnOC);
+            this.menuContainer.Controls.Add(this.btnRAAxPE);
+            this.menuContainer.Controls.Add(this.btnRAxOP);
+            this.menuContainer.Location = new System.Drawing.Point(12, 395);
+            this.menuContainer.Name = "menuContainer";
+            this.menuContainer.Size = new System.Drawing.Size(240, 61);
+            this.menuContainer.TabIndex = 30;
             // 
-            // btnRAxOP
+            // btnOC
             // 
-            this.btnRAxOP.Animated = true;
-            this.btnRAxOP.BorderRadius = 10;
-            this.btnRAxOP.CustomImages.HoveredImage = global::CapaPresentacion.Properties.Resources.ajustes__1_;
-            this.btnRAxOP.CustomImages.Image = global::CapaPresentacion.Properties.Resources.ajustes;
-            this.btnRAxOP.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnRAxOP.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnRAxOP.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnRAxOP.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnRAxOP.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnRAxOP.FillColor = System.Drawing.Color.Transparent;
-            this.btnRAxOP.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Bold);
-            this.btnRAxOP.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnRAxOP.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(109)))));
-            this.btnRAxOP.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
-            this.btnRAxOP.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnRAxOP.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnRAxOP.IndicateFocus = true;
-            this.btnRAxOP.Location = new System.Drawing.Point(3, 121);
-            this.btnRAxOP.Name = "btnRAxOP";
-            this.btnRAxOP.Size = new System.Drawing.Size(208, 53);
-            this.btnRAxOP.TabIndex = 16;
-            this.btnRAxOP.Text = "        Relación entre         los Objetivos..";
-            this.btnRAxOP.UseTransparentBackground = true;
+            this.btnOC.Animated = true;
+            this.btnOC.BorderRadius = 10;
+            this.btnOC.CustomImages.HoveredImage = global::CapaPresentacion.Properties.Resources.objetivo__3_;
+            this.btnOC.CustomImages.Image = global::CapaPresentacion.Properties.Resources.objetivo__2_;
+            this.btnOC.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnOC.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnOC.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnOC.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnOC.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnOC.FillColor = System.Drawing.Color.Transparent;
+            this.btnOC.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Bold);
+            this.btnOC.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnOC.HoverState.FillColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnOC.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
+            this.btnOC.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnOC.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnOC.IndicateFocus = true;
+            this.btnOC.Location = new System.Drawing.Point(3, 3);
+            this.btnOC.Name = "btnOC";
+            this.btnOC.Size = new System.Drawing.Size(208, 53);
+            this.btnOC.TabIndex = 14;
+            this.btnOC.Text = "        Opciones          Conjunto";
+            this.btnOC.UseTransparentBackground = true;
+            this.btnOC.Click += new System.EventHandler(this.btnOC_Click);
             // 
             // btnRAAxPE
             // 
@@ -162,32 +161,43 @@
             this.btnRAAxPE.UseTransparentBackground = true;
             this.btnRAAxPE.Click += new System.EventHandler(this.btnRAAxPE_Click);
             // 
-            // btnOC
+            // btnRAxOP
             // 
-            this.btnOC.Animated = true;
-            this.btnOC.BorderRadius = 10;
-            this.btnOC.CustomImages.HoveredImage = global::CapaPresentacion.Properties.Resources.objetivo__3_;
-            this.btnOC.CustomImages.Image = global::CapaPresentacion.Properties.Resources.objetivo__2_;
-            this.btnOC.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnOC.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnOC.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnOC.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnOC.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnOC.FillColor = System.Drawing.Color.Transparent;
-            this.btnOC.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Bold);
-            this.btnOC.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnOC.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(109)))));
-            this.btnOC.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
-            this.btnOC.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnOC.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnOC.IndicateFocus = true;
-            this.btnOC.Location = new System.Drawing.Point(3, 3);
-            this.btnOC.Name = "btnOC";
-            this.btnOC.Size = new System.Drawing.Size(208, 53);
-            this.btnOC.TabIndex = 14;
-            this.btnOC.Text = "        Opciones          Conjunto";
-            this.btnOC.UseTransparentBackground = true;
-            this.btnOC.Click += new System.EventHandler(this.btnOC_Click);
+            this.btnRAxOP.Animated = true;
+            this.btnRAxOP.BorderRadius = 10;
+            this.btnRAxOP.CustomImages.HoveredImage = global::CapaPresentacion.Properties.Resources.ajustes__1_;
+            this.btnRAxOP.CustomImages.Image = global::CapaPresentacion.Properties.Resources.ajustes;
+            this.btnRAxOP.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnRAxOP.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRAxOP.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRAxOP.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRAxOP.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRAxOP.FillColor = System.Drawing.Color.Transparent;
+            this.btnRAxOP.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Bold);
+            this.btnRAxOP.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnRAxOP.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(109)))));
+            this.btnRAxOP.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
+            this.btnRAxOP.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnRAxOP.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnRAxOP.IndicateFocus = true;
+            this.btnRAxOP.Location = new System.Drawing.Point(3, 121);
+            this.btnRAxOP.Name = "btnRAxOP";
+            this.btnRAxOP.Size = new System.Drawing.Size(208, 53);
+            this.btnRAxOP.TabIndex = 16;
+            this.btnRAxOP.Text = "        Relación entre         los Objetivos..";
+            this.btnRAxOP.UseTransparentBackground = true;
+            // 
+            // lblMenu
+            // 
+            this.lblMenu.AutoSize = true;
+            this.lblMenu.BackColor = System.Drawing.Color.Transparent;
+            this.lblMenu.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMenu.ForeColor = System.Drawing.Color.White;
+            this.lblMenu.Location = new System.Drawing.Point(65, 18);
+            this.lblMenu.Name = "lblMenu";
+            this.lblMenu.Size = new System.Drawing.Size(57, 23);
+            this.lblMenu.TabIndex = 29;
+            this.lblMenu.Text = "Menu";
             // 
             // btnOP
             // 
@@ -643,16 +653,6 @@
             this.guna2AnimateWindow1.AnimationType = Guna.UI2.WinForms.Guna2AnimateWindow.AnimateWindowType.AW_BLEND;
             this.guna2AnimateWindow1.TargetForm = this;
             // 
-            // menuContainer
-            // 
-            this.menuContainer.Controls.Add(this.btnOC);
-            this.menuContainer.Controls.Add(this.btnRAAxPE);
-            this.menuContainer.Controls.Add(this.btnRAxOP);
-            this.menuContainer.Location = new System.Drawing.Point(12, 395);
-            this.menuContainer.Name = "menuContainer";
-            this.menuContainer.Size = new System.Drawing.Size(240, 61);
-            this.menuContainer.TabIndex = 30;
-            // 
             // menuTransition
             // 
             this.menuTransition.Interval = 10;
@@ -675,6 +675,7 @@
             this.Load += new System.EventHandler(this.Menuu_Load);
             this.panelBarra.ResumeLayout(false);
             this.panelBarra.PerformLayout();
+            this.menuContainer.ResumeLayout(false);
             this.panelControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.guna2ShadowPanel1.ResumeLayout(false);
@@ -683,7 +684,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.panelOpciones.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).EndInit();
-            this.menuContainer.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
