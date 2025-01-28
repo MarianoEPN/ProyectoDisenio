@@ -88,6 +88,31 @@ namespace CapaAccesoDatos
             conexion.CerrarConexion();
         }
 
+        public List<ResultadoAprendizaje> ObtenerResultadosAprendizaje(int carreraId)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "ObtenerResultadosAprendizaje";
+            comando.CommandType = System.Data.CommandType.StoredProcedure;
+            comando.Parameters.Clear();
+            comando.Parameters.AddWithValue("@CarreraID", carreraId);
+
+            leer = comando.ExecuteReader();
+
+            List<ResultadoAprendizaje> lista = new List<ResultadoAprendizaje>();
+
+            while (leer.Read())
+            {
+                ResultadoAprendizaje resultado = new ResultadoAprendizaje();
+                resultado.Id = leer.GetInt32(0);
+                resultado.Codigo = leer.GetString(1);
+                resultado.Descripcion = leer.GetString(2);
+                lista.Add(resultado);
+            }
+
+            conexion.CerrarConexion();
+            leer.Close();
+            return lista;
+        }
 
     }
 }
