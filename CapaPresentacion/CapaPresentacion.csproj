@@ -275,6 +275,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenuOpciones\FormEditarUsuario.resx">
       <DependentUpon>FormEditarUsuario.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuOpciones\FormObjetivoEurace.resx">
       <DependentUpon>FormObjetivoEurace.cs</DependentUpon>
