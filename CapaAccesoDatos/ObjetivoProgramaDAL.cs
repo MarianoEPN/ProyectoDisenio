@@ -91,6 +91,35 @@ namespace CapaAccesoDatos
             comando.Parameters.Clear();
             conexion.CerrarConexion();
         }
+
+        public List<ObjetivoPrograma> ObtenerObjetivosProgramaPorCarrera(int carreraId)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "ObtenerObjetivosProgramaPorCarrera";
+            comando.CommandType = System.Data.CommandType.StoredProcedure;
+            comando.Parameters.Clear();
+            comando.Parameters.AddWithValue("@CarreraID", carreraId);
+
+            leer = comando.ExecuteReader();
+            List<ObjetivoPrograma> listaObjetivos = new List<ObjetivoPrograma>();
+
+            while (leer.Read())
+            {
+                ObjetivoPrograma objetivo = new ObjetivoPrograma
+                {
+                    Id = leer.GetInt32(0), // ObjetivoProgramaID
+                    Nombre = leer.GetString(2), // Nombre
+                    Fortalezas = leer.GetString(3), // Fortaleza
+                    Debilidades = leer.GetString(4), // Debilidad
+                };
+                listaObjetivos.Add(objetivo);
+            }
+
+            conexion.CerrarConexion();
+            leer.Close();
+            return listaObjetivos;
+        }
+
     }
 }
 

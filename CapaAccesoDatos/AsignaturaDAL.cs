@@ -77,5 +77,34 @@ namespace CapaAccesoDatos
             comando.Parameters.Clear();
             conexion.CerrarConexion();
         }
+
+        public List<Asignatura> ObtenerAsignaturasPorCarrera(int carreraId)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "ObtenerAsignaturasPorCarrera";
+            comando.CommandType = System.Data.CommandType.StoredProcedure;
+            comando.Parameters.Clear();
+            comando.Parameters.AddWithValue("@CarreraID", carreraId);
+
+            leer = comando.ExecuteReader();
+            List<Asignatura> listaAsignaturas = new List<Asignatura>();
+
+            while (leer.Read())
+            {
+                Asignatura asignatura = new Asignatura
+                {
+                    Id = leer.GetInt32(0), // AsignaturaID
+                    Codigo = leer.GetString(1), // Codigo
+                    Nombre = leer.GetString(2), // Nombre
+                    Nivel = leer.GetInt32(3), // Nivel
+                };
+                listaAsignaturas.Add(asignatura);
+            }
+
+            conexion.CerrarConexion();
+            leer.Close();
+            return listaAsignaturas;
+        }
+
     }
 }
