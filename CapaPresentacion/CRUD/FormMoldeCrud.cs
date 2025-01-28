@@ -21,7 +21,7 @@ namespace CapaPresentacion
         public FormMoldeCrud()
         {
             InitializeComponent();
-            btnCrear.Text = "Guardar";
+            btnCrear.Text = "Crear";
             lblAccionAsignatura.Text = "Crear asignatura";
             lbAdvertencia.Visible = false;
 
@@ -58,7 +58,7 @@ namespace CapaPresentacion
             tbNombre,
             tbNivel
         };
-            if (btnCrear.Text.Equals("Guardar"))
+            if (btnCrear.Text.Equals("Crear"))
             {
                 bool camposCompletos = true;
                 foreach (var txt in listaTextBoxes)

@@ -281,6 +281,7 @@
             this.tbCodigo.TabIndex = 52;
             this.tbCodigo.TextChanged += new System.EventHandler(this.tbCodigo_TextChanged);
             this.tbCodigo.Enter += new System.EventHandler(this.tbCodigo_Enter);
+            this.tbCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCodigo_KeyPress);
             // 
             // tbNivel
             // 

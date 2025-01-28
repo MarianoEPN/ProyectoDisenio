@@ -19,12 +19,14 @@ namespace CapaPresentacion.CRUD
         public FormAsignaturaCrud()
         {
             InitializeComponent();
+            btnCrear.Text = "Crear";
             lbAdvertencia.Visible = false;
             lblAccionAsignatura.Text = "Crear asignatura";
         }
         public FormAsignaturaCrud(Carrera carrera)
         {
             InitializeComponent();
+            btnCancelar.Text = "Crear";
             lbAdvertencia.Visible = false;
             lblAccionAsignatura.Text = "Crear asignatura";
         }
@@ -32,6 +34,7 @@ namespace CapaPresentacion.CRUD
         public FormAsignaturaCrud(Asignatura asignatura)
         {
             InitializeComponent();
+            btnCrear.Text = "Guadar";
             lbAdvertencia.Visible = false;
             tbNombre.Text = asignatura.Nombre;
             tbCodigo.Text = asignatura.Codigo;
@@ -242,5 +245,29 @@ namespace CapaPresentacion.CRUD
 
         }
 
+        private void tbCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir solo letras y números
+            if (!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != (char)8) // (char)8 es el código de la tecla 'Backspace'
+            {
+                e.Handled = true; // Cancela la tecla no permitida
+            }
+            else
+            {
+                string text = tbCodigo.Text;
+                int letterCount = text.Count(char.IsLetter);
+                int numberCount = text.Count(char.IsDigit);
+
+                // Permitir hasta 4 letras y 3 números
+                if (char.IsLetter(e.KeyChar) && letterCount >= 4)
+                {
+                    e.Handled = true; // No permitir más de 4 letras
+                }
+                else if (char.IsDigit(e.KeyChar) && numberCount >= 3)
+                {
+                    e.Handled = true; // No permitir más de 3 números
+                }
+            }
+        }
     }
 }
