@@ -45,6 +45,8 @@
     <Compile Include="AsignaturaDAL.cs" />
     <Compile Include="ObjetivoEuraceDAL.cs" />
     <Compile Include="ObjetivoProgramaDAL.cs" />
+    <Compile Include="ResultadoAprendizaje2DAL.cs" />
+    <Compile Include="ResultadoAprendizajeAsignatura2DAL.cs" />
     <Compile Include="ResultadoAprendizajeDAL.cs" />
     <Compile Include="TipoResultadoAsignaturaDAL.cs" />
     <Compile Include="UsuarioDAL.cs" />
