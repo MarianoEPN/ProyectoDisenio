@@ -80,5 +80,32 @@ namespace CapaAccesoDatos
             conexion.CerrarConexion();
 
         }
+
+        public Carrera ObtenerCarreraPorUsuario(int usuarioId)
+        {
+            Carrera carrera = null;
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "ObtenerCarreraPorUsuario";
+            comando.CommandType = System.Data.CommandType.StoredProcedure;
+            comando.Parameters.Clear();
+            comando.Parameters.AddWithValue("@UsuarioId", usuarioId);
+
+            leer = comando.ExecuteReader();
+            if (leer.Read())
+            {
+                carrera = new Carrera
+                {
+                    Id = leer.GetInt32(0),
+                    Correo = leer.GetString(1),
+                    Nombre = leer.GetString(2),
+                    Pensum = leer.GetString(3)
+                };
+            }
+
+            conexion.CerrarConexion();
+            leer.Close();
+            return carrera;
+        }
+
     }
 }
