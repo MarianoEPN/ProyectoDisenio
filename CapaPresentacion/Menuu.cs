@@ -8,6 +8,7 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaEntidades;
 using CapaPresentacion.CRUD;
 using CapaPresentacion.MenuOpciones;
 using Guna;
@@ -20,6 +21,8 @@ namespace CapaPresentacion
         // Variables para almacenar la posición relativa del ratón en el panel
         private bool isDragging = false;
         private Point initialMousePosition;
+        private Usuario usuario;
+        Form1 formLogin;
 
         bool sidebarExpanded;
         public Menuu()
@@ -27,9 +30,11 @@ namespace CapaPresentacion
             InitializeComponent();
 
         }
-        public Menuu(Form1 login)
+        public Menuu(Form1 login, Usuario usuario)
         {
             InitializeComponent();
+            this.usuario = usuario;
+            formLogin = login;
         }
 
         private void Menuu_Load(object sender, EventArgs e)

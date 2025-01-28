@@ -44,6 +44,8 @@ namespace CapaPresentacion
             this.btnLogin = new Guna.UI2.WinForms.Guna2GradientButton();
             this.lblLogin = new System.Windows.Forms.Label();
             this.panelRegistro = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbCarrera = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.tbPensum = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbCorreo = new Guna.UI2.WinForms.Guna2TextBox();
@@ -64,8 +66,6 @@ namespace CapaPresentacion
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.cbCarrera = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panelIniciar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbVista)).BeginInit();
             this.panelRegistro.SuspendLayout();
@@ -292,6 +292,42 @@ namespace CapaPresentacion
             this.panelRegistro.ShadowColor = System.Drawing.Color.Black;
             this.panelRegistro.Size = new System.Drawing.Size(437, 596);
             this.panelRegistro.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Californian FB", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Location = new System.Drawing.Point(126, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(184, 53);
+            this.label1.TabIndex = 33;
+            this.label1.Text = "Sign Up";
+            // 
+            // cbCarrera
+            // 
+            this.cbCarrera.BackColor = System.Drawing.Color.White;
+            this.cbCarrera.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.cbCarrera.BorderRadius = 10;
+            this.cbCarrera.BorderThickness = 2;
+            this.cbCarrera.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbCarrera.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCarrera.FocusedColor = System.Drawing.Color.Empty;
+            this.cbCarrera.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCarrera.ForeColor = System.Drawing.Color.DimGray;
+            this.cbCarrera.FormattingEnabled = true;
+            this.cbCarrera.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbCarrera.ItemHeight = 30;
+            this.cbCarrera.Items.AddRange(new object[] {
+            "(Carrera)",
+            "Mateticas"});
+            this.cbCarrera.Location = new System.Drawing.Point(73, 150);
+            this.cbCarrera.Name = "cbCarrera";
+            this.cbCarrera.Size = new System.Drawing.Size(254, 36);
+            this.cbCarrera.StartIndex = 0;
+            this.cbCarrera.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.cbCarrera.TabIndex = 32;
             // 
             // guna2CircleButton1
             // 
@@ -620,42 +656,6 @@ namespace CapaPresentacion
             this.guna2PictureBox4.TabIndex = 13;
             this.guna2PictureBox4.TabStop = false;
             // 
-            // cbCarrera
-            // 
-            this.cbCarrera.BackColor = System.Drawing.Color.White;
-            this.cbCarrera.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.cbCarrera.BorderRadius = 10;
-            this.cbCarrera.BorderThickness = 2;
-            this.cbCarrera.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbCarrera.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbCarrera.FocusedColor = System.Drawing.Color.Empty;
-            this.cbCarrera.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbCarrera.ForeColor = System.Drawing.Color.DimGray;
-            this.cbCarrera.FormattingEnabled = true;
-            this.cbCarrera.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbCarrera.ItemHeight = 30;
-            this.cbCarrera.Items.AddRange(new object[] {
-            "(Carrera)",
-            "Mateticas"});
-            this.cbCarrera.Location = new System.Drawing.Point(73, 150);
-            this.cbCarrera.Name = "cbCarrera";
-            this.cbCarrera.Size = new System.Drawing.Size(254, 36);
-            this.cbCarrera.StartIndex = 0;
-            this.cbCarrera.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.cbCarrera.TabIndex = 32;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Californian FB", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(126, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(184, 53);
-            this.label1.TabIndex = 33;
-            this.label1.Text = "Sign Up";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -676,11 +676,13 @@ namespace CapaPresentacion
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.DimGray;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.panelIniciar.ResumeLayout(false);
             this.panelIniciar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbVista)).EndInit();

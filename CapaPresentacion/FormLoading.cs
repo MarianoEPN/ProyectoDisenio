@@ -1,4 +1,5 @@
-﻿using Guna.UI2.WinForms;
+﻿using CapaEntidades;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,15 +19,21 @@ namespace CapaPresentacion
             InitializeComponent();
 
         }
+        Usuario usuario;
+        Form1 form1;
+        public FormLoading(Form1 form, Usuario usuario)
+        {
+            InitializeComponent();
+            this.usuario = usuario;
+            this.form1 = form;
+        }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (guna2CircleProgressBar1.Value == 100)
             {
                 timer1.Stop();
-
-                // Abrir el menú y cerrar este formulario
-                Menuu menu = new Menuu();
+                Menuu menu = new Menuu(form1, usuario);
                 menu.FormClosed += FormLoading_FormClosed; // Asegura el cierre completo
                 menu.Show();
                 this.Hide();
