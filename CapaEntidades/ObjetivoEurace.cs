@@ -20,6 +20,10 @@ namespace CapaEntidades
         // Constructor vacío
         public ObjetivoEurace()
         { EuraceResultadosAprendizaje = new List<EuraceResultadoAprendizaje>();
+        Codigo = "";
+        Nombre = "";
+        Descripcion = "";
+
         }
 
         // Constructor con parámetros

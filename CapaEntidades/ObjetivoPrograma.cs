@@ -25,6 +25,10 @@ namespace CapaEntidades
         public ObjetivoPrograma()
         {
             ProgramasResultadoAprend = new List<ProgramaResultadoAprendizaje>();
+            Nombre = "";
+            Fortalezas = "";
+            Debilidades = "";
+            Codigo = "";    
         }
 
         // Constructor con parámetros

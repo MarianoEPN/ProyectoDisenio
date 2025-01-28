@@ -18,6 +18,7 @@ namespace CapaEntidades
         // Constructor vacío
         public MatchResultadoAprendizaje()
         {
+            NivelAporte = "";
         }
 
         // Constructor con parámetros

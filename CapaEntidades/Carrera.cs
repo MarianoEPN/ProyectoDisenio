@@ -25,6 +25,12 @@ namespace CapaEntidades
         public Carrera()
         {
             Asignaturas = new List<Asignatura>();
+            ResultadoAprendizaje = new List<ResultadoAprendizaje>();
+            ObjetivoPrograma = new List<ObjetivoPrograma>();
+            Nombre = "";
+            Correo = "";
+            Pensum = "";
+
         }
 
 

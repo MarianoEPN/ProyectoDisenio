@@ -24,6 +24,10 @@ namespace CapaEntidades
         public Asignatura()
         {
             ResultadosAprendizaje = new List<ResultadoAprendizajeAsignatura>();
+            Codigo = "";
+            Nombre = "";
+            Nivel = 0;
+
 
         }
 

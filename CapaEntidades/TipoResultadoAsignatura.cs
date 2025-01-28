@@ -24,6 +24,8 @@ namespace CapaEntidades
         public TipoResultadoAsignatura()
         {
             ResultadosAprendizaje = new List<ResultadoAprendizajeAsignatura>();
+            Nombre = TipoNombre.Conocimiento;
+            Codigo = "";
         }
 
         // Constructor con parámetros

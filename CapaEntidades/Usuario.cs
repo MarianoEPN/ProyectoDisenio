@@ -16,7 +16,10 @@ namespace CapaEntidades
        
         public Usuario()
         {
-           
+            nombre = "";
+            Username = "";
+            Clave = "";
+            Correo = "";
         }
         public Usuario(string nombre, string username, string clave, string correo)
         {

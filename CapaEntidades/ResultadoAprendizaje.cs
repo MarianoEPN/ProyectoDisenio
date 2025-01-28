@@ -25,6 +25,9 @@ namespace CapaEntidades
             ProgramasResultadoAprend = new List<ProgramaResultadoAprendizaje>();
             EuraceResultadosAprendizaje = new List<EuraceResultadoAprendizaje>();
             MatchResultadosAprendizaje = new List<MatchResultadoAprendizaje>();
+            Codigo = "";
+            Descripcion = "";
+
         }
 
         // Constructor con parámetros

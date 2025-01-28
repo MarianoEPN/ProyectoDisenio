@@ -17,6 +17,7 @@ namespace CapaEntidades
         // Constructor vacío
         public EuraceResultadoAprendizaje()
         {
+            Comentario = "";
         }
 
         // Constructor con parámetros

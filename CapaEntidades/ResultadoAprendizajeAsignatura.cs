@@ -28,7 +28,10 @@ namespace CapaEntidades
            
             MatchesResultadoAprendizaje = new List<MatchResultadoAprendizaje>();
             ProgramasResultadoAprend = new List<ProgramaResultadoAprendizaje>();
+            Codigo = "";
+            Descripcion = "";
         }
+
 
         // Constructor con parámetros
         public ResultadoAprendizajeAsignatura( string codigo, string descripcion, int asignaturaId, Asignatura asignatura, int tipoId, TipoResultadoAsignatura tipoResultado)

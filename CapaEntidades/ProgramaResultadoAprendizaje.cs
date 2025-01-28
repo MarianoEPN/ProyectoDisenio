@@ -17,6 +17,7 @@ namespace CapaEntidades
         // Constructor vacío
         public ProgramaResultadoAprendizaje()
         {
+            Comentario = "";
         }
 
         // Constructor con parámetros
