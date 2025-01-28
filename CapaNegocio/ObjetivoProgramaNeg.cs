@@ -17,19 +17,24 @@ namespace CapaNegocio
             return objetivoProgramaDAL.MostrarObjetivosPrograma();
         }
 
-        public void InsertarObjetivoPrograma(ObjetivoPrograma objetivoPrograma)
+        public void InsertarObjetivoPrograma(ObjetivoPrograma objetivo, Carrera carrera)
         {
-            objetivoProgramaDAL.InsertarObjetivoPrograma(objetivoPrograma);
+            objetivoProgramaDAL.InsertarObjetivoPrograma(objetivo, carrera);
         }
 
-        public void ActualizarObjetivoPrograma(ObjetivoPrograma objetivoPrograma)
+        public void ActualizarObjetivoPrograma(ObjetivoPrograma objetivo, Carrera carrera)
         {
-            objetivoProgramaDAL.ActualizarObjetivoPrograma(objetivoPrograma);
+            objetivoProgramaDAL.ActualizarObjetivoPrograma(objetivo, carrera);
         }
 
         public void EliminarObjetivoPrograma(int idObjetivoPrograma)
         {
             objetivoProgramaDAL.EliminarObjetivoPrograma(idObjetivoPrograma);
+        }
+
+        public List<ObjetivoPrograma> ObtenerObjetivosProgramaPorCarrera(int carreraId)
+        {
+            return objetivoProgramaDAL.ObtenerObjetivosProgramaPorCarrera(carreraId);
         }
     }
 }

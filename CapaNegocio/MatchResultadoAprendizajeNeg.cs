@@ -12,17 +12,17 @@ namespace CapaNegocio
     {
         private MatchResultadoAprendizajeDAL MRAprendizaje = new MatchResultadoAprendizajeDAL();
 
-        public void InsertarMatchResultadoAprendizaje(MatchResultadoAprendizaje MRApr)
+        public void InsertarMatchResultadoAprendizaje(MatchResultadoAprendizaje match, ResultadoAprendizajeAsignatura resultado, ResultadoAprendizaje resultadoAprendizaje)
         {
-            MRAprendizaje.InsertarMatchResultadoAprendizaje(MRApr);
+            MRAprendizaje.InsertarMatchResultadoAprendizaje(match, resultado, resultadoAprendizaje);
         }
         public List<MatchResultadoAprendizaje> MostrarMatchResultadoAprendizaje()
         {
             return MRAprendizaje.MostrarMatchResultadoAprendizaje();
         }
-        public void ActualizarMatchResultadoAprendizaje(MatchResultadoAprendizaje MRApr)
+        public void ActualizarMatchResultadoAprendizaje(MatchResultadoAprendizaje match, ResultadoAprendizajeAsignatura resultado, ResultadoAprendizaje resultadoAprendizaje)
         {
-            MRAprendizaje.ActualizarMatchResultadoAprendizaje(MRApr);
+            MRAprendizaje.ActualizarMatchResultadoAprendizaje(match, resultado, resultadoAprendizaje);
         }
         public void EliminarMatchResultadoAprendizaje(int id)
         {

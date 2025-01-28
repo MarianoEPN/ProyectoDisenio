@@ -17,14 +17,14 @@ namespace CapaNegocio
             return programaResultadoAprendizajeDAL.MostrarProgramaResultadoAprendizaje();
         }
 
-        public void InsertarProgramaResultadoAprendizaje(ProgramaResultadoAprendizaje programaResultadoAprendizaje)
+        public void InsertarProgramaResultadoAprendizaje(ProgramaResultadoAprendizaje item, ObjetivoPrograma objetivo, ResultadoAprendizaje resultado)
         {
-            programaResultadoAprendizajeDAL.InsertarProgramaResultadoAprendizaje(programaResultadoAprendizaje);
+            programaResultadoAprendizajeDAL.InsertarProgramaResultadoAprendizaje(item, objetivo, resultado);
         }
 
-        public void ActualizarProgramaResultadoAprendizaje(ProgramaResultadoAprendizaje programaResultadoAprendizaje)
+        public void ActualizarProgramaResultadoAprendizaje(ProgramaResultadoAprendizaje item, ObjetivoPrograma objetivo, ResultadoAprendizaje resultado)
         {
-            programaResultadoAprendizajeDAL.ActualizarProgramaResultadoAprendizaje(programaResultadoAprendizaje);
+            programaResultadoAprendizajeDAL.ActualizarProgramaResultadoAprendizaje(item, objetivo, resultado);
         }
 
         public void EliminarProgramaResultadoAprendizaje(int idProgramaResultadoAprendizaje)

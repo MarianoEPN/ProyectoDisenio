@@ -16,14 +16,14 @@ namespace CapaNegocio
             return usuarioDAL.MostrarUsuario();
         }
 
-        public void InsertarUsuario(Usuario usuario)
+        public void InsertarUsuario(Usuario usuario, Carrera carrera)
         {
-            usuarioDAL.InsertarUsuario(usuario);
+            usuarioDAL.InsertarUsuario(usuario, carrera);
         }
 
-        public void ActualizarUsuario(Usuario usuario)
+        public void ActualizarUsuario(Usuario usuario, Carrera carrera)
         {
-            usuarioDAL.ActualizarUsuario(usuario);
+            usuarioDAL.ActualizarUsuario(usuario, carrera);
         }
 
         public void EliminarUsuario(int usuario)

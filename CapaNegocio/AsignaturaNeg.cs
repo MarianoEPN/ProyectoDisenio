@@ -18,20 +18,26 @@ namespace CapaNegocio
             return asignaturaDAL.MostrarAsignatura();
         }
 
-        public void InsertarAsignatura(Asignatura asignatura)
+        public void InsertarAsignatura(Asignatura asignatura, Carrera carrera)
         {
-            asignaturaDAL.InsertarAsignatura(asignatura);
+            asignaturaDAL.InsertarAsignatura(asignatura, carrera);
         }
 
-        public void ActualizarAsignatura(Asignatura asignatura)
+        public void ActualizarAsignatura(Asignatura asignatura, Carrera carrera)
         {
-            asignaturaDAL.ActualizarAsignatura(asignatura);
+            asignaturaDAL.ActualizarAsignatura(asignatura, carrera);
         }
 
         public void EliminarAsignatura(int id)
         {
             asignaturaDAL.EliminarAsignatura(id);
         }
-        
+
+        public List<Asignatura> ObtenerAsignaturasPorCarrera(int carreraId)
+        {
+            return asignaturaDAL.ObtenerAsignaturasPorCarrera(carreraId);
+        }
+
+
     }
 }

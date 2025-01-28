@@ -27,6 +27,11 @@ namespace CapaNegocio
          {
               RANeg.EliminarResultadoAprendizajeNeg(id);
          }
-        
+        public List<ResultadoAprendizaje> ObtenerResultadosAprendizaje(int carreraId)
+        {
+            return RANeg.ObtenerResultadosAprendizaje(carreraId);
+        }
+
+
     }
 }

@@ -12,22 +12,28 @@ namespace CapaNegocio
     {
         private ResultadoAprendizajeAsignaturaDAL RAAsignatura = new ResultadoAprendizajeAsignaturaDAL();
 
-        public void InsertarResultadoAprendizajeAsignatura(ResultadoAprendizajeAsignatura RAAsig)
+        public void InsertarResultadoAprendizajeAsignatura(ResultadoAprendizajeAsignatura item, Asignatura asignatura, TipoResultadoAsignatura tipo)
         {
-            RAAsignatura.InsertarResultadoAprendizajeAsignatura(RAAsig);
+            RAAsignatura.InsertarResultadoAprendizajeAsignatura(item, asignatura, tipo);
         }
         public List<ResultadoAprendizajeAsignatura> MostrarResultadoAprendizajeAsignatura()
         {
              return RAAsignatura.MostrarResultadoAprendizajeAsignatura();
         }
-        public void ActualizarResultadoAprendizajeAsignatura(ResultadoAprendizajeAsignatura RAAsig)
+        public void ActualizarResultadoAprendizajeAsignatura(ResultadoAprendizajeAsignatura item, Asignatura asignatura, TipoResultadoAsignatura tipo)
         {
-             RAAsignatura.ActualizarResultadoAprendizajeAsignatura(RAAsig);
+             RAAsignatura.ActualizarResultadoAprendizajeAsignatura(item, asignatura, tipo);
         }
         public void EliminarResultadoAprendizajeAsignatura(int id)
         {
              RAAsignatura.EliminarResultadoAprendizajeAsignatura(id);
         }
-       
+
+        public List<ResultadoAprendizajeAsignatura> ObtenerResultadosAprendizajeAsignatura(int asignaturaId)
+        {
+            return RAAsignatura.ObtenerResultadosAprendizajeAsignatura(asignaturaId);
+        }
+
+
     }
 }

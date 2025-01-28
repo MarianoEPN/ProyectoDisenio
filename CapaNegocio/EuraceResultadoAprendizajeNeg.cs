@@ -15,18 +15,18 @@ namespace CapaNegocio
     {
         private EuraceResultadoAprendizajeDAL ERAprendizaje = new EuraceResultadoAprendizajeDAL();
 
-        public void InsertarEuraceResultadoAprendizaje(EuraceResultadoAprendizaje ERApr)
+        public void InsertarEuraceResultadoAprendizaje(EuraceResultadoAprendizaje euraceResultadoAprendizaje, ObjetivoEurace objetivo, ResultadoAprendizaje resultado)
         {
-            ERAprendizaje.InsertarEuraceResultadoAprendizaje(ERApr);
+            ERAprendizaje.InsertarEuraceResultadoAprendizaje(euraceResultadoAprendizaje, objetivo, resultado);
         }
 
         public List<EuraceResultadoAprendizaje> MostrarEuraceResultadoAprendizaje()
         {
             return ERAprendizaje.MostrarEuraceResultadoAprendizaje();
         }
-        public void ActualizarEuraceResultadoAprendizaje(EuraceResultadoAprendizaje ERApr)
+        public void ActualizarEuraceResultadoAprendizaje(EuraceResultadoAprendizaje euraceResultadoAprendizaje, ObjetivoEurace objetivo, ResultadoAprendizaje resultado)
         {
-            ERAprendizaje.ActualizarEuraceResultadoAprendizaje(ERApr);
+            ERAprendizaje.ActualizarEuraceResultadoAprendizaje(euraceResultadoAprendizaje, objetivo, resultado);
         }
         public void EliminarEuraceResultadoAprendizaje(int id)
         {
