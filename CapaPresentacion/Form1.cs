@@ -254,16 +254,12 @@ namespace CapaPresentacion
 
         private void tbUsuarioReg_Enter(object sender, EventArgs e)
         {
-            lblCarreraR.Text = "Username";
-            tbUsuarioReg.Text = ""; // Vacía el contenido del TextBox al recibir el foco.
+
 
         }
 
         private void tbClaveReg_Enter(object sender, EventArgs e)
         {
-            lblContraseñaR.Text = "Password";
-
-            tbClaveReg.Text = ""; // Vacía el contenido del TextBox al recibir el foco.
 
         }
 
@@ -327,25 +323,17 @@ namespace CapaPresentacion
 
         private void tbClaveConfirmReg_Enter(object sender, EventArgs e)
         {
-            lblContraseñaR2.Text = "Confirm Password";
 
-            tbClaveConfirmReg.Text = ""; // Vacía el contenido del TextBox al recibir el foco.
 
         }
 
         private void tbPEA_Enter(object sender, EventArgs e)
         {
-            lblPensum.Text = "PEA";
-
-            tbPensum.Text = ""; // Vacía el contenido del TextBox al recibir el foco.
 
         }
 
         private void tbCorreo_Enter(object sender, EventArgs e)
         {
-            lblEmail.Text = "Email";
-
-            tbCorreo.Text = ""; // Vacía el contenido del TextBox al recibir el foco.
 
         }
 

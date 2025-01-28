@@ -1,5 +1,4 @@
-﻿using Guna.UI2.WinForms;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,17 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaPresentacion
+namespace CapaPresentacion.MenuOpciones
 {
-    public partial class Match1 : Form
+    public partial class FormPerfilEgreso_x_ObjetivosEurase : Form
     {
-        public Match1()
+        public FormPerfilEgreso_x_ObjetivosEurase()
         {
             InitializeComponent();
-
         }
 
-        private void Match1_Load(object sender, EventArgs e)
+        private void FormPerfilEgreso_x_ObjetivosEurase_Load(object sender, EventArgs e)
         {
             // Simula datos de la tabla 1 y tabla 2
             var tabla1 = new[] { "Columna1", "Columna2", "Columna3", "Columna6", "Columna7", "Columna8", "Columna9", "Columna10" }; // Nombre de columnas
@@ -27,12 +25,7 @@ namespace CapaPresentacion
 
             // Llenar el DataGridView
             LlenarDataGrid(tabla1, tabla2);
-
-
-
         }
-
-
 
         private void LlenarDataGrid(string[] columnas, string[] filas)
         {
@@ -111,7 +104,6 @@ namespace CapaPresentacion
             dataGridView1.CellMouseDoubleClick += DataGridView1_CellMouseDoubleClick;
         }
 
-
         private void DataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.RowIndex >= 0 && e.ColumnIndex >= 1) // Evitar la columna de encabezado de filas
@@ -136,9 +128,9 @@ namespace CapaPresentacion
         {
             Font myfont = new Font("Californian FB", 20, FontStyle.Bold);
             Brush mybrush = new System.Drawing.SolidBrush(System.Drawing.Color.FromArgb(33, 40, 58));
-            e.Graphics.TranslateTransform(0, 470);
+            e.Graphics.TranslateTransform(0, 290);
             e.Graphics.RotateTransform(-90);
-            e.Graphics.DrawString("Resultados de Aprendizaje de Asignatura", myfont, mybrush, 0, 0);
+            e.Graphics.DrawString("Objetivos Eurace", myfont, mybrush, 0, 0);
         }
     }
 }

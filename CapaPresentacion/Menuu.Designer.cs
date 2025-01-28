@@ -44,34 +44,34 @@
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
             this.panelControl = new Guna.UI2.WinForms.Guna2Panel();
             this.plBarra = new System.Windows.Forms.Panel();
-            this.btnMax = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.panelEPN = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.lblUniversidad = new System.Windows.Forms.Label();
-            this.btnBajar = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.btnMin = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.panelContainer = new Guna.UI2.WinForms.Guna2Panel();
             this.timerExpanded = new System.Windows.Forms.Timer(this.components);
             this.panelOpciones = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.guna2Button10 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2CirclePictureBox3 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.btnEditar = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSalir = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.ToolTip1 = new Guna.UI2.WinForms.Guna2HtmlToolTip();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.menuTransition = new System.Windows.Forms.Timer(this.components);
+            this.guna2CirclePictureBox3 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.btnMax = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnBajar = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.btnMin = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.panelBarra.SuspendLayout();
             this.menuContainer.SuspendLayout();
             this.panelControl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2ShadowPanel1.SuspendLayout();
             this.panelEPN.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.panelOpciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBarra
@@ -148,7 +148,7 @@
             this.btnRAAxPE.FillColor = System.Drawing.Color.Transparent;
             this.btnRAAxPE.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Bold);
             this.btnRAAxPE.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnRAAxPE.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(109)))));
+            this.btnRAAxPE.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(212)))), ((int)(((byte)(255)))));
             this.btnRAAxPE.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
             this.btnRAAxPE.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnRAAxPE.ImageSize = new System.Drawing.Size(30, 30);
@@ -175,7 +175,7 @@
             this.btnRAxOP.FillColor = System.Drawing.Color.Transparent;
             this.btnRAxOP.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Bold);
             this.btnRAxOP.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnRAxOP.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(109)))));
+            this.btnRAxOP.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(212)))), ((int)(((byte)(255)))));
             this.btnRAxOP.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
             this.btnRAxOP.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnRAxOP.ImageSize = new System.Drawing.Size(30, 30);
@@ -186,6 +186,7 @@
             this.btnRAxOP.TabIndex = 16;
             this.btnRAxOP.Text = "        Relación entre         los Objetivos..";
             this.btnRAxOP.UseTransparentBackground = true;
+            this.btnRAxOP.Click += new System.EventHandler(this.btnRAxOP_Click);
             // 
             // lblMenu
             // 
@@ -224,6 +225,7 @@
             this.btnOP.TabIndex = 13;
             this.btnOP.Text = "        Objetivos de     Programa";
             this.btnOP.UseTransparentBackground = true;
+            this.btnOP.Click += new System.EventHandler(this.btnOP_Click);
             // 
             // btnRA
             // 
@@ -411,32 +413,6 @@
             this.plBarra.MouseMove += new System.Windows.Forms.MouseEventHandler(this.plBarra_MouseMove);
             this.plBarra.MouseUp += new System.Windows.Forms.MouseEventHandler(this.plBarra_MouseUp);
             // 
-            // btnMax
-            // 
-            this.btnMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMax.BackColor = System.Drawing.Color.Transparent;
-            this.btnMax.BackgroundImage = global::CapaPresentacion.Properties.Resources.CircleWithe;
-            this.btnMax.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMax.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
-            this.btnMax.FillColor = System.Drawing.Color.Transparent;
-            this.btnMax.IconColor = System.Drawing.Color.DimGray;
-            this.btnMax.Location = new System.Drawing.Point(1012, 3);
-            this.btnMax.Name = "btnMax";
-            this.btnMax.Size = new System.Drawing.Size(30, 30);
-            this.btnMax.TabIndex = 6;
-            this.btnMax.MouseEnter += new System.EventHandler(this.btnMax_MouseEnter);
-            this.btnMax.MouseLeave += new System.EventHandler(this.btnMax_MouseLeave);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.logo2;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 40);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(69, 75);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            // 
             // guna2ShadowPanel1
             // 
             this.guna2ShadowPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -478,6 +454,147 @@
             this.lblUniversidad.Size = new System.Drawing.Size(279, 27);
             this.lblUniversidad.TabIndex = 28;
             this.lblUniversidad.Text = "Escuela Politecnica Nacional";
+            this.lblUniversidad.MouseEnter += new System.EventHandler(this.panelEPN_MouseEnter);
+            this.lblUniversidad.MouseLeave += new System.EventHandler(this.panelEPN_MouseLeave);
+            // 
+            // panelContainer
+            // 
+            this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContainer.Location = new System.Drawing.Point(210, 121);
+            this.panelContainer.Name = "panelContainer";
+            this.panelContainer.Size = new System.Drawing.Size(1090, 679);
+            this.panelContainer.TabIndex = 6;
+            this.panelContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContainer_Paint);
+            // 
+            // timerExpanded
+            // 
+            this.timerExpanded.Interval = 10;
+            this.timerExpanded.Tick += new System.EventHandler(this.timerExpanded_Tick);
+            // 
+            // panelOpciones
+            // 
+            this.panelOpciones.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelOpciones.BackColor = System.Drawing.Color.Transparent;
+            this.panelOpciones.Controls.Add(this.btnEditar);
+            this.panelOpciones.Controls.Add(this.btnSalir);
+            this.panelOpciones.Controls.Add(this.guna2CirclePictureBox3);
+            this.panelOpciones.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
+            this.panelOpciones.Location = new System.Drawing.Point(1032, 40);
+            this.panelOpciones.Name = "panelOpciones";
+            this.panelOpciones.ShadowColor = System.Drawing.Color.Black;
+            this.panelOpciones.Size = new System.Drawing.Size(200, 235);
+            this.panelOpciones.TabIndex = 0;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.BorderRadius = 10;
+            this.btnEditar.CustomImages.HoveredImage = global::CapaPresentacion.Properties.Resources.editar__1_;
+            this.btnEditar.CustomImages.Image = global::CapaPresentacion.Properties.Resources.editar;
+            this.btnEditar.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnEditar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnEditar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnEditar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnEditar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnEditar.FillColor = System.Drawing.Color.Transparent;
+            this.btnEditar.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnEditar.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(212)))), ((int)(((byte)(255)))));
+            this.btnEditar.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
+            this.btnEditar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnEditar.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnEditar.Location = new System.Drawing.Point(24, 122);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(153, 34);
+            this.btnEditar.TabIndex = 14;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.BorderRadius = 10;
+            this.btnSalir.CustomImages.HoveredImage = global::CapaPresentacion.Properties.Resources.cerrar_sesion__1_;
+            this.btnSalir.CustomImages.Image = global::CapaPresentacion.Properties.Resources.cerrar_sesion;
+            this.btnSalir.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSalir.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSalir.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSalir.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSalir.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSalir.FillColor = System.Drawing.Color.Transparent;
+            this.btnSalir.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnSalir.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(212)))), ((int)(((byte)(255)))));
+            this.btnSalir.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
+            this.btnSalir.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSalir.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnSalir.Location = new System.Drawing.Point(24, 173);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(153, 34);
+            this.btnSalir.TabIndex = 5;
+            this.btnSalir.Text = "Salir";
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 10;
+            this.guna2Elipse1.TargetControl = this;
+            // 
+            // ToolTip1
+            // 
+            this.ToolTip1.AllowLinksHandling = true;
+            this.ToolTip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
+            this.ToolTip1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(109)))));
+            this.ToolTip1.Font = new System.Drawing.Font("Californian FB", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ToolTip1.ForeColor = System.Drawing.Color.White;
+            this.ToolTip1.MaximumSize = new System.Drawing.Size(0, 0);
+            // 
+            // guna2AnimateWindow1
+            // 
+            this.guna2AnimateWindow1.AnimationType = Guna.UI2.WinForms.Guna2AnimateWindow.AnimateWindowType.AW_BLEND;
+            this.guna2AnimateWindow1.TargetForm = this;
+            // 
+            // menuTransition
+            // 
+            this.menuTransition.Interval = 10;
+            this.menuTransition.Tick += new System.EventHandler(this.menuTransition_Tick);
+            // 
+            // guna2CirclePictureBox3
+            // 
+            this.guna2CirclePictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2CirclePictureBox3.FillColor = System.Drawing.Color.Transparent;
+            this.guna2CirclePictureBox3.Image = global::CapaPresentacion.Properties.Resources.buhoUser;
+            this.guna2CirclePictureBox3.ImageRotate = 0F;
+            this.guna2CirclePictureBox3.Location = new System.Drawing.Point(53, 11);
+            this.guna2CirclePictureBox3.Name = "guna2CirclePictureBox3";
+            this.guna2CirclePictureBox3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox3.Size = new System.Drawing.Size(95, 88);
+            this.guna2CirclePictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox3.TabIndex = 12;
+            this.guna2CirclePictureBox3.TabStop = false;
+            // 
+            // btnMax
+            // 
+            this.btnMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMax.BackColor = System.Drawing.Color.Transparent;
+            this.btnMax.BackgroundImage = global::CapaPresentacion.Properties.Resources.CircleWithe;
+            this.btnMax.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMax.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
+            this.btnMax.FillColor = System.Drawing.Color.Transparent;
+            this.btnMax.IconColor = System.Drawing.Color.DimGray;
+            this.btnMax.Location = new System.Drawing.Point(1012, 3);
+            this.btnMax.Name = "btnMax";
+            this.btnMax.Size = new System.Drawing.Size(30, 30);
+            this.btnMax.TabIndex = 6;
+            this.btnMax.MouseEnter += new System.EventHandler(this.btnMax_MouseEnter);
+            this.btnMax.MouseLeave += new System.EventHandler(this.btnMax_MouseLeave);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.logo2;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 40);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(69, 75);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
             // 
             // btnBajar
             // 
@@ -546,118 +663,6 @@
             this.btnClose.MouseEnter += new System.EventHandler(this.btnClose_MouseEnter);
             this.btnClose.MouseLeave += new System.EventHandler(this.btnClose_MouseLeave);
             // 
-            // panelContainer
-            // 
-            this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContainer.Location = new System.Drawing.Point(210, 121);
-            this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(1090, 679);
-            this.panelContainer.TabIndex = 6;
-            this.panelContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContainer_Paint);
-            // 
-            // timerExpanded
-            // 
-            this.timerExpanded.Interval = 10;
-            this.timerExpanded.Tick += new System.EventHandler(this.timerExpanded_Tick);
-            // 
-            // panelOpciones
-            // 
-            this.panelOpciones.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelOpciones.BackColor = System.Drawing.Color.Transparent;
-            this.panelOpciones.Controls.Add(this.guna2Button10);
-            this.panelOpciones.Controls.Add(this.guna2Button9);
-            this.panelOpciones.Controls.Add(this.guna2CirclePictureBox3);
-            this.panelOpciones.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
-            this.panelOpciones.Location = new System.Drawing.Point(1032, 40);
-            this.panelOpciones.Name = "panelOpciones";
-            this.panelOpciones.ShadowColor = System.Drawing.Color.Black;
-            this.panelOpciones.Size = new System.Drawing.Size(200, 235);
-            this.panelOpciones.TabIndex = 0;
-            // 
-            // guna2Button10
-            // 
-            this.guna2Button10.BorderRadius = 10;
-            this.guna2Button10.CustomImages.HoveredImage = global::CapaPresentacion.Properties.Resources.editar__1_;
-            this.guna2Button10.CustomImages.Image = global::CapaPresentacion.Properties.Resources.editar;
-            this.guna2Button10.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button10.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button10.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button10.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button10.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button10.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button10.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button10.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Button10.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(109)))));
-            this.guna2Button10.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
-            this.guna2Button10.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button10.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button10.Location = new System.Drawing.Point(24, 122);
-            this.guna2Button10.Name = "guna2Button10";
-            this.guna2Button10.Size = new System.Drawing.Size(153, 34);
-            this.guna2Button10.TabIndex = 14;
-            this.guna2Button10.Text = "Editar";
-            // 
-            // guna2Button9
-            // 
-            this.guna2Button9.BorderRadius = 10;
-            this.guna2Button9.CustomImages.HoveredImage = global::CapaPresentacion.Properties.Resources.cerrar_sesion__1_;
-            this.guna2Button9.CustomImages.Image = global::CapaPresentacion.Properties.Resources.cerrar_sesion;
-            this.guna2Button9.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button9.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button9.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button9.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button9.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button9.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button9.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button9.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Button9.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(109)))));
-            this.guna2Button9.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
-            this.guna2Button9.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button9.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button9.Location = new System.Drawing.Point(24, 173);
-            this.guna2Button9.Name = "guna2Button9";
-            this.guna2Button9.Size = new System.Drawing.Size(153, 34);
-            this.guna2Button9.TabIndex = 5;
-            this.guna2Button9.Text = "Salir";
-            // 
-            // guna2CirclePictureBox3
-            // 
-            this.guna2CirclePictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2CirclePictureBox3.FillColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox3.Image = global::CapaPresentacion.Properties.Resources.buhoUser;
-            this.guna2CirclePictureBox3.ImageRotate = 0F;
-            this.guna2CirclePictureBox3.Location = new System.Drawing.Point(53, 11);
-            this.guna2CirclePictureBox3.Name = "guna2CirclePictureBox3";
-            this.guna2CirclePictureBox3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox3.Size = new System.Drawing.Size(95, 88);
-            this.guna2CirclePictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox3.TabIndex = 12;
-            this.guna2CirclePictureBox3.TabStop = false;
-            // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.BorderRadius = 10;
-            this.guna2Elipse1.TargetControl = this;
-            // 
-            // ToolTip1
-            // 
-            this.ToolTip1.AllowLinksHandling = true;
-            this.ToolTip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
-            this.ToolTip1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(109)))));
-            this.ToolTip1.Font = new System.Drawing.Font("Californian FB", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ToolTip1.ForeColor = System.Drawing.Color.White;
-            this.ToolTip1.MaximumSize = new System.Drawing.Size(0, 0);
-            // 
-            // guna2AnimateWindow1
-            // 
-            this.guna2AnimateWindow1.AnimationType = Guna.UI2.WinForms.Guna2AnimateWindow.AnimateWindowType.AW_BLEND;
-            this.guna2AnimateWindow1.TargetForm = this;
-            // 
-            // menuTransition
-            // 
-            this.menuTransition.Interval = 10;
-            this.menuTransition.Tick += new System.EventHandler(this.menuTransition_Tick);
-            // 
             // Menuu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -677,13 +682,13 @@
             this.panelBarra.PerformLayout();
             this.menuContainer.ResumeLayout(false);
             this.panelControl.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.guna2ShadowPanel1.ResumeLayout(false);
             this.panelEPN.ResumeLayout(false);
             this.panelEPN.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.panelOpciones.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -711,8 +716,8 @@
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
         private Guna.UI2.WinForms.Guna2ShadowPanel panelOpciones;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button10;
-        private Guna.UI2.WinForms.Guna2Button guna2Button9;
+        private Guna.UI2.WinForms.Guna2Button btnEditar;
+        private Guna.UI2.WinForms.Guna2Button btnSalir;
         private Guna.UI2.WinForms.Guna2CircleButton btnBajar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblUniversidad;

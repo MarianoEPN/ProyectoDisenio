@@ -38,48 +38,44 @@ namespace CapaPresentacion
             this.lblContraseñaL = new System.Windows.Forms.Label();
             this.lblCarrera = new System.Windows.Forms.Label();
             this.cbRecordar = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.tbClave = new Guna.UI2.WinForms.Guna2TextBox();
+            this.tbUsuario = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pbVista = new System.Windows.Forms.PictureBox();
             this.btnLogin = new Guna.UI2.WinForms.Guna2GradientButton();
             this.lblLogin = new System.Windows.Forms.Label();
             this.panelRegistro = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblCarreraR = new System.Windows.Forms.Label();
-            this.lblPensum = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.lblContraseñaR = new System.Windows.Forms.Label();
-            this.lblContraseñaR2 = new System.Windows.Forms.Label();
-            this.btnRegistrarseReg = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.itulo = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.tbPensum = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbCorreo = new Guna.UI2.WinForms.Guna2TextBox();
             this.pbVista3 = new System.Windows.Forms.PictureBox();
             this.tbClaveConfirmReg = new Guna.UI2.WinForms.Guna2TextBox();
             this.pbVista2 = new System.Windows.Forms.PictureBox();
+            this.btnRegistrarseReg = new Guna.UI2.WinForms.Guna2GradientButton();
             this.tbClaveReg = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbUsuarioReg = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.itulo = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.tbClave = new Guna.UI2.WinForms.Guna2TextBox();
-            this.tbUsuario = new Guna.UI2.WinForms.Guna2TextBox();
-            this.pbVista = new System.Windows.Forms.PictureBox();
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.cbCarrera = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelIniciar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbVista)).BeginInit();
             this.panelRegistro.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbVista3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbVista2)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbVista)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
@@ -175,436 +171,6 @@ namespace CapaPresentacion
             this.cbRecordar.UncheckedState.BorderThickness = 1;
             this.cbRecordar.UncheckedState.FillColor = System.Drawing.Color.WhiteSmoke;
             // 
-            // btnLogin
-            // 
-            this.btnLogin.Animated = true;
-            this.btnLogin.AutoRoundedCorners = true;
-            this.btnLogin.BorderRadius = 22;
-            this.btnLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLogin.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(41)))), ((int)(((byte)(102)))));
-            this.btnLogin.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(62)))), ((int)(((byte)(127)))));
-            this.btnLogin.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(123, 414);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(180, 46);
-            this.btnLogin.TabIndex = 20;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // lblLogin
-            // 
-            this.lblLogin.AutoSize = true;
-            this.lblLogin.BackColor = System.Drawing.Color.White;
-            this.lblLogin.Font = new System.Drawing.Font("Californian FB", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogin.ForeColor = System.Drawing.Color.DimGray;
-            this.lblLogin.Location = new System.Drawing.Point(115, 84);
-            this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(211, 53);
-            this.lblLogin.TabIndex = 0;
-            this.lblLogin.Text = "Welcome";
-            // 
-            // panelRegistro
-            // 
-            this.panelRegistro.BackColor = System.Drawing.Color.Transparent;
-            this.panelRegistro.Controls.Add(this.guna2CircleButton1);
-            this.panelRegistro.Controls.Add(this.label1);
-            this.panelRegistro.Controls.Add(this.lblCarreraR);
-            this.panelRegistro.Controls.Add(this.lblPensum);
-            this.panelRegistro.Controls.Add(this.lblEmail);
-            this.panelRegistro.Controls.Add(this.lblContraseñaR);
-            this.panelRegistro.Controls.Add(this.lblContraseñaR2);
-            this.panelRegistro.Controls.Add(this.tbPensum);
-            this.panelRegistro.Controls.Add(this.tbCorreo);
-            this.panelRegistro.Controls.Add(this.pbVista3);
-            this.panelRegistro.Controls.Add(this.tbClaveConfirmReg);
-            this.panelRegistro.Controls.Add(this.pbVista2);
-            this.panelRegistro.Controls.Add(this.btnRegistrarseReg);
-            this.panelRegistro.Controls.Add(this.tbClaveReg);
-            this.panelRegistro.Controls.Add(this.tbUsuarioReg);
-            this.panelRegistro.FillColor = System.Drawing.Color.White;
-            this.panelRegistro.Location = new System.Drawing.Point(365, 801);
-            this.panelRegistro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelRegistro.Name = "panelRegistro";
-            this.panelRegistro.Radius = 10;
-            this.panelRegistro.ShadowColor = System.Drawing.Color.Black;
-            this.panelRegistro.Size = new System.Drawing.Size(437, 596);
-            this.panelRegistro.TabIndex = 5;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Californian FB", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(115, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(184, 53);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Sign Up";
-            // 
-            // lblCarreraR
-            // 
-            this.lblCarreraR.AutoSize = true;
-            this.lblCarreraR.Font = new System.Drawing.Font("Californian FB", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCarreraR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.lblCarreraR.Location = new System.Drawing.Point(117, 95);
-            this.lblCarreraR.Name = "lblCarreraR";
-            this.lblCarreraR.Size = new System.Drawing.Size(0, 18);
-            this.lblCarreraR.TabIndex = 20;
-            // 
-            // lblPensum
-            // 
-            this.lblPensum.AutoSize = true;
-            this.lblPensum.Font = new System.Drawing.Font("Californian FB", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPensum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.lblPensum.Location = new System.Drawing.Point(117, 158);
-            this.lblPensum.Name = "lblPensum";
-            this.lblPensum.Size = new System.Drawing.Size(0, 18);
-            this.lblPensum.TabIndex = 21;
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Californian FB", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.lblEmail.Location = new System.Drawing.Point(117, 224);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(0, 18);
-            this.lblEmail.TabIndex = 22;
-            // 
-            // lblContraseñaR
-            // 
-            this.lblContraseñaR.AutoSize = true;
-            this.lblContraseñaR.Font = new System.Drawing.Font("Californian FB", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContraseñaR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.lblContraseñaR.Location = new System.Drawing.Point(115, 289);
-            this.lblContraseñaR.Name = "lblContraseñaR";
-            this.lblContraseñaR.Size = new System.Drawing.Size(0, 18);
-            this.lblContraseñaR.TabIndex = 23;
-            // 
-            // lblContraseñaR2
-            // 
-            this.lblContraseñaR2.AutoSize = true;
-            this.lblContraseñaR2.Font = new System.Drawing.Font("Californian FB", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContraseñaR2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.lblContraseñaR2.Location = new System.Drawing.Point(117, 359);
-            this.lblContraseñaR2.Name = "lblContraseñaR2";
-            this.lblContraseñaR2.Size = new System.Drawing.Size(0, 18);
-            this.lblContraseñaR2.TabIndex = 24;
-            // 
-            // btnRegistrarseReg
-            // 
-            this.btnRegistrarseReg.Animated = true;
-            this.btnRegistrarseReg.AutoRoundedCorners = true;
-            this.btnRegistrarseReg.BorderRadius = 22;
-            this.btnRegistrarseReg.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnRegistrarseReg.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnRegistrarseReg.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnRegistrarseReg.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnRegistrarseReg.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnRegistrarseReg.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(125)))));
-            this.btnRegistrarseReg.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(109)))));
-            this.btnRegistrarseReg.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrarseReg.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrarseReg.Location = new System.Drawing.Point(121, 450);
-            this.btnRegistrarseReg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnRegistrarseReg.Name = "btnRegistrarseReg";
-            this.btnRegistrarseReg.Size = new System.Drawing.Size(180, 46);
-            this.btnRegistrarseReg.TabIndex = 10;
-            this.btnRegistrarseReg.Text = "Sign up";
-            this.btnRegistrarseReg.Click += new System.EventHandler(this.btnRegistrarseReg_Click);
-            // 
-            // guna2AnimateWindow1
-            // 
-            this.guna2AnimateWindow1.AnimationType = Guna.UI2.WinForms.Guna2AnimateWindow.AnimateWindowType.AW_BLEND;
-            this.guna2AnimateWindow1.TargetForm = this;
-            // 
-            // timer2
-            // 
-            this.timer2.Interval = 10;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(36)))), ((int)(((byte)(75)))));
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Location = new System.Drawing.Point(-3, -2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(275, 804);
-            this.panel1.TabIndex = 15;
-            // 
-            // itulo
-            // 
-            this.itulo.AutoSize = true;
-            this.itulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(109)))));
-            this.itulo.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.itulo.ForeColor = System.Drawing.Color.White;
-            this.itulo.Location = new System.Drawing.Point(881, 48);
-            this.itulo.Name = "itulo";
-            this.itulo.Size = new System.Drawing.Size(96, 23);
-            this.itulo.TabIndex = 17;
-            this.itulo.Text = "SIVAPRO";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::CapaPresentacion.Properties.Resources.buhooo;
-            this.pictureBox3.Location = new System.Drawing.Point(899, 706);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(91, 81);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 16;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::CapaPresentacion.Properties.Resources.es;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 215);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(269, 414);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // guna2CircleButton1
-            // 
-            this.guna2CircleButton1.BackgroundImage = global::CapaPresentacion.Properties.Resources._out;
-            this.guna2CircleButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2CircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2CircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton1.Location = new System.Drawing.Point(187, 508);
-            this.guna2CircleButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2CircleButton1.Name = "guna2CircleButton1";
-            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton1.Size = new System.Drawing.Size(56, 57);
-            this.guna2CircleButton1.TabIndex = 25;
-            this.guna2CircleButton1.Click += new System.EventHandler(this.btnVolver_Click);
-            // 
-            // tbPensum
-            // 
-            this.tbPensum.BorderThickness = 2;
-            this.tbPensum.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbPensum.DefaultText = "";
-            this.tbPensum.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbPensum.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbPensum.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbPensum.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbPensum.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbPensum.Font = new System.Drawing.Font("Californian FB", 13.8F);
-            this.tbPensum.ForeColor = System.Drawing.Color.DimGray;
-            this.tbPensum.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbPensum.IconLeft = ((System.Drawing.Image)(resources.GetObject("tbPensum.IconLeft")));
-            this.tbPensum.Location = new System.Drawing.Point(83, 162);
-            this.tbPensum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbPensum.Name = "tbPensum";
-            this.tbPensum.PasswordChar = '\0';
-            this.tbPensum.PlaceholderText = "Pensum";
-            this.tbPensum.SelectedText = "";
-            this.tbPensum.Size = new System.Drawing.Size(147, 48);
-            this.tbPensum.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.tbPensum.TabIndex = 19;
-            this.tbPensum.Enter += new System.EventHandler(this.tbPEA_Enter);
-            // 
-            // tbCorreo
-            // 
-            this.tbCorreo.BorderThickness = 2;
-            this.tbCorreo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbCorreo.DefaultText = "";
-            this.tbCorreo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbCorreo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbCorreo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbCorreo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbCorreo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbCorreo.Font = new System.Drawing.Font("Californian FB", 13.8F);
-            this.tbCorreo.ForeColor = System.Drawing.Color.DimGray;
-            this.tbCorreo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbCorreo.IconLeft = ((System.Drawing.Image)(resources.GetObject("tbCorreo.IconLeft")));
-            this.tbCorreo.Location = new System.Drawing.Point(83, 228);
-            this.tbCorreo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbCorreo.Name = "tbCorreo";
-            this.tbCorreo.PasswordChar = '\0';
-            this.tbCorreo.PlaceholderText = "Email";
-            this.tbCorreo.SelectedText = "";
-            this.tbCorreo.Size = new System.Drawing.Size(255, 48);
-            this.tbCorreo.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.tbCorreo.TabIndex = 18;
-            this.tbCorreo.Enter += new System.EventHandler(this.tbCorreo_Enter);
-            // 
-            // pbVista3
-            // 
-            this.pbVista3.Image = ((System.Drawing.Image)(resources.GetObject("pbVista3.Image")));
-            this.pbVista3.Location = new System.Drawing.Point(356, 382);
-            this.pbVista3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pbVista3.Name = "pbVista3";
-            this.pbVista3.Size = new System.Drawing.Size(24, 23);
-            this.pbVista3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbVista3.TabIndex = 17;
-            this.pbVista3.TabStop = false;
-            this.pbVista3.Click += new System.EventHandler(this.pbVista3_Click);
-            // 
-            // tbClaveConfirmReg
-            // 
-            this.tbClaveConfirmReg.BorderThickness = 2;
-            this.tbClaveConfirmReg.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbClaveConfirmReg.DefaultText = "";
-            this.tbClaveConfirmReg.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbClaveConfirmReg.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbClaveConfirmReg.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbClaveConfirmReg.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbClaveConfirmReg.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbClaveConfirmReg.Font = new System.Drawing.Font("Californian FB", 13.8F);
-            this.tbClaveConfirmReg.ForeColor = System.Drawing.Color.DimGray;
-            this.tbClaveConfirmReg.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbClaveConfirmReg.IconLeft = ((System.Drawing.Image)(resources.GetObject("tbClaveConfirmReg.IconLeft")));
-            this.tbClaveConfirmReg.Location = new System.Drawing.Point(81, 367);
-            this.tbClaveConfirmReg.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbClaveConfirmReg.Name = "tbClaveConfirmReg";
-            this.tbClaveConfirmReg.PasswordChar = '\0';
-            this.tbClaveConfirmReg.PlaceholderText = "Confirm Password";
-            this.tbClaveConfirmReg.SelectedText = "";
-            this.tbClaveConfirmReg.Size = new System.Drawing.Size(255, 48);
-            this.tbClaveConfirmReg.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.tbClaveConfirmReg.TabIndex = 16;
-            this.tbClaveConfirmReg.TextChanged += new System.EventHandler(this.tbClaveConfirmReg_TextChanged);
-            this.tbClaveConfirmReg.Enter += new System.EventHandler(this.tbClaveConfirmReg_Enter);
-            // 
-            // pbVista2
-            // 
-            this.pbVista2.Image = ((System.Drawing.Image)(resources.GetObject("pbVista2.Image")));
-            this.pbVista2.Location = new System.Drawing.Point(356, 308);
-            this.pbVista2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pbVista2.Name = "pbVista2";
-            this.pbVista2.Size = new System.Drawing.Size(24, 23);
-            this.pbVista2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbVista2.TabIndex = 14;
-            this.pbVista2.TabStop = false;
-            this.pbVista2.Click += new System.EventHandler(this.pbVista2_Click);
-            // 
-            // tbClaveReg
-            // 
-            this.tbClaveReg.BorderThickness = 2;
-            this.tbClaveReg.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbClaveReg.DefaultText = "";
-            this.tbClaveReg.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbClaveReg.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbClaveReg.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbClaveReg.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbClaveReg.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbClaveReg.Font = new System.Drawing.Font("Californian FB", 13.8F);
-            this.tbClaveReg.ForeColor = System.Drawing.Color.DimGray;
-            this.tbClaveReg.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbClaveReg.IconLeft = ((System.Drawing.Image)(resources.GetObject("tbClaveReg.IconLeft")));
-            this.tbClaveReg.Location = new System.Drawing.Point(81, 297);
-            this.tbClaveReg.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbClaveReg.Name = "tbClaveReg";
-            this.tbClaveReg.PasswordChar = '\0';
-            this.tbClaveReg.PlaceholderText = "Password";
-            this.tbClaveReg.SelectedText = "";
-            this.tbClaveReg.Size = new System.Drawing.Size(255, 48);
-            this.tbClaveReg.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.tbClaveReg.TabIndex = 7;
-            this.tbClaveReg.TextChanged += new System.EventHandler(this.tbClaveReg_TextChanged);
-            this.tbClaveReg.Enter += new System.EventHandler(this.tbClaveReg_Enter);
-            // 
-            // tbUsuarioReg
-            // 
-            this.tbUsuarioReg.BorderThickness = 2;
-            this.tbUsuarioReg.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbUsuarioReg.DefaultText = "";
-            this.tbUsuarioReg.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbUsuarioReg.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbUsuarioReg.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbUsuarioReg.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbUsuarioReg.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbUsuarioReg.Font = new System.Drawing.Font("Californian FB", 13.8F);
-            this.tbUsuarioReg.ForeColor = System.Drawing.Color.DimGray;
-            this.tbUsuarioReg.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbUsuarioReg.IconLeft = ((System.Drawing.Image)(resources.GetObject("tbUsuarioReg.IconLeft")));
-            this.tbUsuarioReg.Location = new System.Drawing.Point(83, 96);
-            this.tbUsuarioReg.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbUsuarioReg.Name = "tbUsuarioReg";
-            this.tbUsuarioReg.PasswordChar = '\0';
-            this.tbUsuarioReg.PlaceholderText = "Username (Career)";
-            this.tbUsuarioReg.SelectedText = "";
-            this.tbUsuarioReg.Size = new System.Drawing.Size(255, 48);
-            this.tbUsuarioReg.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.tbUsuarioReg.TabIndex = 5;
-            this.tbUsuarioReg.Enter += new System.EventHandler(this.tbUsuarioReg_Enter);
-            // 
-            // guna2ControlBox2
-            // 
-            this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(109)))));
-            this.guna2ControlBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2ControlBox2.BackgroundImage")));
-            this.guna2ControlBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.guna2ControlBox2.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox2.IconColor = System.Drawing.Color.DeepSkyBlue;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(885, 12);
-            this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2ControlBox2.Name = "guna2ControlBox2";
-            this.guna2ControlBox2.Size = new System.Drawing.Size(37, 25);
-            this.guna2ControlBox2.TabIndex = 11;
-            // 
-            // guna2ControlBox1
-            // 
-            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(109)))));
-            this.guna2ControlBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2ControlBox1.BackgroundImage")));
-            this.guna2ControlBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.guna2ControlBox1.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.DeepSkyBlue;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(928, 12);
-            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(37, 25);
-            this.guna2ControlBox1.TabIndex = 10;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = global::CapaPresentacion.Properties.Resources.BB;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(552, 158);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(81, 78);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 3;
-            this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.UseTransparentBackground = true;
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(537, 142);
-            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(109, 108);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox2.TabIndex = 4;
-            this.guna2PictureBox2.TabStop = false;
-            this.guna2PictureBox2.UseTransparentBackground = true;
-            // 
             // tbClave
             // 
             this.tbClave.Animated = true;
@@ -670,6 +236,377 @@ namespace CapaPresentacion
             this.pbVista.TabStop = false;
             this.pbVista.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // btnLogin
+            // 
+            this.btnLogin.Animated = true;
+            this.btnLogin.AutoRoundedCorners = true;
+            this.btnLogin.BorderRadius = 22;
+            this.btnLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogin.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(41)))), ((int)(((byte)(102)))));
+            this.btnLogin.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(62)))), ((int)(((byte)(127)))));
+            this.btnLogin.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(123, 414);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(180, 46);
+            this.btnLogin.TabIndex = 20;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // lblLogin
+            // 
+            this.lblLogin.AutoSize = true;
+            this.lblLogin.BackColor = System.Drawing.Color.White;
+            this.lblLogin.Font = new System.Drawing.Font("Californian FB", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogin.ForeColor = System.Drawing.Color.DimGray;
+            this.lblLogin.Location = new System.Drawing.Point(115, 84);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(211, 53);
+            this.lblLogin.TabIndex = 0;
+            this.lblLogin.Text = "Welcome";
+            // 
+            // panelRegistro
+            // 
+            this.panelRegistro.BackColor = System.Drawing.Color.Transparent;
+            this.panelRegistro.Controls.Add(this.label1);
+            this.panelRegistro.Controls.Add(this.cbCarrera);
+            this.panelRegistro.Controls.Add(this.guna2CircleButton1);
+            this.panelRegistro.Controls.Add(this.tbPensum);
+            this.panelRegistro.Controls.Add(this.tbCorreo);
+            this.panelRegistro.Controls.Add(this.pbVista3);
+            this.panelRegistro.Controls.Add(this.tbClaveConfirmReg);
+            this.panelRegistro.Controls.Add(this.pbVista2);
+            this.panelRegistro.Controls.Add(this.btnRegistrarseReg);
+            this.panelRegistro.Controls.Add(this.tbClaveReg);
+            this.panelRegistro.Controls.Add(this.tbUsuarioReg);
+            this.panelRegistro.FillColor = System.Drawing.Color.White;
+            this.panelRegistro.Location = new System.Drawing.Point(365, 801);
+            this.panelRegistro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelRegistro.Name = "panelRegistro";
+            this.panelRegistro.Radius = 10;
+            this.panelRegistro.ShadowColor = System.Drawing.Color.Black;
+            this.panelRegistro.Size = new System.Drawing.Size(437, 596);
+            this.panelRegistro.TabIndex = 5;
+            // 
+            // guna2CircleButton1
+            // 
+            this.guna2CircleButton1.BackgroundImage = global::CapaPresentacion.Properties.Resources._out;
+            this.guna2CircleButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2CircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2CircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2CircleButton1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButton1.Location = new System.Drawing.Point(187, 508);
+            this.guna2CircleButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2CircleButton1.Name = "guna2CircleButton1";
+            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton1.Size = new System.Drawing.Size(56, 57);
+            this.guna2CircleButton1.TabIndex = 25;
+            this.guna2CircleButton1.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
+            // tbPensum
+            // 
+            this.tbPensum.Animated = true;
+            this.tbPensum.BorderThickness = 2;
+            this.tbPensum.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbPensum.DefaultText = "";
+            this.tbPensum.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbPensum.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbPensum.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbPensum.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbPensum.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbPensum.Font = new System.Drawing.Font("Californian FB", 13.8F);
+            this.tbPensum.ForeColor = System.Drawing.Color.DimGray;
+            this.tbPensum.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbPensum.IconLeft = ((System.Drawing.Image)(resources.GetObject("tbPensum.IconLeft")));
+            this.tbPensum.Location = new System.Drawing.Point(74, 200);
+            this.tbPensum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbPensum.Name = "tbPensum";
+            this.tbPensum.PasswordChar = '\0';
+            this.tbPensum.PlaceholderText = "Pensum";
+            this.tbPensum.SelectedText = "";
+            this.tbPensum.Size = new System.Drawing.Size(147, 48);
+            this.tbPensum.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.tbPensum.TabIndex = 19;
+            this.tbPensum.Enter += new System.EventHandler(this.tbPEA_Enter);
+            // 
+            // tbCorreo
+            // 
+            this.tbCorreo.Animated = true;
+            this.tbCorreo.BorderThickness = 2;
+            this.tbCorreo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCorreo.DefaultText = "";
+            this.tbCorreo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbCorreo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbCorreo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbCorreo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbCorreo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbCorreo.Font = new System.Drawing.Font("Californian FB", 13.8F);
+            this.tbCorreo.ForeColor = System.Drawing.Color.DimGray;
+            this.tbCorreo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbCorreo.IconLeft = ((System.Drawing.Image)(resources.GetObject("tbCorreo.IconLeft")));
+            this.tbCorreo.Location = new System.Drawing.Point(74, 256);
+            this.tbCorreo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbCorreo.Name = "tbCorreo";
+            this.tbCorreo.PasswordChar = '\0';
+            this.tbCorreo.PlaceholderText = "Correo";
+            this.tbCorreo.SelectedText = "";
+            this.tbCorreo.Size = new System.Drawing.Size(255, 48);
+            this.tbCorreo.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.tbCorreo.TabIndex = 18;
+            this.tbCorreo.Enter += new System.EventHandler(this.tbCorreo_Enter);
+            // 
+            // pbVista3
+            // 
+            this.pbVista3.Image = ((System.Drawing.Image)(resources.GetObject("pbVista3.Image")));
+            this.pbVista3.Location = new System.Drawing.Point(347, 410);
+            this.pbVista3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbVista3.Name = "pbVista3";
+            this.pbVista3.Size = new System.Drawing.Size(24, 23);
+            this.pbVista3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbVista3.TabIndex = 17;
+            this.pbVista3.TabStop = false;
+            this.pbVista3.Click += new System.EventHandler(this.pbVista3_Click);
+            // 
+            // tbClaveConfirmReg
+            // 
+            this.tbClaveConfirmReg.Animated = true;
+            this.tbClaveConfirmReg.BorderThickness = 2;
+            this.tbClaveConfirmReg.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbClaveConfirmReg.DefaultText = "";
+            this.tbClaveConfirmReg.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbClaveConfirmReg.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbClaveConfirmReg.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbClaveConfirmReg.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbClaveConfirmReg.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbClaveConfirmReg.Font = new System.Drawing.Font("Californian FB", 13.8F);
+            this.tbClaveConfirmReg.ForeColor = System.Drawing.Color.DimGray;
+            this.tbClaveConfirmReg.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbClaveConfirmReg.IconLeft = ((System.Drawing.Image)(resources.GetObject("tbClaveConfirmReg.IconLeft")));
+            this.tbClaveConfirmReg.Location = new System.Drawing.Point(72, 395);
+            this.tbClaveConfirmReg.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbClaveConfirmReg.Name = "tbClaveConfirmReg";
+            this.tbClaveConfirmReg.PasswordChar = '\0';
+            this.tbClaveConfirmReg.PlaceholderText = "Confirm Contraseña";
+            this.tbClaveConfirmReg.SelectedText = "";
+            this.tbClaveConfirmReg.Size = new System.Drawing.Size(255, 48);
+            this.tbClaveConfirmReg.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.tbClaveConfirmReg.TabIndex = 16;
+            this.tbClaveConfirmReg.TextChanged += new System.EventHandler(this.tbClaveConfirmReg_TextChanged);
+            this.tbClaveConfirmReg.Enter += new System.EventHandler(this.tbClaveConfirmReg_Enter);
+            // 
+            // pbVista2
+            // 
+            this.pbVista2.Image = ((System.Drawing.Image)(resources.GetObject("pbVista2.Image")));
+            this.pbVista2.Location = new System.Drawing.Point(347, 336);
+            this.pbVista2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbVista2.Name = "pbVista2";
+            this.pbVista2.Size = new System.Drawing.Size(24, 23);
+            this.pbVista2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbVista2.TabIndex = 14;
+            this.pbVista2.TabStop = false;
+            this.pbVista2.Click += new System.EventHandler(this.pbVista2_Click);
+            // 
+            // btnRegistrarseReg
+            // 
+            this.btnRegistrarseReg.Animated = true;
+            this.btnRegistrarseReg.AutoRoundedCorners = true;
+            this.btnRegistrarseReg.BorderRadius = 22;
+            this.btnRegistrarseReg.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRegistrarseReg.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRegistrarseReg.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRegistrarseReg.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRegistrarseReg.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRegistrarseReg.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(125)))));
+            this.btnRegistrarseReg.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(109)))));
+            this.btnRegistrarseReg.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Bold);
+            this.btnRegistrarseReg.ForeColor = System.Drawing.Color.White;
+            this.btnRegistrarseReg.IndicateFocus = true;
+            this.btnRegistrarseReg.Location = new System.Drawing.Point(121, 450);
+            this.btnRegistrarseReg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRegistrarseReg.Name = "btnRegistrarseReg";
+            this.btnRegistrarseReg.Size = new System.Drawing.Size(180, 46);
+            this.btnRegistrarseReg.TabIndex = 10;
+            this.btnRegistrarseReg.Text = "Sign up";
+            this.btnRegistrarseReg.UseTransparentBackground = true;
+            this.btnRegistrarseReg.Click += new System.EventHandler(this.btnRegistrarseReg_Click);
+            // 
+            // tbClaveReg
+            // 
+            this.tbClaveReg.Animated = true;
+            this.tbClaveReg.BorderThickness = 2;
+            this.tbClaveReg.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbClaveReg.DefaultText = "";
+            this.tbClaveReg.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbClaveReg.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbClaveReg.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbClaveReg.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbClaveReg.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbClaveReg.Font = new System.Drawing.Font("Californian FB", 13.8F);
+            this.tbClaveReg.ForeColor = System.Drawing.Color.DimGray;
+            this.tbClaveReg.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbClaveReg.IconLeft = ((System.Drawing.Image)(resources.GetObject("tbClaveReg.IconLeft")));
+            this.tbClaveReg.Location = new System.Drawing.Point(72, 325);
+            this.tbClaveReg.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbClaveReg.Name = "tbClaveReg";
+            this.tbClaveReg.PasswordChar = '\0';
+            this.tbClaveReg.PlaceholderText = "Contraseña";
+            this.tbClaveReg.SelectedText = "";
+            this.tbClaveReg.Size = new System.Drawing.Size(255, 48);
+            this.tbClaveReg.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.tbClaveReg.TabIndex = 7;
+            this.tbClaveReg.TextChanged += new System.EventHandler(this.tbClaveReg_TextChanged);
+            this.tbClaveReg.Enter += new System.EventHandler(this.tbClaveReg_Enter);
+            // 
+            // tbUsuarioReg
+            // 
+            this.tbUsuarioReg.Animated = true;
+            this.tbUsuarioReg.BorderThickness = 2;
+            this.tbUsuarioReg.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbUsuarioReg.DefaultText = "";
+            this.tbUsuarioReg.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbUsuarioReg.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbUsuarioReg.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbUsuarioReg.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbUsuarioReg.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbUsuarioReg.Font = new System.Drawing.Font("Californian FB", 13.8F);
+            this.tbUsuarioReg.ForeColor = System.Drawing.Color.DimGray;
+            this.tbUsuarioReg.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbUsuarioReg.IconLeft = ((System.Drawing.Image)(resources.GetObject("tbUsuarioReg.IconLeft")));
+            this.tbUsuarioReg.Location = new System.Drawing.Point(72, 84);
+            this.tbUsuarioReg.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbUsuarioReg.Name = "tbUsuarioReg";
+            this.tbUsuarioReg.PasswordChar = '\0';
+            this.tbUsuarioReg.PlaceholderText = "Usuario";
+            this.tbUsuarioReg.SelectedText = "";
+            this.tbUsuarioReg.Size = new System.Drawing.Size(255, 48);
+            this.tbUsuarioReg.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.tbUsuarioReg.TabIndex = 5;
+            this.tbUsuarioReg.Enter += new System.EventHandler(this.tbUsuarioReg_Enter);
+            // 
+            // guna2AnimateWindow1
+            // 
+            this.guna2AnimateWindow1.AnimationType = Guna.UI2.WinForms.Guna2AnimateWindow.AnimateWindowType.AW_BLEND;
+            this.guna2AnimateWindow1.TargetForm = this;
+            // 
+            // timer2
+            // 
+            this.timer2.Interval = 10;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(36)))), ((int)(((byte)(75)))));
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Location = new System.Drawing.Point(-3, -2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(275, 804);
+            this.panel1.TabIndex = 15;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::CapaPresentacion.Properties.Resources.es;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 215);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(269, 414);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // itulo
+            // 
+            this.itulo.AutoSize = true;
+            this.itulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(109)))));
+            this.itulo.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.itulo.ForeColor = System.Drawing.Color.White;
+            this.itulo.Location = new System.Drawing.Point(881, 48);
+            this.itulo.Name = "itulo";
+            this.itulo.Size = new System.Drawing.Size(96, 23);
+            this.itulo.TabIndex = 17;
+            this.itulo.Text = "SIVAPRO";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::CapaPresentacion.Properties.Resources.buhooo;
+            this.pictureBox3.Location = new System.Drawing.Point(899, 706);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(91, 81);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 16;
+            this.pictureBox3.TabStop = false;
+            // 
+            // guna2ControlBox2
+            // 
+            this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(109)))));
+            this.guna2ControlBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2ControlBox2.BackgroundImage")));
+            this.guna2ControlBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.guna2ControlBox2.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox2.IconColor = System.Drawing.Color.DeepSkyBlue;
+            this.guna2ControlBox2.Location = new System.Drawing.Point(885, 12);
+            this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2ControlBox2.Name = "guna2ControlBox2";
+            this.guna2ControlBox2.Size = new System.Drawing.Size(37, 25);
+            this.guna2ControlBox2.TabIndex = 11;
+            // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(109)))));
+            this.guna2ControlBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2ControlBox1.BackgroundImage")));
+            this.guna2ControlBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.guna2ControlBox1.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.DeepSkyBlue;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(928, 12);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(37, 25);
+            this.guna2ControlBox1.TabIndex = 10;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = global::CapaPresentacion.Properties.Resources.BB;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(552, 158);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(81, 78);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 3;
+            this.guna2PictureBox1.TabStop = false;
+            this.guna2PictureBox1.UseTransparentBackground = true;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(537, 142);
+            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(109, 108);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox2.TabIndex = 4;
+            this.guna2PictureBox2.TabStop = false;
+            this.guna2PictureBox2.UseTransparentBackground = true;
+            // 
             // guna2PictureBox4
             // 
             this.guna2PictureBox4.BackColor = System.Drawing.Color.Transparent;
@@ -682,6 +619,42 @@ namespace CapaPresentacion
             this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox4.TabIndex = 13;
             this.guna2PictureBox4.TabStop = false;
+            // 
+            // cbCarrera
+            // 
+            this.cbCarrera.BackColor = System.Drawing.Color.White;
+            this.cbCarrera.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.cbCarrera.BorderRadius = 10;
+            this.cbCarrera.BorderThickness = 2;
+            this.cbCarrera.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbCarrera.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCarrera.FocusedColor = System.Drawing.Color.Empty;
+            this.cbCarrera.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCarrera.ForeColor = System.Drawing.Color.DimGray;
+            this.cbCarrera.FormattingEnabled = true;
+            this.cbCarrera.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbCarrera.ItemHeight = 30;
+            this.cbCarrera.Items.AddRange(new object[] {
+            "(Carrera)",
+            "Mateticas"});
+            this.cbCarrera.Location = new System.Drawing.Point(73, 150);
+            this.cbCarrera.Name = "cbCarrera";
+            this.cbCarrera.Size = new System.Drawing.Size(254, 36);
+            this.cbCarrera.StartIndex = 0;
+            this.cbCarrera.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.cbCarrera.TabIndex = 32;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Californian FB", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Location = new System.Drawing.Point(126, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(184, 53);
+            this.label1.TabIndex = 33;
+            this.label1.Text = "Sign Up";
             // 
             // Form1
             // 
@@ -710,16 +683,16 @@ namespace CapaPresentacion
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panelIniciar.ResumeLayout(false);
             this.panelIniciar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbVista)).EndInit();
             this.panelRegistro.ResumeLayout(false);
             this.panelRegistro.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbVista3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbVista2)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbVista)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -757,15 +730,11 @@ namespace CapaPresentacion
         private System.Windows.Forms.Label itulo;
         private System.Windows.Forms.Label lblCarrera;
         private System.Windows.Forms.Label lblContraseñaL;
-        private System.Windows.Forms.Label lblCarreraR;
-        private System.Windows.Forms.Label lblPensum;
-        private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.Label lblContraseñaR;
-        private System.Windows.Forms.Label lblContraseñaR2;
         private System.Windows.Forms.LinkLabel linKCreateR;
         private System.Windows.Forms.Label lblCreateR;
-        private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
+        private Guna.UI2.WinForms.Guna2ComboBox cbCarrera;
+        private System.Windows.Forms.Label label1;
     }
 }
 

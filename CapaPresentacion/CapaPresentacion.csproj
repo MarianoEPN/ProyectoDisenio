@@ -178,11 +178,35 @@
     <Compile Include="CRUD\FormMoldeCrud.Designer.cs">
       <DependentUpon>FormMoldeCrud.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenuOpciones\FormEditarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuOpciones\FormEditarUsuario.Designer.cs">
+      <DependentUpon>FormEditarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuOpciones\FormObjetivoEurace.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MenuOpciones\FormObjetivoEurace.Designer.cs">
       <DependentUpon>FormObjetivoEurace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuOpciones\FormObjetivosPrograma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuOpciones\FormObjetivosPrograma.Designer.cs">
+      <DependentUpon>FormObjetivosPrograma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuOpciones\FormPerfilEgreso-x-ObjetivosEurase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuOpciones\FormPerfilEgreso-x-ObjetivosEurase.Designer.cs">
+      <DependentUpon>FormPerfilEgreso-x-ObjetivosEurase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuOpciones\FormRelaciónRresultadosAprendizajeAsignatura-x-PerfilEgreso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuOpciones\FormRelaciónRresultadosAprendizajeAsignatura-x-PerfilEgreso.Designer.cs">
+      <DependentUpon>FormRelaciónRresultadosAprendizajeAsignatura-x-PerfilEgreso.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuOpciones\FormResultadosAprendizajeAsignatura.cs">
       <SubType>Form</SubType>
@@ -249,8 +273,20 @@
     <EmbeddedResource Include="CRUD\FormMoldeCrud.resx">
       <DependentUpon>FormMoldeCrud.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MenuOpciones\FormEditarUsuario.resx">
+      <DependentUpon>FormEditarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuOpciones\FormObjetivoEurace.resx">
       <DependentUpon>FormObjetivoEurace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuOpciones\FormObjetivosPrograma.resx">
+      <DependentUpon>FormObjetivosPrograma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuOpciones\FormPerfilEgreso-x-ObjetivosEurase.resx">
+      <DependentUpon>FormPerfilEgreso-x-ObjetivosEurase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuOpciones\FormRelaciónRresultadosAprendizajeAsignatura-x-PerfilEgreso.resx">
+      <DependentUpon>FormRelaciónRresultadosAprendizajeAsignatura-x-PerfilEgreso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuOpciones\FormResultadosAprendizajeAsignatura.resx">
       <DependentUpon>FormResultadosAprendizajeAsignatura.cs</DependentUpon>

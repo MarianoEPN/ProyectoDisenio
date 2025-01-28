@@ -218,7 +218,7 @@ namespace CapaPresentacion
 
         private void btnRAAxPE_Click(object sender, EventArgs e)
         {
-            container(new Match1());
+            container(new FormRelaciónRresultadosAprendizajeAsignatura_x_PerfilEgreso());
 
         }
 
@@ -253,6 +253,24 @@ namespace CapaPresentacion
         private void btnOC_Click(object sender, EventArgs e)
         {
             menuTransition.Start();
+        }
+
+        private void btnOP_Click(object sender, EventArgs e)
+        {
+            container(new FormObjetivosPrograma());
+
+        }
+
+        private void btnRAxOP_Click(object sender, EventArgs e)
+        {
+            container(new FormPerfilEgreso_x_ObjetivosEurase());
+
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            container(new FormEditarUsuario());
+
         }
     }
 }

@@ -1,6 +1,6 @@
-﻿namespace CapaPresentacion
+﻿namespace CapaPresentacion.MenuOpciones
 {
-    partial class Match1
+    partial class FormPerfilEgreso_x_ObjetivosEurase
     {
         /// <summary>
         /// Required designer variable.
@@ -78,7 +78,7 @@
             this.btnBuscar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
             this.btnBuscar.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Bold);
             this.btnBuscar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnBuscar.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(109)))));
+            this.btnBuscar.HoverState.FillColor = System.Drawing.Color.DeepSkyBlue;
             this.btnBuscar.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
             this.btnBuscar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnBuscar.ImageSize = new System.Drawing.Size(30, 30);
@@ -252,7 +252,7 @@
             this.guna2TextBox2.Size = new System.Drawing.Size(260, 40);
             this.guna2TextBox2.TabIndex = 39;
             // 
-            // Match1
+            // FormPerfilEgreso_x_ObjetivosEurase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -261,9 +261,9 @@
             this.Controls.Add(this.panelFila);
             this.Controls.Add(this.panelColumna);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Match1";
+            this.Name = "FormPerfilEgreso_x_ObjetivosEurase";
             this.Text = "Match1";
-            this.Load += new System.EventHandler(this.Match1_Load);
+            this.Load += new System.EventHandler(this.FormPerfilEgreso_x_ObjetivosEurase_Load);
             this.panelColumna.ResumeLayout(false);
             this.panelColumna.PerformLayout();
             this.panelX.ResumeLayout(false);

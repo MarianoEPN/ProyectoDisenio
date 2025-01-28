@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion.MenuOpciones
 {
-    partial class FormObjetivoEurace
+    partial class FormObjetivosPrograma
     {
         /// <summary>
         /// Required designer variable.
@@ -131,9 +131,9 @@
             this.lblTitulo.ForeColor = System.Drawing.Color.Azure;
             this.lblTitulo.Location = new System.Drawing.Point(35, 12);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(287, 38);
+            this.lblTitulo.Size = new System.Drawing.Size(315, 38);
             this.lblTitulo.TabIndex = 27;
-            this.lblTitulo.Text = "Objetivo EUR-ACE";
+            this.lblTitulo.Text = "Objetivo de Programa";
             // 
             // dtgObjetivoEurace
             // 
@@ -323,7 +323,7 @@
             this.Column4.ReadOnly = true;
             this.Column4.Width = 40;
             // 
-            // FormObjetivoEurace
+            // FormObjetivosPrograma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -335,7 +335,7 @@
             this.Controls.Add(this.btnEditar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "FormObjetivoEurace";
+            this.Name = "FormObjetivosPrograma";
             this.Text = "FormObjetivoEurace";
             this.panelTitulos.ResumeLayout(false);
             this.panelTitulos.PerformLayout();
