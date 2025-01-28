@@ -52,13 +52,12 @@ namespace CapaAccesoDatos
             conexion.CerrarConexion();
         }
 
-        public void ActualizarResultadoAprendizajeAsignatura(ResultadoAprendizajeAsignatura item, Asignatura asignatura, TipoResultadoAsignatura tipo)
+        public void ActualizarResultadoAprendizajeAsignatura(ResultadoAprendizajeAsignatura item, TipoResultadoAsignatura tipo)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "ActualizarResultadoAprendizajeAsignatura";
             comando.CommandType = System.Data.CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("@id", item.Id);    
-            comando.Parameters.AddWithValue("@asignatura_id", asignatura.Id);
             comando.Parameters.AddWithValue("@tipo_id", tipo.Id);
             comando.Parameters.AddWithValue("@codigo", item.Codigo);
             comando.Parameters.AddWithValue("@descripcion", item.Descripcion);
