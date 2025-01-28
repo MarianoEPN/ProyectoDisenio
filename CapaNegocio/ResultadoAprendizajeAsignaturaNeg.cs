@@ -20,9 +20,9 @@ namespace CapaNegocio
         {
              return RAAsignatura.MostrarResultadoAprendizajeAsignatura();
         }
-        public void ActualizarResultadoAprendizajeAsignatura(ResultadoAprendizajeAsignatura item, Asignatura asignatura, TipoResultadoAsignatura tipo)
+        public void ActualizarResultadoAprendizajeAsignatura(ResultadoAprendizajeAsignatura item, TipoResultadoAsignatura tipo)
         {
-             RAAsignatura.ActualizarResultadoAprendizajeAsignatura(item, asignatura, tipo);
+             RAAsignatura.ActualizarResultadoAprendizajeAsignatura(item, tipo);
         }
         public void EliminarResultadoAprendizajeAsignatura(int id)
         {
