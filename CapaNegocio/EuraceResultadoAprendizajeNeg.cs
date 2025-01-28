@@ -32,7 +32,10 @@ namespace CapaNegocio
         {
             ERAprendizaje.EliminarEuraceResultadoAprendizaje(id);
         }
-
+        public List<EuraceResultadoAprendizaje> BuscarEuraceResultadoAprendizaje(ObjetivoEurace objetivo, ResultadoAprendizaje resultado)
+        {
+            return ERAprendizaje.BuscarEuraceResultadoAprendizaje(objetivo, resultado); 
+        }
 
     }
 }

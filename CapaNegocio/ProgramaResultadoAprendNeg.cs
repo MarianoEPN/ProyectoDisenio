@@ -31,5 +31,11 @@ namespace CapaNegocio
         {
             programaResultadoAprendizajeDAL.EliminarProgramaResultadoAprendizaje(idProgramaResultadoAprendizaje);
         }
+        public List<ProgramaResultadoAprendizaje> BuscarProgramaResultadoAprendizaje(ObjetivoPrograma objetivo, ResultadoAprendizaje resultado)
+        {
+            return programaResultadoAprendizajeDAL.BuscarProgramaResultadoAprendizaje(objetivo, resultado);
+        }
+
+
     }
 }
