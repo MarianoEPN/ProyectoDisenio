@@ -38,25 +38,29 @@ namespace CapaAccesoDatos
 
         }
 
-        public void InsertarEuraceResultadoAprendizaje(EuraceResultadoAprendizaje euraceResultadoAprendizaje)
+        public void InsertarEuraceResultadoAprendizaje(EuraceResultadoAprendizaje euraceResultadoAprendizaje, ObjetivoEurace objetivo, ResultadoAprendizaje resultado)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "InsertarEuraceResultadoAprendizaje";
             comando.CommandType = System.Data.CommandType.StoredProcedure;
             comando.Parameters.Clear();
+            comando.Parameters.AddWithValue("@obj_eurace_id", objetivo.Id);
+            comando.Parameters.AddWithValue("@resultado_aprendizaje_id", resultado.Id);
             comando.Parameters.AddWithValue("@comentario", euraceResultadoAprendizaje.Comentario);
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
             conexion.CerrarConexion();
         }
 
-        public void ActualizarEuraceResultadoAprendizaje(EuraceResultadoAprendizaje euraceResultadoAprendizaje)
+        public void ActualizarEuraceResultadoAprendizaje(EuraceResultadoAprendizaje euraceResultadoAprendizaje, ObjetivoEurace objetivo, ResultadoAprendizaje resultado)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "ActualizarEuraceResultadoAprendizaje";
             comando.CommandType = System.Data.CommandType.StoredProcedure;
             comando.Parameters.Clear();
             comando.Parameters.AddWithValue("@id", euraceResultadoAprendizaje.Id);
+            comando.Parameters.AddWithValue("@obj_eurace_id", objetivo.Id);
+            comando.Parameters.AddWithValue("@resultado_aprendizaje_id", resultado.Id);
             comando.Parameters.AddWithValue("@comentario", euraceResultadoAprendizaje.Comentario);
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();

@@ -38,11 +38,13 @@ namespace CapaAccesoDatos
             return lista;
         }
 
-        public void InsertarResultadoAprendizajeAsignatura(ResultadoAprendizajeAsignatura item)
+        public void InsertarResultadoAprendizajeAsignatura(ResultadoAprendizajeAsignatura item, Asignatura asignatura, TipoResultadoAsignatura tipo)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "InsertarResultadoAprendizajeAsignatura";
-            comando.CommandType = System.Data.CommandType.StoredProcedure;            
+            comando.CommandType = System.Data.CommandType.StoredProcedure;   
+            comando.Parameters.AddWithValue("@asignatura_id", asignatura.Id);
+            comando.Parameters.AddWithValue("@tipo_id", tipo.Id);
             comando.Parameters.AddWithValue("@codigo", item.Codigo);
             comando.Parameters.AddWithValue("@descripcion", item.Descripcion);
             comando.ExecuteNonQuery();
@@ -50,12 +52,14 @@ namespace CapaAccesoDatos
             conexion.CerrarConexion();
         }
 
-        public void ActualizarResultadoAprendizajeAsignatura(ResultadoAprendizajeAsignatura item)
+        public void ActualizarResultadoAprendizajeAsignatura(ResultadoAprendizajeAsignatura item, Asignatura asignatura, TipoResultadoAsignatura tipo)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "ActualizarResultadoAprendizajeAsignatura";
             comando.CommandType = System.Data.CommandType.StoredProcedure;
-            comando.Parameters.AddWithValue("@id", item.Id);            
+            comando.Parameters.AddWithValue("@id", item.Id);    
+            comando.Parameters.AddWithValue("@asignatura_id", asignatura.Id);
+            comando.Parameters.AddWithValue("@tipo_id", tipo.Id);
             comando.Parameters.AddWithValue("@codigo", item.Codigo);
             comando.Parameters.AddWithValue("@descripcion", item.Descripcion);
             comando.ExecuteNonQuery();

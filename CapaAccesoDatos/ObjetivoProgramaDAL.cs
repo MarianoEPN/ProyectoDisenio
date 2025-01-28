@@ -46,7 +46,7 @@ namespace CapaAccesoDatos
         }
 
         // Insertar un nuevo objetivo del programa
-        public void InsertarObjetivoPrograma(ObjetivoPrograma objetivo)
+        public void InsertarObjetivoPrograma(ObjetivoPrograma objetivo, Carrera carrera)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "InsertarObjetivoPrograma";
@@ -55,6 +55,7 @@ namespace CapaAccesoDatos
             comando.Parameters.AddWithValue("@codigo", objetivo.Codigo);
             comando.Parameters.AddWithValue("@fortaleza", objetivo.Fortalezas);
             comando.Parameters.AddWithValue("@debilidad", objetivo.Debilidades);
+            comando.Parameters.AddWithValue("@carrera_id", carrera.Id);
 
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
@@ -62,7 +63,7 @@ namespace CapaAccesoDatos
         }
 
         // Actualizar un objetivo del programa existente
-        public void ActualizarObjetivoPrograma(ObjetivoPrograma objetivo)
+        public void ActualizarObjetivoPrograma(ObjetivoPrograma objetivo, Carrera carrera)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "ActualizarObjetivoPrograma";
@@ -72,6 +73,7 @@ namespace CapaAccesoDatos
             comando.Parameters.AddWithValue("@codigo", objetivo.Codigo);
             comando.Parameters.AddWithValue("@fortaleza", objetivo.Fortalezas);
             comando.Parameters.AddWithValue("@debilidad", objetivo.Debilidades);
+            comando.Parameters.AddWithValue("@carrera_id", carrera.Id);
 
 
             comando.ExecuteNonQuery();

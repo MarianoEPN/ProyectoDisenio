@@ -37,23 +37,27 @@ namespace CapaAccesoDatos
             return lista;
         }
 
-        public void InsertarProgramaResultadoAprendizaje(ProgramaResultadoAprendizaje item)
+        public void InsertarProgramaResultadoAprendizaje(ProgramaResultadoAprendizaje item, ObjetivoPrograma objetivo, ResultadoAprendizaje resultado)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "InsertarProgramaResultadoAprendizaje";
-            comando.CommandType = System.Data.CommandType.StoredProcedure;    
+            comando.CommandType = System.Data.CommandType.StoredProcedure;   
+            comando.Parameters.AddWithValue("@obj_programa_id", objetivo.Id);
+            comando.Parameters.AddWithValue("@resultado_aprendizaje_id", resultado.Id);
             comando.Parameters.AddWithValue("@comentario", item.Comentario);
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
             conexion.CerrarConexion();
         }
 
-        public void ActualizarProgramaResultadoAprendizaje(ProgramaResultadoAprendizaje item)
+        public void ActualizarProgramaResultadoAprendizaje(ProgramaResultadoAprendizaje item, ObjetivoPrograma objetivo, ResultadoAprendizaje resultado)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "ActualizarProgramaResultadoAprendizaje";
             comando.CommandType = System.Data.CommandType.StoredProcedure;
-            comando.Parameters.AddWithValue("@id", item.Id);            
+            comando.Parameters.AddWithValue("@id", item.Id);
+            comando.Parameters.AddWithValue("@obj_programa_id", objetivo.Id);
+            comando.Parameters.AddWithValue("@resultado_aprendizaje_id", resultado.Id);
             comando.Parameters.AddWithValue("@comentario", item.Comentario);
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();

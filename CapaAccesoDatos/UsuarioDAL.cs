@@ -41,7 +41,7 @@ namespace CapaAccesoDatos
             return lista;
         }
 
-        public void InsertarUsuario(Usuario usuario)
+        public void InsertarUsuario(Usuario usuario, Carrera carrera)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "InsertarUsuario";
@@ -50,12 +50,13 @@ namespace CapaAccesoDatos
             comando.Parameters.AddWithValue("@correo", usuario.Correo);
             comando.Parameters.AddWithValue("@clave", usuario.Clave);
             comando.Parameters.AddWithValue("@nombre", usuario.nombre);
+            comando.Parameters.AddWithValue("@carrera_id", carrera.Id);
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
             conexion.CerrarConexion();
         }
 
-        public void ActualizarUsuario(Usuario usuario)
+        public void ActualizarUsuario(Usuario usuario, Carrera carrera)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "ActualizarUsuario";
@@ -65,6 +66,7 @@ namespace CapaAccesoDatos
             comando.Parameters.AddWithValue("@correo", usuario.Correo);
             comando.Parameters.AddWithValue("@clave", usuario.Clave);
             comando.Parameters.AddWithValue("@nombre", usuario.nombre);
+            comando.Parameters.AddWithValue("@carrera_id", carrera.Id);
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
             conexion.CerrarConexion();

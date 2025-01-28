@@ -40,7 +40,7 @@ namespace CapaAccesoDatos
             return lista;
         }
 
-        public void InsertarAsignatura(Asignatura asignatura)
+        public void InsertarAsignatura(Asignatura asignatura, Carrera carrera)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "InsertarAsignaturas";
@@ -48,12 +48,13 @@ namespace CapaAccesoDatos
             comando.Parameters.AddWithValue("@codigo", asignatura.Codigo);
             comando.Parameters.AddWithValue("@nombre", asignatura.Nombre);
             comando.Parameters.AddWithValue("@nivel", asignatura.Nivel);
+            comando.Parameters.AddWithValue("@carrera_id", carrera.Id);
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
             conexion.CerrarConexion();
         }
 
-        public void ActualizarAsignatura(Asignatura asignatura)
+        public void ActualizarAsignatura(Asignatura asignatura, Carrera carrera)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "ActualizarAsignatura";
@@ -62,6 +63,7 @@ namespace CapaAccesoDatos
             comando.Parameters.AddWithValue("@codigo", asignatura.Codigo);
             comando.Parameters.AddWithValue("@nombre", asignatura.Nombre);
             comando.Parameters.AddWithValue("@nivel", asignatura.Nivel);
+            comando.Parameters.AddWithValue("@carrera_id", carrera.Id);
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
             conexion.CerrarConexion();

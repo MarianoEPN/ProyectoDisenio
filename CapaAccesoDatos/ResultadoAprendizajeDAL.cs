@@ -45,13 +45,14 @@ namespace CapaAccesoDatos
         }
 
         // Insertar un nuevo resultado de aprendizaje
-        public void InsertarResultadoAprendizaje(ResultadoAprendizaje resultado)
+        public void InsertarResultadoAprendizaje(ResultadoAprendizaje resultado, Carrera carrera)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "InsertarResultadoAprendizaje";
             comando.CommandType = System.Data.CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("@codigo", resultado.Codigo);
             comando.Parameters.AddWithValue("@descripcion", resultado.Descripcion);
+            comando.Parameters.AddWithValue("@carrera_id", carrera.Id);
 
 
             comando.ExecuteNonQuery();
@@ -60,7 +61,7 @@ namespace CapaAccesoDatos
         }
 
         // Actualizar un resultado de aprendizaje existente
-        public void ActualizarResultadoAprendizaje(ResultadoAprendizaje resultado)
+        public void ActualizarResultadoAprendizaje(ResultadoAprendizaje resultado, Carrera carrera)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "ActualizarResultadoAprendizaje";
@@ -68,6 +69,7 @@ namespace CapaAccesoDatos
             comando.Parameters.AddWithValue("@id", resultado.Id);
             comando.Parameters.AddWithValue("@codigo", resultado.Codigo);
             comando.Parameters.AddWithValue("@descripcion", resultado.Descripcion);
+            comando.Parameters.AddWithValue("@carrera_id", carrera.Id);
 
 
             comando.ExecuteNonQuery();
