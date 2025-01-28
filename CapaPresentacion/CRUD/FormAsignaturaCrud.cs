@@ -33,7 +33,7 @@ namespace CapaPresentacion.CRUD
         {
             InitializeComponent();
             lbAdvertencia.Visible = false;
-            tbCodigo.Text = asignatura.Nombre;
+            tbNombre.Text = asignatura.Nombre;
             tbCodigo.Text = asignatura.Codigo;
             tbNivel.Text = Convert.ToString(asignatura.Nivel);
             AsignaturaEditar = asignatura;

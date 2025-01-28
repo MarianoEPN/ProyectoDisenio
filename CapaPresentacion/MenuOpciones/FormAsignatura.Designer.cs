@@ -326,8 +326,10 @@
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "FormAsignatura";
             this.Load += new System.EventHandler(this.Asignatura_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormAsignatura_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.dtgAsignatura)).EndInit();
             this.panelTitulos.ResumeLayout(false);
             this.panelTitulos.PerformLayout();

@@ -87,7 +87,7 @@ namespace CapaPresentacion
 
             foreach (Usuario usuario in listaUsuarios)
             {
-               if (tbUsuario.Text.Equals(usuario.nombre) && tbClave.Text.Equals(usuario.Clave))
+               if (tbUsuario.Text.Equals(usuario.Username) && tbClave.Text.Equals(usuario.Clave))
                 {
                     // Mensaje para dar a entender que funciono
                     //MessageBox.Show("Acceso condedido");
