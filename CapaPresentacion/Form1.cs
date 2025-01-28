@@ -46,17 +46,12 @@ namespace CapaPresentacion
             //
         }
 
-        // Creadno una lista temporal para probar unicamente funcionamiento del login
-        List<Carrera> listaCarreras;
+        // Creando una lista temporal para probar unicamente funcionamiento del login
+        ICollection<Usuario> listaUsuarios;
         private void Form1_Load(object sender, EventArgs e)
         {
-            listaCarreras = new List<Carrera>();
-            Carrera carrera = new Carrera();
-            carrera.Id = 1;
-            //carrera.Nombre = "Tecnologias de la informacion";
-            //carrera.Contraseña = "FIEE-TI2024B";
-            listaCarreras.Add(carrera);
-
+            UsuarioNeg usuarioNeg = new UsuarioNeg();
+            listaUsuarios = usuarioNeg.MostrarUsuario();
         }
 
         
@@ -90,15 +85,14 @@ namespace CapaPresentacion
                 }
             }         
 
-            foreach (Carrera carrera in listaCarreras)
+            foreach (Usuario usuario in listaUsuarios)
             {
-               // if (tbUsuario.Text.Equals(carrera.Nombre) && tbClave.Text.Equals(carrera.Contraseña))
+               if (tbUsuario.Text.Equals(usuario.nombre) && tbClave.Text.Equals(usuario.Clave))
                 {
                     // Mensaje para dar a entender que funciono
                     //MessageBox.Show("Acceso condedido");
 
-
-                    FormLoading _load = new FormLoading();
+                    FormLoading _load = new FormLoading(this, usuario);
                     _load.Show();
                     this.Hide();
                     verificarUsuario = true;
@@ -347,6 +341,16 @@ namespace CapaPresentacion
         {
             timer2.Stop(); // Detener el temporizador de bajada
             timer1.Start(); // Inicia el temporizador de subida
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                // Llama al evento del botón
+                btnLogin_Click(sender, e);
+                e.Handled = true; // Evita que el evento se propague si es necesario
+            }
         }
     }
 }
