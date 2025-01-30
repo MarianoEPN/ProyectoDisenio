@@ -223,12 +223,12 @@
             this.lbAdvertencia.AutoSize = true;
             this.lbAdvertencia.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Bold);
             this.lbAdvertencia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(109)))));
-            this.lbAdvertencia.Location = new System.Drawing.Point(74, 296);
+            this.lbAdvertencia.Location = new System.Drawing.Point(67, 296);
             this.lbAdvertencia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbAdvertencia.Name = "lbAdvertencia";
-            this.lbAdvertencia.Size = new System.Drawing.Size(282, 23);
+            this.lbAdvertencia.Size = new System.Drawing.Size(286, 23);
             this.lbAdvertencia.TabIndex = 55;
-            this.lbAdvertencia.Text = "Debe completar todos los campos";
+            this.lbAdvertencia.Text = "Debe completar todos los campos.";
             // 
             // tbNombre
             // 

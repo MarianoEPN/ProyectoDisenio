@@ -80,8 +80,16 @@ namespace CapaPresentacion.CRUD
 
                     }
                 }
+                
                 if (camposCompletos)
                 {
+                    if (tbCodigo.Text.Length != 7)
+                    {
+                        lbAdvertencia.Text = "El codigo debe contener 7 caracteres.";
+                        lbAdvertencia.Visible = true;
+                        return;
+                    }
+
                     Asignatura asignatura = new Asignatura();
                     asignatura.Codigo = tbCodigo.Text;
                     asignatura.Nombre = tbNombre.Text;
@@ -92,6 +100,7 @@ namespace CapaPresentacion.CRUD
                 }
                 else
                 {
+                    lbAdvertencia.Text = "Debe completar todos los campos.";
                     lbAdvertencia.Visible = true;
                 }
 
@@ -115,8 +124,15 @@ namespace CapaPresentacion.CRUD
 
                     }
                 }
+
                 if (camposCompletos)
                 {
+                    if (tbCodigo.Text.Length != 7)
+                    {
+                        lbAdvertencia.Text = "El codigo debe contener 7 caracteres.";
+                        lbAdvertencia.Visible = true;
+                        return;
+                    }
                     Asignatura asignaturaEditar = asignatura;
                     asignaturaEditar.Codigo = tbCodigo.Text;
                     asignaturaEditar.Nombre = tbNombre.Text;
@@ -127,6 +143,7 @@ namespace CapaPresentacion.CRUD
                 }
                 else
                 {
+                    lbAdvertencia.Text = "Debe completar todos los campos.";
                     lbAdvertencia.Visible = true;
                 }
 
