@@ -48,6 +48,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Guna.Charts.WinForms, Version=1.1.0.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.Charts.WinForms.1.1.0\lib\net472\Guna.Charts.WinForms.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
@@ -220,6 +223,12 @@
     <Compile Include="MenuOpciones\FormResultadosAprendizaje.Designer.cs">
       <DependentUpon>FormResultadosAprendizaje.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenuOpciones\FormsComentario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuOpciones\FormsComentario.Designer.cs">
+      <DependentUpon>FormsComentario.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuOpciones\Match1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -294,6 +303,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenuOpciones\FormResultadosAprendizaje.resx">
       <DependentUpon>FormResultadosAprendizaje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuOpciones\FormsComentario.resx">
+      <DependentUpon>FormsComentario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuOpciones\Match1.resx">
       <DependentUpon>Match1.cs</DependentUpon>

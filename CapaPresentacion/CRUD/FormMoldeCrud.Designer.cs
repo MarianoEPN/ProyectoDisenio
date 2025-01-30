@@ -350,6 +350,7 @@
             this.tbNombre.Size = new System.Drawing.Size(224, 36);
             this.tbNombre.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.tbNombre.TabIndex = 39;
+            this.tbNombre.TextChanged += new System.EventHandler(this.tbNombre_TextChanged);
             // 
             // tbCodigo
             // 

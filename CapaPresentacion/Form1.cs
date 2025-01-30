@@ -113,7 +113,6 @@ namespace CapaPresentacion
         {
 
             if (string.IsNullOrWhiteSpace(tbUsuarioReg.Text)||
-                string.IsNullOrWhiteSpace(tbPensum.Text)||
                 string.IsNullOrWhiteSpace(tbCorreo.Text)||
                 string.IsNullOrWhiteSpace(tbClaveReg.Text)||
                  string.IsNullOrWhiteSpace(tbClaveConfirmReg.Text)
