@@ -26,7 +26,7 @@ namespace CapaPresentacion
                 splash.ShowDialog(); // Mostrar el Splash Screen
             }
 
-            Application.Run(new FormsComentario());
+            Application.Run(new Form1());
         }
     }
 }
