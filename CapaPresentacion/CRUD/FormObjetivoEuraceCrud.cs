@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaEntidades;
+using CapaNegocio;
 using Guna.UI2.WinForms;
 
 namespace CapaPresentacion.CRUD
@@ -21,6 +22,7 @@ namespace CapaPresentacion.CRUD
         public FormObjetivoEuraceCrud()
         {
             InitializeComponent();
+            btnCrear.Text = "Crear";
             lbAdvertencia.Visible = false;
             lblAccionAsignatura.Text = "Crear Objetivo EUR-ACE";
         }
@@ -28,10 +30,11 @@ namespace CapaPresentacion.CRUD
         public FormObjetivoEuraceCrud(ObjetivoEurace objetivoEurace)
         {
             InitializeComponent();
+            btnCrear.Text = "Guardar";
             lbAdvertencia.Visible = false;
-            //tbCodigo.Text = objetivoEurace.Codigo;
-            //tbNombre.Text = objetivoEurace.Nombre;
-            //tbDescripcion.Text = objetivoEurace.Descripcion;
+            tbCodigo.Text = objetivoEurace.Codigo;
+            tbNombre.Text = objetivoEurace.Nombre;
+            tbDescripcion.Text = objetivoEurace.Descripcion;
             objetivoEditar = objetivoEurace;
             lblAccionAsignatura.Text = "Editar Objetivo EUR-ACE";
         }
@@ -74,16 +77,18 @@ namespace CapaPresentacion.CRUD
                 if (camposCompletos)
                 {
                     ObjetivoEurace objetivo = new ObjetivoEurace();
-                    //objetivo.Codigo = tbCodigo.Text;
-                    //objetivo.Nombre = tbNombre.Text;
-                    //objetivo.Descripcion = tbDescripcion.Text;
-
+                    objetivo.Codigo = tbCodigo.Text;
+                    objetivo.Nombre = tbNombre.Text;
+                    objetivo.Descripcion = tbDescripcion.Text;
+                    ObjetivoEuraceNeg objetivoEuraceNeg = new ObjetivoEuraceNeg();
+                    objetivoEuraceNeg.InsertarObjetivoEurace(objetivo);
                     // Metodo de la capa de negocio para guardar la asignatura creada
 
                     this.Close();
                 }
                 else
                 {
+                    lbAdvertencia.Text = "Debe completar todos los campos.";
                     lbAdvertencia.Visible = true;
                 }
 
@@ -109,17 +114,19 @@ namespace CapaPresentacion.CRUD
                 }
                 if (camposCompletos)
                 {
-                    ObjetivoEurace objetivo = new ObjetivoEurace();
-                    //objetivo.Codigo = tbCodigo.Text;
-                    //objetivo.Nombre = tbNombre.Text;
-                    //objetivo.Descripcion = tbDescripcion.Text;
-
+                    ObjetivoEurace objetivo = objetivoEditar;
+                    objetivo.Codigo = tbCodigo.Text;
+                    objetivo.Nombre = tbNombre.Text;
+                    objetivo.Descripcion = tbDescripcion.Text;
+                    ObjetivoEuraceNeg objetivoEuraceNeg = new ObjetivoEuraceNeg();
+                    objetivoEuraceNeg.ActualizarObjetivoEurace(objetivo);
                     // Metodo de la capa de negocio para guardar la asignatura editada
 
                     this.Close();
                 }
                 else
                 {
+                    lbAdvertencia.Text = "Debe completar todos los campos.";
                     lbAdvertencia.Visible = true;
                 }
 

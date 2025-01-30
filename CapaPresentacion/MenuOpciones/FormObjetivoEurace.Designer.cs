@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btnAgregar = new Guna.UI2.WinForms.Guna2Button();
             this.panelTitulos = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.tbBuscar = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnBuscar = new Guna.UI2.WinForms.Guna2Button();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.dtgObjetivoEurace = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnEliminar = new Guna.UI2.WinForms.Guna2Button();
             this.btnEditar = new Guna.UI2.WinForms.Guna2Button();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.tbBuscar = new Guna.UI2.WinForms.Guna2TextBox();
-            this.Column4 = new System.Windows.Forms.DataGridViewImageColumn();
             this.panelTitulos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgObjetivoEurace)).BeginInit();
             this.SuspendLayout();
@@ -80,6 +80,7 @@
             this.btnAgregar.TabIndex = 34;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseTransparentBackground = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // panelTitulos
             // 
@@ -96,6 +97,33 @@
             this.panelTitulos.ShadowColor = System.Drawing.Color.White;
             this.panelTitulos.Size = new System.Drawing.Size(1067, 65);
             this.panelTitulos.TabIndex = 33;
+            // 
+            // tbBuscar
+            // 
+            this.tbBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbBuscar.Animated = true;
+            this.tbBuscar.AutoRoundedCorners = true;
+            this.tbBuscar.BorderColor = System.Drawing.Color.Gray;
+            this.tbBuscar.BorderRadius = 19;
+            this.tbBuscar.BorderThickness = 2;
+            this.tbBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbBuscar.DefaultText = "";
+            this.tbBuscar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbBuscar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbBuscar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbBuscar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbBuscar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbBuscar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tbBuscar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbBuscar.IconLeft = global::CapaPresentacion.Properties.Resources.lupa;
+            this.tbBuscar.Location = new System.Drawing.Point(636, 13);
+            this.tbBuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbBuscar.Name = "tbBuscar";
+            this.tbBuscar.PasswordChar = '\0';
+            this.tbBuscar.PlaceholderText = "Buscar";
+            this.tbBuscar.SelectedText = "";
+            this.tbBuscar.Size = new System.Drawing.Size(300, 40);
+            this.tbBuscar.TabIndex = 30;
             // 
             // btnBuscar
             // 
@@ -139,46 +167,46 @@
             // 
             this.dtgObjetivoEurace.AllowUserToAddRows = false;
             this.dtgObjetivoEurace.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dtgObjetivoEurace.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            this.dtgObjetivoEurace.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.dtgObjetivoEurace.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgObjetivoEurace.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Californian FB", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgObjetivoEurace.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Californian FB", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgObjetivoEurace.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dtgObjetivoEurace.ColumnHeadersHeight = 40;
             this.dtgObjetivoEurace.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dtgObjetivoEurace.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column3,
             this.Column4});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgObjetivoEurace.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgObjetivoEurace.DefaultCellStyle = dataGridViewCellStyle15;
             this.dtgObjetivoEurace.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.dtgObjetivoEurace.Location = new System.Drawing.Point(12, 81);
             this.dtgObjetivoEurace.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtgObjetivoEurace.Name = "dtgObjetivoEurace";
             this.dtgObjetivoEurace.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgObjetivoEurace.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgObjetivoEurace.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.dtgObjetivoEurace.RowHeadersVisible = false;
             this.dtgObjetivoEurace.RowHeadersWidth = 51;
             this.dtgObjetivoEurace.RowTemplate.DividerHeight = 5;
@@ -206,6 +234,7 @@
             this.dtgObjetivoEurace.ThemeStyle.RowsStyle.Height = 40;
             this.dtgObjetivoEurace.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
             this.dtgObjetivoEurace.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.dtgObjetivoEurace.SelectionChanged += new System.EventHandler(this.dtgObjetivoEurace_SelectionChanged);
             // 
             // Column3
             // 
@@ -216,6 +245,18 @@
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             this.Column3.Width = 10;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column4.FillWeight = 85.56149F;
+            this.Column4.HeaderText = "";
+            this.Column4.Image = global::CapaPresentacion.Properties.Resources.biblioteca;
+            this.Column4.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 40;
             // 
             // btnEliminar
             // 
@@ -243,6 +284,7 @@
             this.btnEliminar.Size = new System.Drawing.Size(147, 42);
             this.btnEliminar.TabIndex = 31;
             this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 
@@ -271,6 +313,7 @@
             this.btnEditar.TabIndex = 30;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseTransparentBackground = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // dataGridViewImageColumn1
             // 
@@ -283,45 +326,6 @@
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
             this.dataGridViewImageColumn1.ReadOnly = true;
             this.dataGridViewImageColumn1.Width = 40;
-            // 
-            // tbBuscar
-            // 
-            this.tbBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbBuscar.Animated = true;
-            this.tbBuscar.AutoRoundedCorners = true;
-            this.tbBuscar.BorderColor = System.Drawing.Color.Gray;
-            this.tbBuscar.BorderRadius = 19;
-            this.tbBuscar.BorderThickness = 2;
-            this.tbBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbBuscar.DefaultText = "";
-            this.tbBuscar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbBuscar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbBuscar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbBuscar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbBuscar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbBuscar.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tbBuscar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbBuscar.IconLeft = global::CapaPresentacion.Properties.Resources.lupa;
-            this.tbBuscar.Location = new System.Drawing.Point(636, 13);
-            this.tbBuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbBuscar.Name = "tbBuscar";
-            this.tbBuscar.PasswordChar = '\0';
-            this.tbBuscar.PlaceholderText = "Buscar";
-            this.tbBuscar.SelectedText = "";
-            this.tbBuscar.Size = new System.Drawing.Size(300, 40);
-            this.tbBuscar.TabIndex = 30;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column4.FillWeight = 85.56149F;
-            this.Column4.HeaderText = "";
-            this.Column4.Image = global::CapaPresentacion.Properties.Resources.biblioteca;
-            this.Column4.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 40;
             // 
             // FormObjetivoEurace
             // 
@@ -337,6 +341,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormObjetivoEurace";
             this.Text = "FormObjetivoEurace";
+            this.Load += new System.EventHandler(this.FormObjetivoEurace_Load);
             this.panelTitulos.ResumeLayout(false);
             this.panelTitulos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgObjetivoEurace)).EndInit();

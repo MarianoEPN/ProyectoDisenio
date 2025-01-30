@@ -271,9 +271,37 @@ namespace CapaPresentacion
 
         private void tbNivel_TextChanged(object sender, EventArgs e)
         {
-           
-                
-            
+            if (tbNivel.Text.Length > 1)
+            {
+                tbNivel.Text = tbNivel.Text.Substring(0, 1); // Mantiene solo el primer carácter
+            }
+
+            // Solo permitir un número del 1 al 9
+            if (tbNivel.Text.Length == 1 && (tbNivel.Text[0] < '1' || tbNivel.Text[0] > '9'))
+            {
+                tbNivel.Text = ""; // Borra si no es válido
+            }
+
+            // Mueve el cursor al final del texto
+            tbNivel.SelectionStart = tbNivel.Text.Length;
         }
+
+
+        private void tbNombre_TextChanged(object sender, EventArgs e)
+        {
+            // Guarda la posición del cursor
+            int selectionStart = tbNombre.SelectionStart;
+
+            // Convierte el texto a mayúsculas
+            string nuevoTexto = tbNombre.Text.ToUpper();
+
+            // Solo actualiza si hay cambios para evitar parpadeo
+            if (tbNombre.Text != nuevoTexto)
+            {
+                tbNombre.Text = nuevoTexto;
+                tbNombre.SelectionStart = selectionStart; // Mantiene la posición del cursor
+            }
+        }
+
     }
 }
