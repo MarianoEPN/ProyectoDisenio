@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaEntidades;
+using CapaNegocio;
 using Guna.UI2.WinForms;
 
 namespace CapaPresentacion.CRUD
@@ -16,6 +17,8 @@ namespace CapaPresentacion.CRUD
     {    // Variables para almacenar la posición relativa del ratón en el panel
         private bool isDragging = false;
         private Point initialMousePosition;
+        private Carrera carrera;
+        private Asignatura asignatura;
         public FormAsignaturaCrud()
         {
             InitializeComponent();
@@ -26,24 +29,25 @@ namespace CapaPresentacion.CRUD
         public FormAsignaturaCrud(Carrera carrera)
         {
             InitializeComponent();
-            btnCancelar.Text = "Crear";
+            btnCrear.Text = "Crear";
             lbAdvertencia.Visible = false;
             lblAccionAsignatura.Text = "Crear asignatura";
+            this.carrera = carrera;
         }
 
         public FormAsignaturaCrud(Asignatura asignatura)
         {
             InitializeComponent();
-            btnCrear.Text = "Guadar";
+            btnCrear.Text = "Guardar";
             lbAdvertencia.Visible = false;
             tbNombre.Text = asignatura.Nombre;
             tbCodigo.Text = asignatura.Codigo;
             tbNivel.Text = Convert.ToString(asignatura.Nivel);
-            AsignaturaEditar = asignatura;
+            this.asignatura = asignatura;
             lblAccionAsignatura.Text = "Editar asignatura";
         }
 
-        public Asignatura AsignaturaEditar { get; set; }
+
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
@@ -59,7 +63,7 @@ namespace CapaPresentacion.CRUD
             tbNombre,
             tbNivel
         };
-            if (btnCrear.Text.Equals("Guardar"))
+            if (btnCrear.Text.Equals("Crear"))
             {
                 bool camposCompletos = true;
                 foreach (var txt in listaTextBoxes)
@@ -82,10 +86,8 @@ namespace CapaPresentacion.CRUD
                     asignatura.Codigo = tbCodigo.Text;
                     asignatura.Nombre = tbNombre.Text;
                     asignatura.Nivel = Convert.ToInt32(tbNivel.Text);
-
-                    AsignaturaEditar = asignatura;
-                    // Metodo de la capa de negocio para guardar la asignatura creada
-
+                    AsignaturaNeg asignaturaNeg = new AsignaturaNeg();
+                    asignaturaNeg.InsertarAsignatura(asignatura, carrera);
                     this.Close();
                 }
                 else
@@ -101,10 +103,10 @@ namespace CapaPresentacion.CRUD
                 bool camposCompletos = true;
                 foreach (var txt in listaTextBoxes)
                 {
-                    // 3. Verificar si está vacío o nulo
+
                     if (string.IsNullOrEmpty(txt.Text))
                     {
-                        // Cambiar color del borde a rojo
+
                         txt.BorderColor = Color.FromArgb(241, 90, 109);
                         camposCompletos = false;
                     }
@@ -115,14 +117,12 @@ namespace CapaPresentacion.CRUD
                 }
                 if (camposCompletos)
                 {
-                    Asignatura asignatura = AsignaturaEditar;
-                    asignatura.Codigo = tbCodigo.Text;
-                    asignatura.Nombre = tbNombre.Text;
-                    asignatura.Nivel = Convert.ToInt32(tbNivel.Text);
-
-                    AsignaturaEditar = asignatura;
-                    // Metodo de la capa de negocio para guardar la asignatura editada
-
+                    Asignatura asignaturaEditar = asignatura;
+                    asignaturaEditar.Codigo = tbCodigo.Text;
+                    asignaturaEditar.Nombre = tbNombre.Text;
+                    asignaturaEditar.Nivel = Convert.ToInt32(tbNivel.Text);
+                    AsignaturaNeg asignaturaNeg = new AsignaturaNeg();
+                    asignaturaNeg.ActualizarAsignatura(asignaturaEditar);
                     this.Close();
                 }
                 else

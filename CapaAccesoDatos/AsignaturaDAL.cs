@@ -54,7 +54,7 @@ namespace CapaAccesoDatos
             conexion.CerrarConexion();
         }
 
-        public void ActualizarAsignatura(Asignatura asignatura, Carrera carrera)
+        public void ActualizarAsignatura(Asignatura asignatura)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "ActualizarAsignatura";
@@ -63,7 +63,6 @@ namespace CapaAccesoDatos
             comando.Parameters.AddWithValue("@codigo", asignatura.Codigo);
             comando.Parameters.AddWithValue("@nombre", asignatura.Nombre);
             comando.Parameters.AddWithValue("@nivel", asignatura.Nivel);
-            comando.Parameters.AddWithValue("@carrera_id", carrera.Id);
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
             conexion.CerrarConexion();

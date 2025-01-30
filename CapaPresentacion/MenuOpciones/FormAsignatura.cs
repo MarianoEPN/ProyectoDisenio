@@ -35,11 +35,14 @@ namespace CapaPresentacion
 
         private void Asignatura_Load(object sender, EventArgs e)
         {
-
             AsignaturaNeg asignaturaNeg = new AsignaturaNeg();
 
+            // Lista original de asignaturas
+            listaAsignaturas = asignaturaNeg.ObtenerAsignaturasPorCarrera(carrera.Id);
+
             // Asignar la lista original al DataGridView
-            dtgAsignatura.DataSource = asignaturaNeg.ObtenerAsignaturasPorCarrera(carrera.Id);
+            dtgAsignatura.DataSource = listaAsignaturas;
+
             // Ocultar las columnas que no deseas mostrar
             dtgAsignatura.ClearSelection();
             dtgAsignatura.CurrentCell = null;
@@ -71,18 +74,18 @@ namespace CapaPresentacion
         }
         private void ActualizarTabla()
         {
+            AsignaturaNeg asignaturaNeg = new AsignaturaNeg();
             dtgAsignatura.DataSource = null;
-            dtgAsignatura.DataSource = listaAsignaturas;
+            dtgAsignatura.DataSource = asignaturaNeg.ObtenerAsignaturasPorCarrera(carrera.Id); ;
 
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            FormAsignaturaCrud crud = new FormAsignaturaCrud();
+            FormAsignaturaCrud crud = new FormAsignaturaCrud(carrera);
             this.Enabled = false;
             crud.ShowDialog();
             this.Enabled = true;
-            listaAsignaturas.Add(crud.AsignaturaEditar);
             ActualizarTabla();
         }
 
@@ -96,7 +99,10 @@ namespace CapaPresentacion
                 // Obtener el objeto completo, que corresponde a la fila seleccionada
                 Asignatura asignaturaSeleccionada = (Asignatura)row.DataBoundItem;
 
-                listaAsignaturas.RemoveAll(a => a.Id == asignaturaSeleccionada.Id);
+                AsignaturaNeg asignaturaNeg = new AsignaturaNeg();
+
+                asignaturaNeg.EliminarAsignatura(asignaturaSeleccionada.Id);
+                
                 ActualizarTabla();
                 row.Selected = false;
 

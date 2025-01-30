@@ -23,9 +23,9 @@ namespace CapaNegocio
             asignaturaDAL.InsertarAsignatura(asignatura, carrera);
         }
 
-        public void ActualizarAsignatura(Asignatura asignatura, Carrera carrera)
+        public void ActualizarAsignatura(Asignatura asignatura)
         {
-            asignaturaDAL.ActualizarAsignatura(asignatura, carrera);
+            asignaturaDAL.ActualizarAsignatura(asignatura);
         }
 
         public void EliminarAsignatura(int id)
