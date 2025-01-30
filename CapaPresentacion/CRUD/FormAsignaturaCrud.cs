@@ -207,11 +207,20 @@ namespace CapaPresentacion.CRUD
 
         private void tbCodigo_TextChanged(object sender, EventArgs e)
         {
-            // Actualiza el texto a mayúsculas
-            tbCodigo.Text = tbCodigo.Text.ToUpper();
+            // Obtiene la posición actual del cursor
+            int selectionStart = tbCodigo.SelectionStart;
 
-            // Mueve el cursor al final del texto para evitar conflictos al escribir
-            tbCodigo.SelectionStart = tbCodigo.Text.Length;
+            // Remueve los espacios y convierte a mayúsculas
+            string nuevoTexto = tbCodigo.Text.Replace(" ", "").ToUpper();
+
+            // Solo actualiza si hay cambios para evitar reejecuciones innecesarias
+            if (tbCodigo.Text != nuevoTexto)
+            {
+                tbCodigo.Text = nuevoTexto;
+
+                // Restaura la posición del cursor evitando problemas al escribir
+                tbCodigo.SelectionStart = selectionStart > tbCodigo.Text.Length ? tbCodigo.Text.Length : selectionStart;
+            }
         }
 
 
@@ -268,6 +277,11 @@ namespace CapaPresentacion.CRUD
                     e.Handled = true; // No permitir más de 3 números
                 }
             }
+        }
+
+        private void tbNivel_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

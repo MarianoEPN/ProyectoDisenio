@@ -43,7 +43,7 @@ namespace CapaAccesoDatos
         public void InsertarAsignatura(Asignatura asignatura, Carrera carrera)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "InsertarAsignaturas";
+            comando.CommandText = "InsertarAsignatura";
             comando.CommandType = System.Data.CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("@codigo", asignatura.Codigo);
             comando.Parameters.AddWithValue("@nombre", asignatura.Nombre);

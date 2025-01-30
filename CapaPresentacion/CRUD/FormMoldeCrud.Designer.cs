@@ -325,6 +325,7 @@
             this.tbNivel.Size = new System.Drawing.Size(49, 36);
             this.tbNivel.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.tbNivel.TabIndex = 40;
+            this.tbNivel.TextChanged += new System.EventHandler(this.tbNivel_TextChanged);
             // 
             // tbNombre
             // 
@@ -374,6 +375,7 @@
             this.tbCodigo.Size = new System.Drawing.Size(224, 36);
             this.tbCodigo.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.tbCodigo.TabIndex = 38;
+            this.tbCodigo.TextChanged += new System.EventHandler(this.tbCodigo_TextChanged);
             // 
             // FormMoldeCrud
             // 

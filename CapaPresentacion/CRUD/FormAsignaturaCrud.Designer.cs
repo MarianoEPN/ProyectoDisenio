@@ -306,6 +306,7 @@
             this.tbNivel.Size = new System.Drawing.Size(49, 36);
             this.tbNivel.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.tbNivel.TabIndex = 54;
+            this.tbNivel.TextChanged += new System.EventHandler(this.tbNivel_TextChanged);
             this.tbNivel.Enter += new System.EventHandler(this.tbNivel_Enter);
             this.tbNivel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNivel_KeyPress);
             // 

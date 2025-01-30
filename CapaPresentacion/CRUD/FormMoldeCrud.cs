@@ -252,5 +252,28 @@ namespace CapaPresentacion
             btnClose.BackgroundImage = Properties.Resources.CircleWithe;
             btnClose.IconColor = Color.DimGray;
         }
+
+        private void tbCodigo_TextChanged(object sender, EventArgs e)
+        {
+            // Guarda la posición del cursor
+            int selectionStart = tbCodigo.SelectionStart;
+
+            // Remueve espacios y convierte a mayúsculas
+            string nuevoTexto = tbCodigo.Text.Replace(" ", "").ToUpper();
+
+            // Solo actualiza si hay cambios para evitar parpadeos
+            if (tbCodigo.Text != nuevoTexto)
+            {
+                tbCodigo.Text = nuevoTexto;
+                tbCodigo.SelectionStart = selectionStart > tbCodigo.Text.Length ? tbCodigo.Text.Length : selectionStart;
+            }
+        }
+
+        private void tbNivel_TextChanged(object sender, EventArgs e)
+        {
+           
+                
+            
+        }
     }
 }
