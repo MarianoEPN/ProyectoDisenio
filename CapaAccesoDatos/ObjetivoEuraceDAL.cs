@@ -47,7 +47,7 @@ namespace CapaAccesoDatos
             comando.CommandType = System.Data.CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("@codigo", objetivo.Codigo);
             comando.Parameters.AddWithValue("@nombre", objetivo.Nombre);
-            comando.Parameters.AddWithValue("@desripcion", objetivo.Descripcion);
+            comando.Parameters.AddWithValue("@descripcion", objetivo.Descripcion);
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
             conexion.CerrarConexion();
@@ -61,7 +61,7 @@ namespace CapaAccesoDatos
             comando.Parameters.AddWithValue("@id", objetivo.Id);
             comando.Parameters.AddWithValue("@codigo", objetivo.Codigo);
             comando.Parameters.AddWithValue("@nombre", objetivo.Nombre);
-            comando.Parameters.AddWithValue("@desripcion", objetivo.Descripcion);
+            comando.Parameters.AddWithValue("@descripcion", objetivo.Descripcion);
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
             conexion.CerrarConexion();
