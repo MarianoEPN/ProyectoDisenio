@@ -32,6 +32,11 @@ namespace CapaNegocio
         {
             carreraDAL.EliminarCarrera(id);
         }
+
+        public Carrera ObtenerCarreraPorUsuario(int usuarioId)
+        {
+            return carreraDAL.ObtenerCarreraPorUsuario(usuarioId);
+        }
         
     }
 }
