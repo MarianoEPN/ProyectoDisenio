@@ -10,7 +10,7 @@ namespace CapaNegocio
 {
     public class TipoResultadoAsignaturaNeg
     {
-        TipoResultadoAsignaturaDAL TRAsignatura = new TipoResultadoAsignaturaDAL();
+        private TipoResultadoAsignaturaDAL TRAsignatura = new TipoResultadoAsignaturaDAL();
         public void InsertarMatchResultadoAprendizaje(TipoResultadoAsignatura TRAsig)
         {
             TRAsignatura.InsertarTipoResultadoAsignatura(TRAsig);

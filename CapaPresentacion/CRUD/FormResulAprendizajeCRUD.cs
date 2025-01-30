@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using CapaEntidades;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
+using CapaNegocio;
 
 namespace CapaPresentacion.CRUD
 {
@@ -16,14 +17,35 @@ namespace CapaPresentacion.CRUD
     {
         private bool isDragging = false;
         private Point initialMousePosition;
+        private ResultadoAprendizaje resultadoAprendizaje;
+        private Carrera carrera;
         public FormResulAprendizajeCRUD()
         {
             InitializeComponent();
+            btnGuardarRA.Text = "Crear";
+            lbAdvertenciaRA.Visible = false;
+            lblUniversidadRA.Text = "Crear Resulado Aprendizaje";
         }
         public FormResulAprendizajeCRUD(Carrera carrera)
         {
             InitializeComponent();
+            btnGuardarRA.Text = "Crear";
             lbAdvertenciaRA.Visible = false;
+            lblUniversidadRA.Text = "Crear Resulado Aprendizaje";
+            this.carrera = carrera;
+            tbNombreRA.Text = carrera.Nombre; // Preconfigura el nombre de la carrera
+            tbNombreRA.ReadOnly = true;       // El usuario no puede modificar este campo
+        }
+
+        public FormResulAprendizajeCRUD(ResultadoAprendizaje resultadoAprendizaje, Carrera carrera)
+        {
+            InitializeComponent();
+            btnGuardarRA.Text = "Guardar";
+            lbAdvertenciaRA.Visible = false;
+            tbDescripcionRA.Text = resultadoAprendizaje.Descripcion;
+            tbCodigoRA.Text = resultadoAprendizaje.Codigo;
+            this.resultadoAprendizaje= resultadoAprendizaje;
+            lblUniversidadRA.Text = "Editar Resulado Aprendizaje";
             tbNombreRA.Text = carrera.Nombre; // Preconfigura el nombre de la carrera
             tbNombreRA.ReadOnly = true;       // El usuario no puede modificar este campo
         }
@@ -42,33 +64,79 @@ namespace CapaPresentacion.CRUD
                 tbDescripcionRA
             };
 
-            bool camposCompletos = true;
-
-            foreach (var txt in listaTextBoxes)
+            if (btnGuardarRA.Text.Equals("Crear"))
             {
-                // Verifica si el campo está vacío
-                if (string.IsNullOrEmpty(txt.Text))
+                bool camposCompletos = true;
+
+                foreach (var txt in listaTextBoxes)
                 {
-                    txt.BorderColor = Color.FromArgb(241, 90, 109); // Resalta el borde en rojo
-                    camposCompletos = false;
+                    // Verifica si el campo está vacío
+                    if (string.IsNullOrEmpty(txt.Text))
+                    {
+                        txt.BorderColor = Color.FromArgb(241, 90, 109); // Resalta el borde en rojo
+                        camposCompletos = false;
+                    }
+                    else
+                    {
+                        txt.BorderColor = Color.FromArgb(213, 218, 223); // Restaura el color del borde
+                    }
+                }
+                // Si todos los campos están completos
+                if (camposCompletos)
+                {
+                    lbAdvertenciaRA.Visible = false; // Oculta la advertencia si estaba visible
+
+                    ResultadoAprendizaje resultadoAprendizaje = new ResultadoAprendizaje();
+                    resultadoAprendizaje.Codigo = tbCodigoRA.Text;
+                    resultadoAprendizaje.Descripcion = tbDescripcionRA.Text;
+                    ResultadoAprendizajeNeg resultadoAprendizajeNeg = new ResultadoAprendizajeNeg();
+                    resultadoAprendizajeNeg.InsertarResultadoAprendizaje(resultadoAprendizaje, carrera);
+                    this.Close();
+                    // Lógica para guardar el nuevo objetivo en la base de datos o lista
+                    MessageBox.Show("El Resultado de Apredeizaje fue ingresado con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
                 }
                 else
                 {
-                    txt.BorderColor = Color.FromArgb(213, 218, 223); // Restaura el color del borde
+                    lbAdvertenciaRA.Visible = true; // Muestra la advertencia
                 }
             }
+            else if (btnGuardarRA.Text.Equals("Guardar"))
+            {
+                bool camposCompletos = true;
+                foreach (var txt in listaTextBoxes)
+                {
 
-            // Si todos los campos están completos
-            if (camposCompletos)
-            {
-                lbAdvertenciaRA.Visible = false; // Oculta la advertencia si estaba visible
-                // Lógica para guardar el nuevo objetivo en la base de datos o lista
-                MessageBox.Show("El objetivo fue ingresado con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
-            }
-            else
-            {
-                lbAdvertenciaRA.Visible = true; // Muestra la advertencia
+                    if (string.IsNullOrEmpty(txt.Text))
+                    {
+
+                        txt.BorderColor = Color.FromArgb(241, 90, 109);
+                        camposCompletos = false;
+                    }
+                    else
+                    {
+
+                    }
+
+                    if (camposCompletos)
+                    {
+                        ResultadoAprendizaje resultadoAprendizajeEditar = resultadoAprendizaje;
+                        resultadoAprendizajeEditar.Codigo = tbCodigoRA.Text;
+                        resultadoAprendizajeEditar.Descripcion = tbDescripcionRA.Text;
+                        ResultadoAprendizajeNeg resultadoAprendizajeNeg = new ResultadoAprendizajeNeg();
+                        resultadoAprendizajeNeg.ActualizarResultadoAprendizaje(resultadoAprendizajeEditar);
+                        this.Close();
+                    }
+                    else
+                    {
+                        lbAdvertenciaRA.Text = "Debe completar todos los campos.";
+                        lbAdvertenciaRA.Visible = true;
+                    }
+                }
+
+
+
+
             }
         }
         private void tbCodigoRA_Enter(object sender, EventArgs e)

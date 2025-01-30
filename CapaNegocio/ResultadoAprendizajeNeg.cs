@@ -4,32 +4,33 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CapaAccesoDatos;
 
 namespace CapaNegocio
 {
     public class ResultadoAprendizajeNeg
     {
-        private ResultadoAprendizajeNeg RANeg = new ResultadoAprendizajeNeg();
+        private ResultadoAprendizajeDAL RADAL = new ResultadoAprendizajeDAL();
 
-         public void InsertarResultadoAprendizajeNeg(ResultadoAprendizajeNeg MRApr)
-         {
-             RANeg.InsertarResultadoAprendizajeNeg(MRApr);
+        public void InsertarResultadoAprendizaje(ResultadoAprendizaje resultado, Carrera carrera)
+        {
+             RADAL.InsertarResultadoAprendizaje(resultado, carrera);
          }
-         public List<MatchResultadoAprendizaje> MostrarResultadoAprendizajeNeg()
-         {
-              return RANeg.MostrarResultadoAprendizajeNeg();
+        public List<ResultadoAprendizaje> MostrarResultadosAprendizaje()
+        {
+              return RADAL.MostrarResultadosAprendizaje();
          }
-         public void ActualizarResultadoAprendizajeNeg(ResultadoAprendizajeNeg MRApr)
-         {
-              RANeg.ActualizarResultadoAprendizajeNeg(MRApr);
+        public void ActualizarResultadoAprendizaje(ResultadoAprendizaje resultado)
+        {
+              RADAL.ActualizarResultadoAprendizaje(resultado);
          }
-         public void EliminarResultadoAprendizajeNeg(int id)
-         {
-              RANeg.EliminarResultadoAprendizajeNeg(id);
-         }
+        public void EliminarResultadoAprendizaje(int id)
+        {
+              RADAL.EliminarResultadoAprendizaje(id);
+        }
         public List<ResultadoAprendizaje> ObtenerResultadosAprendizaje(int carreraId)
         {
-            return RANeg.ObtenerResultadosAprendizaje(carreraId);
+            return RADAL.ObtenerResultadosAprendizaje(carreraId);
         }
 
 

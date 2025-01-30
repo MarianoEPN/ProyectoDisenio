@@ -53,15 +53,13 @@ namespace CapaAccesoDatos
             comando.Parameters.AddWithValue("@codigo", resultado.Codigo);
             comando.Parameters.AddWithValue("@descripcion", resultado.Descripcion);
             comando.Parameters.AddWithValue("@carrera_id", carrera.Id);
-
-
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
             conexion.CerrarConexion();
         }
 
         // Actualizar un resultado de aprendizaje existente
-        public void ActualizarResultadoAprendizaje(ResultadoAprendizaje resultado, Carrera carrera)
+        public void ActualizarResultadoAprendizaje(ResultadoAprendizaje resultado)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "ActualizarResultadoAprendizaje";
@@ -69,9 +67,6 @@ namespace CapaAccesoDatos
             comando.Parameters.AddWithValue("@id", resultado.Id);
             comando.Parameters.AddWithValue("@codigo", resultado.Codigo);
             comando.Parameters.AddWithValue("@descripcion", resultado.Descripcion);
-            comando.Parameters.AddWithValue("@carrera_id", carrera.Id);
-
-
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
             conexion.CerrarConexion();
