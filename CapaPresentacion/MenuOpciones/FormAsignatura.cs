@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaEntidades;
+using CapaNegocio;
 using CapaPresentacion.CRUD;
 
 namespace CapaPresentacion
@@ -15,6 +16,7 @@ namespace CapaPresentacion
     public partial class FormAsignatura : Form
     {
         List<Asignatura> listaAsignaturas;
+        Carrera carrera;
 
         public FormAsignatura()
         {
@@ -23,22 +25,21 @@ namespace CapaPresentacion
             btnEliminar.Visible = false;
         }
 
+        public FormAsignatura(Carrera carrera)
+        {
+            InitializeComponent();
+            btnEditar.Visible = false;
+            btnEliminar.Visible = false;
+            this.carrera = carrera;
+        }
+
         private void Asignatura_Load(object sender, EventArgs e)
         {
 
-            // Lista original de asignaturas
-            listaAsignaturas = new List<Asignatura>
-    {
-        new Asignatura { Id = 1, Codigo = "MAT101", Nombre = "Matemáticas Básicas", Nivel = 1 },
-        new Asignatura { Id = 2, Codigo = "FIS202", Nombre = "Física General", Nivel = 2 },
-        new Asignatura { Id = 3, Codigo = "QUI303", Nombre = "Química Orgánica", Nivel = 3 },
-        new Asignatura { Id = 4, Codigo = "BIO404", Nombre = "Biología Celular", Nivel = 4 },
-        new Asignatura { Id = 5, Codigo = "INF505", Nombre = "Programación Avanzada", Nivel = 5 }
-        };
+            AsignaturaNeg asignaturaNeg = new AsignaturaNeg();
 
             // Asignar la lista original al DataGridView
-            dtgAsignatura.DataSource = listaAsignaturas;
-
+            dtgAsignatura.DataSource = asignaturaNeg.ObtenerAsignaturasPorCarrera(carrera.Id);
             // Ocultar las columnas que no deseas mostrar
             dtgAsignatura.ClearSelection();
             dtgAsignatura.CurrentCell = null;

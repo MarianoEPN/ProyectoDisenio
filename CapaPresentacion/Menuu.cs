@@ -7,8 +7,10 @@ using System.Linq;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using CapaEntidades;
+using CapaNegocio;
 using CapaPresentacion.CRUD;
 using CapaPresentacion.MenuOpciones;
 using Guna;
@@ -23,6 +25,7 @@ namespace CapaPresentacion
         private Point initialMousePosition;
         private Usuario usuario;
         Form1 formLogin;
+        Carrera carrera;
 
         bool sidebarExpanded;
         public Menuu()
@@ -42,7 +45,11 @@ namespace CapaPresentacion
             panelOpciones.Visible = false;
             container(new Bienvenido());
             ConfigurarToolTip(); // Configura el ToolTip del botón
-
+            CarreraNeg carreraNeg = new CarreraNeg();
+            if (usuario != null)
+            {
+                carrera = carreraNeg.ObtenerCarreraPorUsuario(usuario.id);
+            }
         }
 
         private void timerExpanded_Tick(object sender, EventArgs e)
@@ -119,7 +126,7 @@ namespace CapaPresentacion
 
         private void btnAsigatura_Click(object sender, EventArgs e)
         {
-            container(new FormAsignatura());
+            container(new FormAsignatura(carrera));
         }
 
         private void plBarra_MouseUp(object sender, MouseEventArgs e)
