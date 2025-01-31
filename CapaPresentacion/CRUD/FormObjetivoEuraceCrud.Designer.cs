@@ -322,6 +322,7 @@
             this.tbCodigo.Size = new System.Drawing.Size(269, 36);
             this.tbCodigo.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.tbCodigo.TabIndex = 52;
+            this.tbCodigo.TextChanged += new System.EventHandler(this.tbCodigo_TextChanged);
             this.tbCodigo.Enter += new System.EventHandler(this.tbCodigo_Enter);
             // 
             // FormObjetivoEuraceCrud

@@ -210,5 +210,10 @@ namespace CapaPresentacion.CRUD
         {
 
         }
+
+        private void tbCodigo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
