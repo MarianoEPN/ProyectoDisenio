@@ -7,27 +7,38 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaEntidades;
+using CapaNegocio;
 
 namespace CapaPresentacion.MenuOpciones
 {
     public partial class FormPerfilEgreso_x_ObjetivosEurase : Form
     {
+        private Carrera carrera;
         public FormPerfilEgreso_x_ObjetivosEurase()
         {
             InitializeComponent();
         }
 
+        public FormPerfilEgreso_x_ObjetivosEurase(Carrera carrera)
+        {
+            InitializeComponent();
+            this.carrera = carrera;
+        }
+
         private void FormPerfilEgreso_x_ObjetivosEurase_Load(object sender, EventArgs e)
         {
+            ResultadoAprendizajeNeg resultadoAprendizajeNeg = new ResultadoAprendizajeNeg();
+            ObjetivoEuraceNeg objetivoEuraceNeg = new ObjetivoEuraceNeg();
             // Simula datos de la tabla 1 y tabla 2
-            var tabla1 = new[] { "Columna1", "Columna2", "Columna3", "Columna6", "Columna7", "Columna8", "Columna9", "Columna10" }; // Nombre de columnas
-            var tabla2 = new[] { "Fila1", "Fila2", "Fila3", "Fila4", "Fila5", "Fila6", "Fila7", "Fila8", "Fila9" }; // Nombre de filas
+            var tabla1 = resultadoAprendizajeNeg.ObtenerResultadosAprendizaje(carrera.Id).ToArray(); // Nombre de columnas
+            var tabla2 = objetivoEuraceNeg.MostrarObjetivoEurace().ToArray(); // Nombre de filas
 
             // Llenar el DataGridView
             LlenarDataGrid(tabla1, tabla2);
         }
 
-        private void LlenarDataGrid(string[] columnas, string[] filas)
+        private void LlenarDataGrid(ResultadoAprendizaje[] columnas, ObjetivoEurace[] filas)
         {
             // Configuración inicial del DataGridView
             dataGridView1.AllowUserToAddRows = false;
@@ -55,8 +66,7 @@ namespace CapaPresentacion.MenuOpciones
             {
                 var imageColumn = new DataGridViewImageColumn
                 {
-                    Name = columna,
-                    HeaderText = columna,
+                    Name = $"{columna.Codigo}: {columna.Descripcion}",
                     ImageLayout = DataGridViewImageCellLayout.Zoom
                 };
                 dataGridView1.Columns.Add(imageColumn);
