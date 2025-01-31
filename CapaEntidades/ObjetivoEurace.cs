@@ -40,7 +40,7 @@ namespace CapaEntidades
         // Método ToString
         public override string ToString()
         {
-            return $"ObjetivoEurace: [ID: {Id}, Código: {Codigo}, Nombre: {Nombre}, Descripción: {Descripcion}]";
+            return $"{Codigo}:\n{Nombre}]";
         }
     }
 

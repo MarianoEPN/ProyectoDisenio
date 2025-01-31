@@ -275,7 +275,7 @@ namespace CapaPresentacion
 
         private void btnRAxOP_Click(object sender, EventArgs e)
         {
-            container(new FormPerfilEgreso_x_ObjetivosEurase());
+            container(new FormPerfilEgreso_x_ObjetivosEurase(carrera));
 
         }
 

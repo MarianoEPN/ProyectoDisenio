@@ -125,6 +125,7 @@ namespace CapaPresentacion.MenuOpciones
                 {
                     cell.Value = Properties.Resources.match8; // Mostrar la imagen de match
                     cell.Tag = "x"; // Registrar la lógica como "x"
+
                 }
                 else
                 {
