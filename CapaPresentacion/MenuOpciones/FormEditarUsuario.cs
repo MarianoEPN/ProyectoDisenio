@@ -13,15 +13,18 @@ namespace CapaPresentacion.MenuOpciones
 {
     public partial class FormEditarUsuario : Form
     {
+        private Usuario usuario;
+        private Carrera carrera;
         public FormEditarUsuario()
         {
             InitializeComponent();
         }
 
-        public FormEditarUsuario(Usuario usuario)
+        public FormEditarUsuario(Usuario usuario, Carrera carrera)
         {
-            
-
+            InitializeComponent();
+            this.usuario = usuario;
+            this.carrera = carrera;
         }
     }
 }

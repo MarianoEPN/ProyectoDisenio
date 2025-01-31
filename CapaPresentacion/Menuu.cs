@@ -281,7 +281,7 @@ namespace CapaPresentacion
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            container(new FormEditarUsuario());
+            container(new FormEditarUsuario(usuario, carrera));
 
         }
     }
