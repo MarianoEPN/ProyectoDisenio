@@ -12,6 +12,7 @@ namespace CapaEntidades
         public int Id { get; set; }
         public string Codigo { get; set; }
         public string Descripcion { get; set; }
+        public TipoResultadoAsignatura Tipo { get; set; }
 
         // Clave foránea hacia Asignatura
        
