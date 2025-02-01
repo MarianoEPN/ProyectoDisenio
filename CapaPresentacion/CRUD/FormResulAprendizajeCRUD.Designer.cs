@@ -75,7 +75,8 @@
             this.tbNombreRA.SelectedText = "";
             this.tbNombreRA.Size = new System.Drawing.Size(224, 36);
             this.tbNombreRA.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.tbNombreRA.TabIndex = 22;
+            this.tbNombreRA.TabIndex = 1;
+            this.tbNombreRA.TextChanged += new System.EventHandler(this.tbNombreRA_TextChanged);
             // 
             // lbAdvertenciaRA
             // 
@@ -179,7 +180,8 @@
             this.tbCodigoRA.SelectedText = "";
             this.tbCodigoRA.Size = new System.Drawing.Size(224, 36);
             this.tbCodigoRA.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.tbCodigoRA.TabIndex = 21;
+            this.tbCodigoRA.TabIndex = 2;
+            this.tbCodigoRA.TextChanged += new System.EventHandler(this.tbCodigoRA_TextChanged_1);
             // 
             // btnGuardarRA
             // 
@@ -254,7 +256,7 @@
             this.tbDescripcionRA.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbDescripcionRA.SelectedText = "";
             this.tbDescripcionRA.Size = new System.Drawing.Size(528, 192);
-            this.tbDescripcionRA.TabIndex = 37;
+            this.tbDescripcionRA.TabIndex = 3;
             // 
             // guna2AnimateWindowRA
             // 

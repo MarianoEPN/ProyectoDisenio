@@ -182,5 +182,38 @@ namespace CapaPresentacion.CRUD
                 isDragging = false;
             }
         }
+
+        private void tbNombreRA_TextChanged(object sender, EventArgs e)
+        {
+            // Guarda la posición del cursor
+            int selectionStart = tbNombreRA.SelectionStart;
+
+            // Filtra solo letras y espacios, y convierte a mayúsculas
+            string nuevoTexto = new string(tbNombreRA.Text.Where(c => char.IsLetter(c) || c == ' ').ToArray()).ToUpper();
+
+            // Si el texto cambió, actualízalo
+            if (tbNombreRA.Text != nuevoTexto)
+            {
+                tbNombreRA.Text = nuevoTexto;
+                tbNombreRA.SelectionStart = selectionStart > tbNombreRA.Text.Length ? tbNombreRA.Text.Length : selectionStart;
+            }
+        }
+
+        private void tbCodigoRA_TextChanged_1(object sender, EventArgs e)
+        {
+            // Guarda la posición del cursor
+            int selectionStart = tbCodigoRA.SelectionStart;
+
+            // Filtra solo letras y números, y convierte a mayúsculas (sin espacios)
+            string nuevoTexto = new string(tbCodigoRA.Text.Where(c => char.IsLetterOrDigit(c)).ToArray()).ToUpper();
+
+            // Si el texto cambió, actualízalo
+            if (tbCodigoRA.Text != nuevoTexto)
+            {
+                tbCodigoRA.Text = nuevoTexto;
+                tbCodigoRA.SelectionStart = selectionStart > tbCodigoRA.Text.Length ? tbCodigoRA.Text.Length : selectionStart;
+            }
+        }
+
     }
 }
