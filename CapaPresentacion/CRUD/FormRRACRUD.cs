@@ -275,5 +275,10 @@ namespace CapaPresentacion.CRUD
         {
 
         }
+
+        private void tbDescripcionRRA_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

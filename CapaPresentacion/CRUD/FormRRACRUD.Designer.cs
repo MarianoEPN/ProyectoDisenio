@@ -338,6 +338,7 @@
             this.tbDescripcionRRA.SelectedText = "";
             this.tbDescripcionRRA.Size = new System.Drawing.Size(483, 192);
             this.tbDescripcionRRA.TabIndex = 4;
+            this.tbDescripcionRRA.TextChanged += new System.EventHandler(this.tbDescripcionRRA_TextChanged);
             // 
             // guna2AnimateWindowRRA
             // 
