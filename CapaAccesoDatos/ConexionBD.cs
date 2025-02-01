@@ -9,7 +9,7 @@ namespace CapaAccesoDatos
 {
     public class ConexionBD
     {
-        private SqlConnection conexion = new SqlConnection("Data Source=DESKTOP-LSR6BTE\\SQLEXPRESS;Initial Catalog=acreditacionBDD;Integrated Security=True");
+        private SqlConnection conexion = new SqlConnection("Data Source=(localdb)\\mariano;Initial Catalog=acreditacion;Integrated Security=True");
 
         public SqlConnection AbrirConexion()
         {
