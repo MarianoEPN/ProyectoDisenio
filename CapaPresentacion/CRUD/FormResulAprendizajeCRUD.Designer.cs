@@ -197,7 +197,7 @@
             this.btnGuardarRA.Location = new System.Drawing.Point(117, 504);
             this.btnGuardarRA.Name = "btnGuardarRA";
             this.btnGuardarRA.Size = new System.Drawing.Size(138, 48);
-            this.btnGuardarRA.TabIndex = 29;
+            this.btnGuardarRA.TabIndex = 4;
             this.btnGuardarRA.Text = "Guardar";
             this.btnGuardarRA.UseTransparentBackground = true;
             this.btnGuardarRA.Click += new System.EventHandler(this.btnGuardarRA_Click);
@@ -216,7 +216,7 @@
             this.btnCancelarRA.Location = new System.Drawing.Point(279, 504);
             this.btnCancelarRA.Name = "btnCancelarRA";
             this.btnCancelarRA.Size = new System.Drawing.Size(138, 48);
-            this.btnCancelarRA.TabIndex = 30;
+            this.btnCancelarRA.TabIndex = 5;
             this.btnCancelarRA.Text = "Cancelar";
             this.btnCancelarRA.UseTransparentBackground = true;
             // 
