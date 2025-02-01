@@ -77,7 +77,7 @@
             this.tbNombreRRA.SelectedText = "";
             this.tbNombreRRA.Size = new System.Drawing.Size(269, 36);
             this.tbNombreRRA.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.tbNombreRRA.TabIndex = 40;
+            this.tbNombreRRA.TabIndex = 1;
             this.tbNombreRRA.TextChanged += new System.EventHandler(this.tbNombreRRA_TextChanged);
             // 
             // lbAdvertenciaRRA
@@ -183,7 +183,7 @@
             this.tbCodigoRRA.SelectedText = "";
             this.tbCodigoRRA.Size = new System.Drawing.Size(269, 36);
             this.tbCodigoRRA.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.tbCodigoRRA.TabIndex = 21;
+            this.tbCodigoRRA.TabIndex = 2;
             this.tbCodigoRRA.TextChanged += new System.EventHandler(this.tbCodigoRRA_TextChanged_1);
             // 
             // lblCodigoRRA
@@ -287,7 +287,7 @@
             this.comboBoxTipoRRA.Name = "comboBoxTipoRRA";
             this.comboBoxTipoRRA.Size = new System.Drawing.Size(269, 36);
             this.comboBoxTipoRRA.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.comboBoxTipoRRA.TabIndex = 31;
+            this.comboBoxTipoRRA.TabIndex = 3;
             // 
             // labelTipoRRA
             // 
@@ -337,7 +337,7 @@
             this.tbDescripcionRRA.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbDescripcionRRA.SelectedText = "";
             this.tbDescripcionRRA.Size = new System.Drawing.Size(483, 192);
-            this.tbDescripcionRRA.TabIndex = 37;
+            this.tbDescripcionRRA.TabIndex = 4;
             // 
             // guna2AnimateWindowRRA
             // 

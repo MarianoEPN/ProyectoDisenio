@@ -235,13 +235,36 @@ namespace CapaPresentacion.CRUD
 
         private void tbNombreRRA_TextChanged(object sender, EventArgs e)
         {
+            // Guarda la posición del cursor
+            int selectionStart = tbNombreRRA.SelectionStart;
 
+            // Filtra solo letras y espacios, y convierte a mayúsculas
+            string nuevoTexto = new string(tbNombreRRA.Text.Where(c => char.IsLetter(c) || c == ' ').ToArray()).ToUpper();
+
+            // Si el texto cambió, actualízalo
+            if (tbNombreRRA.Text != nuevoTexto)
+            {
+                tbNombreRRA.Text = nuevoTexto;
+                tbNombreRRA.SelectionStart = selectionStart > tbNombreRRA.Text.Length ? tbNombreRRA.Text.Length : selectionStart;
+            }
         }
+
 
         private void tbCodigoRRA_TextChanged_1(object sender, EventArgs e)
-        {
+{
+    // Guarda la posición del cursor
+    int selectionStart = tbCodigoRRA.SelectionStart;
 
-        }
+    // Convierte el texto a mayúsculas y elimina espacios
+    string nuevoTexto = tbCodigoRRA.Text.Replace(" ", "").ToUpper();
+
+    // Si el texto cambió, actualízalo
+    if (tbCodigoRRA.Text != nuevoTexto)
+    {
+        tbCodigoRRA.Text = nuevoTexto;
+        tbCodigoRRA.SelectionStart = selectionStart > tbCodigoRRA.Text.Length ? tbCodigoRRA.Text.Length : selectionStart;
+    }
+}
 
         private void btnCrearRRA_Click_1(object sender, EventArgs e)
         {
