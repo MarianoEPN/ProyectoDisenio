@@ -163,7 +163,7 @@ namespace CapaPresentacion
 
         private void btnRAA_Click(object sender, EventArgs e)
         {
-            container(new FormResultadosAprendizajeAsignatura());
+            container(new FormResultadosAprendizajeAsignatura(carrera));
 
         }
 
@@ -236,7 +236,7 @@ namespace CapaPresentacion
 
         private void btnRA_Click(object sender, EventArgs e)
         {
-            container(new FormResultadosAprendizaje());
+            container(new FormResultadosAprendizaje(carrera));
         }
         bool menuExpand = false;
         private void menuTransition_Tick(object sender, EventArgs e)

@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaEntidades;
+using CapaNegocio;
 using Guna.UI2.WinForms;
 
 namespace CapaPresentacion.CRUD
@@ -18,43 +19,72 @@ namespace CapaPresentacion.CRUD
         // Variables para almacenar la posición relativa del ratón en el panel
         private bool isDragging = false;
         private Point initialMousePosition;
+        private Asignatura asignatura;
+        private ResultadoAprendizajeAsignatura raaAsignatura;
 
         public FormRRACRUD()
         {
             InitializeComponent();
+            TipoResultadoAsignaturaNeg tipoNeg = new TipoResultadoAsignaturaNeg();
+            cbbTipoRRA.DataSource = tipoNeg.MostrarTipoResultadoAprendizaje();
             lbAdvertenciaRRA.Visible = false;
         }
 
-        public FormRRACRUD(Carrera carrera)
+        public FormRRACRUD(Asignatura asignatura)
         {
             InitializeComponent();
+            TipoResultadoAsignaturaNeg tipoNeg = new TipoResultadoAsignaturaNeg();
+            cbbTipoRRA.DataSource = tipoNeg.MostrarTipoResultadoAprendizaje();
             lbAdvertenciaRRA.Visible = false;
+            this.asignatura = asignatura;
+            tbNombreRRA.Text = asignatura.Nombre;
+            tbNombreRRA.Enabled = false;
+            btnCrearRRA.Text = "Crear";
         }
 
-        public FormRRACRUD(Carrera carrera, Asignatura asignatura)
+        public FormRRACRUD(ResultadoAprendizajeAsignatura raaAsignatura, Asignatura asignatura)
         {
             InitializeComponent();
+            TipoResultadoAsignaturaNeg tipoNeg = new TipoResultadoAsignaturaNeg();
+            cbbTipoRRA.DataSource = tipoNeg.MostrarTipoResultadoAprendizaje();
             lbAdvertenciaRRA.Visible = false;
-            //tbCodigo.Text = asignatura.Nombre;
-            //tbCodigo.Text = asignatura.Codigo;
-            //tbNivel.Text = Convert.ToString(asignatura.Nivel);
-            
-            Asignatura = asignatura;
-            // Seteamos el nombre de la asignatura
-            //tbNombreRRA.Text = asignatura.Nombre; 
+            tbNombreRRA.Text = asignatura.Nombre;
+            tbNombreRRA.Enabled = false;
+            this.asignatura = asignatura;
+            this.raaAsignatura = raaAsignatura;
+            tbCodigoRRA.Text = raaAsignatura.Codigo;
+            tbDescripcionRRA.Text = raaAsignatura.Descripcion;
             tbNombreRRA.Enabled = false; // Bloqueamos para que no se pueda editar
-
             // Seteamos el código de la asignatura
             //tbCodigoRRA.Text = asignatura.Codigo; 
             tbCodigoRRA.Enabled = false; // Bloqueamos para que no se pueda editar
-
             // Asignamos los valores en el comboBoxTipoRRA si es necesario (en caso de que haya información predefinida)
             // Si se requiere algo específico en comboBoxTipoRRA, agregamos aquí el código correspondiente.
-            comboBoxTipoRRA.SelectedIndex = 0; // O seleccionamos el valor correspondiente
+            cbbTipoRRA.SelectedIndex = ObtenerIndice(raaAsignatura.Tipo.Id); // O seleccionamos el valor correspondiente
         }
 
+        private int ObtenerIndice(int id)
+        {
+            TipoResultadoAsignaturaNeg tipoNeg = new TipoResultadoAsignaturaNeg();
+            List<TipoResultadoAsignatura> listaTipo = tipoNeg.MostrarTipoResultadoAprendizaje();
+            int indice = 0;
+            foreach (TipoResultadoAsignatura tipo in listaTipo)
+            {
+                if(id == tipo.Id)
+                {
+                    return indice;
+                }
+                indice++;
+            }
+            return indice;
 
-        private Asignatura Asignatura { get; set; }
+        }
+
+        private void FormRRACRUD_Load(object sender, EventArgs e)
+        {
+
+        }
+
 
         private void btnCancelarRRA_Click(object sender, EventArgs e)
         {
@@ -63,7 +93,7 @@ namespace CapaPresentacion.CRUD
 
         private void lblTituloRRA_Click(object sender, EventArgs e)
         {
-            this.Close();
+            
         }
 
         private void btnCrearRRA_Click(object sender, EventArgs e)
@@ -92,10 +122,14 @@ namespace CapaPresentacion.CRUD
                 {
                     // Guardar la descripción del objetivo de aprendizaje
                     string descripcionObjetivo = tbDescripcionRRA.Text; // Asumiendo que la descripción está en tbDescripcionRRA
-                    string tipoObjetivo = comboBoxTipoRRA.SelectedItem.ToString(); // O el valor que quieras obtener del ComboBox
+                    string tipoObjetivo = cbbTipoRRA.SelectedItem.ToString(); // O el valor que quieras obtener del ComboBox
                     // Llamamos al método de la capa de negocio para guardar la asignatura y su descripción
-
-                    MessageBox.Show("Se ha guardado con éxito el objetivo de aprendizaje de la asignatura.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ResultadoAprendizajeAsignatura rra = new ResultadoAprendizajeAsignatura();
+                    rra.Codigo = tbCodigoRRA.Text;
+                    rra.Descripcion = tbDescripcionRRA.Text;
+                    rra.Tipo = (TipoResultadoAsignatura)cbbTipoRRA.SelectedItem;
+                    ResultadoAprendizajeAsignaturaNeg rraNeg = new ResultadoAprendizajeAsignaturaNeg();
+                    rraNeg.InsertarResultadoAprendizajeAsignatura(rra, asignatura);
                     this.Close();
                 }
                 else
@@ -119,15 +153,11 @@ namespace CapaPresentacion.CRUD
 
                 if (camposCompletos)
                 {
-                    //Asignatura asignatura = AsignaturaEditar;
-                    
-                    // Guardamos la descripción del objetivo de aprendizaje
-                    string descripcionObjetivo = tbDescripcionRRA.Text;
-                    string tipoObjetivo = comboBoxTipoRRA.SelectedItem.ToString();
-
-                    // Llamamos al método de la capa de negocio para guardar la asignatura editada
-                    // Aquí debes integrar la lógica para actualizar la asignatura
-
+                    raaAsignatura.Descripcion = tbDescripcionRRA.Text;
+                    raaAsignatura.Tipo = (TipoResultadoAsignatura) cbbTipoRRA.SelectedItem;
+                    raaAsignatura.Codigo = tbCodigoRRA.Text;
+                    ResultadoAprendizajeAsignaturaNeg raaNeg = new ResultadoAprendizajeAsignaturaNeg();
+                    raaNeg.ActualizarResultadoAprendizajeAsignatura(raaAsignatura, asignatura);
                     MessageBox.Show("Se ha guardado con éxito el objetivo de aprendizaje de la asignatura.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     this.Close();
@@ -280,5 +310,7 @@ namespace CapaPresentacion.CRUD
         {
 
         }
+
+        
     }
 }

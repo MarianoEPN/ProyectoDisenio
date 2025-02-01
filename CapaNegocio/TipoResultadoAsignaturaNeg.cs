@@ -11,19 +11,19 @@ namespace CapaNegocio
     public class TipoResultadoAsignaturaNeg
     {
         private TipoResultadoAsignaturaDAL TRAsignatura = new TipoResultadoAsignaturaDAL();
-        public void InsertarMatchResultadoAprendizaje(TipoResultadoAsignatura TRAsig)
+        public void InsertarTipoResultadoAprendizaje(TipoResultadoAsignatura TRAsig)
         {
             TRAsignatura.InsertarTipoResultadoAsignatura(TRAsig);
         }
-        public List<TipoResultadoAsignatura> MostrarMatchResultadoAprendizaje()
+        public List<TipoResultadoAsignatura> MostrarTipoResultadoAprendizaje()
         {
             return TRAsignatura.MostrarTipoResultadoAsignatura();
         }
-        public void ActualizarMatchResultadoAprendizaje(TipoResultadoAsignatura TRAsig)
+        public void ActualizarTipoResultadoAprendizaje(TipoResultadoAsignatura TRAsig)
         {
             TRAsignatura.ActualizarTipoResultadoAsignatura(TRAsig);
         }
-        public void EliminarMatchResultadoAprendizaje(int id)
+        public void EliminarTipoResultadoAprendizaje(int id)
         {
             TRAsignatura.EliminarTipoResultadoAsignatura(id);
         }

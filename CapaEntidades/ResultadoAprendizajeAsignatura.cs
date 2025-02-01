@@ -11,12 +11,10 @@ namespace CapaEntidades
     {
         public int Id { get; set; }
         public string Codigo { get; set; }
-        public string Descripcion { get; set; }
         public TipoResultadoAsignatura Tipo { get; set; }
+        public string Descripcion { get; set; }
 
         // Clave foránea hacia Asignatura
-       
-       
 
         // Relaciones con tablas relacionadas (Uno a Muchos)
        
@@ -25,12 +23,12 @@ namespace CapaEntidades
 
         // Constructor vacío
         public ResultadoAprendizajeAsignatura()
-        {
-           
+        {  
             MatchesResultadoAprendizaje = new List<MatchResultadoAprendizaje>();
             ProgramasResultadoAprend = new List<ProgramaResultadoAprendizaje>();
             Codigo = "";
             Descripcion = "";
+            Tipo = new TipoResultadoAsignatura();
         }
 
 
@@ -39,10 +37,9 @@ namespace CapaEntidades
         {
             Codigo = codigo;
             Descripcion = descripcion;
-           
-            
             MatchesResultadoAprendizaje = new List<MatchResultadoAprendizaje>();
             ProgramasResultadoAprend = new List<ProgramaResultadoAprendizaje>();
+            Tipo = new TipoResultadoAsignatura();
         }
 
         // Método ToString

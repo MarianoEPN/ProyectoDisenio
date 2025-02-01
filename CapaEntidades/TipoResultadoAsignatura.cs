@@ -6,9 +6,9 @@ namespace CapaEntidades
 {
     public enum TipoNombre
     {
-        Conocimiento,
-        Destreza,
-        Actitud
+        CONOCIMIENTO,
+        DESTREZA,
+        ACTITUD
     }
 
     public class TipoResultadoAsignatura
@@ -24,7 +24,7 @@ namespace CapaEntidades
         public TipoResultadoAsignatura()
         {
             ResultadosAprendizaje = new List<ResultadoAprendizajeAsignatura>();
-            Nombre = TipoNombre.Conocimiento;
+            Nombre = TipoNombre.CONOCIMIENTO;
             Codigo = "";
         }
 
@@ -39,7 +39,8 @@ namespace CapaEntidades
         // Método ToString
         public override string ToString()
         {
-            return $"TipoResultadoAsignatura: [ID: {Id}, Código: {Codigo}, Nombre: {Nombre}]";
+            //return $"TipoResultadoAsignatura: [ID: {Id}, Código: {Codigo}, Nombre: {Nombre}]";
+            return $"{Nombre}";
         }
     }
 }

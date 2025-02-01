@@ -27,7 +27,8 @@ namespace CapaAccesoDatos
             while (leer.Read())
             {
                 ResultadoAprendizajeAsignatura item = new ResultadoAprendizajeAsignatura();
-                item.Id = leer.GetInt32(0);                
+                item.Id = leer.GetInt32(0);           
+                item.Tipo.Id = leer.GetInt32(2);
                 item.Codigo = leer.GetString(3);
                 item.Descripcion = leer.GetString(4);
                 lista.Add(item);
@@ -38,13 +39,13 @@ namespace CapaAccesoDatos
             return lista;
         }
 
-        public void InsertarResultadoAprendizajeAsignatura(ResultadoAprendizajeAsignatura item, Asignatura asignatura, TipoResultadoAsignatura tipo)
+        public void InsertarResultadoAprendizajeAsignatura(ResultadoAprendizajeAsignatura item, Asignatura asignatura)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "InsertarResultadoAprendizajeAsignatura";
             comando.CommandType = System.Data.CommandType.StoredProcedure;   
             comando.Parameters.AddWithValue("@asignatura_id", asignatura.Id);
-            comando.Parameters.AddWithValue("@tipo_id", tipo.Id);
+            comando.Parameters.AddWithValue("@tipo_id", item.Tipo.Id);
             comando.Parameters.AddWithValue("@codigo", item.Codigo);
             comando.Parameters.AddWithValue("@descripcion", item.Descripcion);
             comando.ExecuteNonQuery();
@@ -52,13 +53,14 @@ namespace CapaAccesoDatos
             conexion.CerrarConexion();
         }
 
-        public void ActualizarResultadoAprendizajeAsignatura(ResultadoAprendizajeAsignatura item, TipoResultadoAsignatura tipo)
+        public void ActualizarResultadoAprendizajeAsignatura(ResultadoAprendizajeAsignatura item, Asignatura asignatura)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "ActualizarResultadoAprendizajeAsignatura";
             comando.CommandType = System.Data.CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@asignatura_id", asignatura.Id);
             comando.Parameters.AddWithValue("@id", item.Id);    
-            comando.Parameters.AddWithValue("@tipo_id", tipo.Id);
+            comando.Parameters.AddWithValue("@tipo_id", item.Tipo.Id);
             comando.Parameters.AddWithValue("@codigo", item.Codigo);
             comando.Parameters.AddWithValue("@descripcion", item.Descripcion);
             comando.ExecuteNonQuery();
@@ -93,8 +95,7 @@ namespace CapaAccesoDatos
             {
                 ResultadoAprendizajeAsignatura resultadoAsignatura = new ResultadoAprendizajeAsignatura();
                 resultadoAsignatura.Id = leer.GetInt32(0);
-
-
+                resultadoAsignatura.Tipo.Id = leer.GetInt32(2);
                 resultadoAsignatura.Codigo = leer.GetString(3);
                 resultadoAsignatura.Descripcion = leer.GetString(4);
                 lista.Add(resultadoAsignatura);
