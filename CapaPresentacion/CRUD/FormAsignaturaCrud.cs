@@ -298,7 +298,36 @@ namespace CapaPresentacion.CRUD
 
         private void tbNivel_TextChanged(object sender, EventArgs e)
         {
+            // Si el usuario ingresó más de un carácter, mantener solo el primero
+            if (tbNivel.Text.Length > 1)
+            {
+                tbNivel.Text = tbNivel.Text.Substring(0, 1);
+            }
 
+            // Verificar que el único carácter permitido sea un número entre 1 y 9
+            if (tbNivel.Text.Length == 1 && (tbNivel.Text[0] < '1' || tbNivel.Text[0] > '9'))
+            {
+                tbNivel.Text = ""; // Borra si el valor ingresado no está en el rango permitido
+            }
+
+            // Mueve el cursor al final del texto
+            tbNivel.SelectionStart = tbNivel.Text.Length;
         }
+        private void tbNombre_TextChanged(object sender, EventArgs e)
+        {
+            // Guarda la posición del cursor
+            int selectionStart = tbNombre.SelectionStart;
+
+            // Filtra solo letras y espacios, y convierte a mayúsculas
+            string nuevoTexto = new string(tbNombre.Text.Where(c => char.IsLetter(c) || c == ' ').ToArray()).ToUpper();
+
+            // Si el texto cambió, actualízalo
+            if (tbNombre.Text != nuevoTexto)
+            {
+                tbNombre.Text = nuevoTexto;
+                tbNombre.SelectionStart = selectionStart > tbNombre.Text.Length ? tbNombre.Text.Length : selectionStart;
+            }
+        }
+
     }
 }
