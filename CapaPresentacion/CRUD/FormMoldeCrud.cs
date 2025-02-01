@@ -292,16 +292,17 @@ namespace CapaPresentacion
             // Guarda la posición del cursor
             int selectionStart = tbNombre.SelectionStart;
 
-            // Convierte el texto a mayúsculas
-            string nuevoTexto = tbNombre.Text.ToUpper();
+            // Filtra solo letras y espacios, y convierte a mayúsculas
+            string nuevoTexto = new string(tbNombre.Text.Where(c => char.IsLetter(c) || c == ' ').ToArray()).ToUpper();
 
-            // Solo actualiza si hay cambios para evitar parpadeo
+            // Si el texto cambió, actualízalo
             if (tbNombre.Text != nuevoTexto)
             {
                 tbNombre.Text = nuevoTexto;
-                tbNombre.SelectionStart = selectionStart; // Mantiene la posición del cursor
+                tbNombre.SelectionStart = selectionStart > tbNombre.Text.Length ? tbNombre.Text.Length : selectionStart;
             }
         }
+
 
     }
 }

@@ -81,7 +81,7 @@
             this.tbDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbDescripcion.SelectedText = "";
             this.tbDescripcion.Size = new System.Drawing.Size(388, 215);
-            this.tbDescripcion.TabIndex = 51;
+            this.tbDescripcion.TabIndex = 7;
             // 
             // label3
             // 
@@ -129,7 +129,7 @@
             this.comboBoxTipo.Name = "comboBoxTipo";
             this.comboBoxTipo.Size = new System.Drawing.Size(224, 36);
             this.comboBoxTipo.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.comboBoxTipo.TabIndex = 48;
+            this.comboBoxTipo.TabIndex = 6;
             // 
             // btnCancelar
             // 
@@ -153,7 +153,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(268, 361);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(138, 48);
-            this.btnCancelar.TabIndex = 47;
+            this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseTransparentBackground = true;
             // 
@@ -179,7 +179,7 @@
             this.btnCrear.Location = new System.Drawing.Point(106, 361);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(138, 48);
-            this.btnCrear.TabIndex = 46;
+            this.btnCrear.TabIndex = 4;
             this.btnCrear.Text = "Guardar";
             this.btnCrear.UseTransparentBackground = true;
             // 
@@ -324,7 +324,7 @@
             this.tbNivel.SelectedText = "";
             this.tbNivel.Size = new System.Drawing.Size(49, 36);
             this.tbNivel.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.tbNivel.TabIndex = 40;
+            this.tbNivel.TabIndex = 3;
             this.tbNivel.TextChanged += new System.EventHandler(this.tbNivel_TextChanged);
             // 
             // tbNombre
@@ -349,7 +349,7 @@
             this.tbNombre.SelectedText = "";
             this.tbNombre.Size = new System.Drawing.Size(224, 36);
             this.tbNombre.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.tbNombre.TabIndex = 39;
+            this.tbNombre.TabIndex = 2;
             this.tbNombre.TextChanged += new System.EventHandler(this.tbNombre_TextChanged);
             // 
             // tbCodigo
@@ -375,7 +375,7 @@
             this.tbCodigo.SelectedText = "";
             this.tbCodigo.Size = new System.Drawing.Size(224, 36);
             this.tbCodigo.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.tbCodigo.TabIndex = 38;
+            this.tbCodigo.TabIndex = 1;
             this.tbCodigo.TextChanged += new System.EventHandler(this.tbCodigo_TextChanged);
             // 
             // FormMoldeCrud
