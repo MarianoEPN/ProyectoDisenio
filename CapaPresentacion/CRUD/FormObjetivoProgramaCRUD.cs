@@ -1,4 +1,5 @@
 ﻿using CapaEntidades;
+using CapaNegocio;
 using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
@@ -23,14 +24,14 @@ namespace CapaPresentacion.CRUD
         {
             InitializeComponent();
             lbAdvertencia.Visible = false;
-            lblAccionAsignatura.Text = "Crear Objetivo EUR-ACE"; 
+            lblAccionAsignatura.Text = "Crear Objetivo Programa"; 
         }
 
         public FormObjetivoProgramaCRUD(Carrera carrera)
         {
             InitializeComponent();
             lbAdvertencia.Visible = false;
-            lblAccionAsignatura.Text = "Crear Objetivo EUR-ACE";
+            lblAccionAsignatura.Text = "Crear Objetivo Programa";
             this.carrera = carrera;
         }
 
@@ -44,12 +45,12 @@ namespace CapaPresentacion.CRUD
             tbDebilidad.Text = objetivoPrograma.Debilidades;
             this.objetivoPrograma = objetivoPrograma;
             this.carrera = carrera;
-            lblAccionAsignatura.Text = "Editar Objetivo EUR-ACE";
+            lblAccionAsignatura.Text = "Editar Objetivo Programa";
         }
 
         private void lblCodigo_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void guna2ShadowPanel2_MouseDown(object sender, MouseEventArgs e)
@@ -118,17 +119,20 @@ namespace CapaPresentacion.CRUD
                 if (camposCompletos)
                 {
                     ObjetivoPrograma objetivo = new ObjetivoPrograma();
-                    //objetivo.Codigo = tbCodigo.Text;
-                    //objetivo.Nombre = tbNombre.Text;
-                    //objetivo.Fortalezas = tbFortaleza.Text;
-                    //objetivo.Debilidades = tbDebilidad.Text;
+                    objetivo.Codigo = tbCodigo.Text;
+                    objetivo.Nombre = tbNombre.Text;
+                    objetivo.Debilidades = tbDebilidad.Text;
+                    objetivo.Fortalezas = tbFortaleza.Text;
 
-                    // Metodo de la capa de negocio para guardar la asignatura creada
+                    // Metodo de la capa de negocio para guardar la asignatura CREADA
+                    ObjetivoProgramaNeg objetivoProgramaNeg = new ObjetivoProgramaNeg();
+                    objetivoProgramaNeg.InsertarObjetivoPrograma(objetivo, carrera);
 
                     this.Close();
                 }
                 else
                 {
+                    
                     lbAdvertencia.Visible = true;
                 }
 
@@ -155,17 +159,20 @@ namespace CapaPresentacion.CRUD
                 if (camposCompletos)
                 {
                     ObjetivoPrograma objetivo = new ObjetivoPrograma();
-                    //objetivo.Codigo = tbCodigo.Text;
-                    //objetivo.Nombre = tbNombre.Text;
-                    //objetivo.Fortalezas = tbFortaleza.Text;
-                    //objetivo.Debilidades = tbDebilidad.Text;
+                    objetivo.Codigo = tbCodigo.Text;
+                    objetivo.Nombre = tbNombre.Text;
+                    objetivo.Fortalezas = tbFortaleza.Text;
+                    objetivo.Debilidades = tbDebilidad.Text;
 
-                    // Metodo de la capa de negocio para guardar la asignatura editada
+                    // Metodo de la capa de negocio para guardar la asignatura EDITADA
+                    ObjetivoProgramaNeg objetivoProgramaNeg = new ObjetivoProgramaNeg();
+                    objetivoProgramaNeg.ActualizarObjetivoPrograma(objetivo, carrera);
 
                     this.Close();
                 }
                 else
                 {
+                   
                     lbAdvertencia.Visible = true;
                 }
 
