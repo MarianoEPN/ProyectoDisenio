@@ -84,7 +84,7 @@
             this.tbDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbDescripcion.SelectedText = "";
             this.tbDescripcion.Size = new System.Drawing.Size(483, 150);
-            this.tbDescripcion.TabIndex = 65;
+            this.tbDescripcion.TabIndex = 3;
             this.tbDescripcion.Enter += new System.EventHandler(this.tbDescripcion_Enter);
             // 
             // label3
@@ -123,7 +123,7 @@
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(139, 48);
-            this.btnCancelar.TabIndex = 61;
+            this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseTransparentBackground = true;
             this.btnCancelar.Click += new System.EventHandler(this.btCancelar_Click);
@@ -152,7 +152,7 @@
             this.btnCrear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(139, 48);
-            this.btnCrear.TabIndex = 60;
+            this.btnCrear.TabIndex = 4;
             this.btnCrear.Text = "Guardar";
             this.btnCrear.UseTransparentBackground = true;
             this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
@@ -295,7 +295,8 @@
             this.tbNombre.SelectedText = "";
             this.tbNombre.Size = new System.Drawing.Size(269, 36);
             this.tbNombre.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.tbNombre.TabIndex = 53;
+            this.tbNombre.TabIndex = 2;
+            this.tbNombre.TextChanged += new System.EventHandler(this.tbNombre_TextChanged);
             this.tbNombre.Enter += new System.EventHandler(this.tbNombre_Enter);
             // 
             // tbCodigo
@@ -321,7 +322,7 @@
             this.tbCodigo.SelectedText = "";
             this.tbCodigo.Size = new System.Drawing.Size(269, 36);
             this.tbCodigo.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.tbCodigo.TabIndex = 52;
+            this.tbCodigo.TabIndex = 1;
             this.tbCodigo.TextChanged += new System.EventHandler(this.tbCodigo_TextChanged);
             this.tbCodigo.Enter += new System.EventHandler(this.tbCodigo_Enter);
             // 
