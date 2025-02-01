@@ -80,7 +80,7 @@
             this.tbFortaleza.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbFortaleza.SelectedText = "";
             this.tbFortaleza.Size = new System.Drawing.Size(534, 132);
-            this.tbFortaleza.TabIndex = 75;
+            this.tbFortaleza.TabIndex = 3;
             this.tbFortaleza.Enter += new System.EventHandler(this.tbFortaleza_Enter);
             // 
             // label3
@@ -122,7 +122,7 @@
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(139, 48);
-            this.btnCancelar.TabIndex = 73;
+            this.btnCancelar.TabIndex = 6;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseTransparentBackground = true;
             this.btnCancelar.Click += new System.EventHandler(this.btCancelar_Click);
@@ -151,7 +151,7 @@
             this.btnCrear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(139, 48);
-            this.btnCrear.TabIndex = 72;
+            this.btnCrear.TabIndex = 5;
             this.btnCrear.Text = "Guardar";
             this.btnCrear.UseTransparentBackground = true;
             this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
@@ -293,7 +293,8 @@
             this.tbNombre.SelectedText = "";
             this.tbNombre.Size = new System.Drawing.Size(269, 36);
             this.tbNombre.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.tbNombre.TabIndex = 67;
+            this.tbNombre.TabIndex = 2;
+            this.tbNombre.TextChanged += new System.EventHandler(this.tbNombre_TextChanged);
             this.tbNombre.Enter += new System.EventHandler(this.tbNombre_Enter);
             // 
             // tbCodigo
@@ -319,7 +320,8 @@
             this.tbCodigo.SelectedText = "";
             this.tbCodigo.Size = new System.Drawing.Size(269, 36);
             this.tbCodigo.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.tbCodigo.TabIndex = 66;
+            this.tbCodigo.TabIndex = 1;
+            this.tbCodigo.TextChanged += new System.EventHandler(this.tbCodigo_TextChanged);
             this.tbCodigo.Enter += new System.EventHandler(this.tbCodigo_Enter);
             // 
             // tbDebilidad
@@ -347,7 +349,7 @@
             this.tbDebilidad.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbDebilidad.SelectedText = "";
             this.tbDebilidad.Size = new System.Drawing.Size(534, 134);
-            this.tbDebilidad.TabIndex = 77;
+            this.tbDebilidad.TabIndex = 4;
             this.tbDebilidad.Enter += new System.EventHandler(this.tbDebilidad_Enter);
             // 
             // label1

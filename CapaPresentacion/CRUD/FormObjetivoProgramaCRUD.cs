@@ -217,5 +217,38 @@ namespace CapaPresentacion.CRUD
             btnClose.BackgroundImage = Properties.Resources.CircleWithe;
             btnClose.IconColor = Color.DimGray;
         }
+
+        private void tbCodigo_TextChanged(object sender, EventArgs e)
+        {
+            // Guarda la posición del cursor
+            int selectionStart = tbCodigo.SelectionStart;
+
+            // Filtra solo letras y números, y convierte a mayúsculas (sin espacios)
+            string nuevoTexto = new string(tbCodigo.Text.Where(c => char.IsLetterOrDigit(c)).ToArray()).ToUpper();
+
+            // Si el texto cambió, actualízalo
+            if (tbCodigo.Text != nuevoTexto)
+            {
+                tbCodigo.Text = nuevoTexto;
+                tbCodigo.SelectionStart = selectionStart > tbCodigo.Text.Length ? tbCodigo.Text.Length : selectionStart;
+            }
+        }
+
+        private void tbNombre_TextChanged(object sender, EventArgs e)
+        {
+            // Guarda la posición del cursor
+            int selectionStart = tbNombre.SelectionStart;
+
+            // Filtra solo letras y espacios, y convierte a mayúsculas
+            string nuevoTexto = new string(tbNombre.Text.Where(c => char.IsLetter(c) || c == ' ').ToArray()).ToUpper();
+
+            // Si el texto cambió, actualízalo
+            if (tbNombre.Text != nuevoTexto)
+            {
+                tbNombre.Text = nuevoTexto;
+                tbNombre.SelectionStart = selectionStart > tbNombre.Text.Length ? tbNombre.Text.Length : selectionStart;
+            }
+        }
+
     }
 }
