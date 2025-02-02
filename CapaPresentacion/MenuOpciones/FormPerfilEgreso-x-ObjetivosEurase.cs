@@ -51,8 +51,14 @@ namespace CapaPresentacion.MenuOpciones
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
-            dataGridView1.ColumnHeadersHeight = 50;
+            dataGridView1.ColumnHeadersHeight = 75;
             dataGridView1.RowTemplate.Height = 100;
+
+            // Habilitar el ajuste de texto en las celdas
+            dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
+            // Habilitar el ajuste de texto en los encabezados de las columnas
+            dataGridView1.ColumnHeadersDefaultCellStyle.WrapMode = DataGridViewTriState.True;
 
             // Configuración de selección y colores
             dataGridView1.SelectionMode = DataGridViewSelectionMode.CellSelect; // Solo seleccionar celdas
@@ -73,7 +79,7 @@ namespace CapaPresentacion.MenuOpciones
             {
                 var imageColumn = new DataGridViewImageColumn
                 {
-                    Name = $"{columna.Codigo}: {columna.Descripcion}",
+                    Name = $"{columna.Codigo}:{Environment.NewLine}{columna.Descripcion}",
                     ImageLayout = DataGridViewImageCellLayout.Zoom
                 };
                 dataGridView1.Columns.Add(imageColumn);
@@ -88,7 +94,7 @@ namespace CapaPresentacion.MenuOpciones
                 nuevaFila.CreateCells(dataGridView1);
 
                 // Configuración de las celdas de las filas
-                nuevaFila.Cells[0].Value = fila;
+                nuevaFila.Cells[0].Value = $"{fila.Codigo}:{Environment.NewLine}{fila.Descripcion}";
                 nuevaFila.Cells[0].Style.Font = new Font("Californian FB", 10.8f, FontStyle.Bold);
                 nuevaFila.Cells[0].Style.ForeColor = Color.DimGray;
                 nuevaFila.Cells[0].Style.BackColor = Color.FromArgb(242, 245, 250);
@@ -109,12 +115,12 @@ namespace CapaPresentacion.MenuOpciones
             // Ajustar tamaño de columnas y filas para uniformidad
             foreach (DataGridViewColumn column in dataGridView1.Columns)
             {
-                column.Width = 100;
+                column.Width = 120;
             }
 
             foreach (DataGridViewRow fila in dataGridView1.Rows)
             {
-                fila.Height = 60;
+                fila.Height = 80;
             }
 
             // Limpiar cualquier selección inicial
@@ -181,7 +187,7 @@ namespace CapaPresentacion.MenuOpciones
             Brush mybrush = new System.Drawing.SolidBrush(System.Drawing.Color.FromArgb(33, 40, 58));
             e.Graphics.TranslateTransform(0, 290);
             e.Graphics.RotateTransform(-90);
-            e.Graphics.DrawString("Objetivos Eurace", myfont, mybrush, 0, 0);
+            e.Graphics.DrawString("Perfil de Egreso", myfont, mybrush, 0, 0);
         }
     }
 }
