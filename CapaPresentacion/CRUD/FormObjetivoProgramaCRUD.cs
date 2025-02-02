@@ -30,6 +30,7 @@ namespace CapaPresentacion.CRUD
         public FormObjetivoProgramaCRUD(Carrera carrera)
         {
             InitializeComponent();
+            btnCrear.Text = "Crear";
             lbAdvertencia.Visible = false;
             lblAccionAsignatura.Text = "Crear Objetivo Programa";
             this.carrera = carrera;
@@ -158,15 +159,15 @@ namespace CapaPresentacion.CRUD
                 }
                 if (camposCompletos)
                 {
-                    ObjetivoPrograma objetivo = new ObjetivoPrograma();
-                    objetivo.Codigo = tbCodigo.Text;
-                    objetivo.Nombre = tbNombre.Text;
-                    objetivo.Fortalezas = tbFortaleza.Text;
-                    objetivo.Debilidades = tbDebilidad.Text;
+                    ObjetivoPrograma objetivoEditar = objetivoPrograma;
+                    objetivoEditar.Codigo = tbCodigo.Text;
+                    objetivoEditar.Nombre = tbNombre.Text;
+                    objetivoEditar.Fortalezas = tbFortaleza.Text;
+                    objetivoEditar.Debilidades = tbDebilidad.Text;
 
                     // Metodo de la capa de negocio para guardar la asignatura EDITADA
                     ObjetivoProgramaNeg objetivoProgramaNeg = new ObjetivoProgramaNeg();
-                    objetivoProgramaNeg.ActualizarObjetivoPrograma(objetivo, carrera);
+                    objetivoProgramaNeg.ActualizarObjetivoPrograma(objetivoEditar, carrera);
 
                     this.Close();
                 }

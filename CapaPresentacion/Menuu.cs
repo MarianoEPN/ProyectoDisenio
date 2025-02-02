@@ -269,7 +269,7 @@ namespace CapaPresentacion
 
         private void btnOP_Click(object sender, EventArgs e)
         {
-            container(new FormObjetivosPrograma());
+            container(new FormObjetivosPrograma(carrera));
 
         }
 
