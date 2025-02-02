@@ -15,6 +15,9 @@ namespace CapaPresentacion.MenuOpciones
     public partial class FormPerfilEgreso_x_ObjetivosEurase : Form
     {
         private Carrera carrera;
+        ObjetivoEurace[] listaObjetivoEurace;
+        ResultadoAprendizaje[] listaResultadosAprendizaje;
+
         public FormPerfilEgreso_x_ObjetivosEurase()
         {
             InitializeComponent();
@@ -33,10 +36,14 @@ namespace CapaPresentacion.MenuOpciones
             // Simula datos de la tabla 1 y tabla 2
             var tabla1 = resultadoAprendizajeNeg.ObtenerResultadosAprendizaje(carrera.Id).ToArray(); // Nombre de columnas
             var tabla2 = objetivoEuraceNeg.MostrarObjetivoEurace().ToArray(); // Nombre de filas
+            listaObjetivoEurace = tabla2;
+            listaResultadosAprendizaje = tabla1;
 
             // Llenar el DataGridView
             LlenarDataGrid(tabla1, tabla2);
         }
+
+        
 
         private void LlenarDataGrid(ResultadoAprendizaje[] columnas, ObjetivoEurace[] filas)
         {
@@ -120,11 +127,20 @@ namespace CapaPresentacion.MenuOpciones
             {
                 var cell = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex];
 
+                int indiceFila = e.RowIndex;
+                int indiceColumna = e.ColumnIndex - 1;
+
+                ObjetivoEurace objetivoSelected = listaObjetivoEurace[indiceFila];
+                ResultadoAprendizaje resultadoSelected = listaResultadosAprendizaje[indiceColumna];
+
+
                 // Cambiar entre imagen "nada" y "match"
                 if (cell.Tag == null)
                 {
                     cell.Value = Properties.Resources.match8; // Mostrar la imagen de match
                     cell.Tag = "x"; // Registrar la lógica como "x"
+                    FormsComentario comentario = new FormsComentario(objetivoSelected, carrera, resultadoSelected);
+                    comentario.ShowDialog();
 
                 }
                 else

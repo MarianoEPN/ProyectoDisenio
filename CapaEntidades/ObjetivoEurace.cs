@@ -40,7 +40,7 @@ namespace CapaEntidades
         // Método ToString
         public override string ToString()
         {
-            return $"{Codigo}:\n{Nombre}]";
+            return $"{Codigo}:{Nombre}";
         }
     }
 
