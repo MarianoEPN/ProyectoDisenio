@@ -78,6 +78,8 @@ namespace CapaPresentacion.MenuOpciones
                 };
                 dataGridView1.Columns.Add(imageColumn);
             }
+            // Configurar la primera columna como de solo lectura
+            dataGridView1.Columns[0].ReadOnly = true;
 
             // Agregar filas al DataGridView
             foreach (var fila in filas)
@@ -91,6 +93,7 @@ namespace CapaPresentacion.MenuOpciones
                 nuevaFila.Cells[0].Style.ForeColor = Color.DimGray;
                 nuevaFila.Cells[0].Style.BackColor = Color.FromArgb(242, 245, 250);
                 nuevaFila.Cells[0].Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                nuevaFila.Cells[0].ReadOnly = true; // Hacer la primera celda de solo lectura
 
                 // Configurar contenido de las celdas restantes
                 for (int i = 1; i < nuevaFila.Cells.Count; i++)
@@ -119,6 +122,27 @@ namespace CapaPresentacion.MenuOpciones
 
             // Asignar evento para manejar doble clic en las celdas
             dataGridView1.CellMouseDoubleClick += DataGridView1_CellMouseDoubleClick;
+
+            // Asignar evento para manejar el formato de las celdas
+            dataGridView1.CellFormatting += DataGridView1_CellFormatting;
+        }
+
+        private void DataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                var cell = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex];
+
+                // Verificar si la celda es de solo lectura
+                if (cell.ReadOnly)
+                {
+                    // Mantener el estilo original de la celda
+                    e.CellStyle.BackColor = Color.FromArgb(242, 245, 250);
+                    e.CellStyle.ForeColor = Color.DimGray;
+                    e.CellStyle.SelectionBackColor = Color.FromArgb(242, 245, 250);
+                    e.CellStyle.SelectionForeColor = Color.DimGray;
+                }
+            }
         }
 
         private void DataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
