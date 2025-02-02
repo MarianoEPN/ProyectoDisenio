@@ -113,7 +113,7 @@ namespace CapaAccesoDatos
                     Nombre = leer.GetString(1), // Nombre
                     Fortalezas = leer.GetString(2), // Fortaleza
                     Debilidades = leer.GetString(3), // Debilidad
-                    //Codigo = leer.GetString(4) // Codigo // No valido en la base por favor revisar
+                    Codigo = leer.GetString(4) // Codigo // No valido en la base por favor revisar
 
                 };
                 listaObjetivos.Add(objetivo);
