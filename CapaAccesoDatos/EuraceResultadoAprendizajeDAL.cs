@@ -102,27 +102,64 @@ namespace CapaAccesoDatos
             return lista;
         }
 
-        /*
-         -- Usar la base de datos creada
+        public List<EuraceResultadoAprendizaje> MostrarEuraceResultadoAprendizajePorCarrera(int carreraId)
+        {
+            List<EuraceResultadoAprendizaje> lista = new List<EuraceResultadoAprendizaje>();
+
+            // Abrir la conexion
+            comando.Connection = conexion.AbrirConexion();
+
+            // Configurar el comando para el procedimiento almacenado
+            comando.CommandText = "MostrarEuraceResultadoAprendizajePorCarrera";
+            comando.CommandType = System.Data.CommandType.StoredProcedure;
+            comando.Parameters.Clear();
+            comando.Parameters.AddWithValue("@carrera_id", carreraId);
+
+            // Ejecutar el lector
+            leer = comando.ExecuteReader();
+
+           while (leer.Read())
+            {
+                EuraceResultadoAprendizaje euraceResultadoAprendizaje = new EuraceResultadoAprendizaje();
+                euraceResultadoAprendizaje.Id = leer.GetInt32(0);
+                euraceResultadoAprendizaje.Comentario = leer.GetString(3);
+
+                lista.Add(euraceResultadoAprendizaje);
+            }
+
+            // Cerrar la conexion y el lector
+            leer.Close();
+            conexion.CerrarConexion();
+
+            return lista;
+        }
+
+    }
+}
+
+
+
+/*
+ -- Usar la base de datos creada
 USE acreditacion;
 GO
 
 CREATE PROCEDURE BuscarEuraceResultadoAprendizaje
-    @obj_eurace_id INT,
-    @resultado_aprendizaje_id INT
+@obj_eurace_id INT,
+@resultado_aprendizaje_id INT
 AS
 BEGIN
-    -- Seleccionar los registros que coinciden con los parámetros de entrada
-    SELECT 
-        id,
-        obj_eurace_id,
-        resultado_aprendizaje_id,
-        comentario
-    FROM 
-        eurace_resultado_aprendizaje
-    WHERE 
-        (@obj_eurace_id IS NULL OR obj_eurace_id = @obj_eurace_id) AND
-        (@resultado_aprendizaje_id IS NULL OR resultado_aprendizaje_id = @resultado_aprendizaje_id);
+-- Seleccionar los registros que coinciden con los parámetros de entrada
+SELECT 
+id,
+obj_eurace_id,
+resultado_aprendizaje_id,
+comentario
+FROM 
+eurace_resultado_aprendizaje
+WHERE 
+(@obj_eurace_id IS NULL OR obj_eurace_id = @obj_eurace_id) AND
+(@resultado_aprendizaje_id IS NULL OR resultado_aprendizaje_id = @resultado_aprendizaje_id);
 END;
 
 ---Pruebas 
@@ -134,13 +171,27 @@ EXEC BuscarEuraceResultadoAprendizaje @obj_eurace_id = 10, @resultado_aprendizaj
 EXEC BuscarEuraceResultadoAprendizaje @obj_eurace_id = 2, @resultado_aprendizaje_id = NULL;
 
 EXEC BuscarEuraceResultadoAprendizaje @obj_eurace_id = NULL, @resultado_aprendizaje_id = NULL; 
-         
-         
-       
-         */
 
 
 
+CREATE PROCEDURE MostrarEuraceResultadoAprendizajePorCarrera
+    @carrera_id INT
+AS
+BEGIN
+    SELECT era.id,
+           era.obj_eurace_id,
+           era.resultado_aprendizaje_id,
+           era.comentario
+    FROM eurace_resultado_aprendizaje era
+    INNER JOIN objetivo_eurace oe ON era.obj_eurace_id = oe.id
+    INNER JOIN resultado_aprendizaje ra ON era.resultado_aprendizaje_id = ra.id
+    WHERE ra.carrera_id = @carrera_id;
+END;
+GO
 
-    }
-}
+EXEC MostrarEuraceResultadoAprendizajePorCarrera @carrera_id = 1;
+
+
+
+ */
+
