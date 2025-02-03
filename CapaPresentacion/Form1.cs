@@ -13,6 +13,8 @@ using CapaEntidades;
 using CapaNegocio;
 using System.Web.UI.WebControls;
 using Guna;
+using System.Drawing.Drawing2D;
+using System.Drawing.Text;
 
 namespace CapaPresentacion
 {
@@ -349,6 +351,27 @@ namespace CapaPresentacion
                 // Llama al evento del botón
                 btnLogin_Click(sender, e);
                 e.Handled = true; // Evita que el evento se propague si es necesario
+            }
+        }
+
+        private void cbCarrera_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbCarrera.SelectedItem != null && cbCarrera.SelectedIndex != -1)
+            {
+                CarreraNeg carreraNeg = new CarreraNeg(); 
+                List<Carrera> listaCarreras = carreraNeg.MostrarCarrera(); 
+
+                foreach (var carrera in listaCarreras)
+                {
+                    Console.WriteLine($"{carrera.Nombre}");
+                }
+
+                cbCarrera.SelectedIndex = -1; 
+            }
+            else
+            {
+
+                    cbCarrera.DataSource = null; 
             }
         }
     }

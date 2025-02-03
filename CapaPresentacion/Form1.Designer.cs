@@ -305,6 +305,7 @@ namespace CapaPresentacion
             this.cbCarrera.StartIndex = 0;
             this.cbCarrera.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.cbCarrera.TabIndex = 32;
+            this.cbCarrera.SelectedIndexChanged += new System.EventHandler(this.cbCarrera_SelectedIndexChanged);
             // 
             // guna2CircleButton1
             // 
