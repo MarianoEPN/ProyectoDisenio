@@ -34,10 +34,9 @@
             this.btnGuardar = new Guna.UI2.WinForms.Guna2Button();
             this.panelTitulos = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.btnEditar = new Guna.UI2.WinForms.Guna2Button();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.guna2CirclePictureBox3 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblUsername = new System.Windows.Forms.Label();
             this.lblCarreraR = new System.Windows.Forms.Label();
             this.lblPensum = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
@@ -50,8 +49,10 @@
             this.pbVista2 = new System.Windows.Forms.PictureBox();
             this.tbClaveReg = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbUsuarioReg = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblCorreo = new System.Windows.Forms.Label();
+            this.lblCarrera = new System.Windows.Forms.Label();
+            this.tbNombreReg = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lbAdvertencia = new System.Windows.Forms.Label();
             this.panelTitulos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbVista3)).BeginInit();
@@ -82,13 +83,14 @@
             this.btnGuardar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnGuardar.ImageSize = new System.Drawing.Size(30, 30);
             this.btnGuardar.IndicateFocus = true;
-            this.btnGuardar.Location = new System.Drawing.Point(709, 401);
+            this.btnGuardar.Location = new System.Drawing.Point(641, 412);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(147, 42);
             this.btnGuardar.TabIndex = 34;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseTransparentBackground = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // panelTitulos
             // 
@@ -116,34 +118,6 @@
             this.lblTitulo.TabIndex = 27;
             this.lblTitulo.Text = "Editar Usuario";
             // 
-            // btnEditar
-            // 
-            this.btnEditar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnEditar.Animated = true;
-            this.btnEditar.AutoRoundedCorners = true;
-            this.btnEditar.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditar.BorderRadius = 20;
-            this.btnEditar.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnEditar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnEditar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnEditar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnEditar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnEditar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
-            this.btnEditar.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Bold);
-            this.btnEditar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnEditar.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(212)))), ((int)(((byte)(255)))));
-            this.btnEditar.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
-            this.btnEditar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnEditar.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnEditar.IndicateFocus = true;
-            this.btnEditar.Location = new System.Drawing.Point(528, 401);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(147, 42);
-            this.btnEditar.TabIndex = 30;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseTransparentBackground = true;
-            // 
             // dataGridViewImageColumn1
             // 
             this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -169,17 +143,17 @@
             this.guna2CirclePictureBox3.TabIndex = 35;
             this.guna2CirclePictureBox3.TabStop = false;
             // 
-            // label1
+            // lblUsername
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Californian FB", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(77, 362);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 38);
-            this.label1.TabIndex = 45;
-            this.label1.Text = "Username";
+            this.lblUsername.AutoSize = true;
+            this.lblUsername.BackColor = System.Drawing.Color.Transparent;
+            this.lblUsername.Font = new System.Drawing.Font("Californian FB", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.ForeColor = System.Drawing.Color.DimGray;
+            this.lblUsername.Location = new System.Drawing.Point(80, 362);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(156, 38);
+            this.lblUsername.TabIndex = 45;
+            this.lblUsername.Text = "Username";
             // 
             // lblCarreraR
             // 
@@ -251,7 +225,7 @@
             this.tbPensum.ForeColor = System.Drawing.Color.DimGray;
             this.tbPensum.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbPensum.IconLeft = ((System.Drawing.Image)(resources.GetObject("tbPensum.IconLeft")));
-            this.tbPensum.Location = new System.Drawing.Point(393, 288);
+            this.tbPensum.Location = new System.Drawing.Point(441, 148);
             this.tbPensum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbPensum.Name = "tbPensum";
             this.tbPensum.PasswordChar = '\0';
@@ -297,6 +271,7 @@
             this.pbVista3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbVista3.TabIndex = 40;
             this.pbVista3.TabStop = false;
+            this.pbVista3.Click += new System.EventHandler(this.pbVista3_Click);
             // 
             // tbClaveConfirmReg
             // 
@@ -334,6 +309,7 @@
             this.pbVista2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbVista2.TabIndex = 38;
             this.pbVista2.TabStop = false;
+            this.pbVista2.Click += new System.EventHandler(this.pbVista2_Click);
             // 
             // tbClaveReg
             // 
@@ -375,40 +351,77 @@
             this.tbUsuarioReg.ForeColor = System.Drawing.Color.DimGray;
             this.tbUsuarioReg.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbUsuarioReg.IconLeft = ((System.Drawing.Image)(resources.GetObject("tbUsuarioReg.IconLeft")));
-            this.tbUsuarioReg.Location = new System.Drawing.Point(393, 218);
+            this.tbUsuarioReg.Location = new System.Drawing.Point(441, 288);
             this.tbUsuarioReg.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbUsuarioReg.Name = "tbUsuarioReg";
             this.tbUsuarioReg.PasswordChar = '\0';
-            this.tbUsuarioReg.PlaceholderText = "Username (Career)";
+            this.tbUsuarioReg.PlaceholderText = "Username";
             this.tbUsuarioReg.SelectedText = "";
             this.tbUsuarioReg.Size = new System.Drawing.Size(255, 48);
             this.tbUsuarioReg.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.tbUsuarioReg.TabIndex = 36;
             // 
-            // label2
+            // lblCorreo
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(116, 401);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 27);
-            this.label2.TabIndex = 49;
-            this.label2.Text = "Email";
+            this.lblCorreo.AutoSize = true;
+            this.lblCorreo.BackColor = System.Drawing.Color.Transparent;
+            this.lblCorreo.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCorreo.ForeColor = System.Drawing.Color.DimGray;
+            this.lblCorreo.Location = new System.Drawing.Point(119, 401);
+            this.lblCorreo.Name = "lblCorreo";
+            this.lblCorreo.Size = new System.Drawing.Size(66, 27);
+            this.lblCorreo.TabIndex = 49;
+            this.lblCorreo.Text = "Email";
             // 
-            // label3
+            // lblCarrera
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Californian FB", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(386, 89);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(124, 38);
-            this.label3.TabIndex = 50;
-            this.label3.Text = "Carrera";
+            this.lblCarrera.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblCarrera.AutoSize = true;
+            this.lblCarrera.BackColor = System.Drawing.Color.Transparent;
+            this.lblCarrera.Font = new System.Drawing.Font("Californian FB", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCarrera.ForeColor = System.Drawing.Color.DimGray;
+            this.lblCarrera.Location = new System.Drawing.Point(434, 89);
+            this.lblCarrera.Name = "lblCarrera";
+            this.lblCarrera.Size = new System.Drawing.Size(124, 38);
+            this.lblCarrera.TabIndex = 50;
+            this.lblCarrera.Text = "Carrera";
+            // 
+            // tbNombreReg
+            // 
+            this.tbNombreReg.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tbNombreReg.BorderThickness = 2;
+            this.tbNombreReg.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbNombreReg.DefaultText = "";
+            this.tbNombreReg.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbNombreReg.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbNombreReg.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbNombreReg.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbNombreReg.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbNombreReg.Font = new System.Drawing.Font("Californian FB", 13.8F);
+            this.tbNombreReg.ForeColor = System.Drawing.Color.DimGray;
+            this.tbNombreReg.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbNombreReg.IconLeft = ((System.Drawing.Image)(resources.GetObject("tbNombreReg.IconLeft")));
+            this.tbNombreReg.Location = new System.Drawing.Point(441, 218);
+            this.tbNombreReg.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbNombreReg.Name = "tbNombreReg";
+            this.tbNombreReg.PasswordChar = '\0';
+            this.tbNombreReg.PlaceholderText = "Nombre";
+            this.tbNombreReg.SelectedText = "";
+            this.tbNombreReg.Size = new System.Drawing.Size(255, 48);
+            this.tbNombreReg.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.tbNombreReg.TabIndex = 51;
+            // 
+            // lbAdvertencia
+            // 
+            this.lbAdvertencia.AutoSize = true;
+            this.lbAdvertencia.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Bold);
+            this.lbAdvertencia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(109)))));
+            this.lbAdvertencia.Location = new System.Drawing.Point(582, 374);
+            this.lbAdvertencia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbAdvertencia.Name = "lbAdvertencia";
+            this.lbAdvertencia.Size = new System.Drawing.Size(282, 23);
+            this.lbAdvertencia.TabIndex = 52;
+            this.lbAdvertencia.Text = "Debe completar todos los campos";
             // 
             // FormEditarUsuario
             // 
@@ -416,9 +429,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1067, 582);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbAdvertencia);
+            this.Controls.Add(this.tbNombreReg);
+            this.Controls.Add(this.lblCarrera);
+            this.Controls.Add(this.lblCorreo);
+            this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.lblCarreraR);
             this.Controls.Add(this.lblPensum);
             this.Controls.Add(this.lblEmail);
@@ -434,7 +449,6 @@
             this.Controls.Add(this.guna2CirclePictureBox3);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.panelTitulos);
-            this.Controls.Add(this.btnEditar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormEditarUsuario";
@@ -455,12 +469,11 @@
         private Guna.UI2.WinForms.Guna2Button btnGuardar;
         private Guna.UI2.WinForms.Guna2ShadowPanel panelTitulos;
         private System.Windows.Forms.Label lblTitulo;
-        private Guna.UI2.WinForms.Guna2Button btnEditar;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblCarrera;
+        private System.Windows.Forms.Label lblCorreo;
+        private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label lblCarreraR;
         private System.Windows.Forms.Label lblPensum;
         private System.Windows.Forms.Label lblEmail;
@@ -473,5 +486,7 @@
         private System.Windows.Forms.PictureBox pbVista2;
         private Guna.UI2.WinForms.Guna2TextBox tbClaveReg;
         private Guna.UI2.WinForms.Guna2TextBox tbUsuarioReg;
+        private Guna.UI2.WinForms.Guna2TextBox tbNombreReg;
+        private System.Windows.Forms.Label lbAdvertencia;
     }
 }
