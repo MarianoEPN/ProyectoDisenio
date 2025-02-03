@@ -83,18 +83,20 @@ namespace CapaAccesoDatos
             List<EuraceResultadoAprendizaje> lista = new List<EuraceResultadoAprendizaje>();
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "BuscarEuraceResultadoAprendizaje";
-            comando.CommandType = System.Data.CommandType.StoredProcedure;
+            comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.Clear();
             comando.Parameters.AddWithValue("@obj_eurace_id", objetivo.Id);
             comando.Parameters.AddWithValue("@resultado_aprendizaje_id", resultado.Id);
+
             leer = comando.ExecuteReader();
             while (leer.Read())
             {
-                EuraceResultadoAprendizaje euraceResultadoAprendizaje = new EuraceResultadoAprendizaje();
-                euraceResultadoAprendizaje.Id = leer.GetInt32(0);
-                euraceResultadoAprendizaje.Comentario = leer.GetString(3);
-
-                lista.Add(euraceResultadoAprendizaje);
+                EuraceResultadoAprendizaje relacion = new EuraceResultadoAprendizaje();
+                relacion.Id = leer.GetInt32(0);
+                relacion.ObjEuraceId = leer.GetInt32(1);
+                relacion.ResultadoAprendizajeId = leer.GetInt32(2);
+                relacion.Comentario = leer.GetString(3);
+                lista.Add(relacion);
             }
 
             conexion.CerrarConexion();

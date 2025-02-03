@@ -19,6 +19,9 @@ namespace CapaPresentacion.MenuOpciones
         Carrera carrera;
         ResultadoAprendizaje resultadoAprendizaje;
 
+        // Propiedad para saber si se eliminó una relación
+        public bool RelacionEliminada { get; private set; } = false;
+
         // Si en modo edición necesitamos guardar el id de la relación (opcional)
         private int relacionId = 0;
 
@@ -139,31 +142,43 @@ namespace CapaPresentacion.MenuOpciones
 
         private void btnCrear_Click(object sender, EventArgs e)
         {
-            bool camposCompletos = true;
             if (string.IsNullOrEmpty(tbComentario.Text))
             {
-                // Cambiar color del borde a rojo
-                tbComentario.BorderColor = Color.FromArgb(241, 90, 109);
-                camposCompletos = false;
-                lbAdvertencia.Text = "Debe completar todos los campos.";
+                tbComentario.BorderColor = Color.Red;
                 lbAdvertencia.Visible = true;
+                return;
             }
 
-            if (camposCompletos)
+            EuraceResultadoAprendizaje relacion = new EuraceResultadoAprendizaje();
+            relacion.Comentario = tbComentario.Text;
+
+            ObjetivoEurace objetivo = gcmbObjetivoEurace.SelectedItem as ObjetivoEurace;
+            ResultadoAprendizaje resultado = gcmbResutadoAprendizaje.SelectedItem as ResultadoAprendizaje;
+
+            EuraceResultadoAprendizajeNeg negocio = new EuraceResultadoAprendizajeNeg();
+
+            try
             {
-                EuraceResultadoAprendizaje euraceResultadoAprendizaje = new EuraceResultadoAprendizaje();
-                euraceResultadoAprendizaje.Comentario = tbComentario.Text;
-                ObjetivoEurace objetivoSelected = gcmbObjetivoEurace.SelectedItem as ObjetivoEurace;
-                ResultadoAprendizaje resultadoSelected = gcmbResutadoAprendizaje.SelectedItem as ResultadoAprendizaje;
-                EuraceResultadoAprendizajeNeg euraceResultadoAprendizajeNeg = new EuraceResultadoAprendizajeNeg();
-                euraceResultadoAprendizajeNeg.InsertarEuraceResultadoAprendizaje(euraceResultadoAprendizaje, objetivoSelected, resultadoSelected);
-                MessageBox.Show("Se ingreso correctamente!!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (esEdicion)
+                {
+                    // Modo EDICIÓN: Actualizar
+                    relacion.Id = relacionId;
+                    negocio.ActualizarEuraceResultadoAprendizaje(relacion, objetivo, resultado);
+                    MessageBox.Show("Comentario actualizado.");
+                }
+                else
+                {
+                    // Modo CREACIÓN: Insertar
+                    negocio.InsertarEuraceResultadoAprendizaje(relacion, objetivo, resultado);
+                    MessageBox.Show("Relación creada.");
+                }
+
+                this.DialogResult = DialogResult.OK;
                 this.Close();
             }
-            else
+            catch (Exception ex)
             {
-                lbAdvertencia.Text = "Debe completar todos los campos.";
-                lbAdvertencia.Visible = true;
+                MessageBox.Show($"Error: {ex.Message}");
             }
         }
 
@@ -176,13 +191,11 @@ namespace CapaPresentacion.MenuOpciones
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            // Invoca el método de eliminación de la capa de negocio.
-            // Se asume que la entidad tiene el id de la relación (relacionId)
-            if (MessageBox.Show("¿Está seguro de eliminar la relación?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (MessageBox.Show("¿Eliminar esta relación?", "Confirmar", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                EuraceResultadoAprendizajeNeg euraceResultadoAprendizajeNeg = new EuraceResultadoAprendizajeNeg();
-                euraceResultadoAprendizajeNeg.EliminarEuraceResultadoAprendizaje(relacionId);
-                MessageBox.Show("Se eliminó la relación.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                EuraceResultadoAprendizajeNeg negocio = new EuraceResultadoAprendizajeNeg();
+                negocio.EliminarEuraceResultadoAprendizaje(relacionId);
+                this.DialogResult = DialogResult.Abort; // Indicar eliminación
                 this.Close();
             }
         }

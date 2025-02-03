@@ -176,30 +176,51 @@ namespace CapaPresentacion.MenuOpciones
 
         private void DataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.RowIndex >= 0 && e.ColumnIndex >= 1) // Evitar la columna de encabezado de filas
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 1)
             {
                 var cell = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex];
-
                 int indiceFila = e.RowIndex;
                 int indiceColumna = e.ColumnIndex - 1;
 
                 ObjetivoEurace objetivoSelected = listaObjetivoEurace[indiceFila];
                 ResultadoAprendizaje resultadoSelected = listaResultadosAprendizaje[indiceColumna];
 
+                // Verificar si ya existe una relación
+                EuraceResultadoAprendizajeNeg negocio = new EuraceResultadoAprendizajeNeg();
+                var relacionExistente = negocio.BuscarEuraceResultadoAprendizaje(objetivoSelected, resultadoSelected).FirstOrDefault();
 
-                // Cambiar entre imagen "nada" y "match"
-                if (cell.Tag == null)
+                if (relacionExistente == null)
                 {
-                    cell.Value = Properties.Resources.x1; // Mostrar la imagen de match
-                    cell.Tag = "x"; // Registrar la lógica como "x"
-                    FormsComentario comentario = new FormsComentario(objetivoSelected, carrera, resultadoSelected);
-                    comentario.ShowDialog();
-
+                    // Modo CREACIÓN: Abrir formulario sin comentario
+                    FormsComentario comentarioForm = new FormsComentario(objetivoSelected, carrera, resultadoSelected);
+                    if (comentarioForm.ShowDialog() == DialogResult.OK)
+                    {
+                        cell.Value = Properties.Resources.x1;
+                        cell.Tag = "x";
+                    }
                 }
                 else
                 {
-                    cell.Value = Properties.Resources.nada; // Restaurar la imagen inicial
-                    cell.Tag = null; // Eliminar la marca lógica
+                    // Modo EDICIÓN: Abrir formulario con comentario existente
+                    FormsComentario comentarioForm = new FormsComentario(
+                        objetivoSelected,
+                        carrera,
+                        resultadoSelected,
+                        relacionExistente.Id,
+                        relacionExistente.Comentario
+                    );
+
+                    if (comentarioForm.ShowDialog() == DialogResult.OK)
+                    {
+                        // Actualizar comentario si se editó
+                        cell.Value = Properties.Resources.x1;
+                    }
+                    else if (comentarioForm.DialogResult == DialogResult.Abort)
+                    {
+                        // Eliminar "X" si se borró la relación
+                        cell.Value = Properties.Resources.nada;
+                        cell.Tag = null;
+                    }
                 }
             }
         }

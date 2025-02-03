@@ -41,5 +41,7 @@ namespace CapaNegocio
         {
             return ERAprendizaje.MostrarEuraceResultadoAprendizajePorCarrera(carreraId);
         }
+
+
     }
 }
