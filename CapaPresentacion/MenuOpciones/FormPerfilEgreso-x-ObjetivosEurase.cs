@@ -31,16 +31,39 @@ namespace CapaPresentacion.MenuOpciones
 
         private void FormPerfilEgreso_x_ObjetivosEurase_Load(object sender, EventArgs e)
         {
+            // Inicializar servicios de la capa de negocios
             ResultadoAprendizajeNeg resultadoAprendizajeNeg = new ResultadoAprendizajeNeg();
             ObjetivoEuraceNeg objetivoEuraceNeg = new ObjetivoEuraceNeg();
-            // Simula datos de la tabla 1 y tabla 2
-            var tabla1 = resultadoAprendizajeNeg.ObtenerResultadosAprendizaje(carrera.Id).ToArray(); // Nombre de columnas
-            var tabla2 = objetivoEuraceNeg.MostrarObjetivoEurace().ToArray(); // Nombre de filas
-            listaObjetivoEurace = tabla2;
-            listaResultadosAprendizaje = tabla1;
+            EuraceResultadoAprendizajeNeg eraNeg = new EuraceResultadoAprendizajeNeg(); // Servicio de relaciones
 
-            // Llenar el DataGridView
-            LlenarDataGrid(tabla1, tabla2);
+            // Obtener datos para columnas y filas
+            var resultadosAprendizaje = resultadoAprendizajeNeg.ObtenerResultadosAprendizaje(carrera.Id).ToArray();
+            var objetivosEurace = objetivoEuraceNeg.MostrarObjetivoEurace().ToArray();
+
+            // Guardar las listas globalmente para usarlas en otros métodos
+            listaObjetivoEurace = objetivosEurace;
+            listaResultadosAprendizaje = resultadosAprendizaje;
+
+            // Llenar el DataGridView con los datos obtenidos
+            LlenarDataGrid(resultadosAprendizaje, objetivosEurace);
+
+            // Obtener relaciones existentes desde la base de datos para la carrera actual
+            List<EuraceResultadoAprendizaje> relacionesExistentes = eraNeg.MostrarEuraceResultadoAprendizajePorCarrera(carrera.Id);
+
+            // Marcar celdas con la imagen "X" en el DataGridView donde exista una relación
+            foreach (var relacion in relacionesExistentes)
+            {
+                // Buscar el índice de la fila (objetivo) y la columna (resultado)
+                int filaIndex = Array.FindIndex(listaObjetivoEurace, o => o.Id == relacion.ObjEuraceId);
+                int columnaIndex = Array.FindIndex(listaResultadosAprendizaje, r => r.Id == relacion.ResultadoAprendizajeId) + 1; // +1 porque la columna 0 es la etiqueta
+
+                if (filaIndex >= 0 && columnaIndex >= 1)
+                {
+                    DataGridViewCell celda = dataGridView1.Rows[filaIndex].Cells[columnaIndex];
+                    celda.Value = Properties.Resources.x1; // Mostrar la imagen "X"
+                    celda.Tag = "x"; // Marcar la celda como que tiene relación
+                }
+            }
         }
 
         
@@ -167,7 +190,7 @@ namespace CapaPresentacion.MenuOpciones
                 // Cambiar entre imagen "nada" y "match"
                 if (cell.Tag == null)
                 {
-                    cell.Value = Properties.Resources.match8; // Mostrar la imagen de match
+                    cell.Value = Properties.Resources.x1; // Mostrar la imagen de match
                     cell.Tag = "x"; // Registrar la lógica como "x"
                     FormsComentario comentario = new FormsComentario(objetivoSelected, carrera, resultadoSelected);
                     comentario.ShowDialog();

@@ -64,7 +64,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnGuardar.Animated = true;
             this.btnGuardar.AutoRoundedCorners = true;
             this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
@@ -95,7 +95,7 @@
             this.panelTitulos.BackColor = System.Drawing.Color.Transparent;
             this.panelTitulos.Controls.Add(this.lblTitulo);
             this.panelTitulos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitulos.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(212)))), ((int)(((byte)(255)))));
+            this.panelTitulos.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
             this.panelTitulos.Location = new System.Drawing.Point(0, 0);
             this.panelTitulos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelTitulos.Name = "panelTitulos";
@@ -109,7 +109,7 @@
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblTitulo.Font = new System.Drawing.Font("Californian FB", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
             this.lblTitulo.Location = new System.Drawing.Point(35, 12);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(220, 38);
@@ -118,7 +118,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnEditar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnEditar.Animated = true;
             this.btnEditar.AutoRoundedCorners = true;
             this.btnEditar.BackColor = System.Drawing.Color.Transparent;
@@ -158,7 +158,6 @@
             // 
             // guna2CirclePictureBox3
             // 
-            this.guna2CirclePictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2CirclePictureBox3.FillColor = System.Drawing.Color.Transparent;
             this.guna2CirclePictureBox3.Image = global::CapaPresentacion.Properties.Resources.buhoUser;
             this.guna2CirclePictureBox3.ImageRotate = 0F;
@@ -173,10 +172,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Californian FB", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(69, 350);
+            this.label1.Location = new System.Drawing.Point(77, 362);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(156, 38);
             this.label1.TabIndex = 45;
@@ -184,6 +183,7 @@
             // 
             // lblCarreraR
             // 
+            this.lblCarreraR.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCarreraR.AutoSize = true;
             this.lblCarreraR.Font = new System.Drawing.Font("Californian FB", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCarreraR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -194,6 +194,7 @@
             // 
             // lblPensum
             // 
+            this.lblPensum.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblPensum.AutoSize = true;
             this.lblPensum.Font = new System.Drawing.Font("Californian FB", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPensum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -204,6 +205,7 @@
             // 
             // lblEmail
             // 
+            this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Californian FB", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -214,6 +216,7 @@
             // 
             // lblContraseñaR
             // 
+            this.lblContraseñaR.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblContraseñaR.AutoSize = true;
             this.lblContraseñaR.Font = new System.Drawing.Font("Californian FB", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContraseñaR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -224,6 +227,7 @@
             // 
             // lblContraseñaR2
             // 
+            this.lblContraseñaR2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblContraseñaR2.AutoSize = true;
             this.lblContraseñaR2.Font = new System.Drawing.Font("Californian FB", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContraseñaR2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -234,6 +238,7 @@
             // 
             // tbPensum
             // 
+            this.tbPensum.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tbPensum.BorderThickness = 2;
             this.tbPensum.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbPensum.DefaultText = "";
@@ -258,6 +263,7 @@
             // 
             // tbCorreo
             // 
+            this.tbCorreo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tbCorreo.BorderThickness = 2;
             this.tbCorreo.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbCorreo.DefaultText = "";
@@ -282,6 +288,7 @@
             // 
             // pbVista3
             // 
+            this.pbVista3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pbVista3.Image = ((System.Drawing.Image)(resources.GetObject("pbVista3.Image")));
             this.pbVista3.Location = new System.Drawing.Point(1001, 303);
             this.pbVista3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -293,6 +300,7 @@
             // 
             // tbClaveConfirmReg
             // 
+            this.tbClaveConfirmReg.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tbClaveConfirmReg.BorderThickness = 2;
             this.tbClaveConfirmReg.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbClaveConfirmReg.DefaultText = "";
@@ -317,6 +325,7 @@
             // 
             // pbVista2
             // 
+            this.pbVista2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pbVista2.Image = ((System.Drawing.Image)(resources.GetObject("pbVista2.Image")));
             this.pbVista2.Location = new System.Drawing.Point(1001, 229);
             this.pbVista2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -328,6 +337,7 @@
             // 
             // tbClaveReg
             // 
+            this.tbClaveReg.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tbClaveReg.BorderThickness = 2;
             this.tbClaveReg.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbClaveReg.DefaultText = "";
@@ -352,6 +362,7 @@
             // 
             // tbUsuarioReg
             // 
+            this.tbUsuarioReg.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tbUsuarioReg.BorderThickness = 2;
             this.tbUsuarioReg.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbUsuarioReg.DefaultText = "";
@@ -377,10 +388,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(108, 389);
+            this.label2.Location = new System.Drawing.Point(116, 401);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 27);
             this.label2.TabIndex = 49;
@@ -388,8 +399,9 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Californian FB", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
             this.label3.Location = new System.Drawing.Point(386, 89);
@@ -402,6 +414,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1067, 582);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);

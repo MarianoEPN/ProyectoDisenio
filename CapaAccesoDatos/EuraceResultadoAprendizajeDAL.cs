@@ -106,28 +106,31 @@ namespace CapaAccesoDatos
         {
             List<EuraceResultadoAprendizaje> lista = new List<EuraceResultadoAprendizaje>();
 
-            // Abrir la conexion
+            // Abrir la conexión
             comando.Connection = conexion.AbrirConexion();
 
-            // Configurar el comando para el procedimiento almacenado
+            // Configurar el comando para llamar al procedimiento almacenado
             comando.CommandText = "MostrarEuraceResultadoAprendizajePorCarrera";
-            comando.CommandType = System.Data.CommandType.StoredProcedure;
+            comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.Clear();
             comando.Parameters.AddWithValue("@carrera_id", carreraId);
 
             // Ejecutar el lector
             leer = comando.ExecuteReader();
 
-           while (leer.Read())
+            // Leer cada registro y llenar la lista
+            while (leer.Read())
             {
                 EuraceResultadoAprendizaje euraceResultadoAprendizaje = new EuraceResultadoAprendizaje();
                 euraceResultadoAprendizaje.Id = leer.GetInt32(0);
+                euraceResultadoAprendizaje.ObjEuraceId = leer.GetInt32(1);            // Obteniendo el id del objetivo
+                euraceResultadoAprendizaje.ResultadoAprendizajeId = leer.GetInt32(2);   // Obteniendo el id del resultado
                 euraceResultadoAprendizaje.Comentario = leer.GetString(3);
 
                 lista.Add(euraceResultadoAprendizaje);
             }
 
-            // Cerrar la conexion y el lector
+            // Cerrar el lector y la conexión
             leer.Close();
             conexion.CerrarConexion();
 

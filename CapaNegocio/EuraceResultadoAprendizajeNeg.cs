@@ -37,5 +37,9 @@ namespace CapaNegocio
             return ERAprendizaje.BuscarEuraceResultadoAprendizaje(objetivo, resultado); 
         }
 
+        public List<EuraceResultadoAprendizaje> MostrarEuraceResultadoAprendizajePorCarrera(int carreraId)
+        {
+            return ERAprendizaje.MostrarEuraceResultadoAprendizajePorCarrera(carreraId);
+        }
     }
 }

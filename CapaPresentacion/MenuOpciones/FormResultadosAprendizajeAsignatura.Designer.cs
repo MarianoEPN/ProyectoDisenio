@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtgRRA = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewImageColumn();
@@ -51,51 +51,51 @@
             // 
             this.dtgRRA.AllowUserToAddRows = false;
             this.dtgRRA.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            this.dtgRRA.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dtgRRA.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgRRA.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgRRA.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Californian FB", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgRRA.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Californian FB", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgRRA.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgRRA.ColumnHeadersHeight = 40;
             this.dtgRRA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dtgRRA.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column3,
             this.Column4});
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgRRA.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgRRA.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtgRRA.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.dtgRRA.Location = new System.Drawing.Point(0, 95);
-            this.dtgRRA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtgRRA.Location = new System.Drawing.Point(0, 117);
+            this.dtgRRA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtgRRA.Name = "dtgRRA";
             this.dtgRRA.ReadOnly = true;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgRRA.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgRRA.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgRRA.RowHeadersVisible = false;
             this.dtgRRA.RowHeadersWidth = 51;
             this.dtgRRA.RowTemplate.DividerHeight = 5;
             this.dtgRRA.RowTemplate.Height = 40;
-            this.dtgRRA.Size = new System.Drawing.Size(800, 322);
+            this.dtgRRA.Size = new System.Drawing.Size(1067, 396);
             this.dtgRRA.TabIndex = 32;
             this.dtgRRA.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dtgRRA.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -147,7 +147,7 @@
             this.btnEliminar.Animated = true;
             this.btnEliminar.AutoRoundedCorners = true;
             this.btnEliminar.BackColor = System.Drawing.Color.Transparent;
-            this.btnEliminar.BorderRadius = 16;
+            this.btnEliminar.BorderRadius = 20;
             this.btnEliminar.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnEliminar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnEliminar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -161,10 +161,10 @@
             this.btnEliminar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnEliminar.ImageSize = new System.Drawing.Size(30, 30);
             this.btnEliminar.IndicateFocus = true;
-            this.btnEliminar.Location = new System.Drawing.Point(527, 433);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Location = new System.Drawing.Point(703, 533);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(110, 34);
+            this.btnEliminar.Size = new System.Drawing.Size(147, 42);
             this.btnEliminar.TabIndex = 31;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseTransparentBackground = true;
@@ -176,7 +176,7 @@
             this.btnEditar.Animated = true;
             this.btnEditar.AutoRoundedCorners = true;
             this.btnEditar.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditar.BorderRadius = 16;
+            this.btnEditar.BorderRadius = 20;
             this.btnEditar.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnEditar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnEditar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -190,10 +190,10 @@
             this.btnEditar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnEditar.ImageSize = new System.Drawing.Size(30, 30);
             this.btnEditar.IndicateFocus = true;
-            this.btnEditar.Location = new System.Drawing.Point(202, 433);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEditar.Location = new System.Drawing.Point(269, 533);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(110, 34);
+            this.btnEditar.Size = new System.Drawing.Size(147, 42);
             this.btnEditar.TabIndex = 30;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseTransparentBackground = true;
@@ -206,11 +206,11 @@
             this.panelTitulos.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitulos.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
             this.panelTitulos.Location = new System.Drawing.Point(0, 0);
-            this.panelTitulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelTitulos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelTitulos.Name = "panelTitulos";
             this.panelTitulos.Radius = 10;
             this.panelTitulos.ShadowColor = System.Drawing.Color.White;
-            this.panelTitulos.Size = new System.Drawing.Size(800, 53);
+            this.panelTitulos.Size = new System.Drawing.Size(1067, 65);
             this.panelTitulos.TabIndex = 33;
             // 
             // lblTitulo
@@ -219,10 +219,9 @@
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblTitulo.Font = new System.Drawing.Font("Californian FB", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.Azure;
-            this.lblTitulo.Location = new System.Drawing.Point(18, 11);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTitulo.Location = new System.Drawing.Point(24, 14);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(512, 31);
+            this.lblTitulo.Size = new System.Drawing.Size(612, 38);
             this.lblTitulo.TabIndex = 27;
             this.lblTitulo.Text = "Resultados del Aprendizaje de la Asignatura";
             // 
@@ -232,7 +231,7 @@
             this.btnAgregar.Animated = true;
             this.btnAgregar.AutoRoundedCorners = true;
             this.btnAgregar.BackColor = System.Drawing.Color.Transparent;
-            this.btnAgregar.BorderRadius = 16;
+            this.btnAgregar.BorderRadius = 20;
             this.btnAgregar.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnAgregar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnAgregar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -246,10 +245,10 @@
             this.btnAgregar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnAgregar.ImageSize = new System.Drawing.Size(30, 30);
             this.btnAgregar.IndicateFocus = true;
-            this.btnAgregar.Location = new System.Drawing.Point(364, 433);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregar.Location = new System.Drawing.Point(485, 533);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(110, 34);
+            this.btnAgregar.Size = new System.Drawing.Size(147, 42);
             this.btnAgregar.TabIndex = 34;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseTransparentBackground = true;
@@ -277,9 +276,10 @@
             this.cbbAsignatura.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbbAsignatura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbbAsignatura.ItemHeight = 30;
-            this.cbbAsignatura.Location = new System.Drawing.Point(153, 54);
+            this.cbbAsignatura.Location = new System.Drawing.Point(204, 66);
+            this.cbbAsignatura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbbAsignatura.Name = "cbbAsignatura";
-            this.cbbAsignatura.Size = new System.Drawing.Size(253, 36);
+            this.cbbAsignatura.Size = new System.Drawing.Size(336, 36);
             this.cbbAsignatura.TabIndex = 28;
             this.cbbAsignatura.SelectedIndexChanged += new System.EventHandler(this.cbbAsignatura_SelectedIndexChanged);
             // 
@@ -289,18 +289,18 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Californian FB", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
-            this.label1.Location = new System.Drawing.Point(11, 56);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(15, 69);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 31);
+            this.label1.Size = new System.Drawing.Size(174, 38);
             this.label1.TabIndex = 28;
             this.label1.Text = "Asignatura:";
             // 
             // FormResultadosAprendizajeAsignatura
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 473);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(1067, 582);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbbAsignatura);
             this.Controls.Add(this.dtgRRA);
@@ -309,7 +309,7 @@
             this.Controls.Add(this.panelTitulos);
             this.Controls.Add(this.btnAgregar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormResultadosAprendizajeAsignatura";
             this.Text = "FormObjetivosAprendizajeAsignatura";
             this.Load += new System.EventHandler(this.FormResultadosAprendizajeAsignatura_Load);

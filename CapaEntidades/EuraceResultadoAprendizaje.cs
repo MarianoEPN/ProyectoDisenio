@@ -12,7 +12,8 @@ namespace CapaEntidades
         public int Id { get; set; }
         public string Comentario { get; set; }
 
-       
+        public int ObjEuraceId { get; set; }           // Agregado para identificar el objetivo
+        public int ResultadoAprendizajeId { get; set; }  // Agregado para identificar el resultado
 
         // Constructor vacío
         public EuraceResultadoAprendizaje()
