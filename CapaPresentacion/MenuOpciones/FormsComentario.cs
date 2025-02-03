@@ -62,13 +62,13 @@ namespace CapaPresentacion.MenuOpciones
             ResultadoAprendizajeNeg resultadoAprendizajeNeg = new ResultadoAprendizajeNeg();
             ObjetivoEuraceNeg objetivoEuraceNeg = new ObjetivoEuraceNeg();
 
-            // Configurar los ComboBox
+            // Configurar los ComboBox con los datos de la base de datos
             gcmbObjetivoEurace.DataSource = null;
             gcmbResutadoAprendizaje.DataSource = null;
             gcmbResutadoAprendizaje.DataSource = resultadoAprendizajeNeg.ObtenerResultadosAprendizaje(carrera.Id);
             gcmbObjetivoEurace.DataSource = objetivoEuraceNeg.MostrarObjetivoEurace();
 
-            // Seleccionar el item correspondiente en cada ComboBox
+            // Seleccionar el elemento correspondiente para cada ComboBox
             int indiceFila = objetivoEuraceNeg.MostrarObjetivoEurace().FindIndex(obj => obj.Id == objetivoEurace.Id);
             gcmbObjetivoEurace.SelectedIndex = indiceFila;
             int indiceColumna = resultadoAprendizajeNeg.ObtenerResultadosAprendizaje(carrera.Id)
@@ -77,23 +77,30 @@ namespace CapaPresentacion.MenuOpciones
 
             lbAdvertencia.Visible = false;
 
-            // Configurar botones según el modo (crear o editar)
+            // Configurar el estado inicial de los controles:
+            // En modo edición, el TextBox se carga con el comentario y se muestra en modo de solo lectura
+            tbComentario.ReadOnly = true;  // inicialmente en modo edición, el TextBox es solo lectura
+
             if (esEdicion)
             {
-                // Modo edición: mostrar botones editar y eliminar
+                // Si estamos en modo edición, mostrar botones Editar y Eliminar
                 btnEditar.Visible = true;
                 btnEliminar.Visible = true;
-                // Bloquea la selección de objetivos y resultados para evitar cambios
+                // Ocultar el botón de Guardar inicialmente
+                btnCrear.Visible = false;
+                // No permitir cambiar el objetivo y el resultado (ya definidos)
                 gcmbObjetivoEurace.Enabled = false;
                 gcmbResutadoAprendizaje.Enabled = false;
             }
             else
             {
-                // Modo creación: ocultar botones de editar y eliminar
+                // En modo creación: no se muestran los botones de editar ni eliminar, solo el botón de Guardar
                 btnEditar.Visible = false;
                 btnEliminar.Visible = false;
+                btnCrear.Visible = true;
+                // En modo creación se permite editar el comentario
+                tbComentario.ReadOnly = false;
             }
-
         }
 
         private void lblTitulo_Click(object sender, EventArgs e)
@@ -142,6 +149,8 @@ namespace CapaPresentacion.MenuOpciones
 
         private void btnCrear_Click(object sender, EventArgs e)
         {
+            // Este método sirve para guardar, ya sea creando una nueva relación o actualizando una existente.
+            // Se valida que el comentario no esté vacío
             if (string.IsNullOrEmpty(tbComentario.Text))
             {
                 tbComentario.BorderColor = Color.Red;
@@ -149,9 +158,11 @@ namespace CapaPresentacion.MenuOpciones
                 return;
             }
 
+            // Se instancia la entidad y se asigna el comentario del TextBox
             EuraceResultadoAprendizaje relacion = new EuraceResultadoAprendizaje();
             relacion.Comentario = tbComentario.Text;
 
+            // Se obtienen los datos seleccionados de los ComboBox (en modo edición, estos ya están fijos)
             ObjetivoEurace objetivo = gcmbObjetivoEurace.SelectedItem as ObjetivoEurace;
             ResultadoAprendizaje resultado = gcmbResutadoAprendizaje.SelectedItem as ResultadoAprendizaje;
 
@@ -161,18 +172,19 @@ namespace CapaPresentacion.MenuOpciones
             {
                 if (esEdicion)
                 {
-                    // Modo EDICIÓN: Actualizar
-                    relacion.Id = relacionId;
+                    // En modo edición se actualiza la relación existente
+                    relacion.Id = relacionId; // se asigna el id de la relación existente
                     negocio.ActualizarEuraceResultadoAprendizaje(relacion, objetivo, resultado);
                     MessageBox.Show("Comentario actualizado.");
                 }
                 else
                 {
-                    // Modo CREACIÓN: Insertar
+                    // En modo creación se inserta una nueva relación
                     negocio.InsertarEuraceResultadoAprendizaje(relacion, objetivo, resultado);
                     MessageBox.Show("Relación creada.");
                 }
 
+                // Se cierra el formulario con DialogResult.OK para indicar que se realizó la operación correctamente
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
@@ -180,13 +192,23 @@ namespace CapaPresentacion.MenuOpciones
             {
                 MessageBox.Show($"Error: {ex.Message}");
             }
+
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            // Permite que el usuario edite el comentario (por ejemplo, habilitando el TextBox)
+            // Permite que el usuario edite el comentario: habilita el TextBox para edición
+            tbComentario.Enabled = true;
             tbComentario.ReadOnly = false;
+
+            // Se puede notificar al usuario que ahora puede editar el comentario
             MessageBox.Show("Ahora puedes editar el comentario.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            // Ocultar el botón Editar para que no se pueda volver a presionar
+            btnEditar.Visible = false;
+            // Mostrar el botón Guardar (btnCrear) y cambiar su texto a "Guardar Cambios"
+            btnCrear.Visible = true;
+            btnCrear.Text = "Guardar Cambios";
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

@@ -201,6 +201,7 @@ namespace CapaPresentacion.MenuOpciones
                 }
                 else
                 {
+
                     // Modo EDICIÓN: Abrir formulario con comentario existente
                     FormsComentario comentarioForm = new FormsComentario(
                         objetivoSelected,
