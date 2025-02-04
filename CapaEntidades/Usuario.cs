@@ -13,21 +13,23 @@ namespace CapaEntidades
         public string Username { get; set; }
         public string Clave { get; set; }
         public string Correo { get; set; }
-       
+        public string carrera { get; set; }
+        
         public Usuario()
         {
             nombre = "";
             Username = "";
             Clave = "";
             Correo = "";
+            carrera = "";//Añadido
         }
-        public Usuario(string nombre, string username, string clave, string correo)
+        public Usuario(string nombre, string username, string clave, string correo, string carrera)
         {
-         
             this.nombre = nombre;
             Username = username;
             Clave = clave;
             Correo = correo;
+            this.carrera = carrera;
         }
 
         public override string ToString()

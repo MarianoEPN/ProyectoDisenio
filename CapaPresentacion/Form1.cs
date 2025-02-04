@@ -44,8 +44,16 @@ namespace CapaPresentacion
             // Inicializar ventana redonda
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
-            
+
             //
+            // Configurar ComboBox para dibujo personalizado
+           
+            cbCarrera.ItemHeight = 40;
+            cbCarrera.DrawMode = DrawMode.OwnerDrawVariable;
+            cbCarrera.ItemHeight = 40;
+            cbCarrera.MeasureItem += cbCarrera_MeasureItem;
+            cbCarrera.DrawItem += cbCarrera_DrawItem;
+
         }
 
         // Creando una lista temporal para probar unicamente funcionamiento del login
@@ -54,9 +62,20 @@ namespace CapaPresentacion
         {
             UsuarioNeg usuarioNeg = new UsuarioNeg();
             listaUsuarios = usuarioNeg.MostrarUsuario();
+            CargarCarreras();
+
         }
 
-        
+        private void CargarCarreras()
+        {
+            CarreraNeg carreraNeg = new CarreraNeg();
+            List<Carrera> listaCarreras = carreraNeg.MostrarCarrera();
+
+            cbCarrera.DataSource = listaCarreras;
+            cbCarrera.SelectedIndex = -1;
+        }
+
+
         // Apartado para la verificacion de los campos e ingreso del usuario al programa
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -111,70 +130,7 @@ namespace CapaPresentacion
             }
         }
 
-        private void btnRegistrarseReg_Click(object sender, EventArgs e)
-        {
-
-            if (string.IsNullOrWhiteSpace(tbUsuarioReg.Text)||
-                string.IsNullOrWhiteSpace(tbCorreo.Text)||
-                string.IsNullOrWhiteSpace(tbClaveReg.Text)||
-                 string.IsNullOrWhiteSpace(tbClaveConfirmReg.Text)
-                )
-            {
-                MessageBox.Show("Todos los campos deben ser completados");
-                return;
-            }
-
-            if (!EsCorreoValido(tbCorreo.Text))
-            {
-                MessageBox.Show("El correo electrónico ingresado no es válido.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            
-            if ((tbClave.Text).Length > 8)
-            {
-                if (tbClave.Text.Equals(tbClaveConfirmReg.Text))
-                {
-                    // Aqui se creara la carrera
-
-                    Carrera carrera = new Carrera();
-
-                    
-
-
-                   // MessageBox.Show("Cuenta creada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                   // Accion para devolver al login
-                }
-                else
-                {
-                    MessageBox.Show("Las contraseñas no coinciden");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Las contraseña debe contener mas de 8 caracteres");
-            }
-
-
-        }
-
-        private bool EsCorreoValido(string correo)
-        {
-            if (string.IsNullOrEmpty(correo)) {
-                return false;
-            }
-            try
-            {
-                var direccion = new System.Net.Mail.MailAddress(correo);
-                return true;
-            }
-            catch (FormatException)
-            {
-                return false;
-            }
-        }
-
+       
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -354,25 +310,175 @@ namespace CapaPresentacion
             }
         }
 
+        private void cbCarrera_MeasureItem(object sender, MeasureItemEventArgs e)
+        {
+            if (e.Index < 0) return;
+
+            Carrera carrera = (Carrera)cbCarrera.Items[e.Index];
+            string[] lineas = WrapText(carrera.Nombre, 30);
+
+            e.ItemHeight = lineas.Length * 18;
+            cbCarrera.DropDownWidth = 300;
+        }
+        private void cbCarrera_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) return;
+
+            e.DrawBackground();
+            using (Brush brush = new SolidBrush(e.ForeColor))
+            {
+                Carrera carrera = (Carrera)cbCarrera.Items[e.Index];
+                string[] lineas = WrapText(carrera.Nombre, 30);
+
+                for (int i = 0; i < lineas.Length; i++)
+                {
+                    e.Graphics.DrawString(lineas[i], e.Font, brush, e.Bounds.X, e.Bounds.Y + (i * 18));
+                }
+            }
+            e.DrawFocusRectangle();
+        }
+        private string[] WrapText(string text, int maxCharsPerLine)
+        {
+            List<string> lines = new List<string>();
+            if (string.IsNullOrWhiteSpace(text)) return new string[] { "" };
+
+            string[] words = text.Split(' ');
+            StringBuilder currentLine = new StringBuilder();
+
+            foreach (string word in words)
+            {
+                if ((currentLine.Length + word.Length) > maxCharsPerLine)
+                {
+                    lines.Add(currentLine.ToString().Trim());
+                    currentLine.Clear();
+                }
+                currentLine.Append(word + " ");
+            }
+
+            if (currentLine.Length > 0)
+            {
+                lines.Add(currentLine.ToString().Trim());
+            }
+
+            return lines.ToArray();
+        }
+
         private void cbCarrera_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbCarrera.SelectedItem != null && cbCarrera.SelectedIndex != -1)
+            if (cbCarrera.SelectedItem is Carrera carreraSeleccionada)
             {
-                CarreraNeg carreraNeg = new CarreraNeg(); 
-                List<Carrera> listaCarreras = carreraNeg.MostrarCarrera(); 
-
-                foreach (var carrera in listaCarreras)
-                {
-                    Console.WriteLine($"{carrera.Nombre}");
-                }
-
-                cbCarrera.SelectedIndex = -1; 
-            }
-            else
-            {
-
-                    cbCarrera.DataSource = null; 
+                // Aquí puedes acceder a las propiedades que necesites
+                Console.WriteLine($"Seleccionaste: {carreraSeleccionada.Nombre} \n Pensum: {carreraSeleccionada.Pensum}");
             }
         }
+        private bool EsCorreoValido(string correo)
+        {
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(correo);
+                return addr.Address == correo;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        private void btnRegistrarseReg_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Validar que se haya seleccionado una carrera
+                if (cbCarrera.SelectedItem == null)
+                {
+                    MessageBox.Show("Debe seleccionar una carrera");
+                    return;
+                }
+
+                // Obtener la carrera seleccionada correctamente
+                Carrera carreraSeleccionada = (Carrera)cbCarrera.SelectedItem;
+
+                string nombreUsuario = tbUsuarioReg.Text.Trim();
+                string correo = tbCorreo.Text.Trim();
+                string contraseña = tbClaveReg.Text;
+                string confirmarContraseña = tbClaveConfirmReg.Text;
+
+                // Validaciones de campos vacíos
+                if (string.IsNullOrWhiteSpace(nombreUsuario) ||
+                    string.IsNullOrWhiteSpace(correo) ||
+                    string.IsNullOrWhiteSpace(contraseña) ||
+                    string.IsNullOrWhiteSpace(confirmarContraseña))
+                {
+                    MessageBox.Show("Todos los campos deben ser completados");
+                    return;
+                }
+
+                // Validar formato de correo
+                if (!EsCorreoValido(correo))
+                {
+                    MessageBox.Show("El correo electrónico ingresado no es válido.");
+                    return;
+                }
+
+                // Validar longitud de la contraseña
+                if (contraseña.Length < 8)
+                {
+                    MessageBox.Show("La contraseña debe contener más de 8 caracteres");
+                    return;
+                }
+
+                // Validar coincidencia de contraseñas
+                if (!contraseña.Equals(confirmarContraseña))
+                {
+                    MessageBox.Show("Las contraseñas no coinciden");
+                    return;
+                }
+
+                // Crear el objeto Usuario con los datos correctos
+                // Si deseas evitar que se almacene el valor "Usuario Computación" en el campo nombre,
+                // puedes reemplazarlo por cadena vacía (o por otro valor) en este punto.
+                Usuario usuarioObj = new Usuario
+                {
+                    // Se puede condicionar el valor; en este ejemplo, si es "Usuario Computación" se asigna vacío.
+                    nombre = (nombreUsuario.Equals("Usuario Computación", StringComparison.OrdinalIgnoreCase)) ? "" : nombreUsuario,
+                    Username = nombreUsuario,
+                    // Se asigna el nombre de la carrera (tal como se selecciona en el ComboBox)
+                    carrera = carreraSeleccionada.Nombre,
+                    Correo = correo,
+                    Clave = contraseña
+                };
+
+                // Registrar usuario utilizando la capa de negocio.
+                UsuarioNeg negocio = new UsuarioNeg();
+                bool resultado = negocio.RegistrarUsuario(usuarioObj);
+
+                if (resultado)
+                {
+                    MessageBox.Show("Usuario registrado correctamente.");
+                    // Limpiar campos después del registro exitoso
+                    LimpiarCamposRegistro();
+                    // Volver a la pantalla de login
+                    btnVolver_Click(sender, e);
+                }
+                else
+                {
+                    MessageBox.Show("Error al registrar usuario.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error inesperado: {ex.Message}");
+            }
+        }
+
+
+        private void LimpiarCamposRegistro()
+        {
+            tbUsuarioReg.Text = string.Empty;
+            tbCorreo.Text = string.Empty;
+            tbClaveReg.Text = string.Empty;
+            tbClaveConfirmReg.Text = string.Empty;
+            cbCarrera.SelectedIndex = -1;
+        }
+
     }
 }

@@ -49,7 +49,8 @@ namespace CapaEntidades
         // Método ToString
         public override string ToString()
         {
-            return $"Carrera: {Nombre} (ID: {Id})";
+            return $"{Nombre} - {Pensum}";  // Aquí agregamos el salto de línea
         }
+
     }
 }

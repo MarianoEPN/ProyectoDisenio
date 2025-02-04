@@ -261,12 +261,12 @@ namespace CapaPresentacion
             this.panelRegistro.Controls.Add(this.tbClaveReg);
             this.panelRegistro.Controls.Add(this.tbUsuarioReg);
             this.panelRegistro.FillColor = System.Drawing.Color.White;
-            this.panelRegistro.Location = new System.Drawing.Point(365, 801);
+            this.panelRegistro.Location = new System.Drawing.Point(337, 48);
             this.panelRegistro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelRegistro.Name = "panelRegistro";
             this.panelRegistro.Radius = 10;
             this.panelRegistro.ShadowColor = System.Drawing.Color.Black;
-            this.panelRegistro.Size = new System.Drawing.Size(437, 596);
+            this.panelRegistro.Size = new System.Drawing.Size(461, 611);
             this.panelRegistro.TabIndex = 5;
             // 
             // label1
@@ -290,19 +290,15 @@ namespace CapaPresentacion
             this.cbCarrera.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbCarrera.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCarrera.FocusedColor = System.Drawing.Color.Empty;
-            this.cbCarrera.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCarrera.Font = new System.Drawing.Font("Californian FB", 13.8F);
             this.cbCarrera.ForeColor = System.Drawing.Color.DimGray;
             this.cbCarrera.FormattingEnabled = true;
             this.cbCarrera.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbCarrera.ItemHeight = 30;
-            this.cbCarrera.Items.AddRange(new object[] {
-            "(Carrera)",
-            "Mateticas"});
-            this.cbCarrera.Location = new System.Drawing.Point(73, 150);
+            this.cbCarrera.Location = new System.Drawing.Point(31, 150);
             this.cbCarrera.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbCarrera.Name = "cbCarrera";
-            this.cbCarrera.Size = new System.Drawing.Size(255, 36);
-            this.cbCarrera.StartIndex = 0;
+            this.cbCarrera.Size = new System.Drawing.Size(391, 36);
             this.cbCarrera.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.cbCarrera.TabIndex = 32;
             this.cbCarrera.SelectedIndexChanged += new System.EventHandler(this.cbCarrera_SelectedIndexChanged);
@@ -341,13 +337,13 @@ namespace CapaPresentacion
             this.tbCorreo.ForeColor = System.Drawing.Color.DimGray;
             this.tbCorreo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbCorreo.IconLeft = ((System.Drawing.Image)(resources.GetObject("tbCorreo.IconLeft")));
-            this.tbCorreo.Location = new System.Drawing.Point(79, 224);
+            this.tbCorreo.Location = new System.Drawing.Point(28, 224);
             this.tbCorreo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbCorreo.Name = "tbCorreo";
             this.tbCorreo.PasswordChar = '\0';
             this.tbCorreo.PlaceholderText = "Correo";
             this.tbCorreo.SelectedText = "";
-            this.tbCorreo.Size = new System.Drawing.Size(255, 48);
+            this.tbCorreo.Size = new System.Drawing.Size(394, 48);
             this.tbCorreo.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.tbCorreo.TabIndex = 18;
             this.tbCorreo.Enter += new System.EventHandler(this.tbCorreo_Enter);
@@ -355,7 +351,7 @@ namespace CapaPresentacion
             // pbVista3
             // 
             this.pbVista3.Image = ((System.Drawing.Image)(resources.GetObject("pbVista3.Image")));
-            this.pbVista3.Location = new System.Drawing.Point(353, 382);
+            this.pbVista3.Location = new System.Drawing.Point(398, 385);
             this.pbVista3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbVista3.Name = "pbVista3";
             this.pbVista3.Size = new System.Drawing.Size(24, 23);
@@ -379,13 +375,13 @@ namespace CapaPresentacion
             this.tbClaveConfirmReg.ForeColor = System.Drawing.Color.DimGray;
             this.tbClaveConfirmReg.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbClaveConfirmReg.IconLeft = ((System.Drawing.Image)(resources.GetObject("tbClaveConfirmReg.IconLeft")));
-            this.tbClaveConfirmReg.Location = new System.Drawing.Point(79, 367);
+            this.tbClaveConfirmReg.Location = new System.Drawing.Point(14, 375);
             this.tbClaveConfirmReg.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbClaveConfirmReg.Name = "tbClaveConfirmReg";
             this.tbClaveConfirmReg.PasswordChar = '\0';
             this.tbClaveConfirmReg.PlaceholderText = "Confirm Contraseña";
             this.tbClaveConfirmReg.SelectedText = "";
-            this.tbClaveConfirmReg.Size = new System.Drawing.Size(255, 48);
+            this.tbClaveConfirmReg.Size = new System.Drawing.Size(373, 41);
             this.tbClaveConfirmReg.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.tbClaveConfirmReg.TabIndex = 16;
             this.tbClaveConfirmReg.TextChanged += new System.EventHandler(this.tbClaveConfirmReg_TextChanged);
@@ -394,7 +390,7 @@ namespace CapaPresentacion
             // pbVista2
             // 
             this.pbVista2.Image = ((System.Drawing.Image)(resources.GetObject("pbVista2.Image")));
-            this.pbVista2.Location = new System.Drawing.Point(353, 308);
+            this.pbVista2.Location = new System.Drawing.Point(398, 305);
             this.pbVista2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbVista2.Name = "pbVista2";
             this.pbVista2.Size = new System.Drawing.Size(24, 23);
@@ -442,13 +438,13 @@ namespace CapaPresentacion
             this.tbClaveReg.ForeColor = System.Drawing.Color.DimGray;
             this.tbClaveReg.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbClaveReg.IconLeft = ((System.Drawing.Image)(resources.GetObject("tbClaveReg.IconLeft")));
-            this.tbClaveReg.Location = new System.Drawing.Point(79, 297);
+            this.tbClaveReg.Location = new System.Drawing.Point(19, 297);
             this.tbClaveReg.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbClaveReg.Name = "tbClaveReg";
             this.tbClaveReg.PasswordChar = '\0';
             this.tbClaveReg.PlaceholderText = "Contraseña";
             this.tbClaveReg.SelectedText = "";
-            this.tbClaveReg.Size = new System.Drawing.Size(255, 48);
+            this.tbClaveReg.Size = new System.Drawing.Size(373, 50);
             this.tbClaveReg.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.tbClaveReg.TabIndex = 7;
             this.tbClaveReg.TextChanged += new System.EventHandler(this.tbClaveReg_TextChanged);
@@ -469,13 +465,13 @@ namespace CapaPresentacion
             this.tbUsuarioReg.ForeColor = System.Drawing.Color.DimGray;
             this.tbUsuarioReg.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbUsuarioReg.IconLeft = ((System.Drawing.Image)(resources.GetObject("tbUsuarioReg.IconLeft")));
-            this.tbUsuarioReg.Location = new System.Drawing.Point(72, 84);
+            this.tbUsuarioReg.Location = new System.Drawing.Point(31, 84);
             this.tbUsuarioReg.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbUsuarioReg.Name = "tbUsuarioReg";
             this.tbUsuarioReg.PasswordChar = '\0';
             this.tbUsuarioReg.PlaceholderText = "Usuario";
             this.tbUsuarioReg.SelectedText = "";
-            this.tbUsuarioReg.Size = new System.Drawing.Size(255, 48);
+            this.tbUsuarioReg.Size = new System.Drawing.Size(391, 39);
             this.tbUsuarioReg.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.tbUsuarioReg.TabIndex = 5;
             this.tbUsuarioReg.Enter += new System.EventHandler(this.tbUsuarioReg_Enter);
@@ -616,9 +612,9 @@ namespace CapaPresentacion
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1000, 800);
             this.Controls.Add(this.itulo);
+            this.Controls.Add(this.panelRegistro);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panelRegistro);
             this.Controls.Add(this.guna2ControlBox2);
             this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.guna2PictureBox1);
