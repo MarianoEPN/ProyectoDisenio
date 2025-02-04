@@ -80,6 +80,39 @@ namespace CapaAccesoDatos
 
         }
 
+        public List<MatchResultadoAprendizaje> MostrarMatchResultadoAprendizajePorCarrera(int carreraId)
+        {
+            List<MatchResultadoAprendizaje> lista = new List<MatchResultadoAprendizaje>();
+
+            // Abrir la conexión
+            comando.Connection = conexion.AbrirConexion();
+
+            // Configurar el comando para el procedimiento almacenado
+            comando.CommandText = "MostrarMatchResultadoAprendizajePorCarrera";
+            comando.CommandType = System.Data.CommandType.StoredProcedure;
+            comando.Parameters.Clear();
+            comando.Parameters.AddWithValue("@carrera_id", carreraId);
+
+            // Ejecutar el lector
+            leer = comando.ExecuteReader();
+
+            while (leer.Read())
+            {
+                MatchResultadoAprendizaje matchResultado = new MatchResultadoAprendizaje
+                    Id = leer.GetInt32(0),
+                    PerfilEgresoId = leer.GetInt32(1),
+                    SubResultadoAsignaturaId = leer.GetInt32(2),
+                    NivelAporte = leer.GetString(3)
+
+                lista.Add(matchResultado);
+            }
+
+            // Cerrar la conexión y el lector
+            leer.Close();
+            conexion.CerrarConexion();
+
+            return lista;
+        }
 
 
 
