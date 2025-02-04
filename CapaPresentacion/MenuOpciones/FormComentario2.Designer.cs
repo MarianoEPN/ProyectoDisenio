@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion.MenuOpciones
 {
-    partial class FormsComentario
+    partial class FormComentario2
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.gcmbObjetivoEurace = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.gcmbResutadoAprendizaje = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.lblPerfil = new System.Windows.Forms.Label();
+            this.lblResultado = new System.Windows.Forms.Label();
+            this.gcmbResultadoAsignatura = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.gcmbPerfilEgreso = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panelTitulos = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
@@ -50,69 +50,67 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label3
+            // lblPerfil
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.Font = new System.Drawing.Font("Californian FB", 16F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(11, 197);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(306, 31);
-            this.label3.TabIndex = 51;
-            this.label3.Text = "Resultado de Aprendizaje";
+            this.lblPerfil.AutoSize = true;
+            this.lblPerfil.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblPerfil.Font = new System.Drawing.Font("Californian FB", 16F, System.Drawing.FontStyle.Bold);
+            this.lblPerfil.ForeColor = System.Drawing.Color.DimGray;
+            this.lblPerfil.Location = new System.Drawing.Point(11, 197);
+            this.lblPerfil.Name = "lblPerfil";
+            this.lblPerfil.Size = new System.Drawing.Size(160, 31);
+            this.lblPerfil.TabIndex = 51;
+            this.lblPerfil.Text = "Perfil Egreso";
             // 
-            // label2
+            // lblResultado
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Font = new System.Drawing.Font("Californian FB", 16F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(16, 92);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(226, 31);
-            this.label2.TabIndex = 52;
-            this.label2.Text = "Objetivo EURACE";
+            this.lblResultado.AutoSize = true;
+            this.lblResultado.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblResultado.Font = new System.Drawing.Font("Californian FB", 16F, System.Drawing.FontStyle.Bold);
+            this.lblResultado.ForeColor = System.Drawing.Color.DimGray;
+            this.lblResultado.Location = new System.Drawing.Point(16, 92);
+            this.lblResultado.Name = "lblResultado";
+            this.lblResultado.Size = new System.Drawing.Size(458, 31);
+            this.lblResultado.TabIndex = 52;
+            this.lblResultado.Text = "Resultado de Aprendizaje de Aignatura";
             // 
-            // gcmbObjetivoEurace
+            // gcmbResultadoAsignatura
             // 
-            this.gcmbObjetivoEurace.BackColor = System.Drawing.Color.Transparent;
-            this.gcmbObjetivoEurace.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.gcmbObjetivoEurace.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.gcmbObjetivoEurace.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.gcmbObjetivoEurace.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.gcmbObjetivoEurace.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Bold);
-            this.gcmbObjetivoEurace.ForeColor = System.Drawing.Color.DimGray;
-            this.gcmbObjetivoEurace.ItemHeight = 30;
-            this.gcmbObjetivoEurace.Items.AddRange(new object[] {
+            this.gcmbResultadoAsignatura.BackColor = System.Drawing.Color.Transparent;
+            this.gcmbResultadoAsignatura.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.gcmbResultadoAsignatura.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.gcmbResultadoAsignatura.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.gcmbResultadoAsignatura.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.gcmbResultadoAsignatura.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Bold);
+            this.gcmbResultadoAsignatura.ForeColor = System.Drawing.Color.DimGray;
+            this.gcmbResultadoAsignatura.ItemHeight = 30;
+            this.gcmbResultadoAsignatura.Items.AddRange(new object[] {
             "(Elegir un  objetivo)"});
-            this.gcmbObjetivoEurace.Location = new System.Drawing.Point(23, 126);
-            this.gcmbObjetivoEurace.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gcmbObjetivoEurace.Name = "gcmbObjetivoEurace";
-            this.gcmbObjetivoEurace.Size = new System.Drawing.Size(849, 36);
-            this.gcmbObjetivoEurace.StartIndex = 0;
-            this.gcmbObjetivoEurace.TabIndex = 53;
-            this.gcmbObjetivoEurace.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBox1_SelectedIndexChanged);
+            this.gcmbResultadoAsignatura.Location = new System.Drawing.Point(23, 135);
+            this.gcmbResultadoAsignatura.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gcmbResultadoAsignatura.Name = "gcmbResultadoAsignatura";
+            this.gcmbResultadoAsignatura.Size = new System.Drawing.Size(849, 36);
+            this.gcmbResultadoAsignatura.StartIndex = 0;
+            this.gcmbResultadoAsignatura.TabIndex = 53;
             // 
-            // gcmbResutadoAprendizaje
+            // gcmbPerfilEgreso
             // 
-            this.gcmbResutadoAprendizaje.BackColor = System.Drawing.Color.Transparent;
-            this.gcmbResutadoAprendizaje.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.gcmbResutadoAprendizaje.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.gcmbResutadoAprendizaje.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.gcmbResutadoAprendizaje.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.gcmbResutadoAprendizaje.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Bold);
-            this.gcmbResutadoAprendizaje.ForeColor = System.Drawing.Color.DimGray;
-            this.gcmbResutadoAprendizaje.ItemHeight = 30;
-            this.gcmbResutadoAprendizaje.Items.AddRange(new object[] {
+            this.gcmbPerfilEgreso.BackColor = System.Drawing.Color.Transparent;
+            this.gcmbPerfilEgreso.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.gcmbPerfilEgreso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.gcmbPerfilEgreso.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.gcmbPerfilEgreso.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.gcmbPerfilEgreso.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Bold);
+            this.gcmbPerfilEgreso.ForeColor = System.Drawing.Color.DimGray;
+            this.gcmbPerfilEgreso.ItemHeight = 30;
+            this.gcmbPerfilEgreso.Items.AddRange(new object[] {
             "(Eligir un resultado de aprendizaje)"});
-            this.gcmbResutadoAprendizaje.Location = new System.Drawing.Point(15, 231);
-            this.gcmbResutadoAprendizaje.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gcmbResutadoAprendizaje.Name = "gcmbResutadoAprendizaje";
-            this.gcmbResutadoAprendizaje.Size = new System.Drawing.Size(849, 36);
-            this.gcmbResutadoAprendizaje.StartIndex = 0;
-            this.gcmbResutadoAprendizaje.TabIndex = 54;
-            this.gcmbResutadoAprendizaje.SelectedIndexChanged += new System.EventHandler(this.gcmbResutadoAprendizaje_SelectedIndexChanged);
+            this.gcmbPerfilEgreso.Location = new System.Drawing.Point(15, 231);
+            this.gcmbPerfilEgreso.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gcmbPerfilEgreso.Name = "gcmbPerfilEgreso";
+            this.gcmbPerfilEgreso.Size = new System.Drawing.Size(849, 36);
+            this.gcmbPerfilEgreso.StartIndex = 0;
+            this.gcmbPerfilEgreso.TabIndex = 54;
             // 
             // label4
             // 
@@ -197,9 +195,9 @@
             this.lblTitulo.ForeColor = System.Drawing.Color.Azure;
             this.lblTitulo.Location = new System.Drawing.Point(63, 15);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(694, 38);
+            this.lblTitulo.Size = new System.Drawing.Size(743, 38);
             this.lblTitulo.TabIndex = 27;
-            this.lblTitulo.Text = "Nuevo Match Obj. Eurace/ Resultado Aprendizaje";
+            this.lblTitulo.Text = "Perfil Egreso / Resultado de Apredizaje de Asignatura";
             // 
             // btnCrear
             // 
@@ -356,7 +354,7 @@
             this.btnEditar.UseTransparentBackground = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-            // FormsComentario
+            // FormComentario2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -370,15 +368,15 @@
             this.Controls.Add(this.btnCrear);
             this.Controls.Add(this.panelTitulos);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.gcmbResutadoAprendizaje);
-            this.Controls.Add(this.gcmbObjetivoEurace);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.gcmbPerfilEgreso);
+            this.Controls.Add(this.gcmbResultadoAsignatura);
+            this.Controls.Add(this.lblResultado);
+            this.Controls.Add(this.lblPerfil);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "FormsComentario";
+            this.Name = "FormComentario2";
             this.Text = "FormsComentario";
-            this.Load += new System.EventHandler(this.FormsComentario_Load);
+            this.Load += new System.EventHandler(this.FormComentario2_Load);
             this.panelTitulos.ResumeLayout(false);
             this.panelTitulos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
@@ -388,10 +386,10 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2ComboBox gcmbObjetivoEurace;
-        private Guna.UI2.WinForms.Guna2ComboBox gcmbResutadoAprendizaje;
+        private System.Windows.Forms.Label lblPerfil;
+        private System.Windows.Forms.Label lblResultado;
+        private Guna.UI2.WinForms.Guna2ComboBox gcmbResultadoAsignatura;
+        private Guna.UI2.WinForms.Guna2ComboBox gcmbPerfilEgreso;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2ShadowPanel panelTitulos;
         private System.Windows.Forms.Label lblTitulo;
