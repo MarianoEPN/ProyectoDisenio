@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -108,6 +109,40 @@ namespace CapaAccesoDatos
             }
 
             // Cerrar la conexión y el lector
+            leer.Close();
+            conexion.CerrarConexion();
+
+            return lista;
+        }
+
+
+        public List<MatchResultadoAprendizaje> BuscarMatchResultadoAprendizaje(ResultadoAprendizajeAsignatura resultadoAprendizajeAsignaturaId, ResultadoAprendizaje resultadoAprendizajeId)
+        {
+            List<MatchResultadoAprendizaje> lista = new List<MatchResultadoAprendizaje>();
+
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "BuscarMatchResultadoAprendizaje";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.Clear();
+            comando.Parameters.AddWithValue("@ResultadoAprendizajeAsignaturaID", resultadoAprendizajeAsignaturaId.Id);
+            comando.Parameters.AddWithValue("@ResultadoAprendizajeID", resultadoAprendizajeId.Id);
+
+            // Ejecutar lector
+            leer = comando.ExecuteReader();
+
+            // Leer resultados
+            while (leer.Read())
+            {
+                MatchResultadoAprendizaje match = new MatchResultadoAprendizaje();
+                match.Id = leer.GetInt32(0);
+                match.PerfilEgresoId = leer.GetInt32(1);
+                match.NivelAporte = leer.GetString(2);
+                match.SubResultadoAprendizageAsignaturaId = leer.GetInt32(3);
+
+                lista.Add(match);
+            }
+
+            // Cerrar conexiones y retornar la lista
             leer.Close();
             conexion.CerrarConexion();
 
