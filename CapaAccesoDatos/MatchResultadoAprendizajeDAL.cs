@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using CapaEntidades;
 
@@ -28,8 +29,7 @@ namespace CapaAccesoDatos
             {
                 MatchResultadoAprendizaje match = new MatchResultadoAprendizaje();
                 match.Id = leer.GetInt32(0);
-                
-                
+              
                 match.NivelAporte = leer.GetString(3);
                 lista.Add(match);
             }
@@ -98,11 +98,9 @@ namespace CapaAccesoDatos
 
             while (leer.Read())
             {
-                MatchResultadoAprendizaje matchResultado = new MatchResultadoAprendizaje
-                    Id = leer.GetInt32(0),
-                    PerfilEgresoId = leer.GetInt32(1),
-                    SubResultadoAsignaturaId = leer.GetInt32(2),
-                    NivelAporte = leer.GetString(3)
+                MatchResultadoAprendizaje matchResultado = new MatchResultadoAprendizaje();
+                matchResultado.Id = leer.GetInt32(0);
+                matchResultado.NivelAporte = leer.GetString(3);
 
                 lista.Add(matchResultado);
             }
