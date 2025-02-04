@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CapaEntidades;
+using CapaNegocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,23 +14,42 @@ namespace CapaPresentacion.MenuOpciones
 {
     public partial class FormRelaciónRresultadosAprendizajeAsignatura_x_PerfilEgreso : Form
     {
+        Carrera carrera;
+
         public FormRelaciónRresultadosAprendizajeAsignatura_x_PerfilEgreso()
         {
             InitializeComponent();
         }
 
+        public FormRelaciónRresultadosAprendizajeAsignatura_x_PerfilEgreso(Carrera carrera)
+        {
+            InitializeComponent();
+            this.carrera = carrera;
+        }
+
         private void FormRelaciónRresultadosAprendizajeAsignatura_x_PerfilEgreso_Load(object sender, EventArgs e)
         {
+            ResultadoAprendizajeAsignaturaNeg resultadoAprendizajeAsignaturaNeg = new ResultadoAprendizajeAsignaturaNeg();
+            ResultadoAprendizajeNeg resultadoAprendizajeNeg = new ResultadoAprendizajeNeg();
+
+            if (carrera != null)
+            {
+                AsignaturaNeg asignaturaNeg = new AsignaturaNeg();
+                cbbAsignatura.DataSource = asignaturaNeg.ObtenerAsignaturasPorCarrera(carrera.Id);
+            }
+
+            Asignatura selected = cbbAsignatura.SelectedItem as Asignatura;
+
             // Simula datos de la tabla 1 y tabla 2
-            var tabla1 = new[] { "Columna1", "Columna2", "Columna3", "Columna6", "Columna7", "Columna8", "Columna9", "Columna10" }; // Nombre de columnas
-            var tabla2 = new[] { "Fila1", "Fila2", "Fila3", "Fila4", "Fila5", "Fila6", "Fila7", "Fila8", "Fila9" }; // Nombre de filas
+            var perfilEgreso = resultadoAprendizajeNeg.ObtenerResultadosAprendizaje(carrera.Id).ToArray(); // Nombre de columnas
+            var raa = resultadoAprendizajeAsignaturaNeg.ObtenerResultadosAprendizajeAsignatura(selected.Id).ToArray(); // Nombre de filas
 
             // Llenar el DataGridView
-            LlenarDataGrid(tabla1, tabla2);
+            LlenarDataGrid(perfilEgreso, raa);
 
         }
 
-        private void LlenarDataGrid(string[] columnas, string[] filas)
+        private void LlenarDataGrid(ResultadoAprendizaje[] columnas, ResultadoAprendizajeAsignatura[] filas)
         {
             // Configuración inicial del DataGridView
             dataGridView1.AllowUserToAddRows = false;
@@ -56,8 +77,7 @@ namespace CapaPresentacion.MenuOpciones
             {
                 var imageColumn = new DataGridViewImageColumn
                 {
-                    Name = columna,
-                    HeaderText = columna,
+                    Name = $"{columna.Codigo}:{Environment.NewLine}{columna.Descripcion}",                   
                     ImageLayout = DataGridViewImageCellLayout.Zoom
                 };
                 dataGridView1.Columns.Add(imageColumn);
@@ -70,7 +90,7 @@ namespace CapaPresentacion.MenuOpciones
                 nuevaFila.CreateCells(dataGridView1);
 
                 // Configuración de las celdas de las filas
-                nuevaFila.Cells[0].Value = fila;
+                nuevaFila.Cells[0].Value = $"{fila.Codigo}:{Environment.NewLine}{fila.Descripcion}";
                 nuevaFila.Cells[0].Style.Font = new Font("Californian FB", 10.8f, FontStyle.Bold);
                 nuevaFila.Cells[0].Style.ForeColor = Color.DimGray;
                 nuevaFila.Cells[0].Style.BackColor = Color.FromArgb(242, 245, 250);

@@ -230,7 +230,7 @@ namespace CapaPresentacion
 
         private void btnRAAxPE_Click(object sender, EventArgs e)
         {
-            container(new FormRelaciónRresultadosAprendizajeAsignatura_x_PerfilEgreso());
+            container(new FormRelaciónRresultadosAprendizajeAsignatura_x_PerfilEgreso(carrera));
 
         }
 

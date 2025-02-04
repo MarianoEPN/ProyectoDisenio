@@ -33,8 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelColumna = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.btnBuscar = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panelX = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,6 +40,8 @@
             this.panelFila = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.dataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panelData = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbbAsignatura = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panelColumna.SuspendLayout();
             this.panelX.SuspendLayout();
             this.panelFila.SuspendLayout();
@@ -52,70 +52,18 @@
             // panelColumna
             // 
             this.panelColumna.BackColor = System.Drawing.Color.Transparent;
-            this.panelColumna.Controls.Add(this.btnBuscar);
-            this.panelColumna.Controls.Add(this.guna2TextBox2);
+            this.panelColumna.Controls.Add(this.label2);
+            this.panelColumna.Controls.Add(this.cbbAsignatura);
             this.panelColumna.Controls.Add(this.lblTitulo);
             this.panelColumna.Controls.Add(this.panelX);
             this.panelColumna.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelColumna.FillColor = System.Drawing.Color.WhiteSmoke;
             this.panelColumna.Location = new System.Drawing.Point(0, 0);
+            this.panelColumna.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelColumna.Name = "panelColumna";
             this.panelColumna.ShadowColor = System.Drawing.Color.White;
-            this.panelColumna.Size = new System.Drawing.Size(1035, 65);
+            this.panelColumna.Size = new System.Drawing.Size(776, 53);
             this.panelColumna.TabIndex = 29;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscar.Animated = true;
-            this.btnBuscar.AutoRoundedCorners = true;
-            this.btnBuscar.BorderRadius = 19;
-            this.btnBuscar.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnBuscar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnBuscar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnBuscar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnBuscar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnBuscar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
-            this.btnBuscar.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Bold);
-            this.btnBuscar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnBuscar.HoverState.FillColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnBuscar.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
-            this.btnBuscar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnBuscar.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnBuscar.IndicateFocus = true;
-            this.btnBuscar.Location = new System.Drawing.Point(919, 14);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(104, 41);
-            this.btnBuscar.TabIndex = 35;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseTransparentBackground = true;
-            // 
-            // guna2TextBox2
-            // 
-            this.guna2TextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2TextBox2.Animated = true;
-            this.guna2TextBox2.AutoRoundedCorners = true;
-            this.guna2TextBox2.BorderColor = System.Drawing.Color.Gray;
-            this.guna2TextBox2.BorderRadius = 19;
-            this.guna2TextBox2.BorderThickness = 2;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.IconLeft = global::CapaPresentacion.Properties.Resources.lupa;
-            this.guna2TextBox2.Location = new System.Drawing.Point(653, 15);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderText = "Buscar";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(260, 40);
-            this.guna2TextBox2.TabIndex = 39;
             // 
             // lblTitulo
             // 
@@ -123,9 +71,10 @@
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblTitulo.Font = new System.Drawing.Font("Californian FB", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
-            this.lblTitulo.Location = new System.Drawing.Point(72, 17);
+            this.lblTitulo.Location = new System.Drawing.Point(54, 14);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(232, 38);
+            this.lblTitulo.Size = new System.Drawing.Size(194, 31);
             this.lblTitulo.TabIndex = 40;
             this.lblTitulo.Text = "Perfil de Egreso";
             // 
@@ -134,11 +83,12 @@
             this.panelX.BackColor = System.Drawing.Color.Transparent;
             this.panelX.Controls.Add(this.label1);
             this.panelX.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
-            this.panelX.Location = new System.Drawing.Point(3, 6);
+            this.panelX.Location = new System.Drawing.Point(2, 5);
+            this.panelX.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelX.Name = "panelX";
             this.panelX.Radius = 5;
             this.panelX.ShadowColor = System.Drawing.Color.WhiteSmoke;
-            this.panelX.Size = new System.Drawing.Size(63, 56);
+            this.panelX.Size = new System.Drawing.Size(47, 46);
             this.panelX.TabIndex = 43;
             // 
             // label1
@@ -147,9 +97,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Californian FB", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Azure;
-            this.label1.Location = new System.Drawing.Point(10, 10);
+            this.label1.Location = new System.Drawing.Point(8, 8);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 38);
+            this.label1.Size = new System.Drawing.Size(32, 31);
             this.label1.TabIndex = 40;
             this.label1.Text = "X";
             // 
@@ -158,9 +109,10 @@
             this.labelFila.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelFila.Font = new System.Drawing.Font("Californian FB", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFila.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
-            this.labelFila.Location = new System.Drawing.Point(12, 3);
+            this.labelFila.Location = new System.Drawing.Point(9, 2);
+            this.labelFila.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelFila.Name = "labelFila";
-            this.labelFila.Size = new System.Drawing.Size(46, 586);
+            this.labelFila.Size = new System.Drawing.Size(34, 476);
             this.labelFila.TabIndex = 35;
             this.labelFila.Paint += new System.Windows.Forms.PaintEventHandler(this.labelFila_Paint);
             // 
@@ -170,10 +122,11 @@
             this.panelFila.Controls.Add(this.labelFila);
             this.panelFila.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelFila.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.panelFila.Location = new System.Drawing.Point(0, 65);
+            this.panelFila.Location = new System.Drawing.Point(0, 53);
+            this.panelFila.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelFila.Name = "panelFila";
             this.panelFila.ShadowColor = System.Drawing.Color.White;
-            this.panelFila.Size = new System.Drawing.Size(65, 598);
+            this.panelFila.Size = new System.Drawing.Size(49, 486);
             this.panelFila.TabIndex = 41;
             // 
             // dataGridView1
@@ -203,6 +156,7 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
@@ -216,7 +170,7 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.DividerHeight = 5;
             this.dataGridView1.RowTemplate.Height = 40;
-            this.dataGridView1.Size = new System.Drawing.Size(970, 598);
+            this.dataGridView1.Size = new System.Drawing.Size(727, 486);
             this.dataGridView1.TabIndex = 28;
             this.dataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -246,22 +200,55 @@
             this.panelData.Controls.Add(this.dataGridView1);
             this.panelData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelData.FillColor = System.Drawing.Color.White;
-            this.panelData.Location = new System.Drawing.Point(65, 65);
+            this.panelData.Location = new System.Drawing.Point(49, 53);
+            this.panelData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelData.Name = "panelData";
             this.panelData.ShadowColor = System.Drawing.Color.Black;
-            this.panelData.Size = new System.Drawing.Size(970, 598);
+            this.panelData.Size = new System.Drawing.Size(727, 486);
             this.panelData.TabIndex = 42;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Californian FB", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
+            this.label2.Location = new System.Drawing.Point(364, 13);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(143, 31);
+            this.label2.TabIndex = 44;
+            this.label2.Text = "Asignatura:";
+            // 
+            // cbbAsignatura
+            // 
+            this.cbbAsignatura.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.cbbAsignatura.BackColor = System.Drawing.Color.Transparent;
+            this.cbbAsignatura.BorderRadius = 15;
+            this.cbbAsignatura.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbAsignatura.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbAsignatura.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbAsignatura.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbAsignatura.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbbAsignatura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbbAsignatura.ItemHeight = 30;
+            this.cbbAsignatura.Location = new System.Drawing.Point(512, 9);
+            this.cbbAsignatura.Name = "cbbAsignatura";
+            this.cbbAsignatura.Size = new System.Drawing.Size(253, 36);
+            this.cbbAsignatura.TabIndex = 45;
             // 
             // FormRelaciónRresultadosAprendizajeAsignatura_x_PerfilEgreso
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1035, 663);
+            this.ClientSize = new System.Drawing.Size(776, 539);
             this.Controls.Add(this.panelData);
             this.Controls.Add(this.panelFila);
             this.Controls.Add(this.panelColumna);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormRelaciónRresultadosAprendizajeAsignatura_x_PerfilEgreso";
             this.Text = "Match1";
             this.Load += new System.EventHandler(this.FormRelaciónRresultadosAprendizajeAsignatura_x_PerfilEgreso_Load);
@@ -283,9 +270,9 @@
         private Guna.UI2.WinForms.Guna2ShadowPanel panelX;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblTitulo;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
-        private Guna.UI2.WinForms.Guna2Button btnBuscar;
         private Guna.UI2.WinForms.Guna2DataGridView dataGridView1;
         private Guna.UI2.WinForms.Guna2ShadowPanel panelData;
+        private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2ComboBox cbbAsignatura;
     }
 }
