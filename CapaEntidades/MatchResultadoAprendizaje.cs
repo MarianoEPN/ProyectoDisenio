@@ -12,6 +12,8 @@ namespace CapaEntidades
         public int Id { get; set; }
    
         public string NivelAporte { get; set; }
+        public string Comentario { get; set; }
+
 
         public int PerfilEgresoId { get; set; }           // Agregado para identificar el perfil de egreso
         public int SubResultadoAprendizageAsignaturaId { get; set; }  // Agregado para identificar el SubResultadoAprendizageAsignatura
@@ -20,14 +22,18 @@ namespace CapaEntidades
         public MatchResultadoAprendizaje()
         {
             NivelAporte = "";
+            Comentario = "";
+
         }
 
+
         // Constructor con parámetros
-        public MatchResultadoAprendizaje( string nivelAporte)
+        public MatchResultadoAprendizaje( string nivelAporte, string comentario)
         {
            
             NivelAporte = nivelAporte;
-            
+            Comentario = comentario;
+
         }
 
         // Método ToString
