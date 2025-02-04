@@ -33,6 +33,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelColumna = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbbAsignatura = new Guna.UI2.WinForms.Guna2ComboBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panelX = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,8 +42,6 @@
             this.panelFila = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.dataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panelData = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cbbAsignatura = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panelColumna.SuspendLayout();
             this.panelX.SuspendLayout();
             this.panelFila.SuspendLayout();
@@ -59,11 +59,43 @@
             this.panelColumna.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelColumna.FillColor = System.Drawing.Color.WhiteSmoke;
             this.panelColumna.Location = new System.Drawing.Point(0, 0);
-            this.panelColumna.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelColumna.Margin = new System.Windows.Forms.Padding(2);
             this.panelColumna.Name = "panelColumna";
             this.panelColumna.ShadowColor = System.Drawing.Color.White;
             this.panelColumna.Size = new System.Drawing.Size(776, 53);
             this.panelColumna.TabIndex = 29;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Californian FB", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
+            this.label2.Location = new System.Drawing.Point(364, 13);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(143, 31);
+            this.label2.TabIndex = 44;
+            this.label2.Text = "Asignatura:";
+            // 
+            // cbbAsignatura
+            // 
+            this.cbbAsignatura.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.cbbAsignatura.BackColor = System.Drawing.Color.Transparent;
+            this.cbbAsignatura.BorderRadius = 15;
+            this.cbbAsignatura.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbAsignatura.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbAsignatura.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbAsignatura.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbAsignatura.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbbAsignatura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbbAsignatura.ItemHeight = 30;
+            this.cbbAsignatura.Location = new System.Drawing.Point(512, 9);
+            this.cbbAsignatura.Name = "cbbAsignatura";
+            this.cbbAsignatura.Size = new System.Drawing.Size(253, 36);
+            this.cbbAsignatura.TabIndex = 45;
+            this.cbbAsignatura.SelectedIndexChanged += new System.EventHandler(this.cbbAsignatura_SelectedIndexChanged);
             // 
             // lblTitulo
             // 
@@ -84,7 +116,7 @@
             this.panelX.Controls.Add(this.label1);
             this.panelX.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
             this.panelX.Location = new System.Drawing.Point(2, 5);
-            this.panelX.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelX.Margin = new System.Windows.Forms.Padding(2);
             this.panelX.Name = "panelX";
             this.panelX.Radius = 5;
             this.panelX.ShadowColor = System.Drawing.Color.WhiteSmoke;
@@ -123,7 +155,7 @@
             this.panelFila.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelFila.FillColor = System.Drawing.Color.WhiteSmoke;
             this.panelFila.Location = new System.Drawing.Point(0, 53);
-            this.panelFila.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelFila.Margin = new System.Windows.Forms.Padding(2);
             this.panelFila.Name = "panelFila";
             this.panelFila.ShadowColor = System.Drawing.Color.White;
             this.panelFila.Size = new System.Drawing.Size(49, 486);
@@ -156,7 +188,7 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
@@ -201,42 +233,11 @@
             this.panelData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelData.FillColor = System.Drawing.Color.White;
             this.panelData.Location = new System.Drawing.Point(49, 53);
-            this.panelData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelData.Margin = new System.Windows.Forms.Padding(2);
             this.panelData.Name = "panelData";
             this.panelData.ShadowColor = System.Drawing.Color.Black;
             this.panelData.Size = new System.Drawing.Size(727, 486);
             this.panelData.TabIndex = 42;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Californian FB", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
-            this.label2.Location = new System.Drawing.Point(364, 13);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(143, 31);
-            this.label2.TabIndex = 44;
-            this.label2.Text = "Asignatura:";
-            // 
-            // cbbAsignatura
-            // 
-            this.cbbAsignatura.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.cbbAsignatura.BackColor = System.Drawing.Color.Transparent;
-            this.cbbAsignatura.BorderRadius = 15;
-            this.cbbAsignatura.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbbAsignatura.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbAsignatura.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbAsignatura.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbAsignatura.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbbAsignatura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbbAsignatura.ItemHeight = 30;
-            this.cbbAsignatura.Location = new System.Drawing.Point(512, 9);
-            this.cbbAsignatura.Name = "cbbAsignatura";
-            this.cbbAsignatura.Size = new System.Drawing.Size(253, 36);
-            this.cbbAsignatura.TabIndex = 45;
             // 
             // FormRelaciónRresultadosAprendizajeAsignatura_x_PerfilEgreso
             // 
@@ -248,7 +249,7 @@
             this.Controls.Add(this.panelFila);
             this.Controls.Add(this.panelColumna);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormRelaciónRresultadosAprendizajeAsignatura_x_PerfilEgreso";
             this.Text = "Match1";
             this.Load += new System.EventHandler(this.FormRelaciónRresultadosAprendizajeAsignatura_x_PerfilEgreso_Load);

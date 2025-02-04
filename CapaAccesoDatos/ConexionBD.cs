@@ -9,7 +9,7 @@ namespace CapaAccesoDatos
 {
     public class ConexionBD
     {
-        private SqlConnection conexion = new SqlConnection("Data Source=LAPTOP-JQB7PBQF;Initial Catalog=acreditacion;Integrated Security=True");
+        private SqlConnection conexion = new SqlConnection("Data Source=Xavier\\SQLEXPRESS02;Initial Catalog=acreditacion;Integrated Security=True");
 
         public SqlConnection AbrirConexion()
         {

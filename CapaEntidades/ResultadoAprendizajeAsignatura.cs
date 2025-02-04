@@ -45,7 +45,7 @@ namespace CapaEntidades
         // Método ToString
         public override string ToString()
         {
-            return $"ResultadoAprendizajeAsignatura: [ID: {Id}, Código: {Codigo}, Descripción: {Descripcion}]";
+            return $"{Codigo} {Descripcion}";
         }
     }
 

@@ -20,6 +20,7 @@ namespace CapaPresentacion.MenuOpciones
         private ResultadoAprendizaje perfilEgreso;
         private Carrera carrera;
         private ResultadoAprendizajeAsignatura resultadoAsignatura;
+        Asignatura asignatura;
 
         // Para indicar si se eliminó la relación
         public bool RelacionEliminada { get; private set; } = false;
@@ -31,17 +32,18 @@ namespace CapaPresentacion.MenuOpciones
         private bool esEdicion = false;
 
         // Constructor para modo CREACIÓN (nuevo match, sin relación previa)
-        public FormComentario2(ResultadoAprendizaje perfilEgreso, Carrera carrera, ResultadoAprendizajeAsignatura resultadoAsignatura)
+        public FormComentario2(ResultadoAprendizaje perfilEgreso, Carrera carrera, ResultadoAprendizajeAsignatura resultadoAsignatura, Asignatura asignatura)
         {
             InitializeComponent();
             this.perfilEgreso = perfilEgreso;
             this.carrera = carrera;
             this.resultadoAsignatura = resultadoAsignatura;
             esEdicion = false;
+            this.asignatura = asignatura;
         }
 
         // Constructor para modo EDICIÓN (ya existe la relación; se envía además el id y el comentario actual)
-        public FormComentario2(ResultadoAprendizaje perfilEgreso, Carrera carrera, ResultadoAprendizajeAsignatura resultadoAsignatura, int relacionId, string comentario)
+        public FormComentario2(ResultadoAprendizaje perfilEgreso, Carrera carrera, ResultadoAprendizajeAsignatura resultadoAsignatura, int relacionId, string comentario, Asignatura asignatura)
         {
             InitializeComponent();
             this.perfilEgreso = perfilEgreso;
@@ -50,6 +52,7 @@ namespace CapaPresentacion.MenuOpciones
             this.relacionId = relacionId;
             // Usamos el campo NivelAporte para mostrar el comentario (ajusta si deseas usar Comentario)
             tbComentario.Text = comentario;
+            this.asignatura = asignatura;
             esEdicion = true;
         }
         public FormComentario2()
@@ -100,18 +103,18 @@ namespace CapaPresentacion.MenuOpciones
             // Para los resultados de asignatura, se obtiene a partir del id de la asignatura.
             // Se supone que el id de la asignatura ya está definido en la variable 'asignaturaId'.
             // Por ejemplo:
-            int asignaturaId = resultadoAsignatura.Id; // O si tienes otro método para obtenerlo, ajústalo.
+            
             ResultadoAprendizajeAsignaturaNeg resultadoAsigNeg = new ResultadoAprendizajeAsignaturaNeg();
-            var listaResultadosAsignatura = resultadoAsigNeg.ObtenerResultadosAprendizajeAsignatura(asignaturaId);
+            var listaResultadosAsignatura = resultadoAsigNeg.ObtenerResultadosAprendizajeAsignatura(asignatura.Id);
 
             // Asignar las listas a los ComboBoxes (o a Labels si prefieres que sean fijos)
             gcmbPerfilEgreso.DataSource = listaPerfiles;
-            gcmbPerfilEgreso.DisplayMember = "Descripcion";  // O "Codigo", según prefieras
-            gcmbPerfilEgreso.ValueMember = "Id";
+            //gcmbPerfilEgreso.DisplayMember = "Descripcion";  // O "Codigo", según prefieras
+            //gcmbPerfilEgreso.ValueMember = "Id";
 
             gcmbResultadoAsignatura.DataSource = listaResultadosAsignatura;
-            gcmbResultadoAsignatura.DisplayMember = "Descripcion";
-            gcmbResultadoAsignatura.ValueMember = "Id";
+            //gcmbResultadoAsignatura.DisplayMember = "Codigo" + " Descripcion";
+            //gcmbResultadoAsignatura.ValueMember = "Id";
 
             // Seleccionar el elemento recibido en el constructor, si no es nulo.
             if (perfilEgreso != null)

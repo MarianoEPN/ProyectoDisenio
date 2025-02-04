@@ -15,10 +15,12 @@ namespace CapaPresentacion.MenuOpciones
     public partial class FormRelaciónRresultadosAprendizajeAsignatura_x_PerfilEgreso : Form
     {
         Carrera carrera;
+        Asignatura asignatura;
 
 
         private ResultadoAprendizaje[] _perfilEgreso;
         private ResultadoAprendizajeAsignatura[] _raa;
+        private ResultadoAprendizajeAsignatura[] vacio = {};
 
         public FormRelaciónRresultadosAprendizajeAsignatura_x_PerfilEgreso()
         {
@@ -44,22 +46,7 @@ namespace CapaPresentacion.MenuOpciones
                 cbbAsignatura.DataSource = asignaturaNeg.ObtenerAsignaturasPorCarrera(carrera.Id);
             }
 
-            // Obtener la asignatura seleccionada en el ComboBox.
-            Asignatura selected = cbbAsignatura.SelectedItem as Asignatura;
-
-            // Obtener los datos:
-            // - "PerfilEgreso": se usan los datos de ResultadoAprendizaje (para las columnas).
-            // - "RAA": se obtienen los resultados de aprendizaje de asignatura (para las filas).
-            var perfiles = resultadoAprendizajeNeg.ObtenerResultadosAprendizaje(carrera.Id).ToArray();
-            var raa = resultadoAprendizajeAsignaturaNeg.ObtenerResultadosAprendizajeAsignatura(selected.Id).ToArray();
-
-            // Guardar estos arreglos en variables globales para usarlos en el marcado de matches.
-            _perfilEgreso = perfiles;
-            _raa = raa;
-
-            // Llenar el DataGridView.
-            LlenarDataGrid(perfiles, raa);
-
+            
             // Marcar las celdas que ya tienen un "match" (relación) en la base de datos.
             MarcarMatches();
 
@@ -214,7 +201,7 @@ namespace CapaPresentacion.MenuOpciones
                 if (matchExistente == null)
                 {
                     // Modo CREACIÓN: No existe un match, se abre el FormComentario2 sin comentario.
-                    FormComentario2 comentarioForm = new FormComentario2(perfilSelected, carrera, raaSelected);
+                    FormComentario2 comentarioForm = new FormComentario2(perfilSelected, carrera, raaSelected, asignatura);
                     if (comentarioForm.ShowDialog() == DialogResult.OK)
                     {
                         cell.Value = Properties.Resources.x1;
@@ -229,7 +216,8 @@ namespace CapaPresentacion.MenuOpciones
                         carrera,
                         raaSelected,
                         matchExistente.Id,
-                        matchExistente.NivelAporte  // Se usa NivelAporte como el "comentario"
+                        matchExistente.NivelAporte,  // Se usa NivelAporte como el "comentario"
+                        asignatura
                     );
 
                     if (comentarioForm.ShowDialog() == DialogResult.OK)
@@ -253,6 +241,34 @@ namespace CapaPresentacion.MenuOpciones
             e.Graphics.TranslateTransform(0, 470);
             e.Graphics.RotateTransform(-90);
             e.Graphics.DrawString("Resultados de Aprendizaje de Asignatura", myfont, mybrush, 0, 0);
+        }
+
+        private void cbbAsignatura_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Clear();
+
+            ResultadoAprendizajeAsignaturaNeg resultadoAprendizajeAsignaturaNeg = new ResultadoAprendizajeAsignaturaNeg();
+            ResultadoAprendizajeNeg resultadoAprendizajeNeg = new ResultadoAprendizajeNeg();
+
+
+            // Obtener la asignatura seleccionada en el ComboBox.
+            Asignatura selected = cbbAsignatura.SelectedItem as Asignatura;
+            asignatura = selected;
+
+            // Obtener los datos:
+            // - "PerfilEgreso": se usan los datos de ResultadoAprendizaje (para las columnas).
+            // - "RAA": se obtienen los resultados de aprendizaje de asignatura (para las filas).
+            var perfiles = resultadoAprendizajeNeg.ObtenerResultadosAprendizaje(carrera.Id).ToArray();
+            var raa = resultadoAprendizajeAsignaturaNeg.ObtenerResultadosAprendizajeAsignatura(selected.Id).ToArray();
+
+            // Guardar estos arreglos en variables globales para usarlos en el marcado de matches.
+            _perfilEgreso = perfiles;
+            _raa = raa;
+
+            // Llenar el DataGridView.
+            LlenarDataGrid(perfiles, raa);
+            MarcarMatches();
+
         }
     }
 }
