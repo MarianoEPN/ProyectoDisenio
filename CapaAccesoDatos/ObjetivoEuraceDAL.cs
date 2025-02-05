@@ -17,7 +17,7 @@ namespace CapaAccesoDatos
         public List<ObjetivoEurace> MostrarObjetivoEurace()
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "MostrarObetivoEurace";
+            comando.CommandText = "MostrarObjetivoEurace";
             comando.CommandType = System.Data.CommandType.StoredProcedure;
             comando.Parameters.Clear();
             leer = comando.ExecuteReader();

@@ -72,6 +72,7 @@ namespace CapaAccesoDatos
             conexion.CerrarConexion();
         }
 
+
         // Eliminar un resultado de aprendizaje por ID
         public void EliminarResultadoAprendizaje(int id)
         {
