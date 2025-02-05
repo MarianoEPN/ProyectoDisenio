@@ -230,15 +230,23 @@ namespace CapaPresentacion.CRUD
             // Remueve los espacios y convierte a mayúsculas
             string nuevoTexto = tbCodigo.Text.Replace(" ", "").ToUpper();
 
+            // Filtra solo letras en los primeros 4 caracteres y números en los últimos 3
+            string letras = new string(nuevoTexto.Take(4).Where(char.IsLetter).ToArray());
+            string numeros = new string(nuevoTexto.Skip(4).Take(3).Where(char.IsDigit).ToArray());
+
+            // Concatena letras y números con un máximo de 4 y 3 respectivamente
+            nuevoTexto = (letras + numeros).Substring(0, Math.Min(7, letras.Length + numeros.Length));
+
             // Solo actualiza si hay cambios para evitar reejecuciones innecesarias
             if (tbCodigo.Text != nuevoTexto)
             {
                 tbCodigo.Text = nuevoTexto;
 
                 // Restaura la posición del cursor evitando problemas al escribir
-                tbCodigo.SelectionStart = selectionStart > tbCodigo.Text.Length ? tbCodigo.Text.Length : selectionStart;
+                tbCodigo.SelectionStart = Math.Min(selectionStart, tbCodigo.Text.Length);
             }
         }
+
 
 
         private void btnClose_MouseEnter(object sender, EventArgs e)

@@ -18,13 +18,15 @@ namespace CapaPresentacion.CRUD
         private bool isDragging = false;
         private Point initialMousePosition;
         private ObjetivoEurace objetivoEditar;
-
+        private ToolTip toolTipCodigo = new ToolTip();
         public FormObjetivoEuraceCrud()
         {
             InitializeComponent();
             btnCrear.Text = "Crear";
             lbAdvertencia.Visible = false;
             lblAccionAsignatura.Text = "Crear Objetivo EUR-ACE";
+            toolTipCodigo.SetToolTip(tbCodigo, "Formato válido: X.X.X (Ejemplo: 5.2.1, 12.4.7)");
+            tbCodigo.MouseHover += TbCodigo_MouseHover;
         }
 
         public FormObjetivoEuraceCrud(ObjetivoEurace objetivoEurace)
@@ -232,15 +234,44 @@ namespace CapaPresentacion.CRUD
             // Guarda la posición del cursor
             int selectionStart = tbCodigo.SelectionStart;
 
-            // Filtra solo letras y números, y convierte a mayúsculas (sin espacios)
-            string nuevoTexto = new string(tbCodigo.Text.Where(c => char.IsLetterOrDigit(c)).ToArray()).ToUpper();
+            // Filtra solo números y puntos
+            string nuevoTexto = new string(tbCodigo.Text.Where(c => char.IsDigit(c) || c == '.').ToArray());
+
+            // No permite iniciar con un punto
+            if (nuevoTexto.StartsWith("."))
+            {
+                nuevoTexto = nuevoTexto.TrimStart('.');
+            }
+
+            // Permite un máximo de 2 puntos
+            int countPuntos = nuevoTexto.Count(c => c == '.');
+            if (countPuntos > 2)
+            {
+                int index = nuevoTexto.LastIndexOf('.');
+                nuevoTexto = nuevoTexto.Remove(index, 1); // Elimina el último punto extra
+            }
+
+            // Divide en partes y asegura que cada parte tenga solo números
+            string[] partes = nuevoTexto.Split('.');
+
+            for (int i = 0; i < partes.Length; i++)
+            {
+                partes[i] = new string(partes[i].Where(char.IsDigit).ToArray());
+            }
+
+            // Reconstruye el formato permitiendo hasta 3 secciones
+            nuevoTexto = string.Join(".", partes.Take(3));
 
             // Si el texto cambió, actualízalo
             if (tbCodigo.Text != nuevoTexto)
             {
                 tbCodigo.Text = nuevoTexto;
-                tbCodigo.SelectionStart = selectionStart > tbCodigo.Text.Length ? tbCodigo.Text.Length : selectionStart;
+                tbCodigo.SelectionStart = Math.Min(selectionStart, tbCodigo.Text.Length);
             }
+        }
+        private void TbCodigo_MouseHover(object sender, EventArgs e)
+        {
+            toolTipCodigo.Show("Formato válido: X.X.X (Ejemplo: 5.2.1, 12.4.7)", tbCodigo, 0, -20, 3000);
         }
 
     }

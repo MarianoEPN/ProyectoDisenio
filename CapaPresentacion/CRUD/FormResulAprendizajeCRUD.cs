@@ -25,6 +25,8 @@ namespace CapaPresentacion.CRUD
             btnGuardarRA.Text = "Crear";
             lbAdvertenciaRA.Visible = false;
             lblUniversidadRA.Text = "Crear Resulado Aprendizaje";
+            ToolTip toolTip = new ToolTip();
+            toolTip.SetToolTip(tbCodigoRA, "Formato permitido: RG1");
         }
         public FormResulAprendizajeCRUD(Carrera carrera)
         {
@@ -204,16 +206,38 @@ namespace CapaPresentacion.CRUD
             // Guarda la posición del cursor
             int selectionStart = tbCodigoRA.SelectionStart;
 
-            // Filtra solo letras y números, y convierte a mayúsculas (sin espacios)
-            string nuevoTexto = new string(tbCodigoRA.Text.Where(c => char.IsLetterOrDigit(c)).ToArray()).ToUpper();
+            // Filtra solo letras y números y convierte a mayúsculas
+            string nuevoTexto = new string(tbCodigoRA.Text.Where(char.IsLetterOrDigit).ToArray()).ToUpper();
+
+            // Validar que solo permita dos letras seguidas de un número
+            if (nuevoTexto.Length > 3)
+            {
+                nuevoTexto = nuevoTexto.Substring(0, 3);
+            }
+
+            // Validar el formato correcto (dos letras seguidas de un número)
+            if (nuevoTexto.Length >= 1 && !char.IsLetter(nuevoTexto[0]))
+            {
+                nuevoTexto = "";
+            }
+            if (nuevoTexto.Length >= 2 && !char.IsLetter(nuevoTexto[1]))
+            {
+                nuevoTexto = nuevoTexto.Substring(0, 1);
+            }
+            if (nuevoTexto.Length == 3 && !char.IsDigit(nuevoTexto[2]))
+            {
+                nuevoTexto = nuevoTexto.Substring(0, 2);
+            }
 
             // Si el texto cambió, actualízalo
             if (tbCodigoRA.Text != nuevoTexto)
             {
                 tbCodigoRA.Text = nuevoTexto;
-                tbCodigoRA.SelectionStart = selectionStart > tbCodigoRA.Text.Length ? tbCodigoRA.Text.Length : selectionStart;
+                tbCodigoRA.SelectionStart = Math.Min(selectionStart, tbCodigoRA.Text.Length);
             }
         }
+
+
 
     }
 }

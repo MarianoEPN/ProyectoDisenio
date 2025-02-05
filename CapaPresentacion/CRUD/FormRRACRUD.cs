@@ -28,7 +28,10 @@ namespace CapaPresentacion.CRUD
             TipoResultadoAsignaturaNeg tipoNeg = new TipoResultadoAsignaturaNeg();
             cbbTipoRRA.DataSource = tipoNeg.MostrarTipoResultadoAprendizaje();
             lbAdvertenciaRRA.Visible = false;
-        }
+            ToolTip toolTip = new ToolTip();
+            toolTip.SetToolTip(tbCodigoRRA, "Formato permitido: 4 letras seguidas de 3 números (Ejemplo: ABCD123)");
+        
+    }
 
         public FormRRACRUD(Asignatura asignatura)
         {
@@ -82,8 +85,10 @@ namespace CapaPresentacion.CRUD
 
         private void FormRRACRUD_Load(object sender, EventArgs e)
         {
-
-        }
+            ToolTip toolTip = new ToolTip();
+            toolTip.SetToolTip(tbCodigoRRA, "Formato permitido: 4 letras seguidas de 3 números (Ejemplo: ABCD123)");
+        
+    }
 
 
         private void btnCancelarRRA_Click(object sender, EventArgs e)
@@ -281,20 +286,56 @@ namespace CapaPresentacion.CRUD
 
 
         private void tbCodigoRRA_TextChanged_1(object sender, EventArgs e)
-{
-    // Guarda la posición del cursor
-    int selectionStart = tbCodigoRRA.SelectionStart;
+        {
+            // Guarda la posición del cursor
+            int selectionStart = tbCodigoRRA.SelectionStart;
 
-    // Convierte el texto a mayúsculas y elimina espacios
-    string nuevoTexto = tbCodigoRRA.Text.Replace(" ", "").ToUpper();
+            // Filtra solo letras y números, elimina espacios y convierte a mayúsculas
+            string nuevoTexto = new string(tbCodigoRRA.Text.Where(char.IsLetterOrDigit).ToArray()).ToUpper();
 
-    // Si el texto cambió, actualízalo
-    if (tbCodigoRRA.Text != nuevoTexto)
-    {
-        tbCodigoRRA.Text = nuevoTexto;
-        tbCodigoRRA.SelectionStart = selectionStart > tbCodigoRRA.Text.Length ? tbCodigoRRA.Text.Length : selectionStart;
-    }
-}
+            // Limita la longitud a 7 caracteres (4 letras + 3 números)
+            if (nuevoTexto.Length > 7)
+            {
+                nuevoTexto = nuevoTexto.Substring(0, 7);
+            }
+
+            // Validar el formato correcto (4 letras seguidas de 3 números)
+            if (nuevoTexto.Length >= 1 && !char.IsLetter(nuevoTexto[0]))
+            {
+                nuevoTexto = "";
+            }
+            if (nuevoTexto.Length >= 2 && !char.IsLetter(nuevoTexto[1]))
+            {
+                nuevoTexto = nuevoTexto.Substring(0, 1);
+            }
+            if (nuevoTexto.Length >= 3 && !char.IsLetter(nuevoTexto[2]))
+            {
+                nuevoTexto = nuevoTexto.Substring(0, 2);
+            }
+            if (nuevoTexto.Length >= 4 && !char.IsLetter(nuevoTexto[3]))
+            {
+                nuevoTexto = nuevoTexto.Substring(0, 3);
+            }
+            if (nuevoTexto.Length >= 5 && !char.IsDigit(nuevoTexto[4]))
+            {
+                nuevoTexto = nuevoTexto.Substring(0, 4);
+            }
+            if (nuevoTexto.Length >= 6 && !char.IsDigit(nuevoTexto[5]))
+            {
+                nuevoTexto = nuevoTexto.Substring(0, 5);
+            }
+            if (nuevoTexto.Length == 7 && !char.IsDigit(nuevoTexto[6]))
+            {
+                nuevoTexto = nuevoTexto.Substring(0, 6);
+            }
+
+            // Si el texto cambió, actualízalo
+            if (tbCodigoRRA.Text != nuevoTexto)
+            {
+                tbCodigoRRA.Text = nuevoTexto;
+                tbCodigoRRA.SelectionStart = Math.Min(selectionStart, tbCodigoRRA.Text.Length);
+            }
+        }
 
         private void btnCrearRRA_Click_1(object sender, EventArgs e)
         {

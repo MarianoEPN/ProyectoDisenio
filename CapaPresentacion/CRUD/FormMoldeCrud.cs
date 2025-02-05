@@ -261,11 +261,22 @@ namespace CapaPresentacion
             // Remueve espacios y convierte a mayúsculas
             string nuevoTexto = tbCodigo.Text.Replace(" ", "").ToUpper();
 
+            // Filtra los primeros 4 caracteres como letras
+            string letras = new string(nuevoTexto.Take(4).Where(char.IsLetter).ToArray());
+
+            // Filtra los últimos 3 caracteres como números
+            string numeros = new string(nuevoTexto.Skip(4).Take(3).Where(char.IsDigit).ToArray());
+
+            // Concatena letras y números con un máximo de 4 y 3 respectivamente
+            nuevoTexto = (letras + numeros).Substring(0, Math.Min(7, letras.Length + numeros.Length));
+
             // Solo actualiza si hay cambios para evitar parpadeos
             if (tbCodigo.Text != nuevoTexto)
             {
                 tbCodigo.Text = nuevoTexto;
-                tbCodigo.SelectionStart = selectionStart > tbCodigo.Text.Length ? tbCodigo.Text.Length : selectionStart;
+
+                // Mantiene la posición del cursor correctamente
+                tbCodigo.SelectionStart = Math.Min(selectionStart, tbCodigo.Text.Length);
             }
         }
 
