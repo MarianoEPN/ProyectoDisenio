@@ -35,13 +35,11 @@ namespace CapaPresentacion.MenuOpciones
 
         private void FormRelaciónRresultadosAprendizajeAsignatura_x_PerfilEgreso_Load(object sender, EventArgs e)
         {
-            
-            MarcarMatches();
 
-        }
+            // Instanciar las clases de la capa de negocio para obtener datos.
+            ResultadoAprendizajeAsignaturaNeg resultadoAprendizajeAsignaturaNeg = new ResultadoAprendizajeAsignaturaNeg();
+            ResultadoAprendizajeNeg resultadoAprendizajeNeg = new ResultadoAprendizajeNeg();
 
-        private void MarcarMatches()
-        {
             // Si la carrera es válida, cargar el ComboBox de asignaturas.
             if (carrera != null)
             {
@@ -49,42 +47,44 @@ namespace CapaPresentacion.MenuOpciones
                 cbbAsignatura.DataSource = asignaturaNeg.ObtenerAsignaturasPorCarrera(carrera.Id);
             }
 
-            // Instanciar las clases de la capa de negocio para obtener datos.
-            ResultadoAprendizajeAsignaturaNeg resultadoAprendizajeAsignaturaNeg = new ResultadoAprendizajeAsignaturaNeg();
-            ResultadoAprendizajeNeg resultadoAprendizajeNeg = new ResultadoAprendizajeNeg();
+
+            // Marcar las celdas que ya tienen un "match" (relación) en la base de datos.
+            MarcarMatches();
+
+
+        }
+
+        private void MarcarMatches()
+        {
             MatchResultadoAprendizajeNeg matchNeg = new MatchResultadoAprendizajeNeg();
-
-            // Obtener datos para columnas y filas
-            var resultadosAprendizaje = resultadoAprendizajeNeg.ObtenerResultadosAprendizaje(carrera.Id).ToArray();
-            var resultadoAprendizajeAsignatura = resultadoAprendizajeAsignaturaNeg.MostrarResultadoAprendizajeAsignatura().ToArray();
-
-            // Guardar las listas globalmente para usarlas en otros métodos
-            listaResultadosAsigntaura = resultadoAprendizajeAsignatura;
-            listaperfilEgreso = resultadosAprendizaje;
-
-            // Llenar el DataGridView con los datos obtenidos
-            LlenarDataGrid(resultadosAprendizaje, resultadoAprendizajeAsignatura);
-
             List<MatchResultadoAprendizaje> listaMatch = matchNeg.MostrarMatchResultadoAprendizajePorCarrera(carrera.Id);
 
             foreach (var match in listaMatch)
             {
+                // Buscar el índice de la columna correspondiente al perfil.
+                // Se utiliza el arreglo _perfilEgreso (que contiene los ResultadoAprendizaje usados para las columnas).
+                int columnaIndex = Array.FindIndex(listaperfilEgreso, p => p.Id == match.PerfilEgresoId) + 1; // +1 porque la primera columna es la etiqueta
 
-                int columnaIndex = Array.FindIndex(listaperfilEgreso, p => p.Id == match.PerfilEgresoId) + 1; 
-
+                // Buscar el índice de la fila correspondiente al RAA.
                 int filaIndex = Array.FindIndex(listaResultadosAsigntaura, r => r.Id == match.SubResultadoAprendizageAsignaturaId);
 
                 if (filaIndex >= 0 && columnaIndex >= 1)
                 {
                     DataGridViewCell celda = dataGridView1.Rows[filaIndex].Cells[columnaIndex];
-                    celda.Value = Properties.Resources.x1;  // Imagen que indica match (por ejemplo, una "X")
-                    celda.Tag = "x";
+                    if (celda is DataGridViewImageCell)
+                    {
+                        celda.Value = Properties.Resources.x1;  // ✅ Asegurar que solo se asignen imágenes
+                        celda.Tag = "x";
+                    }
                 }
             }
         }
 
         private void LlenarDataGrid(ResultadoAprendizaje[] columnas, ResultadoAprendizajeAsignatura[] filas)
         {
+            // Limpiar columnas y filas existentes
+            dataGridView1.Columns.Clear();
+            dataGridView1.Rows.Clear();
             // Configuración inicial del DataGridView
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.RowHeadersVisible = false;
@@ -143,14 +143,11 @@ namespace CapaPresentacion.MenuOpciones
                 // Las demás celdas se inician con la imagen por defecto (por ejemplo, "nada").
                 for (int i = 1; i < nuevaFila.Cells.Count; i++)
                 {
-                    if (Properties.Resources.nada != null)
-                    {
-                        nuevaFila.Cells[i].Value = Properties.Resources.nada;
-                    }
-                    else
-                    {
-                        nuevaFila.Cells[i].Value = DBNull.Value; // O usa una imagen por defecto
-                    }
+
+                    nuevaFila.Cells[i].Value = Properties.Resources.nada;
+
+                    nuevaFila.Cells[i].Tag = null;
+
                 }
                 nuevaFila.DividerHeight = 5;
                 dataGridView1.Rows.Add(nuevaFila);
