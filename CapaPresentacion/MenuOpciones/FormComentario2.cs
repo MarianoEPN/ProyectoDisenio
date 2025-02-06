@@ -18,7 +18,8 @@ namespace CapaPresentacion.MenuOpciones
         private ResultadoAprendizaje perfilEgreso;
         private Carrera carrera;
         private ResultadoAprendizajeAsignatura resultadoAsignatura;
-        Asignatura asignatura;
+        private Asignatura asignatura;
+        private string[] listaAporte = { "ALTO", "MEDIO", "BAJO" };
 
         // Para indicar si se eliminó la relación
         public bool RelacionEliminada { get; private set; } = false;
@@ -37,6 +38,7 @@ namespace CapaPresentacion.MenuOpciones
             this.asignatura = asignatura;
             // Dejamos objetivoEurace y resultadoAprendizaje en null para que el usuario los elija
             esEdicion = false;  // Modo creación
+            gcmbAporte.DataSource = listaAporte;
         }
 
         // Constructor para modo CREACIÓN (nuevo match, sin relación previa)
@@ -48,6 +50,7 @@ namespace CapaPresentacion.MenuOpciones
             this.resultadoAsignatura = resultadoAsignatura;
             esEdicion = false;
             this.asignatura = asignatura;
+            gcmbAporte.DataSource = listaAporte;
         }
 
         // Constructor para modo EDICIÓN (ya existe la relación; se envía además el id y el comentario actual)
@@ -59,13 +62,23 @@ namespace CapaPresentacion.MenuOpciones
             this.resultadoAsignatura = resultadoAsignatura;
             this.relacionId = relacionId;
             // Usamos el campo NivelAporte para mostrar el comentario (ajusta si deseas usar Comentario)
-            tbComentario.Text = comentario;
+            //tbComentario.Text = comentario;
             this.asignatura = asignatura;
             esEdicion = true;
+            gcmbAporte.DataSource = listaAporte;
+            if (gcmbAporte.Items.Contains(comentario))
+            {
+                gcmbAporte.SelectedItem = comentario;
+            }
+            else 
+            {
+                gcmbAporte.SelectedIndex = -1;
+            }
         }
         public FormComentario2()
         {
             InitializeComponent();
+            gcmbAporte.DataSource = listaAporte;
         }
 
 
@@ -105,6 +118,7 @@ namespace CapaPresentacion.MenuOpciones
             ResultadoAprendizajeNeg perfilNeg = new ResultadoAprendizajeNeg();
             ResultadoAprendizajeAsignaturaNeg resultadoAsigNeg = new ResultadoAprendizajeAsignaturaNeg();
 
+            
             // Configurar los ComboBox con los datos de la base de datos
             gcmbResultadoAsignatura.DataSource = null;
             gcmbPerfilEgreso.DataSource = null;
@@ -149,7 +163,8 @@ namespace CapaPresentacion.MenuOpciones
 
             lbAdvertencia.Visible = false;
 
-            tbComentario.ReadOnly = true;  // inicialmente en modo edición, el TextBox es solo lectura
+            //tbComentario.ReadOnly = true;  // inicialmente en modo edición, el TextBox es solo lectura
+            gcmbAporte.Enabled = false;
 
 
             // Configurar el estado inicial del TextBox y los botones según el modo.
@@ -171,7 +186,8 @@ namespace CapaPresentacion.MenuOpciones
                 btnEliminar.Visible = false;
                 btnCrear.Visible = true;
                 // En modo creación se permite editar el comentario
-                tbComentario.ReadOnly = false;
+                //tbComentario.ReadOnly = false;
+                gcmbAporte.Enabled = true;
                 // Si en modo creación se abre sin objetivoEurace y resultadoAprendizaje (por ejemplo, al usar el botón Agregar),
                 // habilitar los ComboBox para que el usuario pueda seleccionar la fila y columna.
                 if (perfilEgreso == null && resultadoAsignatura == null)
@@ -190,17 +206,13 @@ namespace CapaPresentacion.MenuOpciones
         private void btnCrear_Click(object sender, EventArgs e)
         {
             // Validar que el comentario no esté vacío
-            if (string.IsNullOrEmpty(tbComentario.Text))
-            {
-                tbComentario.BorderColor = Color.Red;
-                lbAdvertencia.Visible = true;
-                return;
-            }
+           
 
             // Instanciar el objeto de la relación (MatchResultadoAprendizaje)
             MatchResultadoAprendizaje match = new MatchResultadoAprendizaje();
             // Usamos el campo NivelAporte para almacenar el comentario
-            match.NivelAporte = tbComentario.Text;
+            //match.NivelAporte = tbComentario.Text;
+            match.NivelAporte = gcmbAporte.Text;
 
 
             // Se obtienen los datos seleccionados de los ComboBox (en modo edición, estos ya están fijos)
@@ -252,8 +264,9 @@ namespace CapaPresentacion.MenuOpciones
         private void btnEditar_Click(object sender, EventArgs e)
         {
             // Permitir la edición del comentario
-            tbComentario.Enabled = true;
-            tbComentario.ReadOnly = false;
+            //tbComentario.Enabled = true;
+            //tbComentario.ReadOnly = false;
+            gcmbAporte.Enabled = true;
             MessageBox.Show("Ahora puedes editar el comentario.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             btnEditar.Visible = false;
             btnCrear.Visible = true;

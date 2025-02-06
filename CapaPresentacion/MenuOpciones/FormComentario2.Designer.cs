@@ -40,12 +40,12 @@
             this.btnMin = new Guna.UI2.WinForms.Guna2ControlBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnCrear = new Guna.UI2.WinForms.Guna2Button();
-            this.tbComentario = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnCancelar = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.lbAdvertencia = new System.Windows.Forms.Label();
             this.btnEliminar = new Guna.UI2.WinForms.Guna2Button();
             this.btnEditar = new Guna.UI2.WinForms.Guna2Button();
+            this.gcmbAporte = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panelTitulos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -227,32 +227,6 @@
             this.btnCrear.UseTransparentBackground = true;
             this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
-            // tbComentario
-            // 
-            this.tbComentario.Animated = true;
-            this.tbComentario.BorderRadius = 10;
-            this.tbComentario.BorderThickness = 2;
-            this.tbComentario.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbComentario.DefaultText = "";
-            this.tbComentario.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbComentario.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbComentario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbComentario.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbComentario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbComentario.Font = new System.Drawing.Font("Californian FB", 12F);
-            this.tbComentario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(48)))));
-            this.tbComentario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbComentario.Location = new System.Drawing.Point(45, 335);
-            this.tbComentario.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
-            this.tbComentario.Multiline = true;
-            this.tbComentario.Name = "tbComentario";
-            this.tbComentario.PasswordChar = '\0';
-            this.tbComentario.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(48)))));
-            this.tbComentario.PlaceholderText = "Escribe aquí...";
-            this.tbComentario.SelectedText = "";
-            this.tbComentario.Size = new System.Drawing.Size(409, 54);
-            this.tbComentario.TabIndex = 62;
-            // 
             // btnCancelar
             // 
             this.btnCancelar.Animated = true;
@@ -353,17 +327,32 @@
             this.btnEditar.UseTransparentBackground = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
+            // gcmbAporte
+            // 
+            this.gcmbAporte.BackColor = System.Drawing.Color.Transparent;
+            this.gcmbAporte.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.gcmbAporte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.gcmbAporte.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.gcmbAporte.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.gcmbAporte.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gcmbAporte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.gcmbAporte.ItemHeight = 30;
+            this.gcmbAporte.Location = new System.Drawing.Point(45, 352);
+            this.gcmbAporte.Name = "gcmbAporte";
+            this.gcmbAporte.Size = new System.Drawing.Size(184, 36);
+            this.gcmbAporte.TabIndex = 67;
+            // 
             // FormComentario2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(999, 543);
+            this.Controls.Add(this.gcmbAporte);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.lbAdvertencia);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.tbComentario);
             this.Controls.Add(this.btnCrear);
             this.Controls.Add(this.panelTitulos);
             this.Controls.Add(this.label4);
@@ -395,12 +384,12 @@
         private Guna.UI2.WinForms.Guna2ControlBox btnMin;
         private Guna.UI2.WinForms.Guna2ControlBox btnClose;
         private Guna.UI2.WinForms.Guna2Button btnCrear;
-        private Guna.UI2.WinForms.Guna2TextBox tbComentario;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private Guna.UI2.WinForms.Guna2Button btnCancelar;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.Label lbAdvertencia;
         private Guna.UI2.WinForms.Guna2Button btnEliminar;
         private Guna.UI2.WinForms.Guna2Button btnEditar;
+        private Guna.UI2.WinForms.Guna2ComboBox gcmbAporte;
     }
 }
