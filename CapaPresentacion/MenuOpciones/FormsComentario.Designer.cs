@@ -55,8 +55,8 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label3.Font = new System.Drawing.Font("Californian FB", 16F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(11, 197);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(48)))));
+            this.label3.Location = new System.Drawing.Point(9, 83);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(306, 31);
             this.label3.TabIndex = 51;
@@ -67,8 +67,8 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label2.Font = new System.Drawing.Font("Californian FB", 16F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(16, 92);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(48)))));
+            this.label2.Location = new System.Drawing.Point(11, 188);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(226, 31);
             this.label2.TabIndex = 52;
@@ -82,7 +82,7 @@
             this.gcmbObjetivoEurace.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.gcmbObjetivoEurace.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.gcmbObjetivoEurace.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Bold);
-            this.gcmbObjetivoEurace.ForeColor = System.Drawing.Color.DimGray;
+            this.gcmbObjetivoEurace.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(48)))));
             this.gcmbObjetivoEurace.ItemHeight = 30;
             this.gcmbObjetivoEurace.Items.AddRange(new object[] {
             "(Elegir un  objetivo)"});
@@ -102,7 +102,7 @@
             this.gcmbResutadoAprendizaje.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.gcmbResutadoAprendizaje.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.gcmbResutadoAprendizaje.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Bold);
-            this.gcmbResutadoAprendizaje.ForeColor = System.Drawing.Color.DimGray;
+            this.gcmbResutadoAprendizaje.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(48)))));
             this.gcmbResutadoAprendizaje.ItemHeight = 30;
             this.gcmbResutadoAprendizaje.Items.AddRange(new object[] {
             "(Eligir un resultado de aprendizaje)"});
@@ -119,7 +119,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label4.Font = new System.Drawing.Font("Californian FB", 16F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.DimGray;
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(48)))));
             this.label4.Location = new System.Drawing.Point(11, 301);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(149, 31);
@@ -242,14 +242,14 @@
             this.tbComentario.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbComentario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbComentario.Font = new System.Drawing.Font("Californian FB", 12F);
-            this.tbComentario.ForeColor = System.Drawing.Color.DimGray;
+            this.tbComentario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(48)))));
             this.tbComentario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbComentario.Location = new System.Drawing.Point(17, 334);
             this.tbComentario.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.tbComentario.Multiline = true;
             this.tbComentario.Name = "tbComentario";
             this.tbComentario.PasswordChar = '\0';
-            this.tbComentario.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.tbComentario.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(48)))));
             this.tbComentario.PlaceholderText = "Escribe aquí...";
             this.tbComentario.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbComentario.SelectedText = "";

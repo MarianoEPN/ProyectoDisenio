@@ -113,7 +113,7 @@
             this.labelNivel.AutoSize = true;
             this.labelNivel.BackColor = System.Drawing.Color.Transparent;
             this.labelNivel.Font = new System.Drawing.Font("Californian FB", 15F, System.Drawing.FontStyle.Bold);
-            this.labelNivel.ForeColor = System.Drawing.Color.DimGray;
+            this.labelNivel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(48)))));
             this.labelNivel.Location = new System.Drawing.Point(22, 230);
             this.labelNivel.Name = "labelNivel";
             this.labelNivel.Size = new System.Drawing.Size(70, 29);
@@ -125,7 +125,7 @@
             this.labelNombre.AutoSize = true;
             this.labelNombre.BackColor = System.Drawing.Color.Transparent;
             this.labelNombre.Font = new System.Drawing.Font("Californian FB", 15F, System.Drawing.FontStyle.Bold);
-            this.labelNombre.ForeColor = System.Drawing.Color.DimGray;
+            this.labelNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(48)))));
             this.labelNombre.Location = new System.Drawing.Point(12, 165);
             this.labelNombre.Name = "labelNombre";
             this.labelNombre.Size = new System.Drawing.Size(102, 29);
@@ -137,7 +137,7 @@
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.BackColor = System.Drawing.Color.Transparent;
             this.lblCodigo.Font = new System.Drawing.Font("Californian FB", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigo.ForeColor = System.Drawing.Color.DimGray;
+            this.lblCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(48)))));
             this.lblCodigo.Location = new System.Drawing.Point(12, 87);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(93, 29);
