@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -111,6 +112,42 @@ namespace CapaAccesoDatos
 
             return lista;
         }
+
+        public List<ProgramaResultadoAprendizaje> MostrarProgramaResultadoAprendizajePorCarrera(int carreraId)
+        {
+            List<ProgramaResultadoAprendizaje> lista = new List<ProgramaResultadoAprendizaje>();
+
+            // Abrir la conexión
+            comando.Connection = conexion.AbrirConexion();
+
+            // Configurar el comando para llamar al procedimiento almacenado
+            comando.CommandText = "MostrarProgramaResultadoAprendizajePorCarrera";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.Clear();
+            comando.Parameters.AddWithValue("@carrera_id", carreraId);
+
+            // Ejecutar el lector
+            leer = comando.ExecuteReader();
+
+            // Leer cada registro y llenar la lista
+            while (leer.Read())
+            {
+                ProgramaResultadoAprendizaje programaResultadoAprendizaje = new ProgramaResultadoAprendizaje();
+                programaResultadoAprendizaje.Id = leer.GetInt32(0);
+                programaResultadoAprendizaje.ObjProgramaId = leer.GetInt32(1);                  // Obteniendo el id del objetivo de programa
+                programaResultadoAprendizaje.ResultadoAprendizajeId = leer.GetInt32(2);        // Obteniendo el id del resultado de aprendizaje
+                programaResultadoAprendizaje.Comentario = leer.GetString(3);
+
+                lista.Add(programaResultadoAprendizaje);
+            }
+
+            // Cerrar el lector y la conexión
+            leer.Close();
+            conexion.CerrarConexion();
+
+            return lista;
+        }
+
 
     }
 }

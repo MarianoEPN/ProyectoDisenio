@@ -36,6 +36,11 @@ namespace CapaNegocio
             return programaResultadoAprendizajeDAL.BuscarProgramaResultadoAprendizaje(objetivo, resultado);
         }
 
+        public List<ProgramaResultadoAprendizaje> MostrarProgramaResultadoAprendizajePorCarrera(int carreraId)
+        {
+            return programaResultadoAprendizajeDAL.MostrarProgramaResultadoAprendizajePorCarrera(carreraId);
+        }
+
 
     }
 }
