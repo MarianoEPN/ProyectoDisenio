@@ -52,15 +52,16 @@ namespace CapaPresentacion.CRUD
             cbbTipoRRA.DataSource = tipoNeg.MostrarTipoResultadoAprendizaje();
             lbAdvertenciaRRA.Visible = false;
             tbNombreRRA.Text = asignatura.Nombre;
-            tbNombreRRA.Enabled = false;
+            tbNombreRRA.Enabled = false; // Bloqueamos para que no se pueda editar
             this.asignatura = asignatura;
             this.raaAsignatura = raaAsignatura;
+
             tbCodigoRRA.Text = raaAsignatura.Codigo;
+            tbCodigoRRA.Enabled = true;
             tbDescripcionRRA.Text = raaAsignatura.Descripcion;
-            tbNombreRRA.Enabled = false; // Bloqueamos para que no se pueda editar
             // Seteamos el código de la asignatura
             //tbCodigoRRA.Text = asignatura.Codigo; 
-            tbCodigoRRA.Enabled = false; // Bloqueamos para que no se pueda editar
+          
             // Asignamos los valores en el comboBoxTipoRRA si es necesario (en caso de que haya información predefinida)
             // Si se requiere algo específico en comboBoxTipoRRA, agregamos aquí el código correspondiente.
             cbbTipoRRA.SelectedIndex = ObtenerIndice(raaAsignatura.Tipo.Id); // O seleccionamos el valor correspondiente
@@ -86,7 +87,7 @@ namespace CapaPresentacion.CRUD
         private void FormRRACRUD_Load(object sender, EventArgs e)
         {
             ToolTip toolTip = new ToolTip();
-            toolTip.SetToolTip(tbCodigoRRA, "Formato permitido: 4 letras seguidas de 3 números (Ejemplo: ABCD123)");
+            toolTip.SetToolTip(tbCodigoRRA, "Formato permitido: número y punto (Ejemplo: 1.1.)");
         
     }
 
@@ -290,43 +291,44 @@ namespace CapaPresentacion.CRUD
             // Guarda la posición del cursor
             int selectionStart = tbCodigoRRA.SelectionStart;
 
-            // Filtra solo letras y números, elimina espacios y convierte a mayúsculas
-            string nuevoTexto = new string(tbCodigoRRA.Text.Where(char.IsLetterOrDigit).ToArray()).ToUpper();
+            // Filtra solo números y puntos
+            string nuevoTexto = new string(tbCodigoRRA.Text.Where(c => char.IsDigit(c) || c == '.').ToArray());
 
-            // Limita la longitud a 7 caracteres (4 letras + 3 números)
-            if (nuevoTexto.Length > 7)
+            // Contar cuántos puntos hay
+            int countPuntos = nuevoTexto.Count(c => c == '.');
+
+            // No permitir más de dos puntos
+            if (countPuntos > 2)
             {
-                nuevoTexto = nuevoTexto.Substring(0, 7);
+                int lastIndex = nuevoTexto.LastIndexOf('.');
+                nuevoTexto = nuevoTexto.Remove(lastIndex, 1);
             }
 
-            // Validar el formato correcto (4 letras seguidas de 3 números)
-            if (nuevoTexto.Length >= 1 && !char.IsLetter(nuevoTexto[0]))
-            {
-                nuevoTexto = "";
-            }
-            if (nuevoTexto.Length >= 2 && !char.IsLetter(nuevoTexto[1]))
-            {
-                nuevoTexto = nuevoTexto.Substring(0, 1);
-            }
-            if (nuevoTexto.Length >= 3 && !char.IsLetter(nuevoTexto[2]))
-            {
-                nuevoTexto = nuevoTexto.Substring(0, 2);
-            }
-            if (nuevoTexto.Length >= 4 && !char.IsLetter(nuevoTexto[3]))
-            {
-                nuevoTexto = nuevoTexto.Substring(0, 3);
-            }
-            if (nuevoTexto.Length >= 5 && !char.IsDigit(nuevoTexto[4]))
+            // Validar la estructura X.X.
+            if (nuevoTexto.Length > 5)
             {
                 nuevoTexto = nuevoTexto.Substring(0, 4);
             }
-            if (nuevoTexto.Length >= 6 && !char.IsDigit(nuevoTexto[5]))
+
+            if (nuevoTexto.Length >= 1 && !char.IsDigit(nuevoTexto[0])) // Primer carácter debe ser número
             {
-                nuevoTexto = nuevoTexto.Substring(0, 5);
+                nuevoTexto = "";
             }
-            if (nuevoTexto.Length == 7 && !char.IsDigit(nuevoTexto[6]))
+            if (nuevoTexto.Length >= 2 && nuevoTexto[1] != '.') // Segundo carácter debe ser punto
             {
-                nuevoTexto = nuevoTexto.Substring(0, 6);
+                nuevoTexto = nuevoTexto.Substring(0, 1);
+            }
+            if (nuevoTexto.Length >= 3 && !char.IsDigit(nuevoTexto[2])) // Tercer carácter debe ser número
+            {
+                nuevoTexto = nuevoTexto.Substring(0, 2);
+            }
+            if (nuevoTexto.Length >= 4 && !char.IsDigit(nuevoTexto[3])) // Tercer carácter debe ser número
+            {
+                nuevoTexto = nuevoTexto.Substring(0, 3);
+            }
+            if (nuevoTexto.Length >= 5 && nuevoTexto[4] != '.') // Cuarto carácter debe ser punto
+            {
+                nuevoTexto = nuevoTexto.Substring(0, 4);
             }
 
             // Si el texto cambió, actualízalo
@@ -336,6 +338,8 @@ namespace CapaPresentacion.CRUD
                 tbCodigoRRA.SelectionStart = Math.Min(selectionStart, tbCodigoRRA.Text.Length);
             }
         }
+
+
 
         private void btnCrearRRA_Click_1(object sender, EventArgs e)
         {
