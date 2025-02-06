@@ -30,10 +30,11 @@ namespace CapaPresentacion.MenuOpciones
         private bool esEdicion = false;
 
         // Constructor para modo CREACIÓN en el que se abre el formulario solo con la Carrera,
-        public FormComentario2(Carrera carrera)
+        public FormComentario2(Carrera carrera, Asignatura asignatura)
         {
             InitializeComponent();
             this.carrera = carrera;
+            this.asignatura = asignatura;
             // Dejamos objetivoEurace y resultadoAprendizaje en null para que el usuario los elija
             esEdicion = false;  // Modo creación
         }

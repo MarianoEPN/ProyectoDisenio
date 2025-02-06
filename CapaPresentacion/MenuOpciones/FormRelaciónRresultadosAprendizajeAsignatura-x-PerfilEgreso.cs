@@ -286,7 +286,7 @@ namespace CapaPresentacion.MenuOpciones
         {
 
             // Se abre el FormsComentario en modo creación, donde el usuario podrá seleccionar Objetivo y Resultado
-            FormComentario2 comentarioForm = new FormComentario2(carrera);
+            FormComentario2 comentarioForm = new FormComentario2(carrera, asignatura);
             if (comentarioForm.ShowDialog() == DialogResult.OK)
             {
                 // Se recuperan los datos seleccionados a partir de los métodos públicos

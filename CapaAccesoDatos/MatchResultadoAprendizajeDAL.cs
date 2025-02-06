@@ -44,10 +44,11 @@ namespace CapaAccesoDatos
         public void InsertarMatchResultadoAprendizaje(MatchResultadoAprendizaje match, ResultadoAprendizajeAsignatura resultado, ResultadoAprendizaje resultadoAprendizaje)
         {
             comando.Connection = conexion.AbrirConexion();
+            comando.Parameters.Clear();
             comando.CommandText = "InsertarMatchResultadoAprendizaje";
             comando.CommandType = System.Data.CommandType.StoredProcedure; 
-            comando.Parameters.AddWithValue("@perfil_egreso_id", resultado.Id);
-            comando.Parameters.AddWithValue("@sub_resultado_aprendizage_asignatura_id", resultadoAprendizaje.Id);
+            comando.Parameters.AddWithValue("@perfil_egreso_id", resultadoAprendizaje.Id);
+            comando.Parameters.AddWithValue("@sub_resultado_aprendizage_asignatura_id", resultado.Id);
             comando.Parameters.AddWithValue("@nivelaporte", match.NivelAporte);
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
@@ -60,8 +61,8 @@ namespace CapaAccesoDatos
             comando.CommandText = "ActualizarMatchResultadoAprendizaje";
             comando.CommandType = System.Data.CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("@id", match.Id);  
-            comando.Parameters.AddWithValue("@perfil_egreso_id", resultado.Id);
-            comando.Parameters.AddWithValue("@sub_resultado_aprendizage_asignatura_id", resultadoAprendizaje.Id);
+            comando.Parameters.AddWithValue("@perfil_egreso_id", resultadoAprendizaje.Id);
+            comando.Parameters.AddWithValue("@sub_resultado_aprendizage_asignatura_id", resultado.Id);
             comando.Parameters.AddWithValue("@nivelaporte", match.NivelAporte);
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
