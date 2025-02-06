@@ -79,8 +79,8 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgRRA.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtgRRA.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.dtgRRA.Location = new System.Drawing.Point(0, 95);
-            this.dtgRRA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtgRRA.Location = new System.Drawing.Point(0, 117);
+            this.dtgRRA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtgRRA.Name = "dtgRRA";
             this.dtgRRA.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -95,7 +95,7 @@
             this.dtgRRA.RowHeadersWidth = 51;
             this.dtgRRA.RowTemplate.DividerHeight = 5;
             this.dtgRRA.RowTemplate.Height = 40;
-            this.dtgRRA.Size = new System.Drawing.Size(800, 322);
+            this.dtgRRA.Size = new System.Drawing.Size(1067, 396);
             this.dtgRRA.TabIndex = 32;
             this.dtgRRA.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dtgRRA.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -147,7 +147,7 @@
             this.btnEliminar.Animated = true;
             this.btnEliminar.AutoRoundedCorners = true;
             this.btnEliminar.BackColor = System.Drawing.Color.Transparent;
-            this.btnEliminar.BorderRadius = 16;
+            this.btnEliminar.BorderRadius = 20;
             this.btnEliminar.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnEliminar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnEliminar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -161,10 +161,10 @@
             this.btnEliminar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnEliminar.ImageSize = new System.Drawing.Size(30, 30);
             this.btnEliminar.IndicateFocus = true;
-            this.btnEliminar.Location = new System.Drawing.Point(527, 433);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Location = new System.Drawing.Point(703, 533);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(110, 34);
+            this.btnEliminar.Size = new System.Drawing.Size(147, 42);
             this.btnEliminar.TabIndex = 31;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseTransparentBackground = true;
@@ -176,7 +176,7 @@
             this.btnEditar.Animated = true;
             this.btnEditar.AutoRoundedCorners = true;
             this.btnEditar.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditar.BorderRadius = 16;
+            this.btnEditar.BorderRadius = 20;
             this.btnEditar.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnEditar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnEditar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -190,10 +190,10 @@
             this.btnEditar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnEditar.ImageSize = new System.Drawing.Size(30, 30);
             this.btnEditar.IndicateFocus = true;
-            this.btnEditar.Location = new System.Drawing.Point(202, 433);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEditar.Location = new System.Drawing.Point(269, 533);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(110, 34);
+            this.btnEditar.Size = new System.Drawing.Size(147, 42);
             this.btnEditar.TabIndex = 30;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseTransparentBackground = true;
@@ -206,11 +206,11 @@
             this.panelTitulos.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitulos.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
             this.panelTitulos.Location = new System.Drawing.Point(0, 0);
-            this.panelTitulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelTitulos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelTitulos.Name = "panelTitulos";
             this.panelTitulos.Radius = 10;
             this.panelTitulos.ShadowColor = System.Drawing.Color.White;
-            this.panelTitulos.Size = new System.Drawing.Size(800, 53);
+            this.panelTitulos.Size = new System.Drawing.Size(1067, 65);
             this.panelTitulos.TabIndex = 33;
             // 
             // lblTitulo
@@ -219,10 +219,9 @@
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblTitulo.Font = new System.Drawing.Font("Californian FB", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.Azure;
-            this.lblTitulo.Location = new System.Drawing.Point(18, 11);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTitulo.Location = new System.Drawing.Point(24, 14);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(512, 31);
+            this.lblTitulo.Size = new System.Drawing.Size(612, 38);
             this.lblTitulo.TabIndex = 27;
             this.lblTitulo.Text = "Resultados del Aprendizaje de la Asignatura";
             // 
@@ -232,7 +231,7 @@
             this.btnAgregar.Animated = true;
             this.btnAgregar.AutoRoundedCorners = true;
             this.btnAgregar.BackColor = System.Drawing.Color.Transparent;
-            this.btnAgregar.BorderRadius = 16;
+            this.btnAgregar.BorderRadius = 20;
             this.btnAgregar.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnAgregar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnAgregar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -246,10 +245,10 @@
             this.btnAgregar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnAgregar.ImageSize = new System.Drawing.Size(30, 30);
             this.btnAgregar.IndicateFocus = true;
-            this.btnAgregar.Location = new System.Drawing.Point(364, 433);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregar.Location = new System.Drawing.Point(485, 533);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(110, 34);
+            this.btnAgregar.Size = new System.Drawing.Size(147, 42);
             this.btnAgregar.TabIndex = 34;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseTransparentBackground = true;
@@ -277,9 +276,10 @@
             this.cbbAsignatura.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbbAsignatura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbbAsignatura.ItemHeight = 30;
-            this.cbbAsignatura.Location = new System.Drawing.Point(159, 54);
+            this.cbbAsignatura.Location = new System.Drawing.Point(212, 66);
+            this.cbbAsignatura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbbAsignatura.Name = "cbbAsignatura";
-            this.cbbAsignatura.Size = new System.Drawing.Size(253, 36);
+            this.cbbAsignatura.Size = new System.Drawing.Size(489, 36);
             this.cbbAsignatura.TabIndex = 28;
             this.cbbAsignatura.SelectedIndexChanged += new System.EventHandler(this.cbbAsignatura_SelectedIndexChanged);
             // 
@@ -289,19 +289,18 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Californian FB", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
-            this.label1.Location = new System.Drawing.Point(11, 56);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(15, 69);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 31);
+            this.label1.Size = new System.Drawing.Size(174, 38);
             this.label1.TabIndex = 28;
             this.label1.Text = "Asignatura:";
             // 
             // FormResultadosAprendizajeAsignatura
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(800, 473);
+            this.ClientSize = new System.Drawing.Size(1067, 582);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbbAsignatura);
             this.Controls.Add(this.dtgRRA);
@@ -310,7 +309,7 @@
             this.Controls.Add(this.panelTitulos);
             this.Controls.Add(this.btnAgregar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormResultadosAprendizajeAsignatura";
             this.Text = "FormObjetivosAprendizajeAsignatura";
             this.Load += new System.EventHandler(this.FormResultadosAprendizajeAsignatura_Load);
