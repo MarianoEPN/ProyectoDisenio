@@ -73,6 +73,7 @@ namespace CapaPresentacion
             dtgRRA.DataSource = null;
             ResultadoAprendizajeAsignaturaNeg rra = new ResultadoAprendizajeAsignaturaNeg();
             dtgRRA.DataSource = rra.ObtenerResultadosAprendizajeAsignatura(((Asignatura)cbbAsignatura.SelectedItem).Id);
+            dtgRRA.Columns["Id"].Visible = false;
         }
 
         private void cbbAsignatura_SelectedIndexChanged(object sender, EventArgs e)
@@ -80,6 +81,7 @@ namespace CapaPresentacion
             if (cbbAsignatura.SelectedItem != null) {
                 ResultadoAprendizajeAsignaturaNeg rra = new ResultadoAprendizajeAsignaturaNeg();
                 dtgRRA.DataSource = rra.ObtenerResultadosAprendizajeAsignatura(((Asignatura)cbbAsignatura.SelectedItem).Id);
+                dtgRRA.Columns["Id"].Visible = false;
                 dtgRRA.ClearSelection();
                 dtgRRA.CurrentCell = null;
             }

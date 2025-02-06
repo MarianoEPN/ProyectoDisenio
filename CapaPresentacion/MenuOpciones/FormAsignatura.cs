@@ -42,6 +42,7 @@ namespace CapaPresentacion
 
             // Asignar la lista original al DataGridView
             dtgAsignatura.DataSource = listaAsignaturas;
+            dtgAsignatura.Columns["Id"].Visible = false;
 
             // Ocultar las columnas que no deseas mostrar
             dtgAsignatura.ClearSelection();
@@ -76,7 +77,8 @@ namespace CapaPresentacion
         {
             AsignaturaNeg asignaturaNeg = new AsignaturaNeg();
             dtgAsignatura.DataSource = null;
-            dtgAsignatura.DataSource = asignaturaNeg.ObtenerAsignaturasPorCarrera(carrera.Id); ;
+            dtgAsignatura.DataSource = asignaturaNeg.ObtenerAsignaturasPorCarrera(carrera.Id);
+            dtgAsignatura.Columns["Id"].Visible = false;
 
         }
 

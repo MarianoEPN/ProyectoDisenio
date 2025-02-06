@@ -31,6 +31,7 @@ namespace CapaPresentacion.MenuOpciones
 
             // Asignar la lista original al DataGridView
             dtgObjetivoEurace.DataSource = ListaObjetivoEuraces;
+            dtgObjetivoEurace.Columns["Id"].Visible = false;
 
             // Ocultar las columnas que no deseas mostrar
             dtgObjetivoEurace.ClearSelection();
@@ -66,7 +67,8 @@ namespace CapaPresentacion.MenuOpciones
         {
             ObjetivoEuraceNeg objetivoEuraceNeg = new ObjetivoEuraceNeg();
             dtgObjetivoEurace.DataSource = null;
-            dtgObjetivoEurace.DataSource = objetivoEuraceNeg.MostrarObjetivoEurace(); ;
+            dtgObjetivoEurace.DataSource = objetivoEuraceNeg.MostrarObjetivoEurace(); 
+            dtgObjetivoEurace.Columns["Id"].Visible = false; 
 
         }
 

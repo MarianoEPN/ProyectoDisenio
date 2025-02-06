@@ -38,6 +38,7 @@ namespace CapaPresentacion.MenuOpciones
             ListaObjetivosPrograma = objetivoProgramaNeg.ObtenerObjetivosProgramaPorCarrera(carrera.Id);
 
             dtgObjetivoPrograma.DataSource = ListaObjetivosPrograma;
+            dtgObjetivoPrograma.Columns["Id"].Visible = false;
 
             // Ocultar las columnas que no deseas mostrar
             dtgObjetivoPrograma.ClearSelection();
@@ -73,6 +74,7 @@ namespace CapaPresentacion.MenuOpciones
             ObjetivoProgramaNeg objetivoProgramaNeg = new ObjetivoProgramaNeg();
             dtgObjetivoPrograma.DataSource = null;
             dtgObjetivoPrograma.DataSource = objetivoProgramaNeg.ObtenerObjetivosProgramaPorCarrera(carrera.Id); ;
+            dtgObjetivoPrograma.Columns["Id"].Visible = false;
 
         }
 
