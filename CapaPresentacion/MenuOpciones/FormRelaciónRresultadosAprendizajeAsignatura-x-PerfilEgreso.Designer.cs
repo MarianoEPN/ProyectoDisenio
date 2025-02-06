@@ -59,10 +59,10 @@
             this.panelColumna.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelColumna.FillColor = System.Drawing.Color.WhiteSmoke;
             this.panelColumna.Location = new System.Drawing.Point(0, 0);
-            this.panelColumna.Margin = new System.Windows.Forms.Padding(2);
+            this.panelColumna.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelColumna.Name = "panelColumna";
             this.panelColumna.ShadowColor = System.Drawing.Color.White;
-            this.panelColumna.Size = new System.Drawing.Size(776, 53);
+            this.panelColumna.Size = new System.Drawing.Size(1035, 65);
             this.panelColumna.TabIndex = 29;
             // 
             // label2
@@ -72,10 +72,9 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Californian FB", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
-            this.label2.Location = new System.Drawing.Point(364, 13);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(485, 17);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(143, 31);
+            this.label2.Size = new System.Drawing.Size(174, 38);
             this.label2.TabIndex = 44;
             this.label2.Text = "Asignatura:";
             // 
@@ -91,9 +90,10 @@
             this.cbbAsignatura.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbbAsignatura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbbAsignatura.ItemHeight = 30;
-            this.cbbAsignatura.Location = new System.Drawing.Point(512, 9);
+            this.cbbAsignatura.Location = new System.Drawing.Point(686, 19);
+            this.cbbAsignatura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbbAsignatura.Name = "cbbAsignatura";
-            this.cbbAsignatura.Size = new System.Drawing.Size(253, 36);
+            this.cbbAsignatura.Size = new System.Drawing.Size(336, 36);
             this.cbbAsignatura.TabIndex = 45;
             this.cbbAsignatura.SelectedIndexChanged += new System.EventHandler(this.cbbAsignatura_SelectedIndexChanged);
             // 
@@ -103,10 +103,9 @@
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblTitulo.Font = new System.Drawing.Font("Californian FB", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
-            this.lblTitulo.Location = new System.Drawing.Point(54, 14);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTitulo.Location = new System.Drawing.Point(72, 17);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(194, 31);
+            this.lblTitulo.Size = new System.Drawing.Size(232, 38);
             this.lblTitulo.TabIndex = 40;
             this.lblTitulo.Text = "Perfil de Egreso";
             // 
@@ -115,12 +114,12 @@
             this.panelX.BackColor = System.Drawing.Color.Transparent;
             this.panelX.Controls.Add(this.label1);
             this.panelX.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
-            this.panelX.Location = new System.Drawing.Point(2, 5);
-            this.panelX.Margin = new System.Windows.Forms.Padding(2);
+            this.panelX.Location = new System.Drawing.Point(3, 6);
+            this.panelX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelX.Name = "panelX";
             this.panelX.Radius = 5;
             this.panelX.ShadowColor = System.Drawing.Color.WhiteSmoke;
-            this.panelX.Size = new System.Drawing.Size(47, 46);
+            this.panelX.Size = new System.Drawing.Size(63, 57);
             this.panelX.TabIndex = 43;
             // 
             // label1
@@ -129,10 +128,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Californian FB", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Azure;
-            this.label1.Location = new System.Drawing.Point(8, 8);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(11, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 31);
+            this.label1.Size = new System.Drawing.Size(40, 38);
             this.label1.TabIndex = 40;
             this.label1.Text = "X";
             // 
@@ -141,10 +139,9 @@
             this.labelFila.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelFila.Font = new System.Drawing.Font("Californian FB", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFila.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
-            this.labelFila.Location = new System.Drawing.Point(9, 2);
-            this.labelFila.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelFila.Location = new System.Drawing.Point(12, 2);
             this.labelFila.Name = "labelFila";
-            this.labelFila.Size = new System.Drawing.Size(34, 476);
+            this.labelFila.Size = new System.Drawing.Size(45, 586);
             this.labelFila.TabIndex = 35;
             this.labelFila.Paint += new System.Windows.Forms.PaintEventHandler(this.labelFila_Paint);
             // 
@@ -154,11 +151,11 @@
             this.panelFila.Controls.Add(this.labelFila);
             this.panelFila.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelFila.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.panelFila.Location = new System.Drawing.Point(0, 53);
-            this.panelFila.Margin = new System.Windows.Forms.Padding(2);
+            this.panelFila.Location = new System.Drawing.Point(0, 65);
+            this.panelFila.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelFila.Name = "panelFila";
             this.panelFila.ShadowColor = System.Drawing.Color.White;
-            this.panelFila.Size = new System.Drawing.Size(49, 486);
+            this.panelFila.Size = new System.Drawing.Size(65, 598);
             this.panelFila.TabIndex = 41;
             // 
             // dataGridView1
@@ -188,7 +185,7 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
@@ -202,7 +199,7 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.DividerHeight = 5;
             this.dataGridView1.RowTemplate.Height = 40;
-            this.dataGridView1.Size = new System.Drawing.Size(727, 486);
+            this.dataGridView1.Size = new System.Drawing.Size(970, 598);
             this.dataGridView1.TabIndex = 28;
             this.dataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -232,24 +229,24 @@
             this.panelData.Controls.Add(this.dataGridView1);
             this.panelData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelData.FillColor = System.Drawing.Color.White;
-            this.panelData.Location = new System.Drawing.Point(49, 53);
-            this.panelData.Margin = new System.Windows.Forms.Padding(2);
+            this.panelData.Location = new System.Drawing.Point(65, 65);
+            this.panelData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelData.Name = "panelData";
             this.panelData.ShadowColor = System.Drawing.Color.Black;
-            this.panelData.Size = new System.Drawing.Size(727, 486);
+            this.panelData.Size = new System.Drawing.Size(970, 598);
             this.panelData.TabIndex = 42;
             // 
             // FormRelaciónRresultadosAprendizajeAsignatura_x_PerfilEgreso
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(776, 539);
+            this.ClientSize = new System.Drawing.Size(1035, 663);
             this.Controls.Add(this.panelData);
             this.Controls.Add(this.panelFila);
             this.Controls.Add(this.panelColumna);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormRelaciónRresultadosAprendizajeAsignatura_x_PerfilEgreso";
             this.Text = "Match1";
             this.Load += new System.EventHandler(this.FormRelaciónRresultadosAprendizajeAsignatura_x_PerfilEgreso_Load);

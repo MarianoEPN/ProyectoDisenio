@@ -270,6 +270,7 @@ namespace CapaPresentacion
         private void btnOP_Click(object sender, EventArgs e)
         {
             container(new FormObjetivosPrograma(carrera));
+            
 
         }
 
@@ -282,6 +283,10 @@ namespace CapaPresentacion
         private void btnEditar_Click(object sender, EventArgs e)
         {
             container(new FormEditarUsuario(usuario, carrera));
+            // Ocultar el panel
+            panelOpciones.Visible = false;
+            btnBajar.BackgroundImage = Properties.Resources.baja;
+
 
         }
     }

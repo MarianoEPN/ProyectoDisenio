@@ -38,6 +38,15 @@ namespace CapaPresentacion.MenuOpciones
             esEdicion = false;  // Modo creación
         }
 
+        // Constructor para modo CREACIÓN en el que se abre el formulario solo con la Carrera,
+        // dejando sin asignar los objetos objetivoEurace y resultadoAprendizaje para que el usuario los seleccione.
+        public FormsComentario(Carrera carrera)
+        {
+            InitializeComponent();
+            this.carrera = carrera;
+            // Dejamos objetivoEurace y resultadoAprendizaje en null para que el usuario los elija
+            esEdicion = false;  // Modo creación
+        }
 
         // Constructor para modo EDICIÓN/Visualización (ya existe la relación, se envía además el comentario y opcionalmente el id)
         public FormsComentario(ObjetivoEurace objetivoEurace, Carrera carrera, ResultadoAprendizaje resultadoAprendizaje, int relacionId, string comentario)
@@ -68,12 +77,27 @@ namespace CapaPresentacion.MenuOpciones
             gcmbResutadoAprendizaje.DataSource = resultadoAprendizajeNeg.ObtenerResultadosAprendizaje(carrera.Id);
             gcmbObjetivoEurace.DataSource = objetivoEuraceNeg.MostrarObjetivoEurace();
 
-            // Seleccionar el elemento correspondiente para cada ComboBox
-            int indiceFila = objetivoEuraceNeg.MostrarObjetivoEurace().FindIndex(obj => obj.Id == objetivoEurace.Id);
-            gcmbObjetivoEurace.SelectedIndex = indiceFila;
-            int indiceColumna = resultadoAprendizajeNeg.ObtenerResultadosAprendizaje(carrera.Id)
-                                .FindIndex(res => res.Id == resultadoAprendizaje.Id);
-            gcmbResutadoAprendizaje.SelectedIndex = indiceColumna;
+            // Seleccionar el elemento correspondiente para cada ComboBox, solo si las variables no son nulas
+            if (objetivoEurace != null)
+            {
+                int indiceFila = objetivoEuraceNeg.MostrarObjetivoEurace().FindIndex(obj => obj.Id == objetivoEurace.Id);
+                gcmbObjetivoEurace.SelectedIndex = indiceFila;
+            }
+            else
+            {
+                gcmbObjetivoEurace.SelectedIndex = -1;
+            }
+
+            if (resultadoAprendizaje != null)
+            {
+                int indiceColumna = resultadoAprendizajeNeg.ObtenerResultadosAprendizaje(carrera.Id)
+                                        .FindIndex(res => res.Id == resultadoAprendizaje.Id);
+                gcmbResutadoAprendizaje.SelectedIndex = indiceColumna;
+            }
+            else
+            {
+                gcmbResutadoAprendizaje.SelectedIndex = -1;
+            }
 
             lbAdvertencia.Visible = false;
 
@@ -100,6 +124,18 @@ namespace CapaPresentacion.MenuOpciones
                 btnCrear.Visible = true;
                 // En modo creación se permite editar el comentario
                 tbComentario.ReadOnly = false;
+                // Si en modo creación se abre sin objetivoEurace y resultadoAprendizaje (por ejemplo, al usar el botón Agregar),
+                // habilitar los ComboBox para que el usuario pueda seleccionar la fila y columna.
+                if (objetivoEurace == null && resultadoAprendizaje == null)
+                {
+                    gcmbObjetivoEurace.Enabled = true;
+                    gcmbResutadoAprendizaje.Enabled = true;
+                }
+                else
+                {
+                    gcmbObjetivoEurace.Enabled = false;
+                    gcmbResutadoAprendizaje.Enabled = false;
+                }
             }
         }
 
@@ -179,6 +215,13 @@ namespace CapaPresentacion.MenuOpciones
                 }
                 else
                 {
+                    // **Validación agregada:** Antes de crear, se verifica si ya existe un match para el objetivo y resultado seleccionados
+                    var relacionExistente = negocio.BuscarEuraceResultadoAprendizaje(objetivo, resultado);
+                    if (relacionExistente != null && relacionExistente.Count > 0)
+                    {
+                        MessageBox.Show("Ya existe un match para el objetivo y resultado seleccionados.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
                     // En modo creación se inserta una nueva relación
                     negocio.InsertarEuraceResultadoAprendizaje(relacion, objetivo, resultado);
                     MessageBox.Show("Relación creada.");
@@ -193,6 +236,15 @@ namespace CapaPresentacion.MenuOpciones
                 MessageBox.Show($"Error: {ex.Message}");
             }
 
+        }
+        public ObjetivoEurace GetObjetivoSeleccionado()
+        {
+            return gcmbObjetivoEurace.SelectedItem as ObjetivoEurace;
+        }
+
+        public ResultadoAprendizaje GetResultadoSeleccionado()
+        {
+            return gcmbResutadoAprendizaje.SelectedItem as ResultadoAprendizaje;
         }
 
         private void btnEditar_Click(object sender, EventArgs e)

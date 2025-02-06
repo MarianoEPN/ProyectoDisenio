@@ -234,5 +234,31 @@ namespace CapaPresentacion.MenuOpciones
             e.Graphics.RotateTransform(-90);
             e.Graphics.DrawString("Perfil de Egreso", myfont, mybrush, 0, 0);
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+
+            // Se abre el FormsComentario en modo creación, donde el usuario podrá seleccionar Objetivo y Resultado
+            FormsComentario comentarioForm = new FormsComentario(carrera);
+            if (comentarioForm.ShowDialog() == DialogResult.OK)
+            {
+                // Se recuperan los datos seleccionados a partir de los métodos públicos
+                ObjetivoEurace objetivoSeleccionado = comentarioForm.GetObjetivoSeleccionado();
+                ResultadoAprendizaje resultadoSeleccionado = comentarioForm.GetResultadoSeleccionado();
+
+                // Actualizar el DataGridView: se busca la fila y columna correspondientes
+                int filaIndex = Array.FindIndex(listaObjetivoEurace, o => o.Id == objetivoSeleccionado.Id);
+                int columnaIndex = Array.FindIndex(listaResultadosAprendizaje, r => r.Id == resultadoSeleccionado.Id) + 1; // +1 porque la columna 0 es la etiqueta
+
+                if (filaIndex >= 0 && columnaIndex >= 1)
+                {
+                    DataGridViewCell celda = dataGridView1.Rows[filaIndex].Cells[columnaIndex];
+                    celda.Value = Properties.Resources.x1; // Asigna la imagen “X”
+                    celda.Tag = "x";
+                }
+            }
+        }
+
+
     }
 }
