@@ -34,5 +34,11 @@ namespace CapaNegocio
             return MRAprendizaje.MostrarMatchResultadoAprendizajePorCarrera(carreraId);
         }
 
+        public List<MatchResultadoAprendizaje> BuscarMatchResultadoAprendizaje(ResultadoAprendizajeAsignatura resultadoAprendizajeAsignaturaId, ResultadoAprendizaje resultadoAprendizajeId) 
+        {
+            return MRAprendizaje.BuscarMatchResultadoAprendizaje(resultadoAprendizajeAsignaturaId, resultadoAprendizajeId);
+        }
+
+
     }
 }

@@ -14,9 +14,7 @@ namespace CapaPresentacion.MenuOpciones
 {
     public partial class FormComentario2 : Form
     {
-        // Variables para identificar la relación en este contexto.
-        // "perfilEgreso" representa el perfil de egreso (de tipo ResultadoAprendizaje)
-        // "resultadoAsignatura" representa el resultado de aprendizaje de asignatura (de tipo ResultadoAprendizajeAsignatura)
+
         private ResultadoAprendizaje perfilEgreso;
         private Carrera carrera;
         private ResultadoAprendizajeAsignatura resultadoAsignatura;
@@ -30,6 +28,15 @@ namespace CapaPresentacion.MenuOpciones
 
         // Indica si el formulario se abre en modo edición
         private bool esEdicion = false;
+
+        // Constructor para modo CREACIÓN en el que se abre el formulario solo con la Carrera,
+        public FormComentario2(Carrera carrera)
+        {
+            InitializeComponent();
+            this.carrera = carrera;
+            // Dejamos objetivoEurace y resultadoAprendizaje en null para que el usuario los elija
+            esEdicion = false;  // Modo creación
+        }
 
         // Constructor para modo CREACIÓN (nuevo match, sin relación previa)
         public FormComentario2(ResultadoAprendizaje perfilEgreso, Carrera carrera, ResultadoAprendizajeAsignatura resultadoAsignatura, Asignatura asignatura)
@@ -93,34 +100,22 @@ namespace CapaPresentacion.MenuOpciones
 
         private void FormComentario2_Load(object sender, EventArgs e)
         {
-            // En este formulario vamos a mostrar en dos ComboBoxes la información del "perfil" y del "resultado"
-            // Si deseas que sean fijos (no editables) en este contexto, puedes simplemente mostrarlos en Labels.
-            // En este ejemplo, usaremos ComboBoxes para mantener la consistencia, pero los deshabilitaremos en modo edición.
 
             ResultadoAprendizajeNeg perfilNeg = new ResultadoAprendizajeNeg();
-            // Supongamos que la lista de perfiles se obtiene para la carrera:
-            var listaPerfiles = perfilNeg.ObtenerResultadosAprendizaje(carrera.Id);
-            // Para los resultados de asignatura, se obtiene a partir del id de la asignatura.
-            // Se supone que el id de la asignatura ya está definido en la variable 'asignaturaId'.
-            // Por ejemplo:
-            
             ResultadoAprendizajeAsignaturaNeg resultadoAsigNeg = new ResultadoAprendizajeAsignaturaNeg();
-            var listaResultadosAsignatura = resultadoAsigNeg.ObtenerResultadosAprendizajeAsignatura(asignatura.Id);
 
-            // Asignar las listas a los ComboBoxes (o a Labels si prefieres que sean fijos)
-            gcmbPerfilEgreso.DataSource = listaPerfiles;
-            //gcmbPerfilEgreso.DisplayMember = "Descripcion";  // O "Codigo", según prefieras
-            //gcmbPerfilEgreso.ValueMember = "Id";
+            // Configurar los ComboBox con los datos de la base de datos
+            gcmbResultadoAsignatura.DataSource = null;
+            gcmbPerfilEgreso.DataSource = null;
+            gcmbPerfilEgreso.DataSource = perfilNeg.ObtenerResultadosAprendizaje(carrera.Id);
+            gcmbResultadoAsignatura.DataSource = resultadoAsigNeg.MostrarResultadoAprendizajeAsignatura();
 
-            gcmbResultadoAsignatura.DataSource = listaResultadosAsignatura;
-            //gcmbResultadoAsignatura.DisplayMember = "Codigo" + " Descripcion";
-            //gcmbResultadoAsignatura.ValueMember = "Id";
 
-            // Seleccionar el elemento recibido en el constructor, si no es nulo.
+
             if (perfilEgreso != null)
             {
-                int indicePerfil = listaPerfiles.FindIndex(p => p.Id == perfilEgreso.Id);
-                gcmbPerfilEgreso.SelectedIndex = (indicePerfil >= 0) ? indicePerfil : -1;
+                int indicePerfil = perfilNeg.MostrarResultadosAprendizaje().FindIndex(p => p.Id == perfilEgreso.Id);
+                gcmbPerfilEgreso.SelectedIndex = indicePerfil;
             }
             else
             {
@@ -129,8 +124,8 @@ namespace CapaPresentacion.MenuOpciones
 
             if (resultadoAsignatura != null)
             {
-                int indiceResultado = listaResultadosAsignatura.FindIndex(r => r.Id == resultadoAsignatura.Id);
-                gcmbResultadoAsignatura.SelectedIndex = (indiceResultado >= 0) ? indiceResultado : -1;
+                int indiceResultado = resultadoAsigNeg.MostrarResultadoAprendizajeAsignatura().FindIndex(r => r.Id == resultadoAsignatura.Id);
+                gcmbResultadoAsignatura.SelectedIndex = indiceResultado;
             }
             else
             {
@@ -139,24 +134,41 @@ namespace CapaPresentacion.MenuOpciones
 
             lbAdvertencia.Visible = false;
 
+            tbComentario.ReadOnly = true;  // inicialmente en modo edición, el TextBox es solo lectura
+
+
             // Configurar el estado inicial del TextBox y los botones según el modo.
             if (esEdicion)
             {
-                // En modo edición, el comentario se muestra en modo solo lectura
-                tbComentario.ReadOnly = true;
+                // Si estamos en modo edición, mostrar botones Editar y Eliminar
                 btnEditar.Visible = true;
                 btnEliminar.Visible = true;
-                btnCrear.Visible = false; // Ocultar el botón Guardar hasta que se active la edición
-                gcmbPerfilEgreso.Enabled = false;
+                // Ocultar el botón de Guardar inicialmente
+                btnCrear.Visible = false;
+                // No permitir cambiar el objetivo y el resultado (ya definidos)
                 gcmbResultadoAsignatura.Enabled = false;
+                gcmbPerfilEgreso.Enabled = false;
             }
             else
             {
-                // En modo creación, se permite la edición inmediatamente
-                tbComentario.ReadOnly = false;
+                // En modo creación: no se muestran los botones de editar ni eliminar, solo el botón de Guardar
                 btnEditar.Visible = false;
                 btnEliminar.Visible = false;
                 btnCrear.Visible = true;
+                // En modo creación se permite editar el comentario
+                tbComentario.ReadOnly = false;
+                // Si en modo creación se abre sin objetivoEurace y resultadoAprendizaje (por ejemplo, al usar el botón Agregar),
+                // habilitar los ComboBox para que el usuario pueda seleccionar la fila y columna.
+                if (perfilEgreso == null && resultadoAsignatura == null)
+                {
+                    gcmbPerfilEgreso.Enabled = true;
+                    gcmbResultadoAsignatura.Enabled = true;
+                }
+                else
+                {
+                    gcmbPerfilEgreso.Enabled = false;
+                    gcmbResultadoAsignatura.Enabled = false;
+                }
             }
         }
 
@@ -175,6 +187,11 @@ namespace CapaPresentacion.MenuOpciones
             // Usamos el campo NivelAporte para almacenar el comentario
             match.NivelAporte = tbComentario.Text;
 
+
+            // Se obtienen los datos seleccionados de los ComboBox (en modo edición, estos ya están fijos)
+            ResultadoAprendizajeAsignatura objetivo = gcmbResultadoAsignatura.SelectedItem as ResultadoAprendizajeAsignatura;
+            ResultadoAprendizaje resultado = gcmbPerfilEgreso.SelectedItem as ResultadoAprendizaje;
+
             MatchResultadoAprendizajeNeg negocio = new MatchResultadoAprendizajeNeg();
 
             try
@@ -183,13 +200,21 @@ namespace CapaPresentacion.MenuOpciones
                 {
                     // Actualizar el match existente
                     match.Id = relacionId;
-                    negocio.ActualizarMatchResultadoAprendizaje(match, gcmbResultadoAsignatura.SelectedItem as ResultadoAprendizajeAsignatura, gcmbPerfilEgreso.SelectedItem as ResultadoAprendizaje);
+                    negocio.ActualizarMatchResultadoAprendizaje(match, objetivo, resultado);
                     MessageBox.Show("Comentario actualizado.");
+
                 }
                 else
                 {
-                    // Insertar la nueva relación
-                    negocio.InsertarMatchResultadoAprendizaje(match, gcmbResultadoAsignatura.SelectedItem as ResultadoAprendizajeAsignatura, gcmbPerfilEgreso.SelectedItem as ResultadoAprendizaje);
+                    var relacionExistente = negocio.BuscarMatchResultadoAprendizaje(objetivo, resultado);
+                    if (relacionExistente != null && relacionExistente.Count > 0)
+                    {
+                        MessageBox.Show("Ya existe un match para el objetivo y resultado seleccionados.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+
+                        // Insertar la nueva relación
+                    negocio.InsertarMatchResultadoAprendizaje(match, objetivo, resultado);
                     MessageBox.Show("Relación creada.");
                 }
                 this.DialogResult = DialogResult.OK;
@@ -200,7 +225,15 @@ namespace CapaPresentacion.MenuOpciones
                 MessageBox.Show($"Error: {ex.Message}");
             }
         }
+        public ResultadoAprendizajeAsignatura GetResultadoSeleccionado()
+        {
+            return gcmbResultadoAsignatura.SelectedItem as ResultadoAprendizajeAsignatura;
+        }
 
+        public ResultadoAprendizaje GetPerfilSeleccionado()
+        {
+            return gcmbPerfilEgreso.SelectedItem as ResultadoAprendizaje;
+        }
         private void btnEditar_Click(object sender, EventArgs e)
         {
             // Permitir la edición del comentario

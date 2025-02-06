@@ -18,9 +18,9 @@ namespace CapaPresentacion.MenuOpciones
         Asignatura asignatura;
 
 
-        private ResultadoAprendizaje[] _perfilEgreso;
-        private ResultadoAprendizajeAsignatura[] _raa;
-        private ResultadoAprendizajeAsignatura[] vacio = {};
+         ResultadoAprendizaje[] listaperfilEgreso;
+         ResultadoAprendizajeAsignatura[] listaResultadosAsigntaura;
+         ResultadoAprendizajeAsignatura[] vacio = {};
 
         public FormRelaciónRresultadosAprendizajeAsignatura_x_PerfilEgreso()
         {
@@ -35,10 +35,13 @@ namespace CapaPresentacion.MenuOpciones
 
         private void FormRelaciónRresultadosAprendizajeAsignatura_x_PerfilEgreso_Load(object sender, EventArgs e)
         {
-            // Instanciar las clases de la capa de negocio para obtener datos.
-            ResultadoAprendizajeAsignaturaNeg resultadoAprendizajeAsignaturaNeg = new ResultadoAprendizajeAsignaturaNeg();
-            ResultadoAprendizajeNeg resultadoAprendizajeNeg = new ResultadoAprendizajeNeg();
+            
+            MarcarMatches();
 
+        }
+
+        private void MarcarMatches()
+        {
             // Si la carrera es válida, cargar el ComboBox de asignaturas.
             if (carrera != null)
             {
@@ -46,25 +49,30 @@ namespace CapaPresentacion.MenuOpciones
                 cbbAsignatura.DataSource = asignaturaNeg.ObtenerAsignaturasPorCarrera(carrera.Id);
             }
 
-            
-            // Marcar las celdas que ya tienen un "match" (relación) en la base de datos.
-            MarcarMatches();
-
-        }
-
-        private void MarcarMatches()
-        {
+            // Instanciar las clases de la capa de negocio para obtener datos.
+            ResultadoAprendizajeAsignaturaNeg resultadoAprendizajeAsignaturaNeg = new ResultadoAprendizajeAsignaturaNeg();
+            ResultadoAprendizajeNeg resultadoAprendizajeNeg = new ResultadoAprendizajeNeg();
             MatchResultadoAprendizajeNeg matchNeg = new MatchResultadoAprendizajeNeg();
+
+            // Obtener datos para columnas y filas
+            var resultadosAprendizaje = resultadoAprendizajeNeg.ObtenerResultadosAprendizaje(carrera.Id).ToArray();
+            var resultadoAprendizajeAsignatura = resultadoAprendizajeAsignaturaNeg.MostrarResultadoAprendizajeAsignatura().ToArray();
+
+            // Guardar las listas globalmente para usarlas en otros métodos
+            listaResultadosAsigntaura = resultadoAprendizajeAsignatura;
+            listaperfilEgreso = resultadosAprendizaje;
+
+            // Llenar el DataGridView con los datos obtenidos
+            LlenarDataGrid(resultadosAprendizaje, resultadoAprendizajeAsignatura);
+
             List<MatchResultadoAprendizaje> listaMatch = matchNeg.MostrarMatchResultadoAprendizajePorCarrera(carrera.Id);
 
             foreach (var match in listaMatch)
             {
-                // Buscar el índice de la columna correspondiente al perfil.
-                // Se utiliza el arreglo _perfilEgreso (que contiene los ResultadoAprendizaje usados para las columnas).
-                int columnaIndex = Array.FindIndex(_perfilEgreso, p => p.Id == match.PerfilEgresoId) + 1; // +1 porque la primera columna es la etiqueta
 
-                // Buscar el índice de la fila correspondiente al RAA.
-                int filaIndex = Array.FindIndex(_raa, r => r.Id == match.SubResultadoAprendizageAsignaturaId);
+                int columnaIndex = Array.FindIndex(listaperfilEgreso, p => p.Id == match.PerfilEgresoId) + 1; 
+
+                int filaIndex = Array.FindIndex(listaResultadosAsigntaura, r => r.Id == match.SubResultadoAprendizageAsignaturaId);
 
                 if (filaIndex >= 0 && columnaIndex >= 1)
                 {
@@ -102,6 +110,7 @@ namespace CapaPresentacion.MenuOpciones
             dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.DimGray;
             dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(242, 245, 250);
             dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+          
             // Agregar la primera columna (etiqueta).
             dataGridView1.Columns.Add(" ", " ");
             // Agregar una columna por cada perfil (columna de match).
@@ -120,7 +129,7 @@ namespace CapaPresentacion.MenuOpciones
             // Agregar filas: cada fila se corresponde con un RAA.
             foreach (var fila in filas)
             {
-                DataGridViewRow nuevaFila = new DataGridViewRow();
+                var nuevaFila = new DataGridViewRow();
                 nuevaFila.CreateCells(dataGridView1);
 
                 // La primera celda muestra la etiqueta del RAA.
@@ -134,8 +143,14 @@ namespace CapaPresentacion.MenuOpciones
                 // Las demás celdas se inician con la imagen por defecto (por ejemplo, "nada").
                 for (int i = 1; i < nuevaFila.Cells.Count; i++)
                 {
-                    nuevaFila.Cells[i].Value = Properties.Resources.nada;
-                    nuevaFila.Cells[i].Tag = null;
+                    if (Properties.Resources.nada != null)
+                    {
+                        nuevaFila.Cells[i].Value = Properties.Resources.nada;
+                    }
+                    else
+                    {
+                        nuevaFila.Cells[i].Value = DBNull.Value; // O usa una imagen por defecto
+                    }
                 }
                 nuevaFila.DividerHeight = 5;
                 dataGridView1.Rows.Add(nuevaFila);
@@ -189,14 +204,13 @@ namespace CapaPresentacion.MenuOpciones
                 int indiceColumna = e.ColumnIndex - 1;
 
                 // Seleccionar el "perfil" y el RAA correspondientes
-                ResultadoAprendizaje perfilSelected = _perfilEgreso[indiceColumna];
-                ResultadoAprendizajeAsignatura raaSelected = _raa[indiceFila];
+                ResultadoAprendizajeAsignatura raaSelected = listaResultadosAsigntaura[indiceFila];
+
+                ResultadoAprendizaje perfilSelected = listaperfilEgreso[indiceColumna];
 
                 // Consultar la capa de negocio para ver si ya existe un match para estos dos elementos.
                 MatchResultadoAprendizajeNeg negocio = new MatchResultadoAprendizajeNeg();
-                var matchExistente = negocio.MostrarMatchResultadoAprendizajePorCarrera(carrera.Id)
-                    .FirstOrDefault(m => m.PerfilEgresoId == perfilSelected.Id &&
-                                         m.SubResultadoAprendizageAsignaturaId == raaSelected.Id);
+                var matchExistente = negocio.BuscarMatchResultadoAprendizaje(raaSelected, perfilSelected).FirstOrDefault();
 
                 if (matchExistente == null)
                 {
@@ -262,13 +276,37 @@ namespace CapaPresentacion.MenuOpciones
             var raa = resultadoAprendizajeAsignaturaNeg.ObtenerResultadosAprendizajeAsignatura(selected.Id).ToArray();
 
             // Guardar estos arreglos en variables globales para usarlos en el marcado de matches.
-            _perfilEgreso = perfiles;
-            _raa = raa;
+            listaperfilEgreso = perfiles;
+            listaResultadosAsigntaura = raa;
 
             // Llenar el DataGridView.
             LlenarDataGrid(perfiles, raa);
             MarcarMatches();
 
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+
+            // Se abre el FormsComentario en modo creación, donde el usuario podrá seleccionar Objetivo y Resultado
+            FormComentario2 comentarioForm = new FormComentario2(carrera);
+            if (comentarioForm.ShowDialog() == DialogResult.OK)
+            {
+                // Se recuperan los datos seleccionados a partir de los métodos públicos
+                ResultadoAprendizajeAsignatura objetivoSeleccionado = comentarioForm.GetResultadoSeleccionado();
+                ResultadoAprendizaje resultadoSeleccionado = comentarioForm.GetPerfilSeleccionado();
+
+                // Actualizar el DataGridView: se busca la fila y columna correspondientes
+                int filaIndex = Array.FindIndex(listaResultadosAsigntaura, o => o.Id == objetivoSeleccionado.Id);
+                int columnaIndex = Array.FindIndex(listaperfilEgreso, r => r.Id == resultadoSeleccionado.Id) + 1; // +1 porque la columna 0 es la etiqueta
+
+                if (filaIndex >= 0 && columnaIndex >= 1)
+                {
+                    DataGridViewCell celda = dataGridView1.Rows[filaIndex].Cells[columnaIndex];
+                    celda.Value = Properties.Resources.x1; // Asigna la imagen “X”
+                    celda.Tag = "x";
+                }
+            }
         }
     }
 }

@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelColumna = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.btnAgregar = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
             this.cbbAsignatura = new Guna.UI2.WinForms.Guna2ComboBox();
             this.lblTitulo = new System.Windows.Forms.Label();
@@ -52,6 +53,7 @@
             // panelColumna
             // 
             this.panelColumna.BackColor = System.Drawing.Color.Transparent;
+            this.panelColumna.Controls.Add(this.btnAgregar);
             this.panelColumna.Controls.Add(this.label2);
             this.panelColumna.Controls.Add(this.cbbAsignatura);
             this.panelColumna.Controls.Add(this.lblTitulo);
@@ -65,6 +67,33 @@
             this.panelColumna.Size = new System.Drawing.Size(1035, 65);
             this.panelColumna.TabIndex = 29;
             // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregar.Animated = true;
+            this.btnAgregar.AutoRoundedCorners = true;
+            this.btnAgregar.BorderRadius = 19;
+            this.btnAgregar.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAgregar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAgregar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAgregar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAgregar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAgregar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
+            this.btnAgregar.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAgregar.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnAgregar.HoverState.FillColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnAgregar.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
+            this.btnAgregar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAgregar.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnAgregar.IndicateFocus = true;
+            this.btnAgregar.Location = new System.Drawing.Point(901, 14);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(122, 41);
+            this.btnAgregar.TabIndex = 46;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseTransparentBackground = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -72,7 +101,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Californian FB", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(48)))));
-            this.label2.Location = new System.Drawing.Point(485, 17);
+            this.label2.Location = new System.Drawing.Point(310, 18);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(174, 38);
             this.label2.TabIndex = 44;
@@ -90,10 +119,10 @@
             this.cbbAsignatura.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbbAsignatura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(48)))));
             this.cbbAsignatura.ItemHeight = 30;
-            this.cbbAsignatura.Location = new System.Drawing.Point(686, 19);
-            this.cbbAsignatura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbbAsignatura.Location = new System.Drawing.Point(510, 18);
+            this.cbbAsignatura.Margin = new System.Windows.Forms.Padding(4);
             this.cbbAsignatura.Name = "cbbAsignatura";
-            this.cbbAsignatura.Size = new System.Drawing.Size(336, 36);
+            this.cbbAsignatura.Size = new System.Drawing.Size(384, 36);
             this.cbbAsignatura.TabIndex = 45;
             this.cbbAsignatura.SelectedIndexChanged += new System.EventHandler(this.cbbAsignatura_SelectedIndexChanged);
             // 
@@ -272,5 +301,6 @@
         private Guna.UI2.WinForms.Guna2ShadowPanel panelData;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2ComboBox cbbAsignatura;
+        private Guna.UI2.WinForms.Guna2Button btnAgregar;
     }
 }
