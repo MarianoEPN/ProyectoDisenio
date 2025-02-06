@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -108,17 +109,42 @@ namespace CapaPresentacion.MenuOpciones
 
                 ObjetivoEuraceNeg objetivoEuraceNeg = new ObjetivoEuraceNeg();
 
-                objetivoEuraceNeg.EliminarObjetivoEurace(objetivoSeleccionado.Id);
+                try
+                {
+                    objetivoEuraceNeg.EliminarObjetivoEurace(objetivoSeleccionado.Id);
 
-                ActualizarTabla();
-                row.Selected = false;
+                    // Actualizar la tabla tras la eliminación
+                    ActualizarTabla();
+                    row.Selected = false;
 
-                // Desactiva la selección inicial
-                dtgObjetivoEurace.ClearSelection();
-                dtgObjetivoEurace.CurrentCell = null;
-                btnEditar.Visible = false;
-                btnEliminar.Visible = false;
+                    // Desactiva la selección inicial
+                    dtgObjetivoEurace.ClearSelection();
+                    dtgObjetivoEurace.CurrentCell = null;
+                    btnEditar.Visible = false;
+                    btnEliminar.Visible = false;
+
+                    MessageBox.Show("Registro eliminado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (SqlException ex)
+                {
+                    if (ex.Number == 547) // Código de error SQL Server por conflicto de clave foránea
+                    {
+                        MessageBox.Show("No se puede eliminar el objetivo porque tiene registros relacionados en 'eurace_resultado_aprendizaje'.",
+                                        "Error de eliminación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ocurrió un error al intentar eliminar el registro: " + ex.Message,
+                                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Se produjo un error inesperado: " + ex.Message,
+                                    "Error inesperado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
+
     }
 }
