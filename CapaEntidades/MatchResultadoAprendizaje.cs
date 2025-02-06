@@ -12,7 +12,6 @@ namespace CapaEntidades
         public int Id { get; set; }
    
         public string NivelAporte { get; set; }
-        public string Comentario { get; set; }
 
 
         public int PerfilEgresoId { get; set; }           // Agregado para identificar el perfil de egreso
@@ -22,17 +21,15 @@ namespace CapaEntidades
         public MatchResultadoAprendizaje()
         {
             NivelAporte = "";
-            Comentario = "";
 
         }
 
 
         // Constructor con parámetros
-        public MatchResultadoAprendizaje( string nivelAporte, string comentario)
+        public MatchResultadoAprendizaje( string nivelAporte)
         {
            
             NivelAporte = nivelAporte;
-            Comentario = comentario;
 
         }
 

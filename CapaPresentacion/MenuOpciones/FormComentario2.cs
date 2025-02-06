@@ -110,12 +110,26 @@ namespace CapaPresentacion.MenuOpciones
             gcmbPerfilEgreso.DataSource = perfilNeg.ObtenerResultadosAprendizaje(carrera.Id);
             gcmbResultadoAsignatura.DataSource = resultadoAsigNeg.MostrarResultadoAprendizajeAsignatura();
 
+            //
+            // Supongamos que la lista de perfiles se obtiene para la carrera:
+            var listaPerfiles = perfilNeg.ObtenerResultadosAprendizaje(carrera.Id);
+
+
+            var listaResultadosAsignatura = resultadoAsigNeg.ObtenerResultadosAprendizajeAsignatura(asignatura.Id);
+
+            gcmbPerfilEgreso.DataSource = listaPerfiles;
+
+
+            gcmbResultadoAsignatura.DataSource = listaResultadosAsignatura;
+
+
+            //
 
 
             if (perfilEgreso != null)
             {
-                int indicePerfil = perfilNeg.MostrarResultadosAprendizaje().FindIndex(p => p.Id == perfilEgreso.Id);
-                gcmbPerfilEgreso.SelectedIndex = indicePerfil;
+                int indicePerfil = listaPerfiles.FindIndex(p => p.Id == perfilEgreso.Id);
+                gcmbPerfilEgreso.SelectedIndex = (indicePerfil >= 0) ? indicePerfil : -1;
             }
             else
             {
@@ -124,8 +138,8 @@ namespace CapaPresentacion.MenuOpciones
 
             if (resultadoAsignatura != null)
             {
-                int indiceResultado = resultadoAsigNeg.MostrarResultadoAprendizajeAsignatura().FindIndex(r => r.Id == resultadoAsignatura.Id);
-                gcmbResultadoAsignatura.SelectedIndex = indiceResultado;
+                int indiceResultado = listaResultadosAsignatura.FindIndex(r => r.Id == resultadoAsignatura.Id);
+                gcmbResultadoAsignatura.SelectedIndex = (indiceResultado >= 0) ? indiceResultado : -1;
             }
             else
             {

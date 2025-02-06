@@ -136,8 +136,8 @@ namespace CapaAccesoDatos
                 MatchResultadoAprendizaje match = new MatchResultadoAprendizaje();
                 match.Id = leer.GetInt32(0);
                 match.PerfilEgresoId = leer.GetInt32(1);
-                match.NivelAporte = leer.GetString(2);
-                match.SubResultadoAprendizageAsignaturaId = leer.GetInt32(3);
+                match.NivelAporte = leer.GetString(3);
+                match.SubResultadoAprendizageAsignaturaId = leer.GetInt32(2);
 
                 lista.Add(match);
             }
