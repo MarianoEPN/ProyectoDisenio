@@ -107,24 +107,25 @@ namespace CapaPresentacion
             // 
             this.linKCreateR.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(109)))));
             this.linKCreateR.AutoSize = true;
+            this.linKCreateR.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linKCreateR.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(36)))), ((int)(((byte)(75)))));
-            this.linKCreateR.Location = new System.Drawing.Point(250, 343);
+            this.linKCreateR.Location = new System.Drawing.Point(273, 343);
             this.linKCreateR.Name = "linKCreateR";
-            this.linKCreateR.Size = new System.Drawing.Size(75, 16);
+            this.linKCreateR.Size = new System.Drawing.Size(91, 20);
             this.linKCreateR.TabIndex = 19;
             this.linKCreateR.TabStop = true;
-            this.linKCreateR.Text = "Create Una";
+            this.linKCreateR.Text = "Create una";
             this.linKCreateR.Click += new System.EventHandler(this.linKCreateR_Click);
             // 
             // lblCreateR
             // 
             this.lblCreateR.AutoSize = true;
             this.lblCreateR.BackColor = System.Drawing.Color.Transparent;
-            this.lblCreateR.Font = new System.Drawing.Font("Californian FB", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCreateR.ForeColor = System.Drawing.Color.DimGray;
+            this.lblCreateR.Font = new System.Drawing.Font("Californian FB", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCreateR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(48)))));
             this.lblCreateR.Location = new System.Drawing.Point(72, 343);
             this.lblCreateR.Name = "lblCreateR";
-            this.lblCreateR.Size = new System.Drawing.Size(158, 18);
+            this.lblCreateR.Size = new System.Drawing.Size(185, 19);
             this.lblCreateR.TabIndex = 20;
             this.lblCreateR.Text = "Olvidates tu contraseña?";
             // 
@@ -160,7 +161,7 @@ namespace CapaPresentacion
             this.tbClave.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbClave.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbClave.Font = new System.Drawing.Font("Californian FB", 13.8F);
-            this.tbClave.ForeColor = System.Drawing.Color.DimGray;
+            this.tbClave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(48)))));
             this.tbClave.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbClave.IconLeft = ((System.Drawing.Image)(resources.GetObject("tbClave.IconLeft")));
             this.tbClave.Location = new System.Drawing.Point(75, 231);
@@ -187,7 +188,7 @@ namespace CapaPresentacion
             this.tbUsuario.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbUsuario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbUsuario.Font = new System.Drawing.Font("Californian FB", 13.8F);
-            this.tbUsuario.ForeColor = System.Drawing.Color.DimGray;
+            this.tbUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(48)))));
             this.tbUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbUsuario.IconLeft = ((System.Drawing.Image)(resources.GetObject("tbUsuario.IconLeft")));
             this.tbUsuario.Location = new System.Drawing.Point(75, 151);
@@ -240,7 +241,7 @@ namespace CapaPresentacion
             this.lblLogin.AutoSize = true;
             this.lblLogin.BackColor = System.Drawing.Color.White;
             this.lblLogin.Font = new System.Drawing.Font("Californian FB", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogin.ForeColor = System.Drawing.Color.DimGray;
+            this.lblLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(48)))));
             this.lblLogin.Location = new System.Drawing.Point(97, 75);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(244, 53);
@@ -274,7 +275,7 @@ namespace CapaPresentacion
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Californian FB", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(48)))));
             this.label1.Location = new System.Drawing.Point(125, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(191, 53);
@@ -291,7 +292,7 @@ namespace CapaPresentacion
             this.cbCarrera.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCarrera.FocusedColor = System.Drawing.Color.Empty;
             this.cbCarrera.Font = new System.Drawing.Font("Californian FB", 13.8F);
-            this.cbCarrera.ForeColor = System.Drawing.Color.DimGray;
+            this.cbCarrera.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(48)))));
             this.cbCarrera.FormattingEnabled = true;
             this.cbCarrera.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbCarrera.ItemHeight = 30;
@@ -334,7 +335,7 @@ namespace CapaPresentacion
             this.tbCorreo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbCorreo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbCorreo.Font = new System.Drawing.Font("Californian FB", 13.8F);
-            this.tbCorreo.ForeColor = System.Drawing.Color.DimGray;
+            this.tbCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(48)))));
             this.tbCorreo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbCorreo.IconLeft = ((System.Drawing.Image)(resources.GetObject("tbCorreo.IconLeft")));
             this.tbCorreo.Location = new System.Drawing.Point(28, 224);
@@ -372,7 +373,7 @@ namespace CapaPresentacion
             this.tbClaveConfirmReg.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbClaveConfirmReg.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbClaveConfirmReg.Font = new System.Drawing.Font("Californian FB", 13.8F);
-            this.tbClaveConfirmReg.ForeColor = System.Drawing.Color.DimGray;
+            this.tbClaveConfirmReg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(48)))));
             this.tbClaveConfirmReg.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbClaveConfirmReg.IconLeft = ((System.Drawing.Image)(resources.GetObject("tbClaveConfirmReg.IconLeft")));
             this.tbClaveConfirmReg.Location = new System.Drawing.Point(13, 375);
@@ -435,7 +436,7 @@ namespace CapaPresentacion
             this.tbClaveReg.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbClaveReg.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbClaveReg.Font = new System.Drawing.Font("Californian FB", 13.8F);
-            this.tbClaveReg.ForeColor = System.Drawing.Color.DimGray;
+            this.tbClaveReg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(48)))));
             this.tbClaveReg.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbClaveReg.IconLeft = ((System.Drawing.Image)(resources.GetObject("tbClaveReg.IconLeft")));
             this.tbClaveReg.Location = new System.Drawing.Point(19, 297);
@@ -462,7 +463,7 @@ namespace CapaPresentacion
             this.tbUsuarioReg.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbUsuarioReg.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbUsuarioReg.Font = new System.Drawing.Font("Californian FB", 13.8F);
-            this.tbUsuarioReg.ForeColor = System.Drawing.Color.DimGray;
+            this.tbUsuarioReg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(48)))));
             this.tbUsuarioReg.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbUsuarioReg.IconLeft = ((System.Drawing.Image)(resources.GetObject("tbUsuarioReg.IconLeft")));
             this.tbUsuarioReg.Location = new System.Drawing.Point(31, 84);

@@ -70,7 +70,7 @@
             this.tbNombreRRA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(48)))));
             this.tbNombreRRA.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbNombreRRA.Location = new System.Drawing.Point(152, 87);
-            this.tbNombreRRA.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbNombreRRA.Margin = new System.Windows.Forms.Padding(5);
             this.tbNombreRRA.Name = "tbNombreRRA";
             this.tbNombreRRA.PasswordChar = '\0';
             this.tbNombreRRA.PlaceholderText = "           Asignatura";
@@ -176,7 +176,7 @@
             this.tbCodigoRRA.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbCodigoRRA.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbCodigoRRA.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbCodigoRRA.Font = new System.Drawing.Font("Californian FB", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCodigoRRA.Font = new System.Drawing.Font("Californian FB", 11F, System.Drawing.FontStyle.Bold);
             this.tbCodigoRRA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(48)))));
             this.tbCodigoRRA.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbCodigoRRA.Location = new System.Drawing.Point(152, 156);
@@ -195,7 +195,7 @@
             this.lblCodigoRRA.AutoSize = true;
             this.lblCodigoRRA.BackColor = System.Drawing.Color.Transparent;
             this.lblCodigoRRA.Font = new System.Drawing.Font("Californian FB", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigoRRA.ForeColor = System.Drawing.Color.DimGray;
+            this.lblCodigoRRA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(48)))));
             this.lblCodigoRRA.Location = new System.Drawing.Point(12, 162);
             this.lblCodigoRRA.Name = "lblCodigoRRA";
             this.lblCodigoRRA.Size = new System.Drawing.Size(98, 29);
@@ -207,7 +207,7 @@
             this.labelNombreRRA.AutoSize = true;
             this.labelNombreRRA.BackColor = System.Drawing.Color.Transparent;
             this.labelNombreRRA.Font = new System.Drawing.Font("Californian FB", 15F, System.Drawing.FontStyle.Bold);
-            this.labelNombreRRA.ForeColor = System.Drawing.Color.DimGray;
+            this.labelNombreRRA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(48)))));
             this.labelNombreRRA.Location = new System.Drawing.Point(12, 87);
             this.labelNombreRRA.Name = "labelNombreRRA";
             this.labelNombreRRA.Size = new System.Drawing.Size(132, 29);
@@ -302,7 +302,7 @@
             this.labelTipoRRA.AutoSize = true;
             this.labelTipoRRA.BackColor = System.Drawing.Color.Transparent;
             this.labelTipoRRA.Font = new System.Drawing.Font("Californian FB", 15F, System.Drawing.FontStyle.Bold);
-            this.labelTipoRRA.ForeColor = System.Drawing.Color.DimGray;
+            this.labelTipoRRA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(48)))));
             this.labelTipoRRA.Location = new System.Drawing.Point(12, 222);
             this.labelTipoRRA.Name = "labelTipoRRA";
             this.labelTipoRRA.Size = new System.Drawing.Size(69, 29);
@@ -314,7 +314,7 @@
             this.labelDescripcionRRA.AutoSize = true;
             this.labelDescripcionRRA.BackColor = System.Drawing.Color.Transparent;
             this.labelDescripcionRRA.Font = new System.Drawing.Font("Californian FB", 15F, System.Drawing.FontStyle.Bold);
-            this.labelDescripcionRRA.ForeColor = System.Drawing.Color.DimGray;
+            this.labelDescripcionRRA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(48)))));
             this.labelDescripcionRRA.Location = new System.Drawing.Point(12, 293);
             this.labelDescripcionRRA.Name = "labelDescripcionRRA";
             this.labelDescripcionRRA.Size = new System.Drawing.Size(142, 29);
@@ -334,7 +334,7 @@
             this.tbDescripcionRRA.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbDescripcionRRA.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbDescripcionRRA.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbDescripcionRRA.ForeColor = System.Drawing.Color.Black;
+            this.tbDescripcionRRA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(48)))));
             this.tbDescripcionRRA.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbDescripcionRRA.Location = new System.Drawing.Point(17, 324);
             this.tbDescripcionRRA.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);

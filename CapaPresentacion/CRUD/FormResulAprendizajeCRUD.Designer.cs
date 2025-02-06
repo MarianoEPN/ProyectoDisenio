@@ -225,7 +225,7 @@
             this.labelDescripcionRA.AutoSize = true;
             this.labelDescripcionRA.BackColor = System.Drawing.Color.Transparent;
             this.labelDescripcionRA.Font = new System.Drawing.Font("Californian FB", 15F, System.Drawing.FontStyle.Bold);
-            this.labelDescripcionRA.ForeColor = System.Drawing.Color.DimGray;
+            this.labelDescripcionRA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(48)))));
             this.labelDescripcionRA.Location = new System.Drawing.Point(14, 226);
             this.labelDescripcionRA.Name = "labelDescripcionRA";
             this.labelDescripcionRA.Size = new System.Drawing.Size(147, 29);
@@ -268,7 +268,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Californian FB", 15F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(48)))));
             this.label1.Location = new System.Drawing.Point(14, 162);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 29);
@@ -280,7 +280,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Californian FB", 15F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.DimGray;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(48)))));
             this.label2.Location = new System.Drawing.Point(12, 84);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 29);
