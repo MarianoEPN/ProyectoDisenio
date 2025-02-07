@@ -27,8 +27,8 @@ namespace CapaAccesoDatos
             {
                 Carrera carrera = new Carrera();
                 carrera.Id = leer.GetInt32(0);
-                carrera.Nombre = leer.GetString(1);
-                carrera.Correo = leer.GetString(2);
+                carrera.Nombre = leer.GetString(2);
+                carrera.Correo = leer.GetString(1);
                 carrera.Pensum = leer.GetString(3);
                 lista.Add(carrera);
 

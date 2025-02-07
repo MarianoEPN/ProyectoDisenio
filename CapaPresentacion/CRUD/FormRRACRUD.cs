@@ -42,6 +42,7 @@ namespace CapaPresentacion.CRUD
             this.asignatura = asignatura;
             tbNombreRRA.Text = asignatura.Nombre;
             tbNombreRRA.Enabled = false;
+            lblTituloRRA.Text = "Crear RAA";
             btnCrearRRA.Text = "Crear";
         }
 
@@ -59,9 +60,10 @@ namespace CapaPresentacion.CRUD
             tbCodigoRRA.Text = raaAsignatura.Codigo;
             tbCodigoRRA.Enabled = true;
             tbDescripcionRRA.Text = raaAsignatura.Descripcion;
+            lblTituloRRA.Text = "Editar RAA";
             // Seteamos el código de la asignatura
             //tbCodigoRRA.Text = asignatura.Codigo; 
-          
+
             // Asignamos los valores en el comboBoxTipoRRA si es necesario (en caso de que haya información predefinida)
             // Si se requiere algo específico en comboBoxTipoRRA, agregamos aquí el código correspondiente.
             cbbTipoRRA.SelectedIndex = ObtenerIndice(raaAsignatura.Tipo.Id); // O seleccionamos el valor correspondiente

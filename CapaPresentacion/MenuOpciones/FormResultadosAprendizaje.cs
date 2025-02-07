@@ -88,27 +88,37 @@ namespace CapaPresentacion.MenuOpciones
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (dtgAsignatura.CurrentRow != null)
+            try
             {
-                // Obtener la fila seleccionada
-                DataGridViewRow row = dtgAsignatura.CurrentRow;
+                if (dtgAsignatura.CurrentRow != null)
+                {
+                    // Obtener la fila seleccionada
+                    DataGridViewRow row = dtgAsignatura.CurrentRow;
 
-                // Obtener el objeto completo, que corresponde a la fila seleccionada
-                ResultadoAprendizaje resultadoAprendizajeSeleccionado = (ResultadoAprendizaje)row.DataBoundItem;
+                    // Obtener el objeto completo, que corresponde a la fila seleccionada
+                    ResultadoAprendizaje resultadoAprendizajeSeleccionado = (ResultadoAprendizaje)row.DataBoundItem;
 
-                ResultadoAprendizajeNeg resultadoAprendizajeNeg = new ResultadoAprendizajeNeg();
+                    ResultadoAprendizajeNeg resultadoAprendizajeNeg = new ResultadoAprendizajeNeg();
 
-                resultadoAprendizajeNeg.EliminarResultadoAprendizaje(resultadoAprendizajeSeleccionado.Id);
+                    resultadoAprendizajeNeg.EliminarResultadoAprendizaje(resultadoAprendizajeSeleccionado.Id);
 
-                ActualizarTabla();
-                row.Selected = false;
+                    ActualizarTabla();
+                    row.Selected = false;
 
-                // Desactiva la selección inicial
-                dtgAsignatura.ClearSelection();
-                dtgAsignatura.CurrentCell = null;
-                btnEditar.Visible = false;
-                btnEliminar.Visible = false;
+                    // Desactiva la selección inicial
+                    dtgAsignatura.ClearSelection();
+                    dtgAsignatura.CurrentCell = null;
+                    btnEditar.Visible = false;
+                    btnEliminar.Visible = false;
+                }
+
+                MessageBox.Show("Resultado de asignatura eliminada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            catch (Exception ex) 
+            {
+                MessageBox.Show("No se puede eliminar el objetivo de programa porque tiene registros relacionados", "Error al eliminar", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+            }
+            
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)

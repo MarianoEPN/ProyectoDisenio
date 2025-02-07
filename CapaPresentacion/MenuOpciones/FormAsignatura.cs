@@ -93,27 +93,37 @@ namespace CapaPresentacion
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (dtgAsignatura.CurrentRow != null)
+            try
             {
-                // Obtener la fila seleccionada
-                DataGridViewRow row = dtgAsignatura.CurrentRow;
+                if (dtgAsignatura.CurrentRow != null)
+                {
+                    // Obtener la fila seleccionada
+                    DataGridViewRow row = dtgAsignatura.CurrentRow;
 
-                // Obtener el objeto completo, que corresponde a la fila seleccionada
-                Asignatura asignaturaSeleccionada = (Asignatura)row.DataBoundItem;
+                    // Obtener el objeto completo, que corresponde a la fila seleccionada
+                    Asignatura asignaturaSeleccionada = (Asignatura)row.DataBoundItem;
 
-                AsignaturaNeg asignaturaNeg = new AsignaturaNeg();
+                    AsignaturaNeg asignaturaNeg = new AsignaturaNeg();
 
-                asignaturaNeg.EliminarAsignatura(asignaturaSeleccionada.Id);
-                
-                ActualizarTabla();
-                row.Selected = false;
+                    asignaturaNeg.EliminarAsignatura(asignaturaSeleccionada.Id);
 
-                // Desactiva la selección inicial
-                dtgAsignatura.ClearSelection();
-                dtgAsignatura.CurrentCell = null;
-                btnEditar.Visible = false;
-                btnEliminar.Visible = false;
+                    ActualizarTabla();
+                    row.Selected = false;
+
+                    // Desactiva la selección inicial
+                    dtgAsignatura.ClearSelection();
+                    dtgAsignatura.CurrentCell = null;
+                    btnEditar.Visible = false;
+                    btnEliminar.Visible = false;
+                }
+
+                MessageBox.Show("Asignatura eliminada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            catch (Exception ex) 
+            {
+                MessageBox.Show("No se puede eliminar la asignatura porque tiene registros relacionados", "Error al eliminar", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+            }
+            
 
         }
 

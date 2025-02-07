@@ -104,27 +104,37 @@ namespace CapaPresentacion.MenuOpciones
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (dtgObjetivoPrograma.CurrentRow != null)
+            try
             {
-                // Obtener la fila seleccionada
-                DataGridViewRow row = dtgObjetivoPrograma.CurrentRow;
+                if (dtgObjetivoPrograma.CurrentRow != null)
+                {
+                    // Obtener la fila seleccionada
+                    DataGridViewRow row = dtgObjetivoPrograma.CurrentRow;
 
-                // Obtener el objeto completo, que corresponde a la fila seleccionada
-                ObjetivoPrograma objetivoProgramaSeleccionado = (ObjetivoPrograma)row.DataBoundItem;
+                    // Obtener el objeto completo, que corresponde a la fila seleccionada
+                    ObjetivoPrograma objetivoProgramaSeleccionado = (ObjetivoPrograma)row.DataBoundItem;
 
-                ObjetivoProgramaNeg objetivoProgramaNeg = new ObjetivoProgramaNeg();
+                    ObjetivoProgramaNeg objetivoProgramaNeg = new ObjetivoProgramaNeg();
 
-                objetivoProgramaNeg.EliminarObjetivoPrograma(objetivoProgramaSeleccionado.Id);
+                    objetivoProgramaNeg.EliminarObjetivoPrograma(objetivoProgramaSeleccionado.Id);
 
-                ActualizarTabla();
-                row.Selected = false;
+                    ActualizarTabla();
+                    row.Selected = false;
 
-                // Desactiva la selección inicial
-                dtgObjetivoPrograma.ClearSelection();
-                dtgObjetivoPrograma.CurrentCell = null;
-                btnEditar.Visible = false;
-                btnEliminar.Visible = false;
+                    // Desactiva la selección inicial
+                    dtgObjetivoPrograma.ClearSelection();
+                    dtgObjetivoPrograma.CurrentCell = null;
+                    btnEditar.Visible = false;
+                    btnEliminar.Visible = false;
+                }
+
+                MessageBox.Show("Objetivo de programa eliminada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            catch (Exception ex) 
+            {
+                MessageBox.Show("No se puede eliminar el objetivo de programa porque tiene registros relacionados", "Error al eliminar", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+            }
+            
         }
     }
 }
