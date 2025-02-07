@@ -37,6 +37,7 @@ namespace CapaPresentacion.CRUD
             this.carrera = carrera;
             tbNombreRA.Text = carrera.Nombre; // Preconfigura el nombre de la carrera
             tbNombreRA.ReadOnly = true;       // El usuario no puede modificar este campo
+            tbNombreRA.Enabled = false;
         }
 
         public FormResulAprendizajeCRUD(ResultadoAprendizaje resultadoAprendizaje, Carrera carrera)
@@ -50,6 +51,7 @@ namespace CapaPresentacion.CRUD
             lblUniversidadRA.Text = "Editar Resulado Aprendizaje";
             tbNombreRA.Text = carrera.Nombre; // Preconfigura el nombre de la carrera
             tbNombreRA.ReadOnly = true;       // El usuario no puede modificar este campo
+            tbNombreRA.Enabled = false;
         }
 
         private void btnCancelarRA_Click(object sender, EventArgs e)
