@@ -75,7 +75,7 @@
             this.tbNombreRRA.PasswordChar = '\0';
             this.tbNombreRRA.PlaceholderText = "           Asignatura";
             this.tbNombreRRA.SelectedText = "";
-            this.tbNombreRRA.Size = new System.Drawing.Size(269, 36);
+            this.tbNombreRRA.Size = new System.Drawing.Size(438, 36);
             this.tbNombreRRA.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.tbNombreRRA.TabIndex = 1;
             this.tbNombreRRA.TextChanged += new System.EventHandler(this.tbNombreRRA_TextChanged);
@@ -86,7 +86,7 @@
             this.lbAdvertenciaRRA.AutoSize = true;
             this.lbAdvertenciaRRA.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Bold);
             this.lbAdvertenciaRRA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(109)))));
-            this.lbAdvertenciaRRA.Location = new System.Drawing.Point(101, 529);
+            this.lbAdvertenciaRRA.Location = new System.Drawing.Point(189, 528);
             this.lbAdvertenciaRRA.Name = "lbAdvertenciaRRA";
             this.lbAdvertenciaRRA.Size = new System.Drawing.Size(282, 23);
             this.lbAdvertenciaRRA.TabIndex = 38;
@@ -107,7 +107,7 @@
             this.guna2ShadowPanelRRA.Name = "guna2ShadowPanelRRA";
             this.guna2ShadowPanelRRA.Radius = 5;
             this.guna2ShadowPanelRRA.ShadowColor = System.Drawing.Color.White;
-            this.guna2ShadowPanelRRA.Size = new System.Drawing.Size(512, 63);
+            this.guna2ShadowPanelRRA.Size = new System.Drawing.Size(638, 63);
             this.guna2ShadowPanelRRA.TabIndex = 25;
             // 
             // guna2CirclePictureBoxRRA
@@ -144,7 +144,7 @@
             this.btnMinRRA.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.btnMinRRA.FillColor = System.Drawing.Color.Transparent;
             this.btnMinRRA.IconColor = System.Drawing.Color.DimGray;
-            this.btnMinRRA.Location = new System.Drawing.Point(435, 15);
+            this.btnMinRRA.Location = new System.Drawing.Point(561, 15);
             this.btnMinRRA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMinRRA.Name = "btnMinRRA";
             this.btnMinRRA.Size = new System.Drawing.Size(29, 30);
@@ -158,7 +158,7 @@
             this.btnCloseRRA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCloseRRA.FillColor = System.Drawing.Color.Transparent;
             this.btnCloseRRA.IconColor = System.Drawing.Color.DimGray;
-            this.btnCloseRRA.Location = new System.Drawing.Point(469, 15);
+            this.btnCloseRRA.Location = new System.Drawing.Point(595, 15);
             this.btnCloseRRA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCloseRRA.Name = "btnCloseRRA";
             this.btnCloseRRA.Size = new System.Drawing.Size(29, 30);
@@ -234,7 +234,7 @@
             this.btnCrearRRA.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCrearRRA.ImageSize = new System.Drawing.Size(30, 30);
             this.btnCrearRRA.IndicateFocus = true;
-            this.btnCrearRRA.Location = new System.Drawing.Point(91, 571);
+            this.btnCrearRRA.Location = new System.Drawing.Point(179, 570);
             this.btnCrearRRA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCrearRRA.Name = "btnCrearRRA";
             this.btnCrearRRA.Size = new System.Drawing.Size(139, 48);
@@ -263,7 +263,7 @@
             this.btnCancelarRRA.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCancelarRRA.ImageSize = new System.Drawing.Size(30, 30);
             this.btnCancelarRRA.IndicateFocus = true;
-            this.btnCancelarRRA.Location = new System.Drawing.Point(260, 571);
+            this.btnCancelarRRA.Location = new System.Drawing.Point(348, 570);
             this.btnCancelarRRA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelarRRA.Name = "btnCancelarRRA";
             this.btnCancelarRRA.Size = new System.Drawing.Size(139, 48);
@@ -344,7 +344,7 @@
             this.tbDescripcionRRA.PlaceholderText = "Escribe aquí...";
             this.tbDescripcionRRA.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbDescripcionRRA.SelectedText = "";
-            this.tbDescripcionRRA.Size = new System.Drawing.Size(483, 192);
+            this.tbDescripcionRRA.Size = new System.Drawing.Size(573, 192);
             this.tbDescripcionRRA.TabIndex = 4;
             this.tbDescripcionRRA.TextChanged += new System.EventHandler(this.tbDescripcionRRA_TextChanged);
             // 
@@ -358,7 +358,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(512, 629);
+            this.ClientSize = new System.Drawing.Size(638, 629);
             this.Controls.Add(this.tbDescripcionRRA);
             this.Controls.Add(this.labelDescripcionRRA);
             this.Controls.Add(this.labelTipoRRA);

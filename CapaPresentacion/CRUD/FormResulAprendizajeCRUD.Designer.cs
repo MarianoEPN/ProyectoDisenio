@@ -67,13 +67,13 @@
             this.tbNombreRA.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Bold);
             this.tbNombreRA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(48)))));
             this.tbNombreRA.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbNombreRA.Location = new System.Drawing.Point(86, 68);
+            this.tbNombreRA.Location = new System.Drawing.Point(115, 84);
             this.tbNombreRA.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.tbNombreRA.Name = "tbNombreRA";
             this.tbNombreRA.PasswordChar = '\0';
             this.tbNombreRA.PlaceholderText = "Carrera";
             this.tbNombreRA.SelectedText = "";
-            this.tbNombreRA.Size = new System.Drawing.Size(188, 29);
+            this.tbNombreRA.Size = new System.Drawing.Size(474, 36);
             this.tbNombreRA.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.tbNombreRA.TabIndex = 1;
             this.tbNombreRA.TextChanged += new System.EventHandler(this.tbNombreRA_TextChanged);
@@ -84,9 +84,10 @@
             this.lbAdvertenciaRA.AutoSize = true;
             this.lbAdvertenciaRA.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Bold);
             this.lbAdvertenciaRA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(109)))));
-            this.lbAdvertenciaRA.Location = new System.Drawing.Point(93, 377);
+            this.lbAdvertenciaRA.Location = new System.Drawing.Point(190, 462);
+            this.lbAdvertenciaRA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbAdvertenciaRA.Name = "lbAdvertenciaRA";
-            this.lbAdvertenciaRA.Size = new System.Drawing.Size(226, 18);
+            this.lbAdvertenciaRA.Size = new System.Drawing.Size(282, 23);
             this.lbAdvertenciaRA.TabIndex = 24;
             this.lbAdvertenciaRA.Text = "Debe completar todos los campos";
             // 
@@ -100,22 +101,22 @@
             this.guna2ShadowPanelRA.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2ShadowPanelRA.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
             this.guna2ShadowPanelRA.Location = new System.Drawing.Point(0, 0);
-            this.guna2ShadowPanelRA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2ShadowPanelRA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2ShadowPanelRA.Name = "guna2ShadowPanelRA";
             this.guna2ShadowPanelRA.Radius = 5;
             this.guna2ShadowPanelRA.ShadowColor = System.Drawing.Color.White;
-            this.guna2ShadowPanelRA.Size = new System.Drawing.Size(413, 51);
+            this.guna2ShadowPanelRA.Size = new System.Drawing.Size(636, 63);
             this.guna2ShadowPanelRA.TabIndex = 25;
             // 
             // guna2CirclePictureBoxRA
             // 
             this.guna2CirclePictureBoxRA.Image = global::CapaPresentacion.Properties.Resources.BuhoBlnaco;
             this.guna2CirclePictureBoxRA.ImageRotate = 0F;
-            this.guna2CirclePictureBoxRA.Location = new System.Drawing.Point(9, 2);
-            this.guna2CirclePictureBoxRA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2CirclePictureBoxRA.Location = new System.Drawing.Point(12, 2);
+            this.guna2CirclePictureBoxRA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2CirclePictureBoxRA.Name = "guna2CirclePictureBoxRA";
             this.guna2CirclePictureBoxRA.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBoxRA.Size = new System.Drawing.Size(34, 46);
+            this.guna2CirclePictureBoxRA.Size = new System.Drawing.Size(45, 57);
             this.guna2CirclePictureBoxRA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2CirclePictureBoxRA.TabIndex = 26;
             this.guna2CirclePictureBoxRA.TabStop = false;
@@ -129,10 +130,10 @@
             this.btnMinRA.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.btnMinRA.FillColor = System.Drawing.Color.Transparent;
             this.btnMinRA.IconColor = System.Drawing.Color.DimGray;
-            this.btnMinRA.Location = new System.Drawing.Point(356, 12);
-            this.btnMinRA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMinRA.Location = new System.Drawing.Point(560, 15);
+            this.btnMinRA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMinRA.Name = "btnMinRA";
-            this.btnMinRA.Size = new System.Drawing.Size(22, 24);
+            this.btnMinRA.Size = new System.Drawing.Size(29, 30);
             this.btnMinRA.TabIndex = 8;
             // 
             // lblUniversidadRA
@@ -141,10 +142,9 @@
             this.lblUniversidadRA.BackColor = System.Drawing.Color.Transparent;
             this.lblUniversidadRA.Font = new System.Drawing.Font("Californian FB", 16.2F, System.Drawing.FontStyle.Bold);
             this.lblUniversidadRA.ForeColor = System.Drawing.Color.White;
-            this.lblUniversidadRA.Location = new System.Drawing.Point(45, 12);
-            this.lblUniversidadRA.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUniversidadRA.Location = new System.Drawing.Point(60, 15);
             this.lblUniversidadRA.Name = "lblUniversidadRA";
-            this.lblUniversidadRA.Size = new System.Drawing.Size(344, 25);
+            this.lblUniversidadRA.Size = new System.Drawing.Size(407, 32);
             this.lblUniversidadRA.TabIndex = 28;
             this.lblUniversidadRA.Text = "Resultados de Aprendizaje CRUD";
             // 
@@ -156,10 +156,10 @@
             this.btnCloseRA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCloseRA.FillColor = System.Drawing.Color.Transparent;
             this.btnCloseRA.IconColor = System.Drawing.Color.DimGray;
-            this.btnCloseRA.Location = new System.Drawing.Point(382, 12);
-            this.btnCloseRA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCloseRA.Location = new System.Drawing.Point(594, 15);
+            this.btnCloseRA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCloseRA.Name = "btnCloseRA";
-            this.btnCloseRA.Size = new System.Drawing.Size(22, 24);
+            this.btnCloseRA.Size = new System.Drawing.Size(29, 30);
             this.btnCloseRA.TabIndex = 7;
             // 
             // tbCodigoRA
@@ -176,13 +176,13 @@
             this.tbCodigoRA.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Bold);
             this.tbCodigoRA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(48)))));
             this.tbCodigoRA.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbCodigoRA.Location = new System.Drawing.Point(87, 132);
+            this.tbCodigoRA.Location = new System.Drawing.Point(116, 162);
             this.tbCodigoRA.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.tbCodigoRA.Name = "tbCodigoRA";
             this.tbCodigoRA.PasswordChar = '\0';
             this.tbCodigoRA.PlaceholderText = "Código del Resultado";
             this.tbCodigoRA.SelectedText = "";
-            this.tbCodigoRA.Size = new System.Drawing.Size(187, 29);
+            this.tbCodigoRA.Size = new System.Drawing.Size(249, 36);
             this.tbCodigoRA.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.tbCodigoRA.TabIndex = 2;
             this.tbCodigoRA.TextChanged += new System.EventHandler(this.tbCodigoRA_TextChanged_1);
@@ -193,15 +193,15 @@
             this.btnGuardarRA.Animated = true;
             this.btnGuardarRA.AutoRoundedCorners = true;
             this.btnGuardarRA.BackColor = System.Drawing.Color.Transparent;
-            this.btnGuardarRA.BorderRadius = 18;
+            this.btnGuardarRA.BorderRadius = 23;
             this.btnGuardarRA.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
             this.btnGuardarRA.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnGuardarRA.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnGuardarRA.IndicateFocus = true;
-            this.btnGuardarRA.Location = new System.Drawing.Point(88, 410);
-            this.btnGuardarRA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuardarRA.Location = new System.Drawing.Point(183, 503);
+            this.btnGuardarRA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuardarRA.Name = "btnGuardarRA";
-            this.btnGuardarRA.Size = new System.Drawing.Size(104, 39);
+            this.btnGuardarRA.Size = new System.Drawing.Size(139, 48);
             this.btnGuardarRA.TabIndex = 4;
             this.btnGuardarRA.Text = "Guardar";
             this.btnGuardarRA.UseTransparentBackground = true;
@@ -213,15 +213,15 @@
             this.btnCancelarRA.Animated = true;
             this.btnCancelarRA.AutoRoundedCorners = true;
             this.btnCancelarRA.BackColor = System.Drawing.Color.Transparent;
-            this.btnCancelarRA.BorderRadius = 18;
+            this.btnCancelarRA.BorderRadius = 23;
             this.btnCancelarRA.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
             this.btnCancelarRA.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnCancelarRA.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnCancelarRA.IndicateFocus = true;
-            this.btnCancelarRA.Location = new System.Drawing.Point(209, 410);
-            this.btnCancelarRA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelarRA.Location = new System.Drawing.Point(345, 503);
+            this.btnCancelarRA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelarRA.Name = "btnCancelarRA";
-            this.btnCancelarRA.Size = new System.Drawing.Size(104, 39);
+            this.btnCancelarRA.Size = new System.Drawing.Size(139, 48);
             this.btnCancelarRA.TabIndex = 5;
             this.btnCancelarRA.Text = "Cancelar";
             this.btnCancelarRA.UseTransparentBackground = true;
@@ -232,10 +232,9 @@
             this.labelDescripcionRA.BackColor = System.Drawing.Color.Transparent;
             this.labelDescripcionRA.Font = new System.Drawing.Font("Californian FB", 15F, System.Drawing.FontStyle.Bold);
             this.labelDescripcionRA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(48)))));
-            this.labelDescripcionRA.Location = new System.Drawing.Point(10, 184);
-            this.labelDescripcionRA.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelDescripcionRA.Location = new System.Drawing.Point(13, 226);
             this.labelDescripcionRA.Name = "labelDescripcionRA";
-            this.labelDescripcionRA.Size = new System.Drawing.Size(112, 23);
+            this.labelDescripcionRA.Size = new System.Drawing.Size(147, 29);
             this.labelDescripcionRA.TabIndex = 36;
             this.labelDescripcionRA.Text = "Descripción:";
             // 
@@ -254,7 +253,7 @@
             this.tbDescripcionRA.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbDescripcionRA.ForeColor = System.Drawing.Color.Black;
             this.tbDescripcionRA.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbDescripcionRA.Location = new System.Drawing.Point(9, 209);
+            this.tbDescripcionRA.Location = new System.Drawing.Point(12, 257);
             this.tbDescripcionRA.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.tbDescripcionRA.Multiline = true;
             this.tbDescripcionRA.Name = "tbDescripcionRA";
@@ -262,7 +261,7 @@
             this.tbDescripcionRA.PlaceholderText = "Escribe aquí...";
             this.tbDescripcionRA.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbDescripcionRA.SelectedText = "";
-            this.tbDescripcionRA.Size = new System.Drawing.Size(396, 156);
+            this.tbDescripcionRA.Size = new System.Drawing.Size(577, 192);
             this.tbDescripcionRA.TabIndex = 3;
             // 
             // guna2AnimateWindowRA
@@ -276,10 +275,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Californian FB", 15F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(48)))));
-            this.label1.Location = new System.Drawing.Point(10, 132);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(13, 162);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 23);
+            this.label1.Size = new System.Drawing.Size(98, 29);
             this.label1.TabIndex = 41;
             this.label1.Text = "Código:";
             // 
@@ -289,19 +287,18 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Californian FB", 15F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(48)))));
-            this.label2.Location = new System.Drawing.Point(9, 68);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(12, 84);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 23);
+            this.label2.Size = new System.Drawing.Size(100, 29);
             this.label2.TabIndex = 42;
             this.label2.Text = "Carrera:";
             // 
             // FormResulAprendizajeCRUD
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(413, 457);
+            this.ClientSize = new System.Drawing.Size(636, 562);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbDescripcionRA);
@@ -314,6 +311,7 @@
             this.Controls.Add(this.tbCodigoRA);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormResulAprendizajeCRUD";
             this.Text = "FormResulAprendizaje";
             this.guna2ShadowPanelRA.ResumeLayout(false);

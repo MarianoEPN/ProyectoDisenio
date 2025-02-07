@@ -80,7 +80,7 @@
             this.tbDescripcion.PlaceholderText = "Escribe aquí...";
             this.tbDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbDescripcion.SelectedText = "";
-            this.tbDescripcion.Size = new System.Drawing.Size(388, 215);
+            this.tbDescripcion.Size = new System.Drawing.Size(470, 215);
             this.tbDescripcion.TabIndex = 7;
             // 
             // label3
@@ -101,7 +101,7 @@
             this.labelTipo.BackColor = System.Drawing.Color.Transparent;
             this.labelTipo.Font = new System.Drawing.Font("Californian FB", 15F, System.Drawing.FontStyle.Bold);
             this.labelTipo.ForeColor = System.Drawing.Color.DimGray;
-            this.labelTipo.Location = new System.Drawing.Point(88, 443);
+            this.labelTipo.Location = new System.Drawing.Point(145, 443);
             this.labelTipo.Name = "labelTipo";
             this.labelTipo.Size = new System.Drawing.Size(64, 29);
             this.labelTipo.TabIndex = 49;
@@ -125,7 +125,7 @@
             "Destreza",
             "Actitud",
             "Conocimiento"});
-            this.comboBoxTipo.Location = new System.Drawing.Point(192, 436);
+            this.comboBoxTipo.Location = new System.Drawing.Point(246, 436);
             this.comboBoxTipo.Name = "comboBoxTipo";
             this.comboBoxTipo.Size = new System.Drawing.Size(224, 36);
             this.comboBoxTipo.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
@@ -150,7 +150,7 @@
             this.btnCancelar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCancelar.ImageSize = new System.Drawing.Size(30, 30);
             this.btnCancelar.IndicateFocus = true;
-            this.btnCancelar.Location = new System.Drawing.Point(268, 361);
+            this.btnCancelar.Location = new System.Drawing.Point(314, 361);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(138, 48);
             this.btnCancelar.TabIndex = 5;
@@ -176,7 +176,7 @@
             this.btnCrear.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCrear.ImageSize = new System.Drawing.Size(30, 30);
             this.btnCrear.IndicateFocus = true;
-            this.btnCrear.Location = new System.Drawing.Point(106, 361);
+            this.btnCrear.Location = new System.Drawing.Point(138, 361);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(138, 48);
             this.btnCrear.TabIndex = 4;
@@ -232,7 +232,7 @@
             this.guna2ShadowPanel2.Name = "guna2ShadowPanel2";
             this.guna2ShadowPanel2.Radius = 5;
             this.guna2ShadowPanel2.ShadowColor = System.Drawing.Color.White;
-            this.guna2ShadowPanel2.Size = new System.Drawing.Size(500, 63);
+            this.guna2ShadowPanel2.Size = new System.Drawing.Size(582, 63);
             this.guna2ShadowPanel2.TabIndex = 42;
             // 
             // guna2CirclePictureBox1
@@ -268,7 +268,7 @@
             this.btnMin.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.btnMin.FillColor = System.Drawing.Color.Transparent;
             this.btnMin.IconColor = System.Drawing.Color.DimGray;
-            this.btnMin.Location = new System.Drawing.Point(422, 15);
+            this.btnMin.Location = new System.Drawing.Point(504, 15);
             this.btnMin.Name = "btnMin";
             this.btnMin.Size = new System.Drawing.Size(30, 30);
             this.btnMin.TabIndex = 8;
@@ -283,7 +283,7 @@
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnClose.FillColor = System.Drawing.Color.Transparent;
             this.btnClose.IconColor = System.Drawing.Color.DimGray;
-            this.btnClose.Location = new System.Drawing.Point(458, 15);
+            this.btnClose.Location = new System.Drawing.Point(540, 15);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(30, 30);
             this.btnClose.TabIndex = 7;
@@ -295,7 +295,7 @@
             this.lbAdvertencia.AutoSize = true;
             this.lbAdvertencia.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Bold);
             this.lbAdvertencia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(109)))));
-            this.lbAdvertencia.Location = new System.Drawing.Point(113, 316);
+            this.lbAdvertencia.Location = new System.Drawing.Point(188, 313);
             this.lbAdvertencia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbAdvertencia.Name = "lbAdvertencia";
             this.lbAdvertencia.Size = new System.Drawing.Size(282, 23);
@@ -347,7 +347,7 @@
             this.tbNombre.PasswordChar = '\0';
             this.tbNombre.PlaceholderText = "MATERIA";
             this.tbNombre.SelectedText = "";
-            this.tbNombre.Size = new System.Drawing.Size(224, 36);
+            this.tbNombre.Size = new System.Drawing.Size(342, 36);
             this.tbNombre.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.tbNombre.TabIndex = 2;
             this.tbNombre.TextChanged += new System.EventHandler(this.tbNombre_TextChanged);
@@ -373,7 +373,7 @@
             this.tbCodigo.PasswordChar = '\0';
             this.tbCodigo.PlaceholderText = "FIEED100";
             this.tbCodigo.SelectedText = "";
-            this.tbCodigo.Size = new System.Drawing.Size(224, 36);
+            this.tbCodigo.Size = new System.Drawing.Size(178, 36);
             this.tbCodigo.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.tbCodigo.TabIndex = 1;
             this.tbCodigo.TextChanged += new System.EventHandler(this.tbCodigo_TextChanged);
@@ -383,7 +383,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(500, 750);
+            this.ClientSize = new System.Drawing.Size(582, 750);
             this.Controls.Add(this.tbDescripcion);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.labelTipo);

@@ -73,7 +73,7 @@
             this.btnCancelar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCancelar.ImageSize = new System.Drawing.Size(30, 30);
             this.btnCancelar.IndicateFocus = true;
-            this.btnCancelar.Location = new System.Drawing.Point(229, 344);
+            this.btnCancelar.Location = new System.Drawing.Point(310, 344);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(138, 48);
             this.btnCancelar.TabIndex = 5;
@@ -100,7 +100,7 @@
             this.btnCrear.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCrear.ImageSize = new System.Drawing.Size(30, 30);
             this.btnCrear.IndicateFocus = true;
-            this.btnCrear.Location = new System.Drawing.Point(67, 344);
+            this.btnCrear.Location = new System.Drawing.Point(114, 344);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(138, 48);
             this.btnCrear.TabIndex = 4;
@@ -157,7 +157,7 @@
             this.guna2ShadowPanel2.Name = "guna2ShadowPanel2";
             this.guna2ShadowPanel2.Radius = 5;
             this.guna2ShadowPanel2.ShadowColor = System.Drawing.Color.White;
-            this.guna2ShadowPanel2.Size = new System.Drawing.Size(415, 63);
+            this.guna2ShadowPanel2.Size = new System.Drawing.Size(549, 63);
             this.guna2ShadowPanel2.TabIndex = 56;
             this.guna2ShadowPanel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.guna2CustomGradientPanel1_MouseDown);
             this.guna2ShadowPanel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.guna2CustomGradientPanel1_MouseMove);
@@ -196,7 +196,7 @@
             this.btnMin.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.btnMin.FillColor = System.Drawing.Color.Transparent;
             this.btnMin.IconColor = System.Drawing.Color.DimGray;
-            this.btnMin.Location = new System.Drawing.Point(337, 15);
+            this.btnMin.Location = new System.Drawing.Point(471, 15);
             this.btnMin.Name = "btnMin";
             this.btnMin.Size = new System.Drawing.Size(30, 30);
             this.btnMin.TabIndex = 8;
@@ -211,7 +211,7 @@
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnClose.FillColor = System.Drawing.Color.Transparent;
             this.btnClose.IconColor = System.Drawing.Color.DimGray;
-            this.btnClose.Location = new System.Drawing.Point(373, 15);
+            this.btnClose.Location = new System.Drawing.Point(507, 15);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(30, 30);
             this.btnClose.TabIndex = 7;
@@ -223,7 +223,7 @@
             this.lbAdvertencia.AutoSize = true;
             this.lbAdvertencia.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Bold);
             this.lbAdvertencia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(109)))));
-            this.lbAdvertencia.Location = new System.Drawing.Point(67, 296);
+            this.lbAdvertencia.Location = new System.Drawing.Point(128, 295);
             this.lbAdvertencia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbAdvertencia.Name = "lbAdvertencia";
             this.lbAdvertencia.Size = new System.Drawing.Size(286, 23);
@@ -250,7 +250,7 @@
             this.tbNombre.PasswordChar = '\0';
             this.tbNombre.PlaceholderText = "MATERIA";
             this.tbNombre.SelectedText = "";
-            this.tbNombre.Size = new System.Drawing.Size(224, 36);
+            this.tbNombre.Size = new System.Drawing.Size(369, 36);
             this.tbNombre.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.tbNombre.TabIndex = 2;
             this.tbNombre.TextChanged += new System.EventHandler(this.tbNombre_TextChanged);
@@ -320,7 +320,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(415, 404);
+            this.ClientSize = new System.Drawing.Size(549, 449);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnCrear);
             this.Controls.Add(this.labelNivel);
