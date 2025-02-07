@@ -44,34 +44,34 @@
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
             this.panelControl = new Guna.UI2.WinForms.Guna2Panel();
             this.plBarra = new System.Windows.Forms.Panel();
+            this.btnMax = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.panelEPN = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.lblUniversidad = new System.Windows.Forms.Label();
+            this.btnBajar = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.btnMin = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.panelContainer = new Guna.UI2.WinForms.Guna2Panel();
             this.timerExpanded = new System.Windows.Forms.Timer(this.components);
             this.panelOpciones = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.btnEditar = new Guna.UI2.WinForms.Guna2Button();
             this.btnSalir = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2CirclePictureBox3 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.ToolTip1 = new Guna.UI2.WinForms.Guna2HtmlToolTip();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.menuTransition = new System.Windows.Forms.Timer(this.components);
-            this.guna2CirclePictureBox3 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.btnMax = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnBajar = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.btnMin = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.panelBarra.SuspendLayout();
             this.menuContainer.SuspendLayout();
             this.panelControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2ShadowPanel1.SuspendLayout();
             this.panelEPN.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.panelOpciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBarra
@@ -413,6 +413,32 @@
             this.plBarra.MouseMove += new System.Windows.Forms.MouseEventHandler(this.plBarra_MouseMove);
             this.plBarra.MouseUp += new System.Windows.Forms.MouseEventHandler(this.plBarra_MouseUp);
             // 
+            // btnMax
+            // 
+            this.btnMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMax.BackColor = System.Drawing.Color.Transparent;
+            this.btnMax.BackgroundImage = global::CapaPresentacion.Properties.Resources.CircleWithe;
+            this.btnMax.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMax.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
+            this.btnMax.FillColor = System.Drawing.Color.Transparent;
+            this.btnMax.IconColor = System.Drawing.Color.DimGray;
+            this.btnMax.Location = new System.Drawing.Point(1012, 3);
+            this.btnMax.Name = "btnMax";
+            this.btnMax.Size = new System.Drawing.Size(30, 30);
+            this.btnMax.TabIndex = 6;
+            this.btnMax.MouseEnter += new System.EventHandler(this.btnMax_MouseEnter);
+            this.btnMax.MouseLeave += new System.EventHandler(this.btnMax_MouseLeave);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.logo2;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 40);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(69, 75);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
             // guna2ShadowPanel1
             // 
             this.guna2ShadowPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -456,6 +482,73 @@
             this.lblUniversidad.Text = "Escuela Politecnica Nacional";
             this.lblUniversidad.MouseEnter += new System.EventHandler(this.panelEPN_MouseEnter);
             this.lblUniversidad.MouseLeave += new System.EventHandler(this.panelEPN_MouseLeave);
+            // 
+            // btnBajar
+            // 
+            this.btnBajar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBajar.Animated = true;
+            this.btnBajar.BackColor = System.Drawing.Color.Transparent;
+            this.btnBajar.BackgroundImage = global::CapaPresentacion.Properties.Resources.baja;
+            this.btnBajar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBajar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBajar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBajar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBajar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBajar.FillColor = System.Drawing.Color.Transparent;
+            this.btnBajar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBajar.ForeColor = System.Drawing.Color.White;
+            this.btnBajar.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnBajar.Location = new System.Drawing.Point(951, 23);
+            this.btnBajar.Name = "btnBajar";
+            this.btnBajar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnBajar.Size = new System.Drawing.Size(27, 29);
+            this.btnBajar.TabIndex = 15;
+            this.btnBajar.Click += new System.EventHandler(this.btnBajar_Click);
+            // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2CirclePictureBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2CirclePictureBox1.Image = global::CapaPresentacion.Properties.Resources.buhoUser;
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(895, 13);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox1.TabIndex = 9;
+            this.guna2CirclePictureBox1.TabStop = false;
+            // 
+            // btnMin
+            // 
+            this.btnMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMin.BackColor = System.Drawing.Color.Transparent;
+            this.btnMin.BackgroundImage = global::CapaPresentacion.Properties.Resources.CircleWithe;
+            this.btnMin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMin.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.btnMin.FillColor = System.Drawing.Color.Transparent;
+            this.btnMin.IconColor = System.Drawing.Color.DimGray;
+            this.btnMin.Location = new System.Drawing.Point(976, 3);
+            this.btnMin.Name = "btnMin";
+            this.btnMin.Size = new System.Drawing.Size(30, 30);
+            this.btnMin.TabIndex = 5;
+            this.btnMin.MouseEnter += new System.EventHandler(this.btnMin_MouseEnter);
+            this.btnMin.MouseLeave += new System.EventHandler(this.btnMin_MouseLeave);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundImage = global::CapaPresentacion.Properties.Resources.CircleWithe;
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnClose.FillColor = System.Drawing.Color.Transparent;
+            this.btnClose.IconColor = System.Drawing.Color.DimGray;
+            this.btnClose.Location = new System.Drawing.Point(1048, 3);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(30, 30);
+            this.btnClose.TabIndex = 4;
+            this.btnClose.MouseEnter += new System.EventHandler(this.btnClose_MouseEnter);
+            this.btnClose.MouseLeave += new System.EventHandler(this.btnClose_MouseLeave);
             // 
             // panelContainer
             // 
@@ -531,6 +624,21 @@
             this.btnSalir.Size = new System.Drawing.Size(153, 34);
             this.btnSalir.TabIndex = 5;
             this.btnSalir.Text = "Salir";
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // guna2CirclePictureBox3
+            // 
+            this.guna2CirclePictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2CirclePictureBox3.FillColor = System.Drawing.Color.Transparent;
+            this.guna2CirclePictureBox3.Image = global::CapaPresentacion.Properties.Resources.buhoUser;
+            this.guna2CirclePictureBox3.ImageRotate = 0F;
+            this.guna2CirclePictureBox3.Location = new System.Drawing.Point(53, 11);
+            this.guna2CirclePictureBox3.Name = "guna2CirclePictureBox3";
+            this.guna2CirclePictureBox3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox3.Size = new System.Drawing.Size(95, 88);
+            this.guna2CirclePictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox3.TabIndex = 12;
+            this.guna2CirclePictureBox3.TabStop = false;
             // 
             // guna2Elipse1
             // 
@@ -556,113 +664,6 @@
             this.menuTransition.Interval = 10;
             this.menuTransition.Tick += new System.EventHandler(this.menuTransition_Tick);
             // 
-            // guna2CirclePictureBox3
-            // 
-            this.guna2CirclePictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2CirclePictureBox3.FillColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox3.Image = global::CapaPresentacion.Properties.Resources.buhoUser;
-            this.guna2CirclePictureBox3.ImageRotate = 0F;
-            this.guna2CirclePictureBox3.Location = new System.Drawing.Point(53, 11);
-            this.guna2CirclePictureBox3.Name = "guna2CirclePictureBox3";
-            this.guna2CirclePictureBox3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox3.Size = new System.Drawing.Size(95, 88);
-            this.guna2CirclePictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox3.TabIndex = 12;
-            this.guna2CirclePictureBox3.TabStop = false;
-            // 
-            // btnMax
-            // 
-            this.btnMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMax.BackColor = System.Drawing.Color.Transparent;
-            this.btnMax.BackgroundImage = global::CapaPresentacion.Properties.Resources.CircleWithe;
-            this.btnMax.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMax.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
-            this.btnMax.FillColor = System.Drawing.Color.Transparent;
-            this.btnMax.IconColor = System.Drawing.Color.DimGray;
-            this.btnMax.Location = new System.Drawing.Point(1012, 3);
-            this.btnMax.Name = "btnMax";
-            this.btnMax.Size = new System.Drawing.Size(30, 30);
-            this.btnMax.TabIndex = 6;
-            this.btnMax.MouseEnter += new System.EventHandler(this.btnMax_MouseEnter);
-            this.btnMax.MouseLeave += new System.EventHandler(this.btnMax_MouseLeave);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.logo2;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 40);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(69, 75);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnBajar
-            // 
-            this.btnBajar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBajar.Animated = true;
-            this.btnBajar.BackColor = System.Drawing.Color.Transparent;
-            this.btnBajar.BackgroundImage = global::CapaPresentacion.Properties.Resources.baja;
-            this.btnBajar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBajar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnBajar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnBajar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnBajar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnBajar.FillColor = System.Drawing.Color.Transparent;
-            this.btnBajar.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnBajar.ForeColor = System.Drawing.Color.White;
-            this.btnBajar.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnBajar.Location = new System.Drawing.Point(951, 23);
-            this.btnBajar.Name = "btnBajar";
-            this.btnBajar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnBajar.Size = new System.Drawing.Size(27, 29);
-            this.btnBajar.TabIndex = 15;
-            this.btnBajar.Click += new System.EventHandler(this.btnBajar_Click);
-            // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2CirclePictureBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox1.Image = global::CapaPresentacion.Properties.Resources.buhoUser;
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(895, 13);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox1.TabIndex = 9;
-            this.guna2CirclePictureBox1.TabStop = false;
-            // 
-            // btnMin
-            // 
-            this.btnMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMin.BackColor = System.Drawing.Color.Transparent;
-            this.btnMin.BackgroundImage = global::CapaPresentacion.Properties.Resources.CircleWithe;
-            this.btnMin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMin.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.btnMin.FillColor = System.Drawing.Color.Transparent;
-            this.btnMin.IconColor = System.Drawing.Color.DimGray;
-            this.btnMin.Location = new System.Drawing.Point(976, 3);
-            this.btnMin.Name = "btnMin";
-            this.btnMin.Size = new System.Drawing.Size(30, 30);
-            this.btnMin.TabIndex = 5;
-            this.btnMin.MouseEnter += new System.EventHandler(this.btnMin_MouseEnter);
-            this.btnMin.MouseLeave += new System.EventHandler(this.btnMin_MouseLeave);
-            // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.BackgroundImage = global::CapaPresentacion.Properties.Resources.CircleWithe;
-            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnClose.FillColor = System.Drawing.Color.Transparent;
-            this.btnClose.IconColor = System.Drawing.Color.DimGray;
-            this.btnClose.Location = new System.Drawing.Point(1048, 3);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(30, 30);
-            this.btnClose.TabIndex = 4;
-            this.btnClose.MouseEnter += new System.EventHandler(this.btnClose_MouseEnter);
-            this.btnClose.MouseLeave += new System.EventHandler(this.btnClose_MouseLeave);
-            // 
             // Menuu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -682,13 +683,13 @@
             this.panelBarra.PerformLayout();
             this.menuContainer.ResumeLayout(false);
             this.panelControl.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.guna2ShadowPanel1.ResumeLayout(false);
             this.panelEPN.ResumeLayout(false);
             this.panelEPN.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.panelOpciones.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

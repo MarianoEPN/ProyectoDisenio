@@ -289,5 +289,12 @@ namespace CapaPresentacion
 
 
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1(); // Crear una instancia del formulario Form1
+            form1.Show(); // Mostrar Form1
+            this.Hide(); // Ocultar el formulario actual (Menuu)
+        }
     }
 }
