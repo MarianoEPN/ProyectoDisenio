@@ -43,29 +43,28 @@ namespace CapaPresentacion.MenuOpciones
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             List<Guna2TextBox> listaTextBoxes = new List<Guna2TextBox>
+    {
+        tbNombreReg,
+        tbUsuarioReg,
+        tbCorreo,
+        tbClaveReg,
+        tbClaveConfirmReg
+    };
+
+            bool camposCompletos = true;
+            foreach (var txt in listaTextBoxes)
             {
-                tbNombreReg,
-                tbUsuarioReg,
-                tbCorreo,
-                tbClaveReg,
-                tbClaveConfirmReg
-            };
-            
-                bool camposCompletos = true;
-                foreach (var txt in listaTextBoxes)
+                // Verificar si está vacío o nulo
+                if (string.IsNullOrEmpty(txt.Text))
                 {
-                    // 3. Verificar si está vacío o nulo
-                    if (string.IsNullOrEmpty(txt.Text))
-                    {
-                        // Cambiar color del borde a rojo
-                        txt.BorderColor = Color.FromArgb(241, 90, 109);
-                        camposCompletos = false;
-                    }
-          
+                    // Cambiar color del borde a rojo
+                    txt.BorderColor = Color.FromArgb(241, 90, 109);
+                    camposCompletos = false;
                 }
+            }
+
             if (camposCompletos)
             {
-
                 if (tbClaveReg.Text.Equals(tbClaveConfirmReg.Text))
                 {
                     usuario.nombre = tbNombreReg.Text;
@@ -76,6 +75,8 @@ namespace CapaPresentacion.MenuOpciones
                     UsuarioNeg usuarioNeg = new UsuarioNeg();
                     usuarioNeg.ActualizarUsuario(usuario, carrera);
 
+                    // Mostrar mensaje de éxito
+                    MessageBox.Show("Se ha guardado con éxito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
